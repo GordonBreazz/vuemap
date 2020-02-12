@@ -38,23 +38,59 @@
     </v-app-bar>
 
     <v-content>
-      <HelloWorld/>
+          <yandex-map 
+              :coords="coords" 
+              :zoom="mzoom" 
+              @click="onClick">
+
+      <ymap-marker 
+        marker-id="123" 
+        :coords="coords"
+        :balloon-template="balloonTemplate"
+      ></ymap-marker>
+    </yandex-map>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
-
 export default {
-  name: 'App',
-
-  components: {
-    HelloWorld,
-  },
-
   data: () => ({
-    //
+    coords: [ 51.834464, 107.584574],
+    mzoom: 12,
   }),
-};
+  computed: {
+    balloonTemplate() {
+      return `
+        <h1 class="red">Hi, everyone!</h1>
+        <p>I am here: ${this.coords}</p>
+        <img src="http://via.placeholder.com/350x150">
+      `
+    }
+  },
+  methods: {
+    onClick(e) {
+      this.coords = e.get('coords');
+    }
+  }  
+}
 </script>
+
+<style>
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+
+.ymap-container {
+  height: 600px;
+}
+
+.red {
+  color: red;
+}
+</style>
