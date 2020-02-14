@@ -19,7 +19,8 @@
               :coords="location.coords"  
               @click="onClick(location.coords)"            
               cluster-name="1"
-              :callbacks="{ click: getDataPoint }"                      
+              :callbacks="{ click: getDataPoint }"
+              
          ></ymap-marker>
     </yandex-map>
 </template>
@@ -47,6 +48,7 @@ export default {
         imageOffset: [0, 0],
         content: title,
         contentOffset: [-25, 55],
+        hintContent: "Хинт метки",
         contentLayout: '<div style="border-radius: 8px; background-color: rgba(117, 190, 218, 0);  width: 100px; color: red; font-weight: bold;">$[properties.iconContent]</div>'
       })
     };
@@ -62,9 +64,12 @@ export default {
   },
   methods: {
     onClick(e) {
+      let tt = this.map
+      let sayHi = function() { tt.setCenter(e, 19, {checkZoomRange: true })}
        //this.currentCoords = e.get('coords');             
-      this.map.setCenter(e, 18, {checkZoomRange: true })
-      this.map.panTo(this.currentCoords)
+      this.map.panTo(e)
+      setTimeout(sayHi, 1000);
+      //this.map.setCenter(e, 19, {checkZoomRange: true })
     },
     getDataCluster(obj) {
       const clust = this.map.geoObjects.get(0);
