@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    
     <v-app-bar
       app
       color="primary"
@@ -10,9 +11,10 @@
           alt="Vuetify Logo"
           class="shrink mr-2"
           contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          src="http://cbs-uu.ru/data/assets/logo/bibliocity7.png"
+          
           transition="scale-transition"
-          width="40"
+          width="70"
         />
 
         <v-img
@@ -20,8 +22,8 @@
           class="shrink mt-1 hidden-sm-and-down"
           contain
           min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
+          src="http://cbs-uu.ru/data/assets/logo/img_fonts (3).png"
+          width="300"
         />
       </div>
 
@@ -32,16 +34,39 @@
         target="_blank"
         text
       >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
+        <v-icon>mdi-book-open-page-variant</v-icon>
+        <span class="mr-2 ml-2">Афиша</span>        
       </v-btn>
+
+      
+      <v-btn
+        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+        target="_blank"
+        text
+      >
+        <v-icon>mdi-map-marker-multiple-outline</v-icon>
+        <span class="mr-2 ml-2">Карта</span>
+
+      </v-btn>
+            <v-btn
+        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+        target="_blank"
+        text
+      >
+        <v-icon>mdi-bookmark-minus-outline</v-icon>
+        <span class="mr-2 ml-2">О проекте</span>
+
+      </v-btn>
+
     </v-app-bar>
 
     <v-content>
-      <UUMap></UUMap>
+      <UUMap ref="foo"></UUMap>
 
     </v-content>
+    <button @click="goToAll" id="button100500" style="display: none">Все библиотеки на карте</button> 
   </v-app>
+          
 </template>
 
 <script>
@@ -50,8 +75,12 @@ import UUMap from "./components/UUMap"
 export default {
   components: {
     UUMap
-  }  
- 
+  },
+  methods: {
+    goToAll(){
+      this.$refs.foo.goToAll();
+    }
+  }
 }
 </script>
 
