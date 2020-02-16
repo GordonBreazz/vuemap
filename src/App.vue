@@ -30,7 +30,7 @@
       <v-spacer></v-spacer>
 
       <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+        href="http://cbs-uu.ru/category/%d1%87%d1%82%d0%be-%d0%bf%d0%be%d1%87%d0%b8%d1%82%d0%b0%d1%82%d1%8c/"
         target="_blank"
         text
       >
@@ -40,8 +40,7 @@
 
       
       <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
+        to="/"
         text
       >
         <v-icon>mdi-map-marker-multiple-outline</v-icon>
@@ -49,8 +48,7 @@
 
       </v-btn>
             <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
+        to="/about"
         text
       >
         <v-icon>mdi-bookmark-minus-outline</v-icon>
@@ -60,26 +58,29 @@
 
     </v-app-bar>
 
-    <v-content>
-      <UUMap ref="foo"></UUMap>
+    <v-content class="grey lighten-5">
+       <v-container class="white" style="box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+  <v-row>
+    <v-col xs12="xs12">
+      <router-view></router-view>    
+    </v-col>
+ </v-row>
+</v-container>
+      
 
     </v-content>
-    <button @click="goToAll" id="button100500" style="display: none">Все библиотеки на карте</button> 
+
+    <myFooter></myFooter>
   </v-app>
           
 </template>
 
 <script>
-import UUMap from "./components/UUMap"
+import myFooter from "./components/myFooter"
 // https://codesandbox.io/s/codesandbox-nuxt-1ht4k
 export default {
   components: {
-    UUMap
-  },
-  methods: {
-    goToAll(){
-      this.$refs.foo.goToAll();
-    }
+    myFooter
   }
 }
 </script>
@@ -91,14 +92,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 20px;
+  
 }
 
-.ymap-container {
-  height: 600px;
-}
-
-.red {
-  color: red;
-}
 </style>

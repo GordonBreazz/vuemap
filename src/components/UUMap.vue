@@ -1,4 +1,116 @@
 <template>
+
+<div>
+  <div>
+
+ <v-form>
+    <v-subheader class="display-1 font-weight-light">Поиск ближайщей библиотеки</v-subheader>
+    <v-container class="mb-7">
+       <div class="d-flex "> 
+            <v-text-field
+            label="Библиотека, остановка общественного транспорта, район"
+            outlined
+           class="mr-2"
+          ></v-text-field>
+      <v-btn  x-large dark color="primary">Найти</v-btn>
+    </div>
+   
+         <v-chip-group
+        v-model="amenities"
+        column
+        multiple
+      >
+        <v-chip filter outlined>Открыто сейчас</v-chip>
+        <v-chip filter outlined>Единый читательский билет</v-chip>
+        <v-chip filter outlined>Детская</v-chip>
+
+        <v-chip filter outlined>Взрослая</v-chip>
+        <v-chip filter outlined>Летняя читальня</v-chip>
+      </v-chip-group>
+ <div class="d-flex "> 
+    <v-expansion-panels class="mr-2" hover>
+      <v-expansion-panel>
+        <v-expansion-panel-header>Ресурсы для чтения и работы</v-expansion-panel-header>
+        <v-expansion-panel-content>
+         <v-chip-group
+        v-model="amenities"
+        column
+        multiple
+      >
+        <v-chip filter outlined>Читальный зал</v-chip>
+        <v-chip filter outlined>Компьютеры</v-chip>
+        <v-chip filter outlined>Наушники</v-chip>
+        <v-chip filter outlined>Доступ к электронным ресурсам</v-chip>
+        <v-chip filter outlined>Подбор литературы по теме</v-chip>
+        <v-chip filter outlined>Фактографические справки</v-chip>           
+      </v-chip-group>
+        </v-expansion-panel-content>
+      </v-expansion-panel>
+    </v-expansion-panels>
+    <v-expansion-panels class="mr-2" hover>
+      <v-expansion-panel>
+        <v-expansion-panel-header>Для детей</v-expansion-panel-header>
+        <v-expansion-panel-content>
+         <v-chip-group
+        v-model="amenities"
+        column
+        multiple
+      >
+        <v-chip filter outlined>Детская литература</v-chip>
+        <v-chip filter outlined>Игровая зона</v-chip>
+        <v-chip filter outlined>Занятия и кружки</v-chip>
+        <v-chip filter outlined>Настольные игры</v-chip>           
+      </v-chip-group>
+        </v-expansion-panel-content>
+      </v-expansion-panel>
+    </v-expansion-panels> 
+    <v-expansion-panels class="mr-2" hover>
+      <v-expansion-panel>
+        <v-expansion-panel-header>Копицентр</v-expansion-panel-header>
+        <v-expansion-panel-content>
+         <v-chip-group
+        v-model="amenities"
+        column
+        multiple
+      >
+        <v-chip filter outlined>Сканирование</v-chip>
+        <v-chip filter outlined>Ксерокопирование</v-chip>
+        <v-chip filter outlined>Печать на принтере</v-chip>
+
+        <v-chip filter outlined>Фото печать</v-chip>
+        <v-chip filter outlined>Ламинирование</v-chip>
+        <v-chip filter outlined>Брошюровка</v-chip>
+        <v-chip filter outlined>Набор текста</v-chip>              
+      </v-chip-group>
+        </v-expansion-panel-content>
+      </v-expansion-panel>
+    </v-expansion-panels>
+    <v-expansion-panels hover>
+      <v-expansion-panel>
+        <v-expansion-panel-header>Другие услуги</v-expansion-panel-header>
+        <v-expansion-panel-content>
+         <v-chip-group
+        v-model="amenities"
+        column
+        multiple
+      >
+        <v-chip filter outlined>Можно провести мероприятие</v-chip>
+        <v-chip filter outlined>Принимаем книги в дар</v-chip>
+        <v-chip filter outlined>Подтверждение личности для портала "Гос. услуги"</v-chip>
+        <v-chip filter outlined>Издания на иностранных языках</v-chip>
+
+      </v-chip-group>
+        </v-expansion-panel-content>
+      </v-expansion-panel>
+    </v-expansion-panels>             
+     </div>
+      <v-spacer></v-spacer>
+    </v-container>
+  </v-form>
+  </div>
+
+
+  <div >
     <yandex-map 
         :coords = "coords" 
         :zoom = "mzoom" 
@@ -7,7 +119,7 @@
         :options="{ 
           suppressMapOpenBlock: true,
           autoFitToViewport: 'always'
-        }"        
+        }"                
         map-type = "map">
          <ymap-marker
             v-for="(location, index) in placemarks"
@@ -16,12 +128,29 @@
               marker-type="placemark"
               :icon = "markerIcon(location.title)"
               :coords="location.coords"  
-              @click="onClick(location.coords)"            
+              @click="onClick(location)"            
                cluster-name="1"              
               :balloonTemplate = "balloonTemplate(location)"
                               
          ></ymap-marker>
     </yandex-map>
+    </div>
+            <v-card flat  v-show="showInfo">
+
+          <v-card-title primary-title>
+            <div>
+              <h3 class="headline">{{currentLocation.fullTitle}}</h3>
+              <div>  </div>
+            </div>
+          </v-card-title>
+    <v-card-subtitle >
+      {{ currentLocation.address }}
+    </v-card-subtitle>
+          <v-card-actions >
+            <div class="close"><v-btn @click="hidePanel" error>Закрыть</v-btn></div>
+          </v-card-actions>
+        </v-card>
+    </div>
 </template>
 
 <script>
@@ -32,11 +161,12 @@ import places from '../data/places.js'
 export default {
   components: {},
   data() {
-    return {
+    return {          
       map: {},
       coords: [51.81008913374312, 107.60167337301641],
       userPosition: [51.825683, 107.58439],
       currentCoords: [51.825683, 107.58439],
+      currentLocation: {},
       coords2: [51.74677212790084, 107.6959137288361],
       placemarks: places.placemarks, 
       mzoom: 12,
@@ -50,14 +180,22 @@ export default {
         contentOffset: [-20, 55],
         hintContent: "Хинт метки",
         contentLayout: '<div style="padding:3px 0; border-radius: 3px; font-size: 9pt; background-color: rgba(117, 190, 218, 0.3);  width: 95px; color: red; font-weight: bold;">$[properties.iconContent]</div>'
-      })
-    };
+      }),
+      showInfo: false,  
+    }
   },
   computed: {
 
   },
   methods:  {
-    goToAll(){      
+    showPanel() {
+      this.showInfo = true
+    },
+    hidePanel() {
+      this.showInfo = false
+    },
+
+    goToAll(){ 
        if (this.map.balloon) this.map.balloon.close()  
        this.map.setBounds(this.map.geoObjects.getBounds());
     },
@@ -76,7 +214,7 @@ export default {
         <button type="button" class="v-btn v-btn--contained  v-size--default primary" onclick="javascript: document.querySelector('#button100500').click();">Другие библиотеки на карте</button> 
       `
     },
-    onClick(e) {
+    onClick(l) {
       //console.log('1111111111111111', (tt.geoObjects.get(0)).properties.get('text'))
 
      // let sayHi = function() { tt.setCenter(e, 19, {checkZoomRange: true })}
@@ -89,7 +227,9 @@ export default {
       // )
 
      // setTimeout(sayHi, 1000);
-      this.map.setCenter(e, 19, {checkZoomRange: false })
+      this.map.setCenter(l.coords, 19, {checkZoomRange: false })
+      this.currentLocation = l
+      this.showPanel()
     },
     getDataCluster(obj) {
       // const clust = this.map.geoObjects.get(0);
@@ -109,15 +249,11 @@ export default {
       let gt =  this.goToAll
       const btn = new ymaps.control.Button({
         data: {
-            // Зададим текст и иконку для кнопки.
+            // Зададим текст для кнопки.
             content: "Показать все библиотеки",
-
-            
+            title : 'Уменьшает маштаб карты',            
         },
-        options: {
-            // Поскольку кнопка будет менять вид в зависимости от размера карты,
-            // зададим ей три разных значения maxWidth в массиве.
-            
+        options: {        
             maxWidth: [ 150]
         }
       });
@@ -151,7 +287,9 @@ export default {
 
 <style scoped>
 .ymap-container {
-  height: 100%;
+  height: 600px;
+  width: 100%;
+    
 }
 
 .cluster-icon {
