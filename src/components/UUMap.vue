@@ -1,116 +1,23 @@
 <template>
-
-<div>
   <div>
-
- <v-form>
-    <v-subheader class="display-1 font-weight-light">Поиск ближайщей библиотеки</v-subheader>
-    <v-container class="mb-7">
-       <div class="d-flex "> 
-            <v-text-field
-            label="Библиотека, остановка общественного транспорта, район"
-            outlined
-           class="mr-2"
-          ></v-text-field>
-      <v-btn  x-large dark color="primary">Найти</v-btn>
+    <div>
+      <v-form>
+          <v-subheader class="display-1 font-weight-light">Поиск ближайщей библиотеки</v-subheader>
+          <v-container class="mb-7">
+            <div class="d-flex "> 
+                  <v-text-field
+                  label="Библиотека, остановка общественного транспорта, район"
+                  outlined
+                class="mr-2"
+                ></v-text-field>
+            <v-btn  x-large dark color="primary">Найти</v-btn>
+          </div>
+          <filterPanel></filterPanel>
+          <v-spacer></v-spacer>
+          </v-container>
+      </v-form>
     </div>
-   
-         <v-chip-group
-        v-model="amenities"
-        column
-        multiple
-      >
-        <v-chip filter outlined>Открыто сейчас</v-chip>
-        <v-chip filter outlined>Единый читательский билет</v-chip>
-        <v-chip filter outlined>Детская</v-chip>
-
-        <v-chip filter outlined>Взрослая</v-chip>
-        <v-chip filter outlined>Летняя читальня</v-chip>
-      </v-chip-group>
- <div class="d-flex "> 
-    <v-expansion-panels class="mr-2" hover>
-      <v-expansion-panel>
-        <v-expansion-panel-header>Ресурсы для чтения и работы</v-expansion-panel-header>
-        <v-expansion-panel-content>
-         <v-chip-group
-        v-model="amenities"
-        column
-        multiple
-      >
-        <v-chip filter outlined>Читальный зал</v-chip>
-        <v-chip filter outlined>Компьютеры</v-chip>
-        <v-chip filter outlined>Наушники</v-chip>
-        <v-chip filter outlined>Доступ к электронным ресурсам</v-chip>
-        <v-chip filter outlined>Подбор литературы по теме</v-chip>
-        <v-chip filter outlined>Фактографические справки</v-chip>           
-      </v-chip-group>
-        </v-expansion-panel-content>
-      </v-expansion-panel>
-    </v-expansion-panels>
-    <v-expansion-panels class="mr-2" hover>
-      <v-expansion-panel>
-        <v-expansion-panel-header>Для детей</v-expansion-panel-header>
-        <v-expansion-panel-content>
-         <v-chip-group
-        v-model="amenities"
-        column
-        multiple
-      >
-        <v-chip filter outlined>Детская литература</v-chip>
-        <v-chip filter outlined>Игровая зона</v-chip>
-        <v-chip filter outlined>Занятия и кружки</v-chip>
-        <v-chip filter outlined>Настольные игры</v-chip>           
-      </v-chip-group>
-        </v-expansion-panel-content>
-      </v-expansion-panel>
-    </v-expansion-panels> 
-    <v-expansion-panels class="mr-2" hover>
-      <v-expansion-panel>
-        <v-expansion-panel-header>Копицентр</v-expansion-panel-header>
-        <v-expansion-panel-content>
-         <v-chip-group
-        v-model="amenities"
-        column
-        multiple
-      >
-        <v-chip filter outlined>Сканирование</v-chip>
-        <v-chip filter outlined>Ксерокопирование</v-chip>
-        <v-chip filter outlined>Печать на принтере</v-chip>
-
-        <v-chip filter outlined>Фото печать</v-chip>
-        <v-chip filter outlined>Ламинирование</v-chip>
-        <v-chip filter outlined>Брошюровка</v-chip>
-        <v-chip filter outlined>Набор текста</v-chip>              
-      </v-chip-group>
-        </v-expansion-panel-content>
-      </v-expansion-panel>
-    </v-expansion-panels>
-    <v-expansion-panels hover>
-      <v-expansion-panel>
-        <v-expansion-panel-header>Другие услуги</v-expansion-panel-header>
-        <v-expansion-panel-content>
-         <v-chip-group
-        v-model="amenities"
-        column
-        multiple
-      >
-        <v-chip filter outlined>Можно провести мероприятие</v-chip>
-        <v-chip filter outlined>Принимаем книги в дар</v-chip>
-        <v-chip filter outlined>Подтверждение личности для портала "Гос. услуги"</v-chip>
-        <v-chip filter outlined>Издания на иностранных языках</v-chip>
-
-      </v-chip-group>
-        </v-expansion-panel-content>
-      </v-expansion-panel>
-    </v-expansion-panels>             
-     </div>
-      <v-spacer></v-spacer>
-    </v-container>
-  </v-form>
-  </div>
-
-
-  <div >
+  <div>
     <yandex-map 
         :coords = "coords" 
         :zoom = "mzoom" 
@@ -155,11 +62,14 @@
 
 <script>
 import places from '../data/places.js'
+import filterPanel from "../components/filterPanel"
 
 //console.log(places.placemarks[5].title)
 
 export default {
-  components: {},
+  components: {
+    filterPanel
+  },
   data() {
     return {          
       map: {},
@@ -203,7 +113,8 @@ export default {
       let st = ''
       // let info = ''
       // if (location.fullTitle != location.title) info = location.fullTitle
-      if (location.id == 9 || location.id == 12) st = '<div style="margin-bottom:10px"><iframe src="http://cbs-uu.ru/tours/f'+location.id+'/index.html" width="400" height="250" align="left">Ваш браузер не поддерживает плавающие фреймы!</iframe></div><div style="height: 240px;"></div>'
+      if (location.id == 2 || location.id == 9 || location.id == 10 || location.id == 12 || location.id == 13 || location.id == 15 || location.id == 19 || location.id == 20 ) 
+        st = '<div style="margin-bottom:10px"><iframe src="http://cbs-uu.ru/tours/f'+location.id+'/index.html" width="400" height="250" align="left">Ваш браузер не поддерживает плавающие фреймы!</iframe></div><div style="height: 240px;"></div>'
         else 
           if (location.photoSmall) st= '<img style="width: 100%" src="' + location.photoSmall + '">'  
       return `
