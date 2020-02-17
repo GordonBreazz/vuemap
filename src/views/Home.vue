@@ -1,25 +1,28 @@
 <template>
-  <div class="home">  
+  <div class="home">
     <UUMap ref="foo"></UUMap>
-    <button @click="goToAll" id="button100500" style="display: none">Все библиотеки на карте</button> 
+    <button @click="showPanel" id="button100500" style="display: none">Все библиотеки на карте</button>
+    <button @click="goToAll" id="button100600" style="display: none">Все библиотеки на карте</button>
   </div>
 </template>
 
 <script>
-import UUMap from '../components/UUMap'
+import UUMap from "../components/UUMap";
 // @ is an alias to /src
 
-
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
     UUMap
   },
   methods: {
-    goToAll(){
+    goToAll() {
       this.$refs.foo.goToAll();
-    }
+    },
+    showPanel() {
+      this.$refs.foo.showPanel();
+    }    
   }
-}
+};
 </script>
 

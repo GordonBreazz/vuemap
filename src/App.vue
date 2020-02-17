@@ -1,18 +1,12 @@
 <template>
   <v-app>
-    
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
+    <v-app-bar app color="primary" dark>
       <div class="d-flex align-center">
         <v-img
           alt="Vuetify Logo"
           class="shrink mr-2"
           contain
           src="http://cbs-uu.ru/data/assets/logo/bibliocity7.png"
-          
           transition="scale-transition"
           width="70"
         />
@@ -35,65 +29,54 @@
         text
       >
         <v-icon>mdi-book-open-page-variant</v-icon>
-        <span class="mr-2 ml-2">Афиша</span>        
+        <span class="mr-2 ml-2">Афиша</span>
       </v-btn>
 
-      
-      <v-btn
-        to="/"
-        text
-      >
+      <v-btn to="/" text>
         <v-icon>mdi-map-marker-multiple-outline</v-icon>
         <span class="mr-2 ml-2">Карта</span>
-
       </v-btn>
-            <v-btn
-        to="/about"
-        text
-      >
+      <v-btn to="/about" text>
         <v-icon>mdi-bookmark-minus-outline</v-icon>
         <span class="mr-2 ml-2">О проекте</span>
-
       </v-btn>
-
     </v-app-bar>
 
     <v-content class="grey lighten-5">
-       <v-container class="white" style="box-shadow: 0 0 10px rgba(0,0,0,0.1);">
-  <v-row>
-    <v-col xs12="xs12">
-      <router-view></router-view>    
-    </v-col>
- </v-row>
-</v-container>
-      
-
+      <v-container class="white" style="box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+        <v-row>
+          <v-col xs12="xs12">
+            <router-view></router-view>
+          </v-col>
+        </v-row>
+      </v-container>
     </v-content>
 
     <myFooter></myFooter>
+    
   </v-app>
-          
 </template>
 
 <script>
-import myFooter from "./components/myFooter"
+import myFooter from "./components/myFooter";
 // https://codesandbox.io/s/codesandbox-nuxt-1ht4k
 export default {
   components: {
     myFooter
+  },
+  created() {
+    document.title = "Библиогород МАУ ЦБС г. Улан-Удэ";
   }
-}
+};
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 20px;
-  
 }
-
 </style>

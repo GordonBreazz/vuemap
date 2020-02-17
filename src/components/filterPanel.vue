@@ -27,7 +27,7 @@
         <v-expansion-panel>
           <v-expansion-panel-header color="grey lighten-5">Для детей</v-expansion-panel-header>
           <v-expansion-panel-content>
-            <v-chip-group v-model="amenities1" column multiple>
+            <v-chip-group column multiple>
               <v-chip filter outlined>Детская литература</v-chip>
               <v-chip filter outlined>Игровая зона</v-chip>
               <v-chip filter outlined>Занятия и кружки</v-chip>
