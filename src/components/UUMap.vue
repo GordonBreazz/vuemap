@@ -218,9 +218,11 @@ export default {
     },
 
     goToAll() {
-      this.hidePanel;
+      this.$scrollTo('#anchor',)
+      this.showInfo = false;
       if (this.map.balloon) this.map.balloon.close();
       this.map.setBounds(this.map.geoObjects.getBounds());
+      
     },
     balloonTemplate(location) {
       //Создания балуна метки
