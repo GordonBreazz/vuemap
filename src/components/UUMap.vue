@@ -39,11 +39,10 @@
           @click="onClick(location)"
           cluster-name="1"
           :balloonTemplate="balloonTemplate(location)"
-          v-scroll-to="{ el: '#element' }"
         ></ymap-marker>
       </yandex-map>
     </div>
-    <v-card outlined v-show="showInfo" class="mt-3">
+    <v-card outlined v-show="showInfo" class="mt-3" id="element500">
       <v-card-title primary-title>
         <div>
           <h3 class="headline">{{getCaption()}}</h3>
@@ -53,27 +52,29 @@
           <v-icon dark>mdi-close</v-icon>
         </v-btn>
       </v-card-title>
-      <v-card-subtitle style="text-align: left">{{ currentLocation.district + ' район ' + currentLocation.address }}</v-card-subtitle>
+      <v-card-subtitle
+        style="text-align: left"
+      >{{ currentLocation.district + ' район ' + currentLocation.address }}</v-card-subtitle>
       <v-card-text>
         <f1 v-show="filials[1]"></f1>
-        <f2 v-show="filials[2]"></f2>        
+        <f2 v-show="filials[2]"></f2>
         <f3 v-show="filials[3]"></f3>
-        <f4 v-show="filials[4]"></f4>        
+        <f4 v-show="filials[4]"></f4>
         <f5 v-show="filials[5]"></f5>
-        <f6 v-show="filials[6]"></f6>        
+        <f6 v-show="filials[6]"></f6>
         <f9 v-show="filials[9]"></f9>
-        <f10 v-show="filials[10]"></f10>        
+        <f10 v-show="filials[10]"></f10>
         <f12 v-show="filials[12]"></f12>
-        <f13 v-show="filials[13]"></f13>        
+        <f13 v-show="filials[13]"></f13>
         <f15 v-show="filials[15]"></f15>
-        <f16 v-show="filials[16]"></f16>        
+        <f16 v-show="filials[16]"></f16>
         <f17 v-show="filials[17]"></f17>
-        <f18 v-show="filials[18]"></f18>        
+        <f18 v-show="filials[18]"></f18>
         <f19 v-show="filials[19]"></f19>
-        <f20 v-show="filials[20]"></f20>        
+        <f20 v-show="filials[20]"></f20>
         <f21 v-show="filials[21]"></f21>
         <f24 v-show="filials[24]"></f24>
-        <f25 v-show="filials[25]"></f25>                
+        <f25 v-show="filials[25]"></f25>
       </v-card-text>
     </v-card>
     <div id="anchor"></div>
@@ -183,28 +184,41 @@ export default {
   },
   computed: {},
   methods: {
-    getCaption(){
-      if (this.currentLocation.title != this.currentLocation.fullTitle) return this.currentLocation.fullTitle + '( '+this.currentLocation.title+' )'
-      return this.currentLocation.fullTitle
+    getCaption() {
+      if (this.currentLocation.title != this.currentLocation.fullTitle)
+        return (
+          this.currentLocation.fullTitle +
+          "( " +
+          this.currentLocation.title +
+          " )"
+        );
+      return this.currentLocation.fullTitle;
     },
-    showPanel() {      
-      let a = document.body.scrollHeight+100
+    showPanel() {
+      let a = document.body.scrollHeight + 100;
       this.showInfo = true;
       // var anchor1 = this.$el.querySelector("#anchor");
       // console.log(anchor1)
       // anchor1.scrollTop = anchor1.scrollHeight;
-      // setTimeout(function() {
-      //   window.scrollTo(0, 300);
-      // }, 1000);
-      VueScrollTo.scrollTo(element)
+      let gl = this.$scrollTo;
+      setTimeout(function() {
+        gl("#element500", { offset: -100 });
+      }, 0);
     },
     hidePanel() {
-      this.showInfo = false;
-      if (this.map.balloon) this.map.balloon.close();
+      this.$scrollTo('body');
+      //this.showInfo = false;
+      let gl = this
+      setTimeout(function() {
+        gl.showInfo = false;
+        //if (gl.map.balloon) gl.map.balloon.close();
+      }, 500);      
+
+
     },
 
     goToAll() {
-      this.hidePanel
+      this.hidePanel;
       if (this.map.balloon) this.map.balloon.close();
       this.map.setBounds(this.map.geoObjects.getBounds());
     },
@@ -252,11 +266,11 @@ export default {
       // )
 
       // setTimeout(sayHi, 1000);
-      this.hidePanel()
-      this.map.setCenter(l.coords, 19, { checkZoomRange: false })
-      this.currentLocation = l
-      this.filials = this.filials.map( () => false )
-      this.filials[+this.currentLocation.id] = true
+      //this.hidePanel();
+      this.map.setCenter(l.coords, 19, { checkZoomRange: false });
+      this.currentLocation = l;
+      this.filials = this.filials.map(() => false);
+      this.filials[+this.currentLocation.id] = true;
 
       //this.showPanel();
     },

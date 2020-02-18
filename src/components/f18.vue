@@ -119,12 +119,10 @@
     <p>&nbsp;</p>
     <h3 style="text-align: center;">Библиотека сегодня</h3>
     <p>
-      <img
-        class="aligncenter wp-image-8167 size-large"
+      <v-img width=350 style="float: right;"
+
         src="http://cbs-uu.ru/wp-content/uploads/2019/05/Ф18-1024x768.jpg"
-        alt
-        width="1024"
-        height="768"
+  
       />
     </p>
     <p>Библиотека была открыта в декабре 1961 года.</p>

@@ -125,7 +125,7 @@
     </div>
     <div class="fotorama" data-allowfullscreen="true" data-nav="thumbs" data-width="800"></div>
     <div data-allowfullscreen="true" data-nav="thumbs" data-width="800">
-      <img
+      <v-img
         class="aligncenter wp-image-8135 size-large"
         src="http://cbs-uu.ru/wp-content/uploads/2019/05/IMG_20181207_152601-1-1024x645.jpg"
         alt
