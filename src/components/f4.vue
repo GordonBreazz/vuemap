@@ -152,15 +152,7 @@
         <a href="http://cbs-uu.ru/библиотека-филиал-№4/">Виртуальная экскурсия:</a>
       </strong>
     </p>
-    <p>
-      <iframe
-        src="http://cbs-uu.ru/tours/f4/index.html"
-        width="100%"
-        height="600px"
-        frameborder="0"
-        allowfullscreen="allowfullscreen"
-      ></iframe>
-    </p>
+    
     <p>
       <b>
         <a href="http://cbs-uu.ru/tag/филиал-№4/">Новости:</a>

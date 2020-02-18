@@ -220,9 +220,7 @@ export default {
         location.id == 13 ||
         location.id == 15 ||
         location.id == 19 ||
-        location.id == 20 ||
-        location.id == 21 ||
-        location.id == 24
+        location.id == 20
       )
         st =
           '<div style="margin-bottom:10px"><iframe src="http://cbs-uu.ru/tours/f' +
@@ -253,10 +251,10 @@ export default {
 
       // setTimeout(sayHi, 1000);
       this.hidePanel()
-      this.map.setCenter(l.coords, 19, { checkZoomRange: false });
-      this.currentLocation = l;
-      this.filials.forEach(element => false);
-      this.filials[+this.currentLocation.id] = true;
+      this.map.setCenter(l.coords, 19, { checkZoomRange: false })
+      this.currentLocation = l
+      this.filials = this.filials.map( () => false )
+      this.filials[+this.currentLocation.id] = true
 
       //this.showPanel();
     },
@@ -296,17 +294,17 @@ export default {
         floatIndex: 100
       });
 
-      this.userPosition = ymaps.geolocation.get({ provider: "browser" });
-      console.log("userPosition", ymaps.geolocation);
-      this.userPosition.then(
-        function(result) {
-          // Добавление местоположения на карту.
-          this.map.geoObjects.add(result.geoObjects);
-        },
-        function(err) {
-          console.log("Ошибка: " + err);
-        }
-      );
+      // this.userPosition = ymaps.geolocation.get({ provider: "browser" });
+      // console.log("userPosition", ymaps.geolocation);
+      // this.userPosition.then(
+      //   function(result) {
+      //     // Добавление местоположения на карту.
+      //     this.map.geoObjects.add(result.geoObjects);
+      //   },
+      //   function(err) {
+      //     console.log("Ошибка: " + err);
+      //   }
+      // );
     }
   }
 };

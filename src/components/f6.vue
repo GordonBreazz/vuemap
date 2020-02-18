@@ -139,21 +139,7 @@
         <strong>Виртуальная экскурсия:</strong>
       </a>
     </p>
-    <p>
-      <iframe
-        src="http://cbs-uu.ru/tours/f6/index.html"
-        width="100%"
-        height="600px"
-        frameborder="0"
-        allowfullscreen="allowfullscreen"
-      >
-        <span
-          data-mce-type="bookmark"
-          style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;"
-          class="mce_SELRES_start"
-        ></span>
-      </iframe>
-    </p>
+    
     <p>
       <a href="http://cbs-uu.ru/tag/филиал-№6/">
         <strong>Новости:</strong>

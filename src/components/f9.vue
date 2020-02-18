@@ -168,15 +168,7 @@
         >Виртуальная экскурсия:</a>
       </strong>
     </p>
-    <p>
-      <iframe
-        src="http://cbs-uu.ru/tours/f9/index.html"
-        width="100%"
-        height="600px"
-        frameborder="0"
-        allowfullscreen="allowfullscreen"
-      ></iframe>
-    </p>
+    
     <div align="justify">
       <p>
         <strong>
