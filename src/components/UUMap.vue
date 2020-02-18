@@ -39,6 +39,7 @@
           @click="onClick(location)"
           cluster-name="1"
           :balloonTemplate="balloonTemplate(location)"
+          v-scroll-to="{ el: '#element' }"
         ></ymap-marker>
       </yandex-map>
     </div>
@@ -192,9 +193,10 @@ export default {
       // var anchor1 = this.$el.querySelector("#anchor");
       // console.log(anchor1)
       // anchor1.scrollTop = anchor1.scrollHeight;
-      setTimeout(function() {
-        window.scrollTo(0, 300);
-      }, 1000);
+      // setTimeout(function() {
+      //   window.scrollTo(0, 300);
+      // }, 1000);
+      VueScrollTo.scrollTo(element)
     },
     hidePanel() {
       this.showInfo = false;

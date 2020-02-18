@@ -50,16 +50,7 @@
             </p>
           </td>
           <td>
-            <p>
-              <iframe
-                style="border: 0;"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1232.1339397272206!2d107.57679394546656!3d51.85606520810717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5dafc526c75ecccf%3A0xaa0a8c7f517298a2!2z0YPQuy4gOCDQnNCw0YDRgtCwLCAyMSwg0KPQu9Cw0L0t0KPQtNGNLCDQoNC10YHQvy4g0JHRg9GA0Y_RgtC40Y8sIDY3MDAyNA!5e0!3m2!1sru!2sru!4v1490007775316"
-                width="600"
-                height="450"
-                frameborder="0"
-                allowfullscreen="allowfullscreen"
-              ></iframe>
-            </p>
+            
             <p class>До остановки «Сенчихина»</p>
             <p class>Маршрутное такси: 57</p>
             <p class>Трамвай: 1, 2, 5</p>
