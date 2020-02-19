@@ -128,12 +128,9 @@
       <span style="font-weight: bold;">Библиотека сегодня</span>
     </h3>
     <h3>
-      <img
-        class="aligncenter wp-image-8152 size-large"
+      <v-img width=350 style="float: right;"
         src="http://cbs-uu.ru/wp-content/uploads/2019/05/DSC_8034-1024x683.jpg"
-        alt
-        width="1024"
-        height="683"
+
       />
     </h3>
     <p>Библиотека была открыта в 1975 году по ул. Строителей, 11. В 2014 году библиотека переехала в новое, более просторное помещение, и сейчас она располагается по адресу: ул. Кабанская, 16.</p>

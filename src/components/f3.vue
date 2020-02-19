@@ -50,7 +50,6 @@
             </p>
           </td>
           <td style="width: 1012px;" valign="top">
-
             <p class>До остановки «Бассейн Юбилейный»</p>
             <p class>Автобус: 22</p>
             <p class>Маршрутное такси: 3, 12, 21, 23, 44, 51, 54, 133</p>
@@ -125,13 +124,7 @@
     </div>
     <div class="fotorama" data-allowfullscreen="true" data-nav="thumbs" data-width="800"></div>
     <div data-allowfullscreen="true" data-nav="thumbs" data-width="800">
-      <v-img
-        class="aligncenter wp-image-8135 size-large"
-        src="http://cbs-uu.ru/wp-content/uploads/2019/05/IMG_20181207_152601-1-1024x645.jpg"
-        alt
-        width="1024"
-        height="645"
-      />
+      <v-img src="http://cbs-uu.ru/wp-content/uploads/2019/05/IMG_20181207_152601-1-1024x645.jpg" />
     </div>
     <div data-allowfullscreen="true" data-nav="thumbs" data-width="800"></div>
     <div data-allowfullscreen="true" data-nav="thumbs" data-width="800">
@@ -146,7 +139,6 @@
           >Виртуальная экскурсия:</a>
         </b>
       </p>
-      
     </div>
     <div align="justify">
       <p>

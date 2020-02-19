@@ -84,6 +84,7 @@
 <script>
 import places from "../data/places.js";
 import filterPanel from "../components/filterPanel";
+
 import f1 from "../components/f1";
 import f2 from "../components/f2";
 import f3 from "../components/f3";
@@ -130,7 +131,7 @@ export default {
     f25
   },
   data() {
-    return {
+    return {      
       map: {},
       coords: [51.81008913374312, 107.60167337301641],
       userPosition: [51.825683, 107.58439],
@@ -179,11 +180,15 @@ export default {
         false,
         false,
         false
-      ]
+      ],
+      panaUrl: ''
     };
   },
   computed: {},
   methods: {
+    panaView() {
+      alert("ok");
+    },
     getCaption() {
       if (this.currentLocation.title != this.currentLocation.fullTitle)
         return (
@@ -206,27 +211,25 @@ export default {
       }, 0);
     },
     hidePanel() {
-      this.$scrollTo('body');
+      this.$scrollTo("body");
       //this.showInfo = false;
-      let gl = this
+      let gl = this;
       setTimeout(function() {
         gl.showInfo = false;
         //if (gl.map.balloon) gl.map.balloon.close();
-      }, 500);      
-
-
+      }, 500);
     },
 
     goToAll() {
-      this.$scrollTo('#anchor',)
+      this.$scrollTo("#anchor");
       this.showInfo = false;
       if (this.map.balloon) this.map.balloon.close();
       this.map.setBounds(this.map.geoObjects.getBounds());
-      
     },
     balloonTemplate(location) {
       //Создания балуна метки
-      let st = "";
+      let frameSt = ""
+      let buttonSt = ""
       // let info = ''
       // if (location.fullTitle != location.title) info = location.fullTitle
       if (
@@ -239,20 +242,31 @@ export default {
         location.id == 15 ||
         location.id == 19 ||
         location.id == 20
-      )
-        st =
+      ) {
+        // this.panaUrl = `http://cbs-uu.ru/tours/f${location.id}/index.html`
+        // this.$Bus.$emit('my-sample-event', this.panaUrl);
+        frameSt =
           '<div style="margin-bottom:10px"><iframe src="http://cbs-uu.ru/tours/f' +
           location.id +
           '/index.html" width="400" height="250" align="left">Ваш браузер не поддерживает плавающие фреймы!</iframe></div><div style="height: 240px;"></div>';
-      else if (location.photoSmall)
-        st = '<img style="width: 100%" src="' + location.photoSmall + '">';
+        buttonSt = `
+          <button  type="button" class="v-btn v-btn--absolute v-btn--contained v-btn--fab v-btn--right v-btn--round v-btn--top theme--dark v-size--small red accent-3 ml-3" style="margin-top:313px" onclick="javascript:document.querySelector('#button100700').click()">
+            <span class="v-btn__content">
+              <i aria-hidden="true" class="v-icon notranslate mdi mdi-arrow-expand-all theme--dark "></i>
+            </span>
+          </button>`;
+      } else if (location.photoSmall)
+        frameSt = '<img style="width: 100%" src="' + location.photoSmall + '">';
       return `
         <h1>${location.fullTitle}</h1>
         <p style="margin-top: 10px; margin-bottom: 5px;"><i>Адрес библиотеки:
         <b>${location.address}</b></i></p>
-        ${st}<div style="height: 10px;"></div>
-        <button type="button" class="v-btn v-btn--contained  v-size--default primary mb-1" onclick="javascript: document.querySelector('#button100500').click();">Подробнее</button> 
-        <button type="button" class="v-btn v-btn--contained  v-size--default light-blue blue-grey white--text mb-1" onclick="javascript: document.querySelector('#button100600').click();">Другие библиотеки </button> 
+        ${frameSt}<div style="height: 10px;"></div>
+        <button type="button" class="v-btn v-btn--contained  v-size--default  primary mb-1" onclick="javascript: document.querySelector('#button100500').click();">Подробнее</button> 
+        <button type="button" class="v-btn v-btn--contained  v-size--default  light-blue white--text mb-1" onclick="javascript: document.querySelector('#button100600').click();">ВСЕ БИБЛИОТЕКИ </button>
+        ${buttonSt}
+        <p id="info100500" style="display: none"><${this.panaUrl}/p>
+
       `;
     },
     onClick(l) {

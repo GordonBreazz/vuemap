@@ -51,7 +51,6 @@
               </p>
             </td>
             <td>
-             
               <p class>До остановки «20-й А квартал»</p>
               <p class>Автобус: 17, 39, 120, 129</p>
               <p class>Маршрутное такси: 25, 29, 33, 44, 57, 59, 70, 71, 77, 100, 134, 135</p>
@@ -123,15 +122,13 @@
       <br />
       <br />
     </h3>
-    <div class="fotorama" data-allowfullscreen="true" data-nav="thumbs" data-width="800">
-      <img
-        class="wp-image-8159 size-large aligncenter"
-        src="http://cbs-uu.ru/wp-content/uploads/2019/05/Ф16-1024x576.jpg"
-        alt
-        width="1024"
-        height="576"
-      />
-    </div>
+
+    <v-img
+      width="350"
+      style="float: right;"
+      src="http://cbs-uu.ru/wp-content/uploads/2019/05/Ф16-1024x576.jpg"
+    />
+
     <div data-allowfullscreen="true" data-nav="thumbs" data-width="800">
       <p>&nbsp;</p>
       <p>Библиотека была открыта в 1975 году.</p>
@@ -140,7 +137,7 @@
       <p>Приоритетным направлением деятельности является семейное чтение. В библиотеке для младших школьников реализуется проект Канис-библиотека «Читай-ка, лай-ка»: увлекательное чтение книг вслух в присутствии собаки. На базе библиотеки действует клуб досуга для пенсионеров «Родник».</p>
       <p>&nbsp;</p>
     </div>
-    
+
     <p>
       <b>
         <a href="http://cbs-uu.ru/tag/филиал-№16/">Новости:</a>

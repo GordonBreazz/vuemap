@@ -51,7 +51,6 @@
               </p>
             </td>
             <td valign="top">
-              
               <p class>До остановки «112-й микрорайон»</p>
               <p class>Маршрутное такси: 40, 70, 71, 92</p>
             </td>
@@ -126,15 +125,13 @@
         <strong>Библиотека сегодня</strong>
       </p>
     </div>
-    <div align="justify">
-      <img
-        class="aligncenter wp-image-8147 size-large"
-        src="http://cbs-uu.ru/wp-content/uploads/2019/05/DSC_0986-1024x683.jpg"
-        alt
-        width="1024"
-        height="683"
-      />
-    </div>
+
+    <v-img
+      width="350"
+      style="float: right;"
+      src="http://cbs-uu.ru/wp-content/uploads/2019/05/DSC_0986-1024x683.jpg"
+    />
+
     <div align="justify">
       <p>Библиотека открыта в марте 1994 году в 113 квартале города по просьбе активистов МЖК.</p>
       <p>Библиотека-филиал №12 является информационным и культурно-досуговым центром микрорайона 113 квартал. Использование современных технологий позволяет библиотеке работать в новом формате и более эффективно заниматься популяризацией книги и чтения в нашем городе.</p>
@@ -149,7 +146,7 @@
         <strong>Виртуальная экскурсия:</strong>
       </a>
     </div>
-    
+
     <div style="text-align: center;" align="justify">
       <br />
       <p style="text-align: left;">

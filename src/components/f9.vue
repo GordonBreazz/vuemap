@@ -144,12 +144,9 @@
       <br />Библиотека сегодня
     </h3>
     <div align="justify">
-      <img
-        class="aligncenter wp-image-8143 size-large"
+      <v-img width=350 style="float: right;"
         src="http://cbs-uu.ru/wp-content/uploads/2019/05/DSC_4316-1024x683.jpg"
-        alt
-        width="1024"
-        height="683"
+
       />
       <br />
       <div class="fotorama" data-allowfullscreen="true" data-nav="thumbs" data-width="800"></div>

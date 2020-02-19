@@ -115,12 +115,9 @@
       <br />
     </h3>
     <p>
-      <img
-        class="aligncenter wp-image-8169 size-large"
+      <v-img width=350 style="float: right;"
         src="http://cbs-uu.ru/wp-content/uploads/2019/05/DSC_5227-1024x683.jpg"
-        alt
-        width="1024"
-        height="683"
+
       />
     </p>
     <p>Библиотека образована в 1936 году.</p>
