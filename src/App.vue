@@ -1,47 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar app color="primary" dark id="top-page">
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="http://cbs-uu.ru/data/assets/logo/bibliocity7.png"
-          transition="scale-transition"
-          width="70"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="http://cbs-uu.ru/data/assets/logo/img_fonts (3).png"
-          width="300"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="http://cbs-uu.ru/category/%d1%87%d1%82%d0%be-%d0%bf%d0%be%d1%87%d0%b8%d1%82%d0%b0%d1%82%d1%8c/"
-        target="_blank"
-        text
-      >
-        <v-icon>mdi-book-open-page-variant</v-icon>
-        <span class="mr-2 ml-2">Афиша</span>
-      </v-btn>
-
-      <v-btn to="/" text>
-        <v-icon>mdi-map-marker-multiple-outline</v-icon>
-        <span class="mr-2 ml-2">Карта</span>
-      </v-btn>
-      <v-btn to="/about" text>
-        <v-icon>mdi-bookmark-minus-outline</v-icon>
-        <span class="mr-2 ml-2">О проекте</span>
-      </v-btn>
-    </v-app-bar>
-
+   <app-header />
     <v-content class="grey lighten-5">
       <v-container class="white" style="box-shadow: 0 0 10px rgba(0,0,0,0.1);">
         <v-row>
@@ -52,17 +11,20 @@
       </v-container>
     </v-content>
 
-    <myFooter></myFooter>
+    <app-footer/>
     
   </v-app>
 </template>
 
 <script>
-import myFooter from "./components/myFooter";
+import AppHeader from "./components/AppHeader";
+import AppFooter from "./components/AppFooter";
+
 // https://codesandbox.io/s/codesandbox-nuxt-1ht4k
 export default {
   components: {
-    myFooter
+    AppHeader,
+    AppFooter
   },
   created() {
     document.title = "Библиогород МАУ ЦБС г. Улан-Удэ";

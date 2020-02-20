@@ -1,23 +1,6 @@
 <template>
   <div>
     <div>
-      <v-form>
-        <v-subheader class="display-1 font-weight-light">Поиск ближайщей библиотеки</v-subheader>
-        <v-container class="mb-7">
-          <div class="d-flex">
-            <v-text-field
-              label="Библиотека, остановка общественного транспорта, район"
-              outlined
-              class="mr-2"
-            ></v-text-field>
-            <v-btn x-large dark color="primary">Найти</v-btn>
-          </div>
-          <filterPanel></filterPanel>
-          <v-spacer></v-spacer>
-        </v-container>
-      </v-form>
-    </div>
-    <div>
       <yandex-map
         :coords="coords"
         :zoom="mzoom"
@@ -83,7 +66,6 @@
 
 <script>
 import places from "../data/places.js";
-import filterPanel from "../components/filterPanel";
 
 import f1 from "../components/f1";
 import f2 from "../components/f2";
@@ -109,7 +91,6 @@ import f25 from "../components/f25";
 
 export default {
   components: {
-    filterPanel,
     f1,
     f2,
     f3,
@@ -285,6 +266,7 @@ export default {
       //this.hidePanel();
       this.map.setCenter(l.coords, 19, { checkZoomRange: false });
       this.currentLocation = l;
+      this.$store.commit('changeLocation', { newLocation: l})
       this.filials = this.filials.map(() => false);
       this.filials[+this.currentLocation.id] = true;
 

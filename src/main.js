@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import store from './store'
 import App from './App.vue'
 import router from './router'
 import ymapPlugin from 'vue-yandex-maps'
@@ -17,9 +18,7 @@ Vue.use(VueScrollTo)
 Vue.prototype.$Bus = new Vue({})
 
 new Vue({
-  data: {
-    pUrl: ''
-  },
+  store,
   router,
   vuetify,
   scrollTo,
