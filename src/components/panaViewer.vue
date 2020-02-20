@@ -17,9 +17,9 @@
 <script>
 export default {
   name: "InformationWindow",
+  props: ['toUrl'],
   data: () => ({
     sheet: false,
-
     panaUrl:'http://cbs-uu.ru/tours/f15/index.html'
   }),
   methods: {},
