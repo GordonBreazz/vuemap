@@ -83,8 +83,7 @@ export default {
     f25
   },
   data() {
-    return {
-    };
+    return {};
   },
   methods: {
     hidePanel() {
@@ -93,9 +92,9 @@ export default {
       let gl = this;
       setTimeout(function() {
         //if (gl.map.balloon) gl.map.balloon.close();
-        gl.$store.commit('hideInfoPanel')
+        gl.$store.commit("hideInfoPanel");
       }, 500);
-    }      
+    }
   }
 };
 </script>

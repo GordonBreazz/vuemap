@@ -113,8 +113,7 @@
       <br />
     </h3>
 
-      <img
-        class="aligncenter wp-image-8175 size-large"
+      <v-img width=350 style="float: right;"
         src="http://cbs-uu.ru/wp-content/uploads/2019/05/DSC_1234-1024x683.jpg"
 
       />
