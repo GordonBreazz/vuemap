@@ -1,123 +1,42 @@
 <template>
   <div>
-    <div>
-      <yandex-map
-        :coords="coords"
-        :zoom="mzoom"
-        :controls="controls"
-        @map-was-initialized="initHandler"
-        :options="{ 
+    <yandex-map
+      :coords="coords"
+      :zoom="mzoom"
+      :controls="controls"
+      @map-was-initialized="initHandler"
+      :options="{ 
           suppressMapOpenBlock: true,
           autoFitToViewport: 'always'
         }"
-        map-type="map"
-      >
-        <ymap-marker
-          v-for="(location, index) in placemarks"
-          :key="index"
-          :marker-id="index"
-          marker-type="placemark"
-          :icon="markerIcon(location.title)"
-          :coords="location.coords"
-          @click="onClick(location)"
-          cluster-name="1"
-          :balloonTemplate="balloonTemplate(location)"
-        ></ymap-marker>
-      </yandex-map>
-    </div>
-    <v-card outlined v-show="showInfo" class="mt-3" id="element500">
-      <v-card-title primary-title>
-        <div>
-          <h3 class="headline">{{getCaption()}}</h3>
-          <div></div>
-        </div>
-        <v-btn @click="hidePanel" absolute dark fab top right color="red">
-          <v-icon dark>mdi-close</v-icon>
-        </v-btn>
-      </v-card-title>
-      <v-card-subtitle
-        style="text-align: left"
-      >{{ currentLocation.district + ' район ' + currentLocation.address }}</v-card-subtitle>
-      <v-card-text>
-        <f1 v-show="filials[1]"></f1>
-        <f2 v-show="filials[2]"></f2>
-        <f3 v-show="filials[3]"></f3>
-        <f4 v-show="filials[4]"></f4>
-        <f5 v-show="filials[5]"></f5>
-        <f6 v-show="filials[6]"></f6>
-        <f9 v-show="filials[9]"></f9>
-        <f10 v-show="filials[10]"></f10>
-        <f12 v-show="filials[12]"></f12>
-        <f13 v-show="filials[13]"></f13>
-        <f15 v-show="filials[15]"></f15>
-        <f16 v-show="filials[16]"></f16>
-        <f17 v-show="filials[17]"></f17>
-        <f18 v-show="filials[18]"></f18>
-        <f19 v-show="filials[19]"></f19>
-        <f20 v-show="filials[20]"></f20>
-        <f21 v-show="filials[21]"></f21>
-        <f24 v-show="filials[24]"></f24>
-        <f25 v-show="filials[25]"></f25>
-      </v-card-text>
-    </v-card>
-    <div id="anchor"></div>
+      map-type="map"
+    >
+      <ymap-marker
+        v-for="(location, index) in placemarks"
+        :key="index"
+        :marker-id="index"
+        marker-type="placemark"
+        :icon="markerIcon(location.title)"
+        :coords="location.coords"
+        @click="onClick(location)"
+        cluster-name="1"
+        :balloonTemplate="balloonTemplate(location)"
+      ></ymap-marker>
+    </yandex-map>
   </div>
 </template>
 
 <script>
 import places from "../data/places.js";
 
-import f1 from "../components/f1";
-import f2 from "../components/f2";
-import f3 from "../components/f3";
-import f4 from "../components/f4";
-import f5 from "../components/f5";
-import f6 from "../components/f6";
-import f9 from "../components/f9";
-import f10 from "../components/f10";
-import f12 from "../components/f12";
-import f13 from "../components/f13";
-import f15 from "../components/f15";
-import f16 from "../components/f16";
-import f17 from "../components/f17";
-import f18 from "../components/f18";
-import f19 from "../components/f19";
-import f20 from "../components/f20";
-import f21 from "../components/f21";
-import f24 from "../components/f24";
-import f25 from "../components/f25";
-
-//console.log(places.placemarks[5].title)
-
 export default {
-  components: {
-    f1,
-    f2,
-    f3,
-    f4,
-    f5,
-    f6,
-    f9,
-    f10,
-    f12,
-    f13,
-    f15,
-    f16,
-    f17,
-    f18,
-    f19,
-    f20,
-    f21,
-    f24,
-    f25
-  },
+  components: {},
   data() {
-    return {      
+    return {
       map: {},
       coords: [51.81008913374312, 107.60167337301641],
       userPosition: [51.825683, 107.58439],
       currentCoords: [51.825683, 107.58439],
-      currentLocation: {},
       coords2: [51.74677212790084, 107.6959137288361],
       placemarks: places.placemarks,
       mzoom: 12,
@@ -132,57 +51,14 @@ export default {
         hintContent: "Хинт метки",
         contentLayout:
           '<div style="padding:3px 0; border-radius: 3px; font-size: 9pt; background-color: rgba(117, 190, 218, 0.3);  width: 95px; color: red; font-weight: bold;">$[properties.iconContent]</div>'
-      }),
-      showInfo: false,
-      filials: [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ],
-      panaUrl: ''
+      })
     };
   },
   computed: {},
   methods: {
-    panaView() {
-      alert("ok");
-    },
-    getCaption() {
-      if (this.currentLocation.title != this.currentLocation.fullTitle)
-        return (
-          this.currentLocation.fullTitle +
-          "( " +
-          this.currentLocation.title +
-          " )"
-        );
-      return this.currentLocation.fullTitle;
-    },
     showPanel() {
       let a = document.body.scrollHeight + 100;
-      this.showInfo = true;
+      this.$store.state.showInfoPanel = true;
       // var anchor1 = this.$el.querySelector("#anchor");
       // console.log(anchor1)
       // anchor1.scrollTop = anchor1.scrollHeight;
@@ -190,15 +66,6 @@ export default {
       setTimeout(function() {
         gl("#element500", { offset: -100 });
       }, 0);
-    },
-    hidePanel() {
-      this.$scrollTo("body");
-      //this.showInfo = false;
-      let gl = this;
-      setTimeout(function() {
-        gl.showInfo = false;
-        //if (gl.map.balloon) gl.map.balloon.close();
-      }, 500);
     },
 
     goToAll() {
@@ -209,19 +76,23 @@ export default {
     },
     balloonTemplate(location) {
       //Создания балуна метки
-      let frameSt = ""
-      let buttonSt = ""
+      let frameSt = "";
+      let buttonSt = "";
       // let info = ''
       // if (location.fullTitle != location.title) info = location.fullTitle
       if (
         location.id == 2 ||
         location.id == 3 ||
+        location.id == 6 ||
         location.id == 9 ||
         location.id == 10 ||
         location.id == 12 ||
         location.id == 13 ||
         location.id == 15 ||
+        location.id == 16 ||
         location.id == 19 ||
+        location.id == 21 ||
+        location.id == 24 ||
         location.id == 20
       ) {
         // this.panaUrl = `http://cbs-uu.ru/tours/f${location.id}/index.html`
@@ -264,11 +135,11 @@ export default {
 
       // setTimeout(sayHi, 1000);
       //this.hidePanel();
+
       this.map.setCenter(l.coords, 19, { checkZoomRange: false });
       this.currentLocation = l;
-      this.$store.commit('changeLocation', { newLocation: l})
-      this.filials = this.filials.map(() => false);
-      this.filials[+this.currentLocation.id] = true;
+      this.$store.commit("changeLocation", { newLocation: l });
+      this.$store.commit("chooseFilial", { newLocation: l });
 
       //this.showPanel();
     },

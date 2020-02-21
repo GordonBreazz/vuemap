@@ -8,17 +8,71 @@ export default new Vuex.Store({
     },
     mutations: {
         changeLocation(state, payload) {
-            console.log(payload)
-            state.currentLocation = payload.newLocation            
+            state.currentLocation = payload.newLocation
+        },
+        hideInfoPanel(state) {
+            state.showInfoPanel = false
+        },
+        chooseFilial(state) {
+            state.filials = state.filials.map(() => false)
+            state.filials[+state.currentLocation.id] = true
         }
     },
     state: {
-        currentLocation: { id: 0 },
+        filials: [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+        ],
+        showInfoPanel: false,
+        currentLocation: {
+            title: '',
+            fullTitle: '',
+            coords: [51.8664255625606, 107.7454773644181],
+            address: '',
+            phone: '',
+            forChildren: false,
+            district: '',
+            photoSmall: '',
+            id: 0
+        },
     },
     getters: {
         getPanaUrl(state) {
             //alert('ok')
             return `http://cbs-uu.ru/tours/f${state.currentLocation.id}/index.html`
+        },
+        getCaption(state) {
+            if (state.currentLocation.title != state.currentLocation.fullTitle)
+                return (
+                    state.currentLocation.fullTitle +
+                    "( " +
+                    state.currentLocation.title +
+                    " )")
+            return state.currentLocation.fullTitle
         }
     }
 })
