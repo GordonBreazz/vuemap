@@ -14,28 +14,9 @@
         style="text-align: left"
       >{{ this.$store.state.currentLocation.district + ' район ' + this.$store.state.currentLocation.address }}</v-card-subtitle>
       <v-card-text>
-        <f1 v-show="this.$store.state.filials[1]"></f1>
-        <f2 v-show="this.$store.state.filials[2]"></f2>
-        <f3 v-show="this.$store.state.filials[3]"></f3>
-        <f4 v-show="this.$store.state.filials[4]"></f4>
-        <f5 v-show="this.$store.state.filials[5]"></f5>
-        <f6 v-show="this.$store.state.filials[6]"></f6>
-        <f9 v-show="this.$store.state.filials[9]"></f9>
-        <f10 v-show="this.$store.state.filials[10]"></f10>
-        <f12 v-show="this.$store.state.filials[12]"></f12>
-        <f13 v-show="this.$store.state.filials[13]"></f13>
-        <f15 v-show="this.$store.state.filials[15]"></f15>
-        <f16 v-show="this.$store.state.filials[16]"></f16>
-        <f17 v-show="this.$store.state.filials[17]"></f17>
-        <f18 v-show="this.$store.state.filials[18]"></f18>
-        <f19 v-show="this.$store.state.filials[19]"></f19>
-        <f20 v-show="this.$store.state.filials[20]"></f20>
-        <f21 v-show="this.$store.state.filials[21]"></f21>
-        <f24 v-show="this.$store.state.filials[24]"></f24>
-        <f25 v-show="this.$store.state.filials[25]"></f25>
+        <component v-bind:is="currentComponent"></component>
       </v-card-text>
     </v-card>
-    <div id="anchor"></div>
   </div>
 </template>
 
@@ -82,12 +63,20 @@ export default {
     f24,
     f25
   },
+  props: ['filial'],
+  computed: {
+    currentComponent: function() {
+      if (this.filial == 0)  return "f1"
+      return "f" + this.filial
+    }
+  },
   data() {
     return {};
   },
   methods: {
     hidePanel() {
-      this.$scrollTo("body");
+      //this.$scrollTo("body");
+      this.$vuetify.goTo("#requestpanel", { offset: 0 });
       //this.showInfo = false;
       let gl = this;
       setTimeout(function() {

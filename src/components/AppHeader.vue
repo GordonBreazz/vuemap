@@ -1,14 +1,17 @@
 <template>
   <v-app-bar app color="primary" dark id="top-page">
     <div class="d-flex align-center">
-      <v-img
-        alt="Vuetify Logo"
-        class="shrink mr-2"
-        contain
-        src="http://cbs-uu.ru/data/assets/logo/bibliocity7.png"
-        transition="scale-transition"
-        width="70"
-      />
+
+      <router-link to="/">
+        <v-img
+          alt="Logo"
+          class="shrink mr-2"
+          contain
+          src="http://cbs-uu.ru/data/assets/logo/bibliocity7.png"
+          transition="scale-transition"
+          width="70"
+        />
+      </router-link>
 
       <v-img
         alt="Vuetify Name"
@@ -16,6 +19,7 @@
         contain
         min-width="100"
         src="http://cbs-uu.ru/data/assets/logo/img_fonts (3).png"
+        transition="scale-transition"
         width="300"
       />
     </div>

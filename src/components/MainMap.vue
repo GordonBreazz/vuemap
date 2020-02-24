@@ -57,19 +57,22 @@ export default {
   computed: {},
   methods: {
     showPanel() {
-      let a = document.body.scrollHeight + 100;
-      this.$store.state.showInfoPanel = true;
+//      this.$store.state.showInfoPanel = true;
+      this.$store.commit("showInfoPanel");
       // var anchor1 = this.$el.querySelector("#anchor");
       // console.log(anchor1)
       // anchor1.scrollTop = anchor1.scrollHeight;
-      let gl = this.$scrollTo;
-      setTimeout(function() {
-        gl("#element500", { offset: -100 });
-      }, 0);
+
+      this.$vuetify.goTo("#infopanel", {offset: 30})
+
+      // let gl = this.$scrollTo;
+      // setTimeout(function() {
+      //   gl("#element500", { offset: -100 });
+      // }, 0);
     },
 
     goToAll() {
-      this.$scrollTo("#anchor");
+      this.$vuetify.goTo("#requestpanel")
       this.showInfo = false;
       if (this.map.balloon) this.map.balloon.close();
       this.map.setBounds(this.map.geoObjects.getBounds());
@@ -98,7 +101,7 @@ export default {
         // this.panaUrl = `http://cbs-uu.ru/tours/f${location.id}/index.html`
         // this.$Bus.$emit('my-sample-event', this.panaUrl);
         frameSt =
-          '<div style="margin-bottom:10px"><iframe src="http://cbs-uu.ru/tours/f' +
+          '<div style="margin-bottom:10px;"><iframe src="http://cbs-uu.ru/tours/f' +
           location.id +
           '/index.html" width="400" height="250" align="left">Ваш браузер не поддерживает плавающие фреймы!</iframe></div><div style="height: 240px;"></div>';
         buttonSt = `
@@ -108,7 +111,7 @@ export default {
             </span>
           </button>`;
       } else if (location.photoSmall)
-        frameSt = '<img style="width: 100%" src="' + location.photoSmall + '">';
+        frameSt = '<img style="width: 100%" src="' + location.photoSmall + '">';//'<div role="progressbar" aria-valuemin="0" aria-valuemax="100" class="v-progress-circular v-progress-circular--indeterminate purple--text" style="height: 70px; width: 70px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="22.22222222222222 22.22222222222222 44.44444444444444 44.44444444444444" style="transform: rotate(0deg);"><circle fill="transparent" cx="44.44444444444444" cy="44.44444444444444" r="20" stroke-width="4.444444444444445" stroke-dasharray="125.664" stroke-dashoffset="125.66370614359172px" class="v-progress-circular__overlay"></circle></svg><div class="v-progress-circular__info"></div></div>'//
       return `
         <h1>${location.fullTitle}</h1>
         <p style="margin-top: 10px; margin-bottom: 5px;"><i>Адрес библиотеки:
@@ -122,6 +125,7 @@ export default {
       `;
     },
     onClick(l) {
+      this.$vuetify.goTo("#requestpanel", {offset: 0})
       //console.log('1111111111111111', (tt.geoObjects.get(0)).properties.get('text'))
 
       // let sayHi = function() { tt.setCenter(e, 19, {checkZoomRange: true })}
@@ -139,7 +143,7 @@ export default {
       this.map.setCenter(l.coords, 19, { checkZoomRange: false });
       this.currentLocation = l;
       this.$store.commit("changeLocation", { newLocation: l });
-      this.$store.commit("chooseFilial", { newLocation: l });
+      //this.$store.commit("chooseFilial", { id: l.id });
 
       //this.showPanel();
     },

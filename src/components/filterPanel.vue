@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div> 
+
     <v-chip-group column multiple>
       <v-chip filter color="blue lighten-4">Открыто сейчас</v-chip>
       <v-chip filter color="blue lighten-4">Единый читательский билет</v-chip>

@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import filials from './modules/filials'
 
 Vue.use(Vuex)
 
@@ -10,43 +11,16 @@ export default new Vuex.Store({
         changeLocation(state, payload) {
             state.currentLocation = payload.newLocation
         },
+        showInfoPanel(state) {
+            state.showInfoPanel = true
+        },
+
         hideInfoPanel(state) {
             state.showInfoPanel = false
-        },
-        chooseFilial(state) {
-            state.filials = state.filials.map(() => false)
-            state.filials[+state.currentLocation.id] = true
-        }
+        }        
     },
     state: {
-        filials: [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-        ],
+
         showInfoPanel: false,
         currentLocation: {
             title: '',
@@ -61,8 +35,10 @@ export default new Vuex.Store({
         },
     },
     getters: {
+        getCurrentLocationId(state) {
+            return state.currentLocation.id
+        },    
         getPanaUrl(state) {
-            //alert('ok')
             return `http://cbs-uu.ru/tours/f${state.currentLocation.id}/index.html`
         },
         getCaption(state) {
@@ -74,5 +50,9 @@ export default new Vuex.Store({
                     " )")
             return state.currentLocation.fullTitle
         }
+    }
+    ,
+    modules: {
+        filials
     }
 })
