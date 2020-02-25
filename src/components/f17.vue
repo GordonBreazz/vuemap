@@ -138,7 +138,11 @@
       <br />
       <br />
     </h3>
-    <v-img src="http://cbs-uu.ru/wp-content/uploads/2019/05/Screenshot_2.png" />
+    <v-img
+      width="350"
+      style="float: right;"
+      src="http://cbs-uu.ru/wp-content/uploads/2019/05/Screenshot_2.png"
+    />
 
     <p>&nbsp;</p>
     <p>Детская библиотека была основана в 1966 году, в 1968 году ей было присвоено имя детского писателя А.П.Гайдара.</p>
