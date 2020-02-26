@@ -2,7 +2,8 @@
   <div class="home">
     <RequastPanel id="requestpanel" />
     <main-map ref="foo" id="mainmap" />    
-    <detail-panel id="infopanel" :filial="toFilial" v-on:showPanViewer="panaView"/>
+    <info-panel id="infopanel" :filial="toFilial" v-on:showPanViewer="panaView"/>
+
     <button @click="showPanel" id="button100500" style="display: none">Подробнее</button>
     <button @click="goToAll" id="button100600" style="display: none">Все библиотеки на карте</button>
     <button @click="panaView" id="button100700" style="display: none">Панорама на весь экран</button>
@@ -13,6 +14,7 @@
 <script>
 //<info-panel id="infopanel" />
 //<detail-panel id="infopanel" />
+//    <detail-panel id="infopanel" :filial="toFilial" v-on:showPanViewer="panaView"/>
 import MainMap from "../components/MainMap";
 import PanaViewer from "../components/PanaViewer";
 import RequastPanel from "../components/RequastPanel";
