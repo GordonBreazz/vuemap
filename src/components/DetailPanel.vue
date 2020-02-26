@@ -31,24 +31,13 @@
           </v-col>
           <v-col>
             <v-row no-gutters>
-              <v-col>One of three columns</v-col>
+              <v-col></v-col>
               <v-col>
-                  If you enjoy using Vuetify, please take a few seconds to rate your experience with the framework. It really helps!
 
-      <div class="text-center ">
-        <v-rating
-          v-model="rating"
-          color="yellow darken-3"
-          background-color="grey darken-1"
-          empty-icon="$ratingFull"
-          half-increments
-          hover
-        ></v-rating>
-      </div>
                 <v-list one-line>
                   <v-list-item @click>
                     <v-list-item-icon>
-                      <v-icon color="indigo">mdi-phone</v-icon>
+                      <v-icon color="indigo" >mdi-phone</v-icon>
                     </v-list-item-icon>
 
                     <v-list-item-content>
@@ -86,11 +75,27 @@
                     </v-list-item-icon>
 
                     <v-list-item-content>
-                      <v-list-item-title>1400 Main Street</v-list-item-title>
-                      <v-list-item-subtitle class="mt-1 pl-2">Orlando, FL 79938</v-list-item-subtitle>
+                      <v-list-item-subtitle class="mt-1 pl-2">Район: {{this.$store.state.currentLocation.district}}</v-list-item-subtitle>
+                      <v-list-item-subtitle class="mt-1 pl-2">Микрорайон: {{this.$store.state.currentLocation.microdistrict}}</v-list-item-subtitle>
+                      <v-list-item-subtitle class="mt-1 pl-2">Адрес</v-list-item-subtitle>
+                      <v-list-item-title class="mt-1 pl-2"> {{this.$store.state.currentLocation.address}}</v-list-item-title>
+                      
+                      
                     </v-list-item-content>
                   </v-list-item>
                 </v-list>
+                                <h4 style="text-align: center;"> Оцените библиотеку</h4>
+
+      <div class="text-center ">
+        <v-rating
+          v-model="rating"
+          color="yellow darken-3"
+          background-color="grey darken-1"
+          empty-icon="$ratingFull"
+          half-increments
+          hover
+        ></v-rating>
+      </div>
               </v-col>
             </v-row>
           </v-col>
