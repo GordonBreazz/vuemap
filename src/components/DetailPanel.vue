@@ -53,13 +53,11 @@
 
                     <v-list-item-content>
                         <v-list-item-subtitle>Телефон библиотеки</v-list-item-subtitle>
-                      <v-list-item-title>{{this.$store.state.currentLocation.phone}}</v-list-item-title>
+                      <v-list-item-title class="mt-1 pl-1">{{this.$store.state.currentLocation.phone}}</v-list-item-title>
                     
                     </v-list-item-content>
 
-                    <v-list-item-icon>
-                      <v-icon>mdi-message-text</v-icon>
-                    </v-list-item-icon>
+
                   </v-list-item>
 
  
@@ -73,7 +71,7 @@
 
                     <v-list-item-content>
                       <v-list-item-subtitle>E-mail библиотеки</v-list-item-subtitle>
-                      <v-list-item-title>{{this.$store.state.currentLocation.email}}</v-list-item-title>
+                      <v-list-item-title class="mt-1 pl-2">{{(this.$store.state.currentLocation.email).toUpperCase()}}</v-list-item-title>
                       
                     </v-list-item-content>
                   </v-list-item>
@@ -89,7 +87,7 @@
 
                     <v-list-item-content>
                       <v-list-item-title>1400 Main Street</v-list-item-title>
-                      <v-list-item-subtitle>Orlando, FL 79938</v-list-item-subtitle>
+                      <v-list-item-subtitle class="mt-1 pl-2">Orlando, FL 79938</v-list-item-subtitle>
                     </v-list-item-content>
                   </v-list-item>
                 </v-list>

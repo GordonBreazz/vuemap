@@ -2,7 +2,6 @@
   <div class="home">
     <RequastPanel id="requestpanel" />
     <main-map ref="foo" id="mainmap" />    
-    <info-panel id="infopanel" :filial="toFilial"/>
     <detail-panel id="infopanel" :filial="toFilial" v-on:showPanViewer="panaView"/>
     <button @click="showPanel" id="button100500" style="display: none">Подробнее</button>
     <button @click="goToAll" id="button100600" style="display: none">Все библиотеки на карте</button>
