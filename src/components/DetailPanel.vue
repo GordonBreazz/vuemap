@@ -34,15 +34,60 @@
               <v-col></v-col>
               <v-col>
 
-                <v-list one-line>
+                <v-list one-line dense  >
+                                    <v-list-item >
+                    <v-list-item-icon>
+                      <v-icon color="indigo">mdi-home-city-outline</v-icon>
+                    </v-list-item-icon>
+
+                    <v-list-item-content>
+                      <v-row no-gutters>
+                        <v-col>
+                      <v-list-item-subtitle class="mt-1 ">Район</v-list-item-subtitle>
+                       <v-list-item-title class="mt-1">{{this.$store.state.currentLocation.district}}</v-list-item-title>
+                       </v-col>
+                       <v-col>
+                      <v-list-item-subtitle class="mt-1 ">Микрорайон</v-list-item-subtitle>
+                      <v-list-item-title class="mt-1 ">{{this.$store.state.currentLocation.microdistrict}}</v-list-item-title>
+                      </v-col>
+         <v-col>
+                      <v-list-item-subtitle class="mt-1 ">Адрес</v-list-item-subtitle>
+                      <v-list-item-title class="mt-1"> {{this.$store.state.currentLocation.address}}</v-list-item-title>
+                     </v-col>
+         </v-row>             
+                    </v-list-item-content>
+                  </v-list-item>              
+                    <v-divider inset></v-divider>
+                    <v-list-item @click>
+                    <v-list-item-icon>
+                      <v-icon color="indigo">mdi-bus-multiple</v-icon>
+                    </v-list-item-icon>
+
+                    <v-list-item-content>
+                        <v-list-item-subtitle>Ближайшая остановка общественного транспорта </v-list-item-subtitle>
+                      <v-list-item-title class="mt-1 ">31321312</v-list-item-title>
+  
+         <div>
+         <v-icon>mdi-bus</v-icon>Автобус
+         </div>
+    <div>
+         <v-icon>mdi-tram-side </v-icon>Трамвай
+         </div>
+  
+    
+                    </v-list-item-content>
+
+
+                  </v-list-item>
+                  <v-divider inset></v-divider>
                   <v-list-item @click>
                     <v-list-item-icon>
-                      <v-icon color="indigo" >mdi-phone</v-icon>
+                      <v-icon color="indigo">mdi-phone</v-icon>
                     </v-list-item-icon>
 
                     <v-list-item-content>
                         <v-list-item-subtitle>Телефон библиотеки</v-list-item-subtitle>
-                      <v-list-item-title class="mt-1 pl-1">{{this.$store.state.currentLocation.phone}}</v-list-item-title>
+                      <v-list-item-title class="mt-1 ">{{this.$store.state.currentLocation.phone}}</v-list-item-title>
                     
                     </v-list-item-content>
 
@@ -60,29 +105,16 @@
 
                     <v-list-item-content>
                       <v-list-item-subtitle>E-mail библиотеки</v-list-item-subtitle>
-                      <v-list-item-title class="mt-1 pl-2">{{(this.$store.state.currentLocation.email).toUpperCase()}}</v-list-item-title>
+                      <v-list-item-title class="mt-1 ">{{(this.$store.state.currentLocation.email).toUpperCase()}}</v-list-item-title>
                       
                     </v-list-item-content>
                   </v-list-item>
 
        
 
-                  <v-divider inset></v-divider>
+                
 
-                  <v-list-item @click>
-                    <v-list-item-icon>
-                      <v-icon color="indigo">mdi-map-marker</v-icon>
-                    </v-list-item-icon>
 
-                    <v-list-item-content>
-                      <v-list-item-subtitle class="mt-1 pl-2">Район: {{this.$store.state.currentLocation.district}}</v-list-item-subtitle>
-                      <v-list-item-subtitle class="mt-1 pl-2">Микрорайон: {{this.$store.state.currentLocation.microdistrict}}</v-list-item-subtitle>
-                      <v-list-item-subtitle class="mt-1 pl-2">Адрес</v-list-item-subtitle>
-                      <v-list-item-title class="mt-1 pl-2"> {{this.$store.state.currentLocation.address}}</v-list-item-title>
-                      
-                      
-                    </v-list-item-content>
-                  </v-list-item>
                 </v-list>
                                 <h4 style="text-align: center;"> Оцените библиотеку</h4>
 
@@ -103,13 +135,13 @@
       </v-card-text>
        <v-divider></v-divider>
       <v-card-actions>
-        <v-btn @click="showPanViewer" large color="pink" dark>
+        <v-btn @click="showPanViewer" large color="pink" dark outlined>
           <v-icon dark class="mr-2">mdi-arrow-decision-outline</v-icon>3D тур по библиотеке
         </v-btn>
-        <v-btn @click large color="success" dark class="mr-2 ml-2">
+        <v-btn @click large color="success" dark class="mr-2 ml-2" outlined>
           <v-icon dark class="mr-2">mdi-arrow-decision-outline</v-icon>Предстаящие события
         </v-btn>
-        <v-btn @click large color="success" dark>
+        <v-btn @click large color="success" dark outlined> 
           <v-icon dark class="mr-2">mdi-arrow-decision-outline</v-icon>Новости библиотеки
         </v-btn>
       </v-card-actions>
