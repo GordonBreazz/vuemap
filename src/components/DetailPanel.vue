@@ -65,13 +65,16 @@
 
                     <v-list-item-content>
                         <v-list-item-subtitle>Ближайшая остановка общественного транспорта </v-list-item-subtitle>
-                      <v-list-item-title class="mt-1 ">31321312</v-list-item-title>
+                      <v-list-item-title class="mt-1 ">Проезд {{this.$store.state.currentLocation.itinerary.point}}</v-list-item-title>
   
          <div>
-         <v-icon>mdi-bus</v-icon>Автобус
+         <v-icon>mdi-bus</v-icon>Автобус {{this.$store.state.currentLocation.itinerary.bus}}
          </div>
     <div>
-         <v-icon>mdi-tram-side </v-icon>Трамвай
+         <v-icon>mdi-tram-side </v-icon>Трамвай {{this.$store.state.currentLocation.itinerary.tram}}
+         </div>
+             <div>
+         <v-icon>mdi-bus-side </v-icon>Маршрутное такси {{this.$store.state.currentLocation.itinerary.taxiBus}}
          </div>
   
     
