@@ -28,7 +28,23 @@
           </v-col>
           <v-col>
             <v-row no-gutters>
-              <v-col></v-col>
+              <v-col>
+
+      <v-list-item @click>
+                    <v-list-item-icon>
+                      <v-icon color="indigo">mdi-spray-bottle</v-icon>
+                    </v-list-item-icon>
+
+                    <v-list-item-content>
+                      <v-list-item-subtitle>Санитарный день</v-list-item-subtitle>
+                      <v-list-item-title
+                        class="mt-1"
+                      >Последняя пятница месяца</v-list-item-title>
+                    </v-list-item-content>
+                  </v-list-item>
+                  <v-divider inset></v-divider>
+
+              </v-col>
               <v-col>
                 <v-list one-line dense>
                   <v-list-item>
@@ -91,7 +107,9 @@
    
                     </v-list-item-content>
                   </v-list-item>
-                  <v-divider inset></v-divider>
+
+
+                        <v-divider inset></v-divider>
                   <v-list-item @click>
                     <v-list-item-icon>
                       <v-icon color="indigo">mdi-phone</v-icon>
@@ -117,6 +135,18 @@
                       >{{(this.$store.state.currentLocation.email).toUpperCase()}}</v-list-item-title>
                     </v-list-item-content>
                   </v-list-item>
+                  <v-divider inset></v-divider>
+                  <v-list-item @click>
+                    <v-list-item-icon>
+                      <v-icon color="indigo">mdi-account-circle-outline</v-icon>
+                    </v-list-item-icon>
+
+                    <v-list-item-content>
+                      <v-list-item-subtitle v-if="this.$store.state.currentLocation.chief.title">{{this.$store.state.currentLocation.chief.title}}</v-list-item-subtitle>                      
+                      <v-list-item-subtitle v-else>Заведующая библиотекой</v-list-item-subtitle>                      
+                      <v-list-item-title class="mt-1">{{this.$store.state.currentLocation.chief.name}}</v-list-item-title>
+                    </v-list-item-content>
+                  </v-list-item>                  
                 </v-list>
  
               </v-col>
