@@ -16,10 +16,10 @@ export default
                 microdistrict: '',
                 email: 'cbskalashnikov@yandex.ru',
                 itinerary: {
-                    point: '',
+                    point: 'До остановки «Гостинные ряды» или остановки «Площадь революции 1905 г.»',
                     bus: '',
                     tram: '',
-                    taxiBus: ''
+                    taxiBus: '2, 15,  29, 30, 37, 97'
                 }                 
             },
             {
@@ -57,17 +57,17 @@ export default
                 microdistrict: 'Загорск',
                 email: 'filial3@cbs-uu.ru',
                 itinerary: {
-                    point: '',
-                    bus: '',
+                    point: 'До остановки «Бассейн Юбилейный»',
+                    bus: '22',
                     tram: '',
-                    taxiBus: ''
-                }     
+                    taxiBus: '3, 12, 21, 23, 44, 51, 54, 133'
+                }    
             },
             {
                 title: 'Библиотека-филиал №4',
                 fullTitle: 'Библиотека-филиал №4',
                 coords: [51.863683, 107.544168],
-                address: 'г. Улан-Удэ, мкр. Стеклозавод, ул. Радикальцева, 5',
+                address: 'г. Улан-Удэ, ул. Радикальцева, 5',
                 phone: ' +7 (3012) 27-11-32',
                 forChildren: false,
                 district: 'Советский',
@@ -77,10 +77,10 @@ export default
                 microdistrict: 'Стеклозавод',
                 email: 'filial4@cbs-uu.ru',
                 itinerary: {
-                    point: '',
-                    bus: '',
+                    point: 'До остановки «Ж/д переезд»',
+                    bus: '17',
                     tram: '',
-                    taxiBus: ''
+                    taxiBus: ' 42, 80, 92, 100'
                 }     
             },
             {
@@ -97,10 +97,10 @@ export default
                 microdistrict: 'Восточный',
                 email: 'filial5@cbs-uu.ru',
                 itinerary: {
-                    point: '',
-                    bus: '',
+                    point: 'До остановки «Абсолют (ул.Туполева)»',
+                    bus: '22',
                     tram: '',
-                    taxiBus: ''
+                    taxiBus: '3, 12, 21, 23, 51, 54'
                 }     
             },
             {
@@ -117,10 +117,10 @@ export default
                 microdistrict: 'Загорск',
                 email: 'filial6@cbs-uu.ru',
                 itinerary: {
-                    point: '',
-                    bus: '',
+                    point: 'До остановки «Бассейн Юбилейный»',
+                    bus: '22',
                     tram: '',
-                    taxiBus: ''
+                    taxiBus: '3, 12, 21, 23, 44, 51, 54, 133'
                 }     
             },
             {
@@ -157,10 +157,10 @@ export default
                 microdistrict: '43-й квартал',
                 email: 'filial10@cbs-uu.ru',
                 itinerary: {
-                    point: '',
-                    bus: '',
+                    point: 'До остановки «Призывной пункт»',
+                    bus: '17, 31а',
                     tram: '',
-                    taxiBus: ''
+                    taxiBus: '15, 21, 25, 33, 36, 37, 44, 57, 70, 77, 82, 97, 100, 122'
                 }     
             },
             {
@@ -177,10 +177,10 @@ export default
                 microdistrict: '113-й квартал',
                 email: 'filial12@cbs-uu.ru',
                 itinerary: {
-                    point: '',
-                    bus: '',
+                    point: 'До остановки «112-й микрорайон»',
+                    bus: '40',
                     tram: '',
-                    taxiBus: ''
+                    taxiBus: '40, 70, 71, 92'
                 }     
             },
             {
@@ -197,10 +197,10 @@ export default
                 microdistrict: 'Саяны',
                 email: 'filial13@cbs-uu.ru',
                 itinerary: {
-                    point: '',
-                    bus: '',
-                    tram: '',
-                    taxiBus: ''
+                    point: 'До остановки «Русский драматический театр»',
+                    bus: '16к, 31а, 137',
+                    tram: '1, 2, 4',
+                    taxiBus: '2, 15, 19, 29, 30, 33, 37, 42, 44, 51, 54, 56, 59, 70, 71, 95, 97'
                 }     
             },
             {
@@ -217,10 +217,10 @@ export default
                 microdistrict: 'Бурвод',
                 email: 'filial15@cbs-uu.ru',
                 itinerary: {
-                    point: '',
-                    bus: '',
+                    point: 'До остановки «ТЦ Абсолют (ул.Кабанская)»',
+                    bus: '129',
                     tram: '',
-                    taxiBus: ''
+                    taxiBus: '2, 19, 23, 82, 131, 155, 177, 347, 348, 349, 502, 510'
                 }     
             },
             {
@@ -237,10 +237,10 @@ export default
                 microdistrict: '20-й А кварталгорск',
                 email: 'filial16@cbs-uu.ru',
                 itinerary: {
-                    point: '',
-                    bus: '',
-                    tram: '',
-                    taxiBus: ''
+                    point: 'До остановки «20-й А квартал»',
+                    bus: '17, 39, 120, 129',
+                    tram: '4, 5',
+                    taxiBus: '25, 29, 33, 44, 57, 59, 70, 71, 77, 100, 134, 135'
                 }     
             },
             {
@@ -257,10 +257,10 @@ export default
                 microdistrict: 'Саяны',
                 email: 'filial17@cbs-uu.ru',
                 itinerary: {
-                    point: '',
-                    bus: '',
-                    tram: '',
-                    taxiBus: ''
+                    point: 'До остановки «Институт Культуры»',
+                    bus: '16, 28, 31а',
+                    tram: '1, 2, 4',
+                    taxiBus: '2, 15, 19, 29, 30, 33, 37, 40, 42, 44, 51, 54, 56, 59, 80, 92, 95, 97, 115, 132'
                 } 
             },
             {
@@ -277,11 +277,11 @@ export default
                 microdistrict: 'Шишковка',
                 email: 'filial18@cbs-uu.ru',
                 itinerary: {
-                    point: '',
+                    point: 'До остановки «Сенчихина»',
                     bus: '',
-                    tram: '',
-                    taxiBus: ''
-                } 
+                    tram: '1, 2, 5',
+                    taxiBus: '57'
+                }    
             },
             {
                 title: 'Библиотека-филиал №19',
@@ -297,10 +297,10 @@ export default
                 microdistrict: 'ПВЗ',
                 email: 'filial19@cbs-uu.ru',
                 itinerary: {
-                    point: '',
+                    point: 'До остановки «Площадь Славы»',
                     bus: '',
                     tram: '',
-                    taxiBus: ''
+                    taxiBus: '4, 29, 30, 31, 37, 40, 46, 54, 55, 59, 100'
                 }  
             },
             {
@@ -317,10 +317,10 @@ export default
                 microdistrict: 'Аэропорт',
                 email: 'filial20@cbs-uu.ru',
                 itinerary: {
-                    point: '',
-                    bus: '',
+                    point: 'До остановки «Гостиница «Полет»',
+                    bus: '28',
                     tram: '',
-                    taxiBus: ''
+                    taxiBus: '55, 77'
                 } 
             },
             {
@@ -337,10 +337,10 @@ export default
                 microdistrict: 'Сокол',
                 email: 'filial21@cbs-uu.ru',
                 itinerary: {
-                    point: '',
-                    bus: '',
+                    point: 'До остановки «Мкрорайон Сокол»',
+                    bus: '28',
                     tram: '',
-                    taxiBus: ''
+                    taxiBus: '55'
                 } 
             },
             {
@@ -357,10 +357,10 @@ export default
                 microdistrict: '',
                 email: 'filial24@cbs-uu.ru',
                 itinerary: {
-                    point: '',
-                    bus: '',
-                    tram: '',
-                    taxiBus: ''
+                    point: 'До остановки «БСМП»',
+                    bus: '31а',
+                    tram: '1, 2',
+                    taxiBus: '15, 21, 25, 33, 36, 37, 42, 44, 56, 70, 71, 82, 97, 100, 122'
                 } 
             },
             {
