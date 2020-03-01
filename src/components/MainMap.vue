@@ -54,20 +54,18 @@ export default {
       })
     };
   },
-  computed: {},
   methods: {
     workStatus() {
       let today = new Date();
-
     },
     showPanel() {
-//      this.$store.state.showInfoPanel = true;
+      //      this.$store.state.showInfoPanel = true;
       this.$store.commit("showInfoPanel");
       // var anchor1 = this.$el.querySelector("#anchor");
       // console.log(anchor1)
       // anchor1.scrollTop = anchor1.scrollHeight;
 
-      this.$vuetify.goTo("#infopanel", {offset: 30})
+      this.$vuetify.goTo("#infopanel", { offset: 30 });
 
       // let gl = this.$scrollTo;
       // setTimeout(function() {
@@ -76,7 +74,7 @@ export default {
     },
 
     goToAll() {
-      this.$vuetify.goTo("#requestpanel")
+      this.$vuetify.goTo("#requestpanel");
       this.showInfo = false;
       if (this.map.balloon) this.map.balloon.close();
       this.map.setBounds(this.map.geoObjects.getBounds());
@@ -87,11 +85,12 @@ export default {
       let buttonSt = "";
       // let info = ''
       // if (location.fullTitle != location.title) info = location.fullTitle
-      if (        
+      if (
         location.id == 1 ||
         location.id == 2 ||
         location.id == 3 ||
         location.id == 4 ||
+        location.id == 5 ||
         location.id == 6 ||
         location.id == 9 ||
         location.id == 10 ||
@@ -99,13 +98,14 @@ export default {
         location.id == 13 ||
         location.id == 15 ||
         location.id == 16 ||
+        location.id == 17 ||        
         location.id == 19 ||
         location.id == 20 ||
         location.id == 21 ||
-        location.id == 24 
+        location.id == 24
       ) {
         // this.panaUrl = `http://cbs-uu.ru/tours/f${location.id}/index.html`
-        // this.$Bus.$emit('my-sample-event', this.panaUrl);        
+        // this.$Bus.$emit('my-sample-event', this.panaUrl);
         frameSt =
           '<div style="margin-bottom:0px;"><div style="width: 400px; height: 250px;"><iframe src="http://cbs-uu.ru/tours/f' +
           location.id +
@@ -117,16 +117,13 @@ export default {
             </span>
           </button>`;
       } else if (location.photoSmall)
-        frameSt = '<img style="width: 100%" src="' + location.photoSmall + '">';//'<div role="progressbar" aria-valuemin="0" aria-valuemax="100" class="v-progress-circular v-progress-circular--indeterminate purple--text" style="height: 70px; width: 70px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="22.22222222222222 22.22222222222222 44.44444444444444 44.44444444444444" style="transform: rotate(0deg);"><circle fill="transparent" cx="44.44444444444444" cy="44.44444444444444" r="20" stroke-width="4.444444444444445" stroke-dasharray="125.664" stroke-dashoffset="125.66370614359172px" class="v-progress-circular__overlay"></circle></svg><div class="v-progress-circular__info"></div></div>'//
-
-      let today = new Date();
-      let stTime = today.getUTCHours() + 8 + ":" + today.getUTCMinutes() + ":" + today.getUTCSeconds();
+        frameSt = '<img style="width: 100%" src="' + location.photoSmall + '">'; //'<div role="progressbar" aria-valuemin="0" aria-valuemax="100" class="v-progress-circular v-progress-circular--indeterminate purple--text" style="height: 70px; width: 70px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="22.22222222222222 22.22222222222222 44.44444444444444 44.44444444444444" style="transform: rotate(0deg);"><circle fill="transparent" cx="44.44444444444444" cy="44.44444444444444" r="20" stroke-width="4.444444444444445" stroke-dasharray="125.664" stroke-dashoffset="125.66370614359172px" class="v-progress-circular__overlay"></circle></svg><div class="v-progress-circular__info"></div></div>'//
 
       return `
         <h2 style="margin-top: 0px;">${location.fullTitle}</h2>
         <p style="margin-top: 8px; margin-bottom: 4px;"><i>Адрес:
         <b>${location.address}</b>
-        <br><b>Сейчас закрыто.</b> До открытия библиотеки 11 часов.${stTime}</i></p>
+        <br><b>Сейчас ${this.WorkStatus.status}.</b> ${this.WorkStatus.message} </i></p>
         ${frameSt}<div style="height: 10px;"></div>
         <button type="button" class="v-btn v-btn--contained  v-size--default  primary mb-1" onclick="javascript: document.querySelector('#button100500').click();">Подробнее</button> 
         <button type="button" class="v-btn v-btn--contained  v-size--default  light-blue white--text mb-1" onclick="javascript: document.querySelector('#button100600').click();">ВСЕ БИБЛИОТЕКИ </button>
@@ -136,7 +133,7 @@ export default {
       `;
     },
     onClick(l) {
-      this.$vuetify.goTo("#requestpanel", {offset: 0})
+      this.$vuetify.goTo("#requestpanel", { offset: 0 });
       //console.log('1111111111111111', (tt.geoObjects.get(0)).properties.get('text'))
 
       // let sayHi = function() { tt.setCenter(e, 19, {checkZoomRange: true })}
@@ -205,6 +202,11 @@ export default {
       //     console.log("Ошибка: " + err);
       //   }
       // );
+    }
+  },
+  computed: {
+    WorkStatus() {    
+      return this.$store.getters.getWorkStatus
     }
   }
 };
