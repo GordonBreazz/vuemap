@@ -1,21 +1,24 @@
 <template>
   <div class="home">
-              <v-btn
-            v-scroll="onScroll"
-            v-show="fab"
-            fab
-            dark
-            fixed
-            bottom
-            right
-            color="primary"
-            @click="toTop"
-          >
-                      <v-icon>mdi-chevron-up</v-icon>
-          </v-btn>
+    <v-btn
+      v-scroll="onScroll"
+      v-show="fab"
+      fab
+      dark
+      fixed
+      bottom
+      right
+      color="primary"
+      @click="toTop"
+    >
+      <v-icon>mdi-chevron-up</v-icon>
+    </v-btn>
+
+   
+
     <RequastPanel id="requestpanel" />
-    <main-map ref="foo" id="mainmap" />    
-    <detail-panel id="infopanel" :filial="toFilial" v-on:showPanViewer="panaView"/>
+    <main-map ref="foo" id="mainmap" />
+    <detail-panel id="infopanel" :filial="toFilial" v-on:showPanViewer="panaView" />
 
     <button @click="showPanel" id="button100500" style="display: none">Подробнее</button>
     <button @click="goToAll" id="button100600" style="display: none">Все библиотеки на карте</button>
@@ -48,22 +51,20 @@ export default {
     toUrl() {
       return this.$store.getters.getPanaUrl;
     },
-    toFilial(){
+    toFilial() {
       return this.$store.getters.getCurrentLocationId;
     }
   },
   methods: {
-    onScroll (e) {
-      if (typeof window === 'undefined') return
-      const top = window.pageYOffset ||   e.target.scrollTop || 0
-      this.fab = top > 20
+    onScroll(e) {
+      if (typeof window === "undefined") return;
+      const top = window.pageYOffset || e.target.scrollTop || 0;
+      this.fab = top > 20;
     },
-    fab(){
-
+    fab() {},
+    toTop() {
+      this.$vuetify.goTo(0);
     },
-    toTop () {
-      this.$vuetify.goTo(0)
-    },    
     goToAll() {
       this.$refs.foo.goToAll();
     },

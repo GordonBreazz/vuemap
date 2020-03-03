@@ -1,4 +1,6 @@
 <template>
+<div>
+
   <v-list one-line dense>
     <v-list-item>
       <v-list-item-icon>
@@ -72,17 +74,30 @@
 
     <v-divider inset></v-divider>
 
-    <v-list-item @click>
+    <v-list-item @click="openEmail()">
       <v-list-item-icon>
         <v-icon color="indigo">mdi-email</v-icon>
       </v-list-item-icon>
-
       <v-list-item-content>
         <v-list-item-subtitle>E-mail библиотеки</v-list-item-subtitle>
         <v-list-item-title class="mt-1">{{(this.getCurrentData.email).toUpperCase()}}</v-list-item-title>
       </v-list-item-content>
     </v-list-item>
+
     <v-divider inset></v-divider>
+
+    <v-list-item @click="openSite()">
+      <v-list-item-icon>
+        <v-icon color="indigo">mdi-web</v-icon>
+      </v-list-item-icon>
+      <v-list-item-content>
+        <v-list-item-subtitle>Сайт</v-list-item-subtitle>
+
+      </v-list-item-content>
+    </v-list-item>
+
+    <v-divider inset></v-divider>
+
     <v-list-item @click>
       <v-list-item-icon>
         <v-icon color="indigo">mdi-account-circle-outline</v-icon>
@@ -97,10 +112,22 @@
       </v-list-item-content>
     </v-list-item>
   </v-list>
+  </div>
 </template>
 <script>
 export default {
   data: () => ({}),
+  methods: {
+    openEmail() {
+    
+      let emailTo = this.$store.getters.getCurrentLocation.email
+      window.open("mailto:"+emailTo+'?subject='+'bibliogorod')
+    },
+    openSite() {
+      window.open('http://'+this.$store.getters.getCurrentLocation.site)
+    }
+
+  },
   computed: {
     getCurrentData() {
       return this.$store.getters.getCurrentLocation

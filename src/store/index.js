@@ -69,9 +69,21 @@ export default new Vuex.Store({
             libraryType: '',
             shedule: 0
         },
-        structure: ['Читальный зал']        
+        structure: ['Читальный зал'],
+        clubs: [],
+        site: 'cbs-uu.ru',
+        foundingYear: 2019,
+        features: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ,15, 16, 17, 18, 19]       
     },
     getters: {
+        getFeaturesImages(state){
+            if (!state.currentLocation.features) return []
+            let arr =Array.from(state.currentLocation.features)        
+            return  arr.map( (item) => 'http://cbs-uu.ru/data/assets/features/' + item + '.jpg')
+        },
+        getFoundingYearImage(state){
+            return 'http://cbs-uu.ru/data/assets/years/'+state.currentLocation.foundingYear+'.jpg'
+        },
         getClubs(state) {
             return state.currentLocation.clubs
         },
@@ -87,39 +99,51 @@ export default new Vuex.Store({
             //console.log(state.timeTables[state.currentLocation.shedule])
 
         },
-        getWorkStatus(state) {
+        getWorkStatus(state, getters) {
 
             let result = {
                 status: 'закрыто',
                 message: ''
             }
             let today = new Date()
-            today.setHours(19, 37, 0, 0)
+            //today.setHours(19, 37, 0, 0)
+           
+
+            let isOffday = getters.getTimetable[today.getDay()].dayoff
+
+            if (isOffday) {
+                result.status = 'закрыто'
+                result.message = 'Сегодня у библиотеки выходной'
+                return result
+            }
 
             let openTime = new Date()
             openTime.setHours(10, 0, 0, 0)
 
             let closeTime = new Date()
             closeTime.setHours(19, 0, 0, 0)
-
-            let hours
+            
+            let hours1
 
             if (today >= openTime && today <= closeTime) {
-                hours = closeTime - today
+                hours1 = closeTime - today
                 result.status = 'открыто'
-                result.message = `До закрытия библиотеки ${getHoursAndMin(hours)}`
+                result.message = `До закрытия библиотеки ${getHoursAndMin(hours1)}`
             } else {
                 result.status = 'закрыто'
-                hours = openTime - today
-                if (hours < 0) result.message = 'Библиотека откроется завтра'
-                else result.message = `Библиотека откроется через ${getHoursAndMin(hours)}`
+                hours1 = openTime - today
+                if (hours1 < 0) result.message = 'Библиотека откроется завтра'
+                else result.message = `Библиотека откроется через ${getHoursAndMin(hours1)}`
 
-            }
+            }            
             return result
 
         },
         getCurrentLocation(state) {
             return state.currentLocation
+        },
+        getCurrentLocationSite(state) {
+            return state.currentLocation.site
         },
         getCurrentLocationId(state) {
             return state.currentLocation.id

@@ -9,7 +9,6 @@
       <v-card-title primary-title>
         <div>
           <h3 class="headline">{{this.$store.getters.getCaption}}</h3>
-
         </div>
         <v-btn @click="hidePanel" absolute dark fab top right color="red">
           <v-icon dark>mdi-close</v-icon>
@@ -17,38 +16,50 @@
       </v-card-title>
       <v-card-subtitle
         style="text-align: left"
-      >{{ this.$store.state.currentLocation.district + ' район ' + this.$store.state.currentLocation.address }}</v-card-subtitle>
+      >{{ this.$store.state.currentLocation.district + ' район ' + this.$store.state.currentLocation.address }}. Сейчас {{this.$store.getters.getWorkStatus.status}}. {{this.$store.getters.getWorkStatus.message}}</v-card-subtitle>
       <v-card-text>
-        <v-row no-gutters>
-          <v-col>
-            <div
-              style="text-align: justify; color: #454545;"
-              v-html="this.$store.state.currentLocation.text"
-            ></div>
-          </v-col>
-          <v-col>
-            <v-row no-gutters>
-              <v-col>
-                 <FeaturesList />
-              </v-col>
-              <v-col>
-     <ContactDetailsList />
-              </v-col>
-            </v-row>
-          </v-col>
-        </v-row>
+        <v-container>
+          <v-row>
+            <v-col cols="12" md="6">
+              <v-row>
+                <v-col cols="10">
+                  <v-row>
+                    <v-col v-for="(item, index) in this.$store.getters.getFeaturesImages" :key="index">
+                      <v-img :src="item" width="40"></v-img>
+                    </v-col>
+
+                  </v-row>
+                </v-col>
+                <v-col cols="2">
+                  <v-img :src="this.$store.getters.getFoundingYearImage" width="120"></v-img>
+                </v-col>
+              </v-row>
+              <div
+                style="text-align: justify; color: #454545;"
+                v-html="this.$store.state.currentLocation.text"
+              ></div>
+            </v-col>
+            <v-col cols="12" md="6">
+              <v-container>
+                <v-row no-gutters>
+                  <v-col cols="12" lg="6">
+                    <FeaturesList />
+                  </v-col>
+                  <v-col cols="12" lg="6">
+                    <ContactDetailsList />
+                  </v-col>
+                </v-row>
+              </v-container>
+            </v-col>
+          </v-row>
+        </v-container>
       </v-card-text>
       <v-divider></v-divider>
       <v-card-actions>
         <v-btn @click="showPanViewer" large color="pink" dark outlined>
           <v-icon dark class="mr-2">mdi-arrow-decision-outline</v-icon>3D тур по библиотеке
         </v-btn>
-        <v-btn @click large color="success" dark class="mr-2 ml-2" outlined>
-          <v-icon dark class="mr-2">mdi-arrow-decision-outline</v-icon>Предстаящие события
-        </v-btn>
-        <v-btn @click large color="success" dark outlined>
-          <v-icon dark class="mr-2">mdi-arrow-decision-outline</v-icon>Новости библиотеки
-        </v-btn>
+
       </v-card-actions>
     </v-card>
   </div>
@@ -59,8 +70,8 @@ import FeaturesList from "../components/FeaturesList";
 
 export default {
   components: {
-      ContactDetailsList,
-      FeaturesList
+    ContactDetailsList,
+    FeaturesList
   },
   props: ["filial"],
   data() {
@@ -68,7 +79,7 @@ export default {
   },
   methods: {
     showPanViewer() {
-      console.log(this.$store.state.currentLocation)
+      console.log(this.$store.state.currentLocation);
       this.$emit("showPanViewer");
     },
     hidePanel() {
