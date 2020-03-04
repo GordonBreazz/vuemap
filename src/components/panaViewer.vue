@@ -27,6 +27,7 @@
           height="100%"
           width="100%"
           :src="toUrl"
+          loading="lazy"
         >Ваш браузер не поддерживает плавающие фреймы!</iframe>
       </v-card>
     </v-sheet>

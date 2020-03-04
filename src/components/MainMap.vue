@@ -40,7 +40,7 @@ export default {
       coords2: [51.74677212790084, 107.6959137288361],
       placemarks: places.placemarks,
       mzoom: 12,
-      controls: ["zoomControl"],
+      controls: ["zoomControl",  "typeSelector"],
       markerIcon: (title, photoSmall) => ({
         layout: "default#imageWithContent",
         imageHref: "http://cbs-uu.ru//images/assets/pins-maps-library.png",
@@ -109,7 +109,7 @@ export default {
         frameSt =
           '<div style="margin-bottom:0px;"><div style="width: 400px; height: 250px;"><iframe src="http://cbs-uu.ru/tours/f' +
           location.id +
-          '/index.html" width="100%" height="100%" align="left">Ваш браузер не поддерживает плавающие фреймы!</iframe></div></div>';
+          '/index.html" width="100%" height="100%" align="left" loading="lazy">Ваш браузер не поддерживает плавающие фреймы!</iframe></div></div>';
         buttonSt = `
           <button  type="button" class="v-btn v-btn--absolute v-btn--contained v-btn--fab v-btn--right v-btn--round v-btn--top theme--dark v-size--small red accent-3 ml-3" style="margin-top:332px" onclick="javascript:document.querySelector('#button100700').click()">
             <span class="v-btn__content">
