@@ -42,6 +42,26 @@ export default new Vuex.Store({
         }
     },
     state: {
+        mainMenu: [
+            {   
+                title: 'Афиша',
+                link: 'http://cbs-uu.ru/category/%d1%87%d1%82%d0%be-%d0%bf%d0%be%d1%87%d0%b8%d1%82%d0%b0%d1%82%d1%8c/',
+                icon: 'mdi-book-open-page-variant',
+                linkName: 'href'                
+            },
+            {   
+                title: 'Карта',
+                link: '/',
+                icon: 'mdi-map-marker-multiple-outline',
+                linkName: 'to'
+            },
+            {   
+                title: 'О проекте',
+                link: '/about',
+                icon: 'mdi-bookmark-minus-outline',
+                linkName: 'to'
+            },
+        ],
         drawer: false,
         timeTables: shedule.scheduleTypes,
         summerTimetable: shedule.summerTimetable,
@@ -80,6 +100,9 @@ export default new Vuex.Store({
         features: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ,15, 16, 17, 18, 19]       
     },
     getters: {
+        getMenu(state) {
+            return state.mainMenu
+        },
         getDrawer(state) {
             return state.drawer
         },
