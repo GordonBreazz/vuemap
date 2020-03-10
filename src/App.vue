@@ -1,19 +1,28 @@
 <template>
   <v-app>
-    <app-header />
+
+    <!--<app-nav-drawer />      -->
+    <app-header />      
     <app-content />    
     <app-footer />
   </v-app>
 </template>
 
 <script>
-import AppHeader from "./components/AppHeader";
-import AppContent from "./components/AppContent";
-import AppFooter from "./components/AppFooter";
+import AppNavDrawer from "./layout/AppNavDrawer";
+import AppHeader from "./layout/AppHeader";
+import AppContent from "./layout/AppContent";
+import AppFooter from "./layout/AppFooter";
 
 // https://codesandbox.io/s/codesandbox-nuxt-1ht4k
 export default {
+  data() {
+    return {
+      tt: true
+    }
+  },     
   components: {
+    AppNavDrawer,
     AppHeader,
     AppContent,
     AppFooter

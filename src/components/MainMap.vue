@@ -1,5 +1,6 @@
 <template>
   <div>
+      <v-card outlined >
     <yandex-map
       :coords="coords"
       :zoom="mzoom"
@@ -10,7 +11,7 @@
           autoFitToViewport: 'always'
         }"
       map-type="map"
-    >
+    >  
       <ymap-marker
         v-for="(location, index) in placemarks"
         :key="index"
@@ -23,6 +24,7 @@
         :balloonTemplate="balloonTemplate(location)"
       ></ymap-marker>
     </yandex-map>
+    </v-card>
   </div>
 </template>
 

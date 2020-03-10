@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar app color="primary" dark id="top-page">
+  <v-app-bar app color="primary" dark id="top-page" clipped-left  >
     <div class="d-flex align-center">
 
       <router-link to="/">

@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="map-page">
     <v-btn
       v-scroll="onScroll"
       v-show="fab"
@@ -81,4 +81,15 @@ export default {
   }
 };
 </script>
+<style>
+.map-page {
+  padding-top: 20px;
 
+}
+.v-parallax__image-container {
+  opacity: 1;
+}
+#litmap .v-parallax__image-container {
+  opacity: 0.5;
+}
+</style>
