@@ -1,9 +1,8 @@
 <template>
   <v-app>
-
-    <!--<app-nav-drawer />      -->
-    <app-header />      
-    <app-content />    
+    <app-nav-drawer />
+    <app-header />
+    <app-content />
     <app-footer />
   </v-app>
 </template>
@@ -19,8 +18,8 @@ export default {
   data() {
     return {
       tt: true
-    }
-  },     
+    };
+  },
   components: {
     AppNavDrawer,
     AppHeader,

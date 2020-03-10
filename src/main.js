@@ -6,8 +6,6 @@ import router from './router'
 import ymapPlugin from 'vue-yandex-maps'
 import vuetify from './plugins/vuetify'
 
-
-
 Vue.config.productionTip = false
 
 Vue.use(Vuex);

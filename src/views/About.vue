@@ -36,9 +36,9 @@
             <h2 style="display-2 font-weight-black mb-5">С помощью интерактивной карты</h2>
 
             <h2 class="display-1 font-weight-black">Мы поможем Вам найти свою библиотеку</h2>
-                 <div class="my-2">
-         <v-btn class="ma-2" large outlined color="white" @click="goMap">Перейти к карте</v-btn>
-          </div>
+            <div class="my-2">
+              <v-btn class="ma-2" large outlined color="white" @click="goMap">Перейти к карте</v-btn>
+            </div>
           </v-parallax>
         </v-col>
       </v-row>
@@ -93,7 +93,7 @@
 
     <v-container>
       <v-row>
-        <v-col  cols="10"  lg="6" >
+        <v-col cols="10" lg="6">
           <v-row class="text-left">
             <v-col cols="12">
               <h3 class="display-1 font-weight-light" style="padding-left: 70px;">
@@ -102,13 +102,12 @@
               </h3>
             </v-col>
             <v-col cols="12">
-              <v-img src="../assets/libfr.jpg"></v-img>
+              <v-img src="../assets/libfr.jpg" title="На рисунке изображена Центральная городская библиотека им. Исая К. Калашникова"></v-img>
             </v-col>
           </v-row>
         </v-col>
-        <v-col cols="10"  lg="6">
+        <v-col cols="10" lg="6">
           <v-row class="text-left pl-3">
-            
             <v-col
               cols="1"
               style=" background:no-repeat url(http://cbs-uu.ru/data/images/1.svg) 50% 30%; "
@@ -116,7 +115,6 @@
             <v-col cols="11" class="mb-10">
               <p>Большое разнообразие литературы, которую можно читать в зале или взять домой совершенно бесплатно. Библиотекари и библиографы помогут подобрать нужные издания. А через стационарный компьютер можно получить доступ к электронным базам данных (Электронная библиотека диссертаций, КонсультантПлюс, Гарант, Национальная электронная библиотека и многие другие).</p>
             </v-col>
-            
 
             <v-col
               cols="1"
@@ -145,11 +143,36 @@
         </v-col>
       </v-row>
     </v-container>
-        <v-container style="margin-top:0px; ">
+    <v-container style="margin-top:0px; ">
+      <v-row justify="center">
+        <v-col cols="12" lg="10">
+          <h3 class="display-1 font-weight-light">МЫ В СОЦИАЛЬНЫХ СЕТЯХ, ПРИСОЕДИНЯЙСЯ!</h3>
+
+          <v-spacer></v-spacer>
+ 
+              <v-btn
+                v-for="(item, index) in socnet"
+                :key="index"
+                class="mx-4"
+                dark
+                icon
+                x-large
+                color="blue-grey darken-3"
+                @click="goSoc(item.link)"
+                v-bind:title="item.hint"
+              >
+                <v-icon x-large>{{ item.icon }}</v-icon>
+              </v-btn>
+
+        </v-col>
+      </v-row>
+    </v-container>
+
+    <v-container style="margin-top:0px; ">
       <v-row justify="center">
         <v-col cols="12" lg="9">
-           <v-img src="http://cbs-uu.ru/data/assets/places/6.jpg" ></v-img>
-           <!--
+          <v-img src="http://cbs-uu.ru/data/assets/places/6.jpg" title="На рисунке изображена Площадь советов г. Улан-Удэ"></v-img>
+          <!--
           <v-carousel hide-delimiters cycle>
             <v-carousel-item v-for="(item,i) in items" :key="i" :src="item.src"></v-carousel-item>
           </v-carousel>
@@ -165,6 +188,28 @@
 export default {
   data() {
     return {
+      socnet: [
+        {
+          icon: "mdi-facebook",
+          link: "https://www.facebook.com/CBSUU",
+          hint: "Наш Facebook"
+        },
+        {
+          icon: "mdi-vk",
+          link: "https://vk.com/ik_kalashnikov",
+          hint: "Наша группа ВКонтакте"
+        },
+        {
+          icon: "mdi-youtube",
+          link: "https://www.youtube.com/channel/UC3xc55v1C4hJmRp6UCLWeyQ",
+          hint: "Наш канал на YouTube"
+        },
+        {
+          icon: "mdi-instagram",
+          link: "https://www.instagram.com/cbs_kalashnikov/",
+          hint: "Наш Instagram"
+        }
+      ],
       items: [
         {
           src: "http://cbs-uu.ru/data/assets/places/4.jpg"
@@ -183,14 +228,16 @@ export default {
   },
   methods: {
     goMap() {
-      this.$router.push({ path: '/' })
+      this.$router.push({ path: "/" });
+    },
+    goSoc(link) {
+      window.open(link);
     }
   }
 };
 </script>
 <style>
 .container {
-
 }
 .v-parallax__image-container {
   opacity: 1;

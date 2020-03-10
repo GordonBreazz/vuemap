@@ -27,6 +27,9 @@ export default new Vuex.Store({
     actions: {
     },
     mutations: {
+        toggleDrawer(state, val){
+            state.drawer = val
+        },
         changeLocation(state, payload) {
             state.currentLocation = payload.newLocation
         },
@@ -39,6 +42,7 @@ export default new Vuex.Store({
         }
     },
     state: {
+        drawer: false,
         timeTables: shedule.scheduleTypes,
         summerTimetable: shedule.summerTimetable,
         winterTimetable: shedule.winterTimetable,
@@ -76,6 +80,9 @@ export default new Vuex.Store({
         features: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ,15, 16, 17, 18, 19]       
     },
     getters: {
+        getDrawer(state) {
+            return state.drawer
+        },
         getFeaturesImages(state){
             if (!state.currentLocation.features) return []
             let arr =Array.from(state.currentLocation.features)        
