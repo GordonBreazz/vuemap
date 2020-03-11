@@ -1,11 +1,17 @@
 <template>
   <v-navigation-drawer
-    clipped="$vuetify.breakpoint.lgAndUp"
+    clipped
     app
     right
     class="text-left grey lighten-5"
     v-model="drawer"
+     disable-resize-watcher
+     :mini-variant="false"
   >
+
+    
+
+  <!--
     <template v-slot:prepend>
       <v-list-item two-line>
         <v-list-item-avatar>
@@ -18,10 +24,14 @@
         </v-list-item-content>
       </v-list-item>
     </template>
+-->
 
-    <v-divider></v-divider>
 
     <v-list dense>
+      <v-subheader>МЕНЮ</v-subheader>
+    
+      
+      <v-divider></v-divider>
       <v-list-item
         v-for="(item, index) in mainMenu"
         :key="index"

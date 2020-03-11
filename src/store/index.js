@@ -109,7 +109,7 @@ export default new Vuex.Store({
         getFeaturesImages(state){
             if (!state.currentLocation.features) return []
             let arr =Array.from(state.currentLocation.features)        
-            return  arr.map( (item) => 'http://cbs-uu.ru/data/assets/features/' + item + '.jpg')
+            return  arr.map( (item) => 'http://cbs-uu.ru/data/assets/features_blue/' + item + '.jpg')
         },
         getFoundingYearImage(state){
             return 'http://cbs-uu.ru/data/assets/years/'+state.currentLocation.foundingYear+'.jpg'
