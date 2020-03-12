@@ -27,7 +27,7 @@ export default {
     AppFooter
   },
   created() {
-    document.title = "Библиогород МАУ ЦБС г. Улан-Удэ";
+    //document.title = "Библиогород МАУ ЦБС г. Улан-Удэ";
   }
 };
 </script>

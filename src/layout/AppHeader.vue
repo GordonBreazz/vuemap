@@ -19,7 +19,7 @@
         min-width="100"
         src="http://cbs-uu.ru/data/assets/logo/img_fonts (3).png"
         transition="scale-transition"
-        width="300"
+        :width="imageHeight"
       />
     </div>
 
@@ -53,7 +53,16 @@ export default {
   computed: {
     mainMenu() {
       return this.$store.getters.getMenu;
-    }
+    },
+      imageHeight () {
+        switch (this.$vuetify.breakpoint.name) {
+          case 'xs': return '200'
+          case 'sm': return '300'
+          case 'md': return '300'
+          case 'lg': return '300'
+          case 'xl': return '300'
+        }
+      }      
   }
 };
 </script>
