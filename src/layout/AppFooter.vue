@@ -4,7 +4,7 @@
 
       <v-card-text class="py-2 white--text">
         {{ new Date().getFullYear() }}
-        <strong class=>© МАУ «Централизованная библиотечная система г. Улан-Удэ»</strong>
+        <strong >© МАУ «Централизованная библиотечная система г. Улан-Удэ»</strong>
         <!--<strong> Разработка Коннов Е. С.</strong>-->
       </v-card-text>
      

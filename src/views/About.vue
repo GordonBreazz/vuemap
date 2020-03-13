@@ -3,7 +3,8 @@
     <v-parallax src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg" height="350">
       <h2 class="display-2 font-weight-light mb-5">Добро пожаловать!</h2>
 
-      <h2 class="display-1 font-weight-light mb-5">
+      <!--<h2 class="display-1 font-weight-light mb-5">-->
+              <h2 v-bind:class="{'subtitle-1 font-weight-light': $vuetify.breakpoint.xsOnly, 'display-1 font-weight-light': $vuetify.breakpoint.mdAndUp}" >
         Это БИБЛИОГОРОД - навигатор по библиотекам
         МАУ ЦБС
         <br />города Улан-Удэ

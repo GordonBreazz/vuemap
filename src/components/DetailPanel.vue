@@ -53,6 +53,24 @@
             </v-col>
           </v-row>
         </v-container>
+        <v-container>
+          <v-row>
+            <v-col >
+         <v-img src="https://picsum.photos/510/300?random" ></v-img>
+              </v-col>
+            <v-col >
+         <v-img src="https://picsum.photos/510/300?random" ></v-img>
+              </v-col>
+            <v-col >
+                
+          
+          
+        >
+         <v-img src="https://picsum.photos/510/300?random" width="200" height="100%" style></v-img>
+              </v-col>
+              </v-row>
+              </v-container>
+
       </v-card-text>
       <v-divider></v-divider>
       <v-card-actions>
@@ -60,6 +78,8 @@
           <v-icon dark class="mr-2">mdi-arrow-decision-outline</v-icon>3D тур по библиотеке
         </v-btn>
 
+
+                
       </v-card-actions>
     </v-card>
   </div>
