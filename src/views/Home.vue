@@ -14,10 +14,8 @@
       <v-icon>mdi-chevron-up</v-icon>
     </v-btn>
 
-   
-
     <RequastPanel id="requestpanel" />
-    <main-map ref="foo" id="mainmap" />
+    <main-map ref="foo" id="mainmap" v-bind="$props" />
     <detail-panel id="infopanel" :filial="toFilial" v-on:showPanViewer="panaView" />
 
     <button @click="showPanel" id="button100500" style="display: none">Подробнее</button>
@@ -54,6 +52,7 @@ export default {
     toFilial() {
       return this.$store.getters.getCurrentLocationId;
     }
+
   },
   methods: {
     onScroll(e) {
@@ -78,13 +77,13 @@ export default {
         this.$refs.bar.panarama = true;
       }, 1000);
     }
-  }
+  },
+  props: ["fId"]
 };
 </script>
 <style>
 .map-page {
   padding-top: 20px;
-
 }
 .v-parallax__image-container {
   opacity: 1;

@@ -1,29 +1,29 @@
 <template>
   <div>
-      <v-card outlined >
-    <yandex-map
-      :coords="coords"
-      :zoom="mzoom"
-      :controls="controls"
-      @map-was-initialized="initHandler"
-      :options="{ 
+    <v-card outlined>
+      <yandex-map
+        :coords="coords"
+        :zoom="mzoom"
+        :controls="controls"
+        @map-was-initialized="initHandler"
+        :options="{ 
           suppressMapOpenBlock: true,
           autoFitToViewport: 'always'
         }"
-      map-type="map"
-    >  
-      <ymap-marker
-        v-for="(location, index) in placemarks"
-        :key="index"
-        :marker-id="index"
-        marker-type="placemark"
-        :icon="markerIcon(location.title)"
-        :coords="location.coords"
-        @click="onClick(location)"
-        cluster-name="1"
-        :balloonTemplate="balloonTemplate(location)"
-      ></ymap-marker>
-    </yandex-map>
+        map-type="map"
+      >
+        <ymap-marker
+          v-for="(location, index) in placemarks"
+          :key="index"
+          :marker-id="index"
+          marker-type="placemark"
+          :icon="markerIcon(location.title)"
+          :coords="location.coords"
+          @click="onClick(location)"
+          cluster-name="1"
+          :balloonTemplate="balloonTemplate(location)"
+        ></ymap-marker>
+      </yandex-map>
     </v-card>
   </div>
 </template>
@@ -42,7 +42,7 @@ export default {
       coords2: [51.74677212790084, 107.6959137288361],
       placemarks: places.placemarks,
       mzoom: 12,
-      controls: ["zoomControl",  "typeSelector"],
+      controls: ["zoomControl", "typeSelector"],
       markerIcon: (title, photoSmall) => ({
         layout: "default#imageWithContent",
         imageHref: "http://cbs-uu.ru//images/assets/pins-maps-library.png",
@@ -100,7 +100,7 @@ export default {
         location.id == 13 ||
         location.id == 15 ||
         location.id == 16 ||
-        location.id == 17 ||        
+        location.id == 17 ||
         location.id == 19 ||
         location.id == 20 ||
         location.id == 21 ||
@@ -207,8 +207,27 @@ export default {
     }
   },
   computed: {
-    WorkStatus() {    
-      return this.$store.getters.getWorkStatus
+    WorkStatus() {
+      return this.$store.getters.getWorkStatus;
+    }
+  },
+  props: ["fId"],
+  watch: {
+    fId: function(newVal, oldVal) {
+      // watch it
+
+      if (newVal !== oldVal) {
+        let result = this.placemarks.find(
+          currentValue => currentValue.id == newVal
+        );
+        if (result) {
+          //this.onClick(result)
+          this.currentLocation = result;
+          this.$store.commit("changeLocation", { newLocation: result });
+           this.showPanel()
+        } else console.log("Нет такого филиала");
+      }
+      console.log("Prop changed: ", newVal, " | was: ", oldVal);
     }
   }
 };
