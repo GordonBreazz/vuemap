@@ -221,7 +221,7 @@ export default {
           currentValue => currentValue.id == newVal
         );
         if (result) {
-          //this.onClick(result)
+          this.onClick(result)
           this.currentLocation = result;
           this.$store.commit("changeLocation", { newLocation: result });
            this.showPanel()
