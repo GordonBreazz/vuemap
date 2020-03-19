@@ -39,31 +39,9 @@
               <div
                 style="text-align: justify; color: #454545;"
                 v-html="this.$store.state.currentLocation.text"
-              >
-              
-              
-              
+              >                                        
               </div>
-                    <v-container>
-                      <v-row no-gutters>
-                        <v-col cols="5"> 
-                          <v-img src="https://picsum.photos/510/300?random" class="mr-1"></v-img>
-                        </v-col>
-                        <v-col cols="5">
-                          <v-img src="https://picsum.photos/510/300?random" class="mr-1"></v-img>
-                        </v-col>
-                        <v-col cols="2">
-                          <v-img
-                            src="https://picsum.photos/510/300?random"
-                            width="200"
-                            height="100%"
-                          
-                          ><div style="background-color:rgba(51,51,51,.8); height: 100%; color: white; justify-content: center;   position: relative ;  align-items: center; text-align: center; ">
-                            <p style="position: absolute; top: 45%; width: 100%">6 фото</p>
-                            </div></v-img>
-                        </v-col>
-                      </v-row>
-                    </v-container>
+           <Photo-Gallery />
 
 
 
@@ -95,11 +73,13 @@
 <script>
 import ContactDetailsList from "../components/ContactDetailsList";
 import FeaturesList from "../components/FeaturesList";
+import PhotoGallery from "../components/PhotoGallery";
 
 export default {
   components: {
     ContactDetailsList,
-    FeaturesList
+    FeaturesList,
+    PhotoGallery
   },
   props: ["filial"],
   data() {
@@ -143,18 +123,5 @@ export default {
 
 </style>
 
-<style scoped>
-  .bottom-gradient {
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, transparent 72px);
-  }
 
-  .repeating-gradient {
-    background-image: repeating-linear-gradient(-45deg,
-                        rgba(255,0,0,.25),
-                        rgba(255,0,0,.25) 5px,
-                        rgba(0,0,255,.25) 5px,
-                        rgba(0,0,255,.25) 10px
-                      );
-  }
-</style>
 
