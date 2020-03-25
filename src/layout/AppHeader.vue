@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar app color="primary" dark id="top-page" :clipped-right="$vuetify.breakpoint.lgAndUp" >
+  <v-app-bar app color="primary" dark id="top-page" :clipped-right="$vuetify.breakpoint.lgAndUp">
     <div class="d-flex align-center">
       <router-link to="/">
         <v-img
@@ -10,6 +10,7 @@
           transition="scale-transition"
           width="70"
         />
+
       </router-link>
 
       <v-img
@@ -25,57 +26,32 @@
 
     <v-spacer></v-spacer>
 
-    <v-menu offset-y v-for="(item, i) in subMenu" :key="(i+900)" :close-on-content-click="false" v-model="mshow">
-      <template v-slot:activator="{ on }">
-        <v-btn text v-on="on" class="hidden-xs-only">
-          <v-icon>{{item.icon}}</v-icon>
-          <span class="mr-2 ml-2 hidden-sm-and-down">{{item.title}}</span>
-        </v-btn>
-      </template>
-     <menu-list :menuItems="item.groups"  v-on:closemenuev="closeMenu" />
+    <DropDownMenu />
 
-    </v-menu>
+    <FlatMenu />
 
-    <v-btn
-      v-for="(item, index) in mainMenu"
-      :key="index"
-      :[item.linkName]="item.link"
-      target="(item.linkName==href) ? true : false"
-      text
-      class="hidden-xs-only"
-    >
-      <v-icon>{{item.icon}}</v-icon>
-      <span class="mr-2 ml-2 hidden-sm-and-down">{{item.title}}</span>
-    </v-btn>
     <v-app-bar-nav-icon class="d-sm-flex d-md-none" @click.stop="drawer" />
+    
   </v-app-bar>
 </template>
 
 <script>
-import MenuList from "../components/MenuList";
+import FlatMenu from "../components/FlatMenu";
+import DropDownMenu from "../components/DropDownMenu";
 export default {
   components: {
-    MenuList
+    FlatMenu,
+    DropDownMenu
   },
   data() {
-    return {
-      mshow: false
-
-    };
+    return {};
   },
   methods: {
     drawer() {
       this.$store.commit("toggleDrawer", !this.$store.getters.getDrawer);
-    },
-    closeMenu(){
-      console.log('я услышал')
-      this.mshow=false; 
     }
   },
   computed: {
-    subMenu() {
-      return this.$store.getters.getSubMenu;
-    },
     mainMenu() {
       return this.$store.getters.getMenu;
     },
@@ -84,9 +60,9 @@ export default {
         case "xs":
           return "200";
         case "sm":
-          return "300";
+          return "200";
         case "md":
-          return "300";
+          return "240";
         case "lg":
           return "300";
         case "xl":
