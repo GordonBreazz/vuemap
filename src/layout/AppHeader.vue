@@ -26,10 +26,8 @@
 
     <v-spacer></v-spacer>
 
-    <DropDownMenu />
-
-    <FlatMenu />
-
+    <drop-down-menu />
+    <flat-menu />
     <v-app-bar-nav-icon class="d-sm-flex d-md-none" @click.stop="drawer" />
     
   </v-app-bar>
