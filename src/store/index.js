@@ -63,7 +63,7 @@ export default new Vuex.Store({
         linkName: "to"
       }
     ],
-    drawer: false,
+    drawer: true,
     timeTables: shedule.scheduleTypes,
     summerTimetable: shedule.summerTimetable,
     winterTimetable: shedule.winterTimetable,

@@ -11,15 +11,18 @@
  
     <v-subheader>МЕНЮ</v-subheader>
     <v-divider></v-divider>
+
     <flat-menu-list />
 
   </v-navigation-drawer>
 </template>
 <script>
 import FlatMenuList from "../components/FlatMenuList";
+import NestedMenuList from "../components/NestedMenuList";
 export default {
   components: {
-    FlatMenuList
+    FlatMenuList,
+    NestedMenuList
   },
   data() {
     return {};

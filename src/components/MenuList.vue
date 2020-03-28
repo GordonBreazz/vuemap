@@ -2,9 +2,14 @@
   <v-list class="text-left" dense>
     <v-list-group sub-group v-for="(gp, h) in menuItems" :key="(h+1500)" v-model="gshow[h]">
       <template v-slot:activator>
+
         <v-list-item-content>
+          
           <v-list-item-title class="text-weight">{{gp.name}}</v-list-item-title>
         </v-list-item-content>
+                              <v-list-item-icon>
+          <v-icon>mdi-star</v-icon>
+        </v-list-item-icon>
       </template>
 
       <v-list-item
@@ -14,6 +19,7 @@
         :to="itm.link"
         @click="menuClick"
       >
+
         <v-list-item-title>{{itm.title}}</v-list-item-title>
       </v-list-item>
     </v-list-group>
