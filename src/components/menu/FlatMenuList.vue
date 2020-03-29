@@ -22,7 +22,7 @@
   </v-list>
 </template>>
 <script>
-import NestedMenuList from "../components/NestedMenuList";
+import NestedMenuList from "@/components/menu/NestedMenuList";
 export default {
     components: {    
     NestedMenuList

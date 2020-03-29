@@ -32,7 +32,6 @@
 import MainMap from "../components/MainMap";
 import PanaViewer from "../components/PanaViewer";
 import RequastPanel from "../components/RequastPanel";
-import InfoPanel from "../components/InfoPanel";
 import DetailPanel from "../components/DetailPanel";
 // @ is an alias to /src
 
@@ -40,7 +39,6 @@ export default {
   name: "Home",
   components: {
     RequastPanel,
-    InfoPanel,
     MainMap,
     PanaViewer,
     DetailPanel

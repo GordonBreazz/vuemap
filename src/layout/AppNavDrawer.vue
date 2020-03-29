@@ -17,8 +17,8 @@
   </v-navigation-drawer>
 </template>
 <script>
-import FlatMenuList from "../components/FlatMenuList";
-import NestedMenuList from "../components/NestedMenuList";
+import FlatMenuList from "../components/menu/FlatMenuList";
+import NestedMenuList from "../components/menu/NestedMenuList";
 export default {
   components: {
     FlatMenuList,

@@ -7,9 +7,7 @@
           
           <v-list-item-title class="text-weight">{{gp.name}}</v-list-item-title>
         </v-list-item-content>
-                              <v-list-item-icon>
-          <v-icon>mdi-star</v-icon>
-        </v-list-item-icon>
+
       </template>
 
       <v-list-item

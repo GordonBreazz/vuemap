@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import MenuList from "../components/MenuList";
+import MenuList from "@/components/menu/MenuList";
 export default {
   components: {
     MenuList

@@ -21,25 +21,25 @@
 </template>
 
 <script>
-import f1 from "../components/f1";
-import f2 from "../components/f2";
-import f3 from "../components/f3";
-import f4 from "../components/f4";
-import f5 from "../components/f5";
-import f6 from "../components/f6";
-import f9 from "../components/f9";
-import f10 from "../components/f10";
-import f12 from "../components/f12";
-import f13 from "../components/f13";
-import f15 from "../components/f15";
-import f16 from "../components/f16";
-import f17 from "../components/f17";
-import f18 from "../components/f18";
-import f19 from "../components/f19";
-import f20 from "../components/f20";
-import f21 from "../components/f21";
-import f24 from "../components/f24";
-import f25 from "../components/f25";
+import f1 from "@/components/deplicated/f1";
+import f2 from "@/components/deplicated/f2";
+import f3 from "@/components/deplicated/f3";
+import f4 from "@/components/deplicated/f4";
+import f5 from "@/components/deplicated/f5";
+import f6 from "@/components/deplicated/f6";
+import f9 from "@/components/deplicated/f9";
+import f10 from "@/components/deplicated/f10";
+import f12 from "@/components/deplicated/f12";
+import f13 from "@/components/deplicated/f13";
+import f15 from "@/components/deplicated/f15";
+import f16 from "@/components/deplicated/f16";
+import f17 from "@/components/deplicated/f17";
+import f18 from "@/components/deplicated/f18";
+import f19 from "@/components/deplicated/f19";
+import f20 from "@/components/deplicated/f20";
+import f21 from "@/components/deplicated/f21";
+import f24 from "@/components/deplicated/f24";
+import f25 from "@/components/deplicated/f25";
 
 export default {
   components: {

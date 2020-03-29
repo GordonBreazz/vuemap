@@ -34,8 +34,8 @@
 </template>
 
 <script>
-import FlatMenu from "../components/FlatMenu";
-import DropDownMenu from "../components/DropDownMenu";
+import FlatMenu from "../components/menu/FlatMenu";
+import DropDownMenu from "../components/menu/DropDownMenu";
 export default {
   components: {
     FlatMenu,
