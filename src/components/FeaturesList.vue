@@ -73,7 +73,7 @@
     </v-list-item>    
   </v-list>
 </template>
-                <script>
+<script>
 export default {
   data: () => ({
     todayWork: 0,
