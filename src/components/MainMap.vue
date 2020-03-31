@@ -35,7 +35,6 @@ export default {
   components: {},
   data() {
     return {
-      ppp: 0,
       map: {},
       coords: [51.81008913374312, 107.60167337301641],
       userPosition: [51.825683, 107.58439],
@@ -67,6 +66,7 @@ export default {
       // var anchor1 = this.$el.querySelector("#anchor");
       // console.log(anchor1)
       // anchor1.scrollTop = anchor1.scrollHeight;    
+      
       this.$vuetify.goTo("#infopanel", { offset: 30 +  Math.floor(Math.random() * 11) });
 
       // let gl = this.$scrollTo;
