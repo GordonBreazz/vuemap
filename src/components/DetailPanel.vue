@@ -87,7 +87,7 @@ export default {
   },
   methods: {
     showPanViewer() {
-      console.log(this.$store.state.currentLocation);
+      //console.log(this.$store.state.currentLocation);
       this.$emit("showPanViewer");
     },
     hidePanel() {

@@ -35,6 +35,7 @@ export default {
   components: {},
   data() {
     return {
+      ppp: 0,
       map: {},
       coords: [51.81008913374312, 107.60167337301641],
       userPosition: [51.825683, 107.58439],
@@ -65,9 +66,8 @@ export default {
       this.$store.commit("showInfoPanel");
       // var anchor1 = this.$el.querySelector("#anchor");
       // console.log(anchor1)
-      // anchor1.scrollTop = anchor1.scrollHeight;
-
-      this.$vuetify.goTo("#infopanel", { offset: 30 });
+      // anchor1.scrollTop = anchor1.scrollHeight;    
+      this.$vuetify.goTo("#infopanel", { offset: 30 +  Math.floor(Math.random() * 11) });
 
       // let gl = this.$scrollTo;
       // setTimeout(function() {
@@ -76,10 +76,12 @@ export default {
     },
 
     goToAll() {
+      //if (this.$router.currentRoute.path !== '/') this.$router.replace('/')
       this.$vuetify.goTo("#requestpanel");
       this.showInfo = false;
       if (this.map.balloon) this.map.balloon.close();
       this.map.setBounds(this.map.geoObjects.getBounds());
+      
     },
     balloonTemplate(location) {
       //Создания балуна метки
@@ -211,7 +213,7 @@ export default {
       return this.$store.getters.getWorkStatus;
     }
   },
-  props: ["fId"],
+  props: ["fId", "frm"],
   watch: {
     fId: function(newVal, oldVal) {
       // watch it
@@ -220,14 +222,18 @@ export default {
         let result = this.placemarks.find(
           currentValue => currentValue.id == newVal
         );
-        if (result) {
-          this.onClick(result)
+        if (result) {     
           this.currentLocation = result;
+          if (!this.frm) {
+            // this.$vuetify.goTo(0);
+            this.map.setCenter(result.coords, 19, { checkZoomRange: false });
+
+          }    
           this.$store.commit("changeLocation", { newLocation: result });
-           this.showPanel()
+         this.showPanel();
         } else console.log("Нет такого филиала");
       }
-      console.log("Prop changed: ", newVal, " | was: ", oldVal);
+      // console.log("Prop changed: ", newVal, " | was: ", oldVal);
     }
   }
 };

@@ -623,7 +623,7 @@ export default
                 forChildren: false,
                 district: 'Советский',
                 photoSmall: 'http://cbs-uu.ru/data/images/small/25.jpg',
-                id: 24,
+                id: 25,
                 text: '',
                 microdistrict: '',
                 email: 'cbskalashnikov@yandex.ru',

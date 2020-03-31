@@ -1,8 +1,6 @@
 <template>
   <v-list dense>
-
-
-    <nested-menu-list/>
+    <nested-menu-list />
     <v-list-item
       v-for="(item, index) in mainMenu"
       :key="index"
@@ -24,7 +22,7 @@
 <script>
 import NestedMenuList from "@/components/menu/NestedMenuList";
 export default {
-    components: {    
+  components: {
     NestedMenuList
   },
   computed: {

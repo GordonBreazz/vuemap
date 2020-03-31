@@ -49,6 +49,9 @@ export default {
     },
     toFilial() {
       return this.$store.getters.getCurrentLocationId;
+    },
+    getPath() {
+      return this.$store.getters.getPath;
     }
 
   },
@@ -60,13 +63,15 @@ export default {
     },
     fab() {},
     toTop() {
-      this.$vuetify.goTo(0);
+      //this.$vuetify.goTo(0);
+      this.$vuetify.goTo("#infopanel", { offset: 30 });
     },
     goToAll() {
       this.$refs.foo.goToAll();
     },
     showPanel() {
-      this.$refs.foo.showPanel();
+     if (this.$store.state.pathMode && this.$router.currentRoute.path !== this.getPath) this.$router.push(this.getPath+'?q=baloon') 
+       else  this.$refs.foo.showPanel();
     },
     panaView() {
       this.$refs.bar.panarama = false;
@@ -76,7 +81,7 @@ export default {
       }, 1000);
     }
   },
-  props: ["fId"]
+  props: ["fId", "frm"]
 };
 </script>
 <style>
