@@ -5,11 +5,14 @@ import App from './App.vue'
 import router from './router'
 import ymapPlugin from 'vue-yandex-maps'
 import vuetify from './plugins/vuetify'
+import VueLazyLoad from 'vue-lazyload'
+
 
 Vue.config.productionTip = false
 
 Vue.use(Vuex);
 Vue.use(ymapPlugin)
+Vue.use(VueLazyLoad)
 
 Vue.prototype.$Bus = new Vue({})
 

@@ -12,6 +12,7 @@ import AppNavDrawer from "./layout/AppNavDrawer";
 import AppHeader from "./layout/AppHeader";
 import AppContent from "./layout/AppContent";
 import AppFooter from "./layout/AppFooter";
+require("vue-image-lightbox/dist/vue-image-lightbox.min.css");
 
 // https://codesandbox.io/s/codesandbox-nuxt-1ht4k
 export default {

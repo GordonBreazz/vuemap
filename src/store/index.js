@@ -118,9 +118,38 @@ export default new Vuex.Store({
       17,
       18,
       19
-    ]
+    ],
+    photos: [        {
+      thumb:
+        "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
+      src:
+        "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
+      caption: "<h4>Elephant</h4>"
+    },
+    {
+      thumb:
+        "https://i-kinhdoanh.vnecdn.net/2018/06/18/1-1529296929_680x0.jpg",
+      src:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/F-15_vertical_deploy.jpg/390px-F-15_vertical_deploy.jpg",
+      caption: "<h4>Messi</h4>"
+    }
+  ]
   },
   getters: {
+    getAllPhoto(state){
+      if (state.currentLocation.photos)
+        return state.currentLocation.photos
+      return []  
+    },
+    getTwoPhoto(state){    
+      if (state.currentLocation.photos)
+        return state.currentLocation.photos.slice(0,2) 
+    },
+    getOtherPhoto(state){   
+      if (state.currentLocation.photos) 
+        if (state.currentLocation.photos.length > 2)
+          return {photo: state.currentLocation.photos[2], cnt: state.currentLocation.photos.length-2}       
+    },    
     getPath(state) {
       return `/filial/${state.currentLocation.id}/`
     },
