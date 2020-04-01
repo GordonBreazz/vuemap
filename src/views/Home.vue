@@ -21,14 +21,14 @@
     <button @click="showPanel" id="button100500" style="display: none">Подробнее</button>
     <button @click="goToAll" id="button100600" style="display: none">Все библиотеки на карте</button>
     <button @click="panaView" id="button100700" style="display: none">Панорама на весь экран</button>
-    <pana-viewer :toUrl="toUrl" ref="bar" />
+    <pana-viewer :toUrl="getPanaUrl" ref="bar" />
   </div>
 </template>
 
 <script>
-//<info-panel id="infopanel" />
-//<detail-panel id="infopanel" />
-//    <detail-panel id="infopanel" :filial="toFilial" v-on:showPanViewer="panaView"/>
+import { mapState } from "vuex";
+import { mapGetters } from "vuex";
+
 import MainMap from "../components/MainMap";
 import PanaViewer from "../components/PanaViewer";
 import RequastPanel from "../components/RequastPanel";
@@ -44,16 +44,11 @@ export default {
     DetailPanel
   },
   computed: {
-    toUrl() {
-      return this.$store.getters.getPanaUrl;
-    },
-    toFilial() {
-      return this.$store.getters.getCurrentLocationId;
-    },
-    getPath() {
-      return this.$store.getters.getPath;
-    }
-
+    ...mapState({
+      toFilial: state => state.currentLocation.id,
+      pathMode: state => state.pathMode
+    }),
+    ...mapGetters(["getPanaUrl"])
   },
   methods: {
     onScroll(e) {
@@ -70,8 +65,9 @@ export default {
       this.$refs.foo.goToAll();
     },
     showPanel() {
-     if (this.$store.state.pathMode && this.$router.currentRoute.path !== this.getPath) this.$router.push(this.getPath+'?q=baloon') 
-       else  this.$refs.foo.showPanel();
+      if (this.pathMode && this.$router.currentRoute.path !== this.getPath)
+        this.$router.push(this.getPath + "?q=baloon");
+      else this.$refs.foo.showPanel();
     },
     panaView() {
       this.$refs.bar.panarama = false;

@@ -8,10 +8,7 @@
         <!--<strong> Разработка Коннов Е. С.</strong>-->
       </v-card-text>
      
-
-
     </v-card>
-
   </v-footer>
 </template>
 <script>

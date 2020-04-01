@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-list-group value="true" v-for="(item, i) in subMenu" :key="i + 900" :value="false">
+    <v-list-group value="true" v-for="(item, i) in getSubMenu" :key="i + 900" :value="false">
       <template v-slot:activator>
         <v-list-item-icon>
           <v-icon>{{ item.icon }}</v-icon>
@@ -15,16 +15,14 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 import MenuList from "@/components/menu/MenuList"
+
 export default {
   components: {
     MenuList
   },
-  computed: {
-    subMenu() {
-      return this.$store.getters.getSubMenu
-    }
-  }
+  computed: mapGetters(["getSubMenu"])
 }
 </script>
 

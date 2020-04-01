@@ -20,15 +20,13 @@
   </v-list>
 </template>>
 <script>
+import { mapState } from 'vuex'
 import NestedMenuList from "@/components/menu/NestedMenuList";
+
 export default {
   components: {
     NestedMenuList
   },
-  computed: {
-    mainMenu() {
-      return this.$store.getters.getMenu;
-    }
-  }
+  computed:  mapState(["mainMenu"])
 };
 </script>

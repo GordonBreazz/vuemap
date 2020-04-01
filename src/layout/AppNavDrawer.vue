@@ -8,12 +8,10 @@
     disable-resize-watcher
     :mini-variant="false"
   >
- 
     <v-subheader>МЕНЮ</v-subheader>
     <v-divider></v-divider>
 
     <flat-menu-list />
-
   </v-navigation-drawer>
 </template>
 <script>

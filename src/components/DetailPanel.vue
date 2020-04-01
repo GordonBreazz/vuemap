@@ -8,7 +8,7 @@
     >
       <v-card-title primary-title>
         <div>
-          <h3 class="headline">{{this.$store.getters.getCaption}}</h3>
+          <h3 class="headline">{{getCaption}}</h3>
         </div>
         <v-btn @click="hidePanel" absolute dark fab top right color="red">
           <v-icon dark>mdi-close</v-icon>
@@ -16,7 +16,7 @@
       </v-card-title>
       <v-card-subtitle
         style="text-align: left"
-      >{{ this.$store.state.currentLocation.district + ' район ' + this.$store.state.currentLocation.address }}. Сейчас {{this.$store.getters.getWorkStatus.status}}. {{this.$store.getters.getWorkStatus.message}}</v-card-subtitle>
+      >{{ currentLocation.district + ' район ' + currentLocation.address }}. Сейчас {{getWorkStatus.status}}. {{getWorkStatus.message}}</v-card-subtitle>
       <v-card-text>
         <v-container>
           <v-row>
@@ -25,7 +25,7 @@
                 <v-col cols="10">
                   <v-row>
                     <v-col
-                      v-for="(item, index) in this.$store.getters.getFeaturesImages"
+                      v-for="(item, index) in getFeaturesImages"
                       :key="index"
                     >
                       <v-img :src="item" width="40"></v-img>
@@ -33,12 +33,12 @@
                   </v-row>
                 </v-col>
                 <v-col cols="2">
-                  <v-img :src="this.$store.getters.getFoundingYearImage" width="120"></v-img>
+                  <v-img :src="getFoundingYearImage" width="120"></v-img>
                 </v-col>
               </v-row>
               <div
                 style="text-align: justify; color: #454545;"
-                v-html="this.$store.state.currentLocation.text"
+                v-html="currentLocation.text"
               >                                        
               </div>
            <Photo-Gallery />
@@ -71,6 +71,9 @@
   </div>
 </template>
 <script>
+import { mapState } from 'vuex'
+import { mapGetters } from 'vuex'
+
 import ContactDetailsList from "../components/ContactDetailsList";
 import FeaturesList from "../components/FeaturesList";
 import PhotoGallery from "../components/PhotoGallery";
@@ -87,11 +90,9 @@ export default {
   },
   methods: {
     showPanViewer() {
-      //console.log(this.$store.state.currentLocation);
       this.$emit("showPanViewer");
     },
     hidePanel() {
-      //this.$scrollTo("body");
       this.$vuetify.goTo("#requestpanel", { offset: 0 });
       //this.showInfo = false;
       let gl = this;
@@ -100,6 +101,10 @@ export default {
         gl.$store.commit("hideInfoPanel");
       }, 500);
     }
+  },
+  computed: {
+    ...mapState(['currentLocation']),
+    ...mapGetters(['getFeaturesImages', 'getCaption', 'getWorkStatus', 'getFoundingYearImage'])
   }
 };
 </script>

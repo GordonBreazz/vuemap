@@ -29,6 +29,8 @@
 </template>
 
 <script>
+import places from "../data/places.js";
+
 import { mapState } from 'vuex'
 import { mapGetters } from 'vuex'
 
@@ -38,7 +40,10 @@ export default {
     return {
       map: {},
       coords: [51.81008913374312, 107.60167337301641],
-      //userPosition: [51.825683, 107.58439],
+      userPosition: [51.825683, 107.58439],
+      currentCoords: [51.825683, 107.58439],
+      coords2: [51.74677212790084, 107.6959137288361],
+      placemarks: places.placemarks,
       mzoom: 12,
       controls: ["zoomControl", "typeSelector"],
       markerIcon: (title, photoSmall) => ({
@@ -55,14 +60,28 @@ export default {
     };
   },
   methods: {
+    workStatus() {
+      let today = new Date();
+    },
     showPanel() {
-      this.$store.commit("showInfoPanel");     
-      this.$vuetify.goTo("#infopanel", { offset: 30 +  Math.floor(Math.random() * 11) })
+      //      this.$store.state.showInfoPanel = true;
+      this.$store.commit("showInfoPanel");
+      // var anchor1 = this.$el.querySelector("#anchor");
+      // console.log(anchor1)
+      // anchor1.scrollTop = anchor1.scrollHeight;    
+      
+      this.$vuetify.goTo("#infopanel", { offset: 30 +  Math.floor(Math.random() * 11) });
+
+      // let gl = this.$scrollTo;
+      // setTimeout(function() {
+      //   gl("#element500", { offset: -100 });
+      // }, 0);
     },
 
     goToAll() {
       //if (this.$router.currentRoute.path !== '/') this.$router.replace('/')
       this.$vuetify.goTo("#requestpanel");
+      this.showInfo = false;
       if (this.map.balloon) this.map.balloon.close();
       this.map.setBounds(this.map.geoObjects.getBounds());
       
@@ -71,6 +90,8 @@ export default {
       //Создания балуна метки
       let frameSt = "";
       let buttonSt = "";
+      // let info = ''
+      // if (location.fullTitle != location.title) info = location.fullTitle
       if (
         location.id == 1 ||
         location.id == 2 ||
@@ -90,6 +111,8 @@ export default {
         location.id == 21 ||
         location.id == 24
       ) {
+        // this.panaUrl = `http://cbs-uu.ru/tours/f${location.id}/index.html`
+        // this.$Bus.$emit('my-sample-event', this.panaUrl);
         frameSt =
           '<div style="margin-bottom:0px;"><div style="width: 400px; height: 250px;"><iframe src="http://cbs-uu.ru/tours/f' +
           location.id +
@@ -107,7 +130,7 @@ export default {
         <h2 style="margin-top: 0px;">${location.fullTitle}</h2>
         <p style="margin-top: 8px; margin-bottom: 4px;"><i>Адрес:
         <b>${location.address}</b>
-        <br><b>Сейчас ${this.getWorkStatus.status}.</b> ${this.getWorkStatus.message} </i></p>
+        <br><b>Сейчас ${this.WorkStatus.status}.</b> ${this.WorkStatus.message} </i></p>
         ${frameSt}<div style="height: 10px;"></div>
         <button type="button" class="v-btn v-btn--contained  v-size--default  primary mb-1" onclick="javascript: document.querySelector('#button100500').click();">Подробнее</button> 
         <button type="button" class="v-btn v-btn--contained  v-size--default  light-blue white--text mb-1" onclick="javascript: document.querySelector('#button100600').click();">ВСЕ БИБЛИОТЕКИ </button>
@@ -118,13 +141,39 @@ export default {
     },
     onClick(l) {
       this.$vuetify.goTo("#requestpanel", { offset: 0 });
+      //console.log('1111111111111111', (tt.geoObjects.get(0)).properties.get('text'))
+
+      // let sayHi = function() { tt.setCenter(e, 19, {checkZoomRange: true })}
+      //this.currentCoords = e.get('coords');
+      //this.map.panTo(e)
+      // this.map.panTo(e).then(
+      //   function (value) {
+      //     tt.setZoom(19)
+      //   }
+      // )
+
+      // setTimeout(sayHi, 1000);
+      //this.hidePanel();
+
       this.map.setCenter(l.coords, 19, { checkZoomRange: false });
+      this.currentLocation = l;
       this.$store.commit("changeLocation", { newLocation: l });
+      //this.$store.commit("chooseFilial", { id: l.id });
+
+      //this.showPanel();
     },
     getDataCluster(obj) {
+      // const clust = this.map.geoObjects.get(0);
+      // this.map.setBounds(clust.getBounds());
+      // this.$emit("set-coords", obj.get("coords"));
+      // this.$emit("get-data-point", obj.get("coords").join());
     },
     getDataPoint(obj) {
       const coords = obj.get("coords");
+      //console.log('qqq')
+      //this.$emit("set-coords", coords);
+      //this.$bus.$emit("get-data-point", coords.join());
+      //this.map.setCenter(coords, FOCUS_ZOOM, {checkZoomRange: true })
     },
     initHandler(obj) {
       this.map = obj;
@@ -141,34 +190,53 @@ export default {
       });
       btn.options.set("size", "large");
       btn.events.add("press", function() {
-        gt();//goToAll
+        gt();
       });
 
       this.map.controls.add(btn, {
         float: "left",
         floatIndex: 100
       });
+
+      // this.userPosition = ymaps.geolocation.get({ provider: "browser" });
+      // console.log("userPosition", ymaps.geolocation);
+      // this.userPosition.then(
+      //   function(result) {
+      //     // Добавление местоположения на карту.
+      //     this.map.geoObjects.add(result.geoObjects);
+      //   },
+      //   function(err) {
+      //     console.log("Ошибка: " + err);
+      //   }
+      // );
     }
   },
   computed: {
-    ...mapState(['placemarks']),
-    ...mapGetters(['getWorkStatus'])
+    WorkStatus() {
+      return this.$store.getters.getWorkStatus;
+    }
   },
   props: ["fId", "frm"],
   watch: {
     fId: function(newVal, oldVal) {
+      // watch it
+
       if (newVal !== oldVal) {
         let result = this.placemarks.find(
           currentValue => currentValue.id == newVal
         );
         if (result) {     
+          this.currentLocation = result;
           if (!this.frm) {
+            // this.$vuetify.goTo(0);
             this.map.setCenter(result.coords, 19, { checkZoomRange: false });
+
           }    
           this.$store.commit("changeLocation", { newLocation: result });
-          this.showPanel();
+         this.showPanel();
         } else console.log("Нет такого филиала");
       }
+      // console.log("Prop changed: ", newVal, " | was: ", oldVal);
     }
   }
 };

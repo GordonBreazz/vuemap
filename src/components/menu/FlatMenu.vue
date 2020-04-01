@@ -15,11 +15,9 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
-  computed: {
-    mainMenu() {
-      return this.$store.getters.getMenu;
-    }
-  }      
+  computed: mapState(["mainMenu"])
 };
 </script>

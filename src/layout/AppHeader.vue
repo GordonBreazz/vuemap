@@ -50,9 +50,6 @@ export default {
     }
   },
   computed: {
-    mainMenu() {
-      return this.$store.getters.getMenu;
-    },
     imageHeight() {
       switch (this.$vuetify.breakpoint.name) {
         case "xs":

@@ -7,7 +7,7 @@
 
       <v-list-item-content>
         <v-list-item-subtitle>Тип библиотеки</v-list-item-subtitle>
-        <v-list-item-title class="mt-1">{{this.$store.state.currentLocation.libraryType}}</v-list-item-title>
+        <v-list-item-title class="mt-1">{{libraryType}}</v-list-item-title>
       </v-list-item-content>
     </v-list-item>
 
@@ -21,7 +21,7 @@
         <v-list-item-subtitle class="mb-2">Режим работы</v-list-item-subtitle>
         <v-list-item-title
           class="schedule"
-          v-for="item in getTimetable()"
+          v-for="item in timeTable"
           v-bind:key="item.id"
           :class="{ activeDay: isActive(item.id) }"
         >
@@ -50,7 +50,7 @@
       </v-list-item-icon>
       <v-list-item-content>
         <v-list-item-subtitle class="mb-2">Отделы библиотекки</v-list-item-subtitle>
-        <v-list-item-title> <ul v-for="item in getStructure()" v-bind:key="item.id">
+        <v-list-item-title> <ul v-for="item in structure" v-bind:key="item.id">
           <li>{{ item }}</li>
           </ul>
         </v-list-item-title>
@@ -65,7 +65,7 @@
       </v-list-item-icon>
       <v-list-item-content>
         <v-list-item-subtitle class="mb-2">Объединения и клубы</v-list-item-subtitle>
-        <v-list-item-title> <ul v-for="item in this.$store.getters.getClubs" v-bind:key="item.id">
+        <v-list-item-title> <ul v-for="item in clubs" v-bind:key="item.id">
           <li>{{ item }}</li>
           </ul>
         </v-list-item-title>
@@ -74,9 +74,13 @@
   </v-list>
 </template>
 <script>
+import { mapState } from 'vuex'
+import { mapGetters } from 'vuex'
+
 export default {
   data: () => ({
     todayWork: 0,
+    // Шаблон отображения расписания
     days: [
       { id: 1, dayOfWeek: "Понедельник", timeOfDay: "Выходной" },
       { id: 2, dayOfWeek: "Вторник", timeOfDay: "c 10:00 до 19:00" },
@@ -88,17 +92,25 @@ export default {
     ],
   }),
   methods: {
-    getStructure: function() {
-      return this.$store.getters.getStructure
-    },
-
     isActive(day) {
       if (this.todayWork)
         if (day == this.todayWork.getDay()) return true
       return false
-    },
-    getTimetable() {
-      let arr = this.$store.getters.getTimetable
+    }
+  },
+  mounted() {
+    this.todayWork = new Date();
+    //console.log(this.$vuetify.breakpoint);
+  },
+  computed: {
+    ...mapState({
+        libraryType: state => state.currentLocation.libraryType,
+        structure: state => state.currentLocation.structure,
+        clubs: state => state.currentLocation.clubs
+      }),
+    ...mapGetters(['getTimetable']),
+    timeTable() {
+      let arr = this.getTimetable
       //console.log('AAA', arr)
       for (let i = 0; i<7; i++) {
         let j = this.days[i].id
@@ -106,15 +118,8 @@ export default {
           else this.days[i].timeOfDay = `c ${arr[j].openTime}:00 до ${arr[j].closeTime}:00`
       }
       return this.days
-    }     
-  },
-  mounted() {
-    this.todayWork = new Date();
-    //console.log(this.$vuetify.breakpoint);
-  },
-    computed: {
-
-    }
+    }         
+  }
 }
 </script>
 

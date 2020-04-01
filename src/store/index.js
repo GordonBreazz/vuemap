@@ -40,6 +40,7 @@ export default new Vuex.Store({
     }
   },
   state: {
+    placemarks: places.placemarks,
     pathMode: false,
     districts: ["Советский", "Октябрьский", "Железнодорожный"],
     mainMenu: [
@@ -154,7 +155,7 @@ export default new Vuex.Store({
       return `/filial/${state.currentLocation.id}/`
     },
     getSubMenu(state) {
-      let arr = places.placemarks.map(function(item) {
+      let arr = state.placemarks.map(function(item) {
         return {
           district: item.district,
           title: item.title,
@@ -182,9 +183,6 @@ export default new Vuex.Store({
 
       return sm
     },
-    getMenu(state) {
-      return state.mainMenu
-    },
     getDrawer(state) {
       return state.drawer
     },
@@ -201,12 +199,6 @@ export default new Vuex.Store({
         state.currentLocation.foundingYear +
         ".jpg"
       )
-    },
-    getClubs(state) {
-      return state.currentLocation.clubs
-    },
-    getStructure(state) {
-      return state.currentLocation.structure
     },
     getTimetable(state) {
       let today = new Date()
@@ -260,12 +252,6 @@ export default new Vuex.Store({
     getCurrentLocation(state) {
       return state.currentLocation
     },
-    getCurrentLocationSite(state) {
-      return state.currentLocation.site
-    },
-    getCurrentLocationId(state) {
-      return state.currentLocation.id
-    },
     getPanaUrl(state) {
       return `http://cbs-uu.ru/tours/f${state.currentLocation.id}/index.html`
     },
@@ -279,8 +265,5 @@ export default new Vuex.Store({
         )
       return state.currentLocation.fullTitle
     }
-  },
-  modules: {
-    filials
   }
 })

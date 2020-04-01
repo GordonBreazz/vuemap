@@ -1,6 +1,6 @@
 <template>
 <div>
-    <v-menu offset-y v-for="(item, i) in subMenu" :key="(i+900)" :close-on-content-click="false" v-model="mshow">
+    <v-menu offset-y v-for="(item, i) in getSubMenu" :key="(i+900)" :close-on-content-click="false" v-model="mshow">
       <template v-slot:activator="{ on }">
         <v-btn text v-on="on" class="hidden-xs-only">
           <v-icon>{{item.icon}}</v-icon>
@@ -12,7 +12,9 @@
   </div>    
 </template>>
 <script>
+import { mapGetters } from "vuex";
 import MenuList from "@/components/menu/MenuList";
+
 export default {
   components: {
     MenuList
@@ -29,11 +31,6 @@ export default {
       this.mshow=false; 
     }
   },
-  computed: {
-    subMenu() {
-      return this.$store.getters.getSubMenu;
-    }
-  }  
-    
+  computed: mapGetters(["getSubMenu"])    
 }
 </script>>
