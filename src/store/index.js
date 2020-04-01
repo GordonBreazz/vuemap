@@ -39,6 +39,38 @@ export default new Vuex.Store({
     }
   },
   state: {
+    ebd:[
+      {
+        title: 'ЛитРес: библиотека',
+        url: 'https://www.litres.ru/o-kompanii/biblioteka/'
+      },
+      {
+        title: 'Национальная электронная библиотека (НЭБ)',
+        url: 'https://rusneb.ru/'
+      }
+    ],    
+    socnet: [
+      {
+        icon: "mdi-facebook",
+        link: "https://www.facebook.com/CBSUU",
+        hint: "Наш Facebook"
+      },
+      {
+        icon: "mdi-vk",
+        link: "https://vk.com/ik_kalashnikov",
+        hint: "Наша группа ВКонтакте"
+      },
+      {
+        icon: "mdi-youtube",
+        link: "https://www.youtube.com/channel/UC3xc55v1C4hJmRp6UCLWeyQ",
+        hint: "Наш канал на YouTube"
+      },
+      {
+        icon: "mdi-instagram",
+        link: "https://www.instagram.com/cbs_kalashnikov/",
+        hint: "Наш Instagram"
+      }
+    ],
     placemarks: places.placemarks,
     pathMode: false,
     districts: ["Советский", "Октябрьский", "Железнодорожный"],
@@ -119,21 +151,10 @@ export default new Vuex.Store({
       18,
       19
     ],
-    photos: [        {
-      thumb:
-        "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
-      src:
-        "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
-      caption: "<h4>Elephant</h4>"
-    },
-    {
-      thumb:
-        "https://i-kinhdoanh.vnecdn.net/2018/06/18/1-1529296929_680x0.jpg",
-      src:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/F-15_vertical_deploy.jpg/390px-F-15_vertical_deploy.jpg",
-      caption: "<h4>Messi</h4>"
-    }
-  ]
+    photos: [],
+    forChildren: ['Детская литература', 'Игровая зона'],
+    copyCentre: [],
+    services: []
   },
   getters: {
     getAllPhoto(state){

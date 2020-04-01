@@ -32,9 +32,7 @@
                     </v-col>
                   </v-row>
                 </v-col>
-                <v-col cols="2">
-                  <v-img :src="getFoundingYearImage" width="120"></v-img>
-                </v-col>
+
               </v-row>
               <div
                 style="text-align: justify; color: #454545;"
@@ -42,8 +40,6 @@
               >                                        
               </div>
            <Photo-Gallery />
-
-
 
             </v-col>
             <v-col cols="12" md="6">
@@ -53,7 +49,7 @@
                     <FeaturesList />
                   </v-col>
                   <v-col cols="12" lg="6">
-                    <ContactDetailsList />                    
+                    <ContactsList />                    
                   </v-col>
                 </v-row>
               </v-container>
@@ -74,13 +70,13 @@
 import { mapState } from 'vuex'
 import { mapGetters } from 'vuex'
 
-import ContactDetailsList from "../components/ContactDetailsList";
+import ContactsList from "../components/ContactsList";
 import FeaturesList from "../components/FeaturesList";
 import PhotoGallery from "../components/PhotoGallery";
 
 export default {
   components: {
-    ContactDetailsList,
+    ContactsList,
     FeaturesList,
     PhotoGallery
   },
@@ -104,7 +100,7 @@ export default {
   },
   computed: {
     ...mapState(['currentLocation']),
-    ...mapGetters(['getFeaturesImages', 'getCaption', 'getWorkStatus', 'getFoundingYearImage'])
+    ...mapGetters(['getFeaturesImages', 'getCaption', 'getWorkStatus'])
   }
 };
 </script>

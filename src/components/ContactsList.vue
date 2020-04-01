@@ -3,6 +3,27 @@
     <v-list one-line dense>
       <v-list-item>
         <v-list-item-icon>
+          <v-icon color="indigo">mdi-bookshelf</v-icon>
+        </v-list-item-icon>
+
+        <v-list-item-content>
+          <v-row no-gutters>
+            <v-col cols="9">
+              <v-list-item-subtitle>Тип библиотеки</v-list-item-subtitle>
+              <v-list-item-title class="mt-1">{{currentLocation.libraryType}}</v-list-item-title>
+              <v-list-item-subtitle class="pt-2">Год основания</v-list-item-subtitle>
+              <v-list-item-title class="mt-1">{{currentLocation.foundingYear}}</v-list-item-title>
+            </v-col>
+            <v-col cols="3" title="Год основания">
+              <v-img :src="getFoundingYearImage" width="120"></v-img>
+            </v-col>
+          </v-row>
+        </v-list-item-content>
+      </v-list-item>
+
+      <v-divider inset></v-divider>
+      <v-list-item>
+        <v-list-item-icon>
           <v-icon color="indigo">mdi-home-city-outline</v-icon>
         </v-list-item-icon>
 
@@ -23,6 +44,7 @@
           </v-row>
         </v-list-item-content>
       </v-list-item>
+
       <v-divider inset></v-divider>
 
       <v-list-item @click>
@@ -58,53 +80,7 @@
           </div>
         </v-list-item-content>
       </v-list-item>
-
-      <v-divider inset></v-divider>
-      <v-list-item @click>
-        
-            <v-list-item-icon>
-              <v-icon color="indigo">mdi-phone-classic</v-icon>
-            </v-list-item-icon>
-
-        <v-list-item-content>
-          <v-tooltip v-model="showT" top>
-          <template v-slot:activator="{ on }">
-          <v-list-item-subtitle  v-on="on">Телефон библиотеки</v-list-item-subtitle>
-          </template>
-          <span>Скопированно в буфер обмена</span>
-        </v-tooltip>
-          <v-list-item-title
-            class="mt-1"
-            ref="phoneToCopy"
-            @click="copyToClipboard('phoneToCopy')"
-          >{{currentLocation.phone}}</v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
-
-      <v-divider inset></v-divider>
-
-      <v-list-item @click="openEmail()">
-        <v-list-item-icon>
-          <v-icon color="indigo">mdi-email</v-icon>
-        </v-list-item-icon>
-        <v-list-item-content>
-          <v-list-item-subtitle>E-mail библиотеки</v-list-item-subtitle>
-          <v-list-item-title class="mt-1">{{(currentLocation.email).toUpperCase()}}</v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
-
-      <v-divider inset></v-divider>
-
-      <v-list-item @click="openSite()">
-        <v-list-item-icon>
-          <v-icon color="indigo">mdi-web</v-icon>
-        </v-list-item-icon>
-        <v-list-item-content>
-          <v-list-item-subtitle>Сайт</v-list-item-subtitle>
-        </v-list-item-content>
-      </v-list-item>
-
-      <v-divider inset></v-divider>
+            <v-divider inset></v-divider>
 
       <v-list-item @click>
         <v-list-item-icon>
@@ -117,11 +93,85 @@
           <v-list-item-title class="mt-1">{{currentLocation.chief.name}}</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
+
+      <v-divider inset></v-divider>
+      <v-list-item @click>
+        <v-list-item-icon>
+          <v-icon color="indigo">mdi-phone-classic</v-icon>
+        </v-list-item-icon>
+
+        <v-list-item-content>
+          <v-tooltip v-model="showT" top>
+            <template v-slot:activator="{ on }">
+              <v-list-item-subtitle v-on="on">Телефон библиотеки</v-list-item-subtitle>
+            </template>
+            <span>Скопированно в буфер обмена</span>
+          </v-tooltip>
+          <v-list-item-title
+            class="mt-1"
+            ref="phoneToCopy"
+            @click="copyToClipboard('phoneToCopy')"
+          >{{currentLocation.phone}}</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+
+      <v-divider inset></v-divider>
+
+      <v-list-item @click="openEmail()">
+        <v-list-item-icon>
+          <v-icon color="indigo">mdi-at</v-icon>
+        </v-list-item-icon>
+        <v-list-item-content>
+          <v-list-item-subtitle>E-mail библиотеки</v-list-item-subtitle>
+          <v-list-item-title class="mt-1">{{(currentLocation.email).toUpperCase()}}</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+
+      <v-divider inset></v-divider>
+
+      <v-list-item @click="openSite()">
+        <v-list-item-icon>
+          <v-icon color="indigo">mdi-link-variant</v-icon>
+        </v-list-item-icon>
+        <v-list-item-content>
+          <v-list-item-subtitle>Сайт</v-list-item-subtitle>
+        </v-list-item-content>
+      </v-list-item>
+
+
+      <v-divider inset></v-divider>
+
+      <v-list-item>
+        <v-list-item-icon>
+          <v-icon color="indigo">mdi-thumb-up-outline</v-icon>
+        </v-list-item-icon>
+
+        <v-list-item-content>
+          <v-list-item-subtitle>Библиотека в соц. сетях</v-list-item-subtitle>
+          <div class="mt-3 text-center"> 
+          <v-btn
+            v-for="(item, index) in socnet"
+            :key="index"
+            class="mr-4"
+            dark
+            icon
+            x-large
+            color="blue-grey darken-3"
+            @click="goSoc(item.link)"
+            v-bind:title="item.hint"
+          >
+            <v-icon large>{{ item.icon }}</v-icon>
+          </v-btn>
+          </div>
+        </v-list-item-content>
+      </v-list-item>
+
     </v-list>
   </div>
 </template>
 <script>
 import { mapState } from "vuex";
+import { mapGetters } from "vuex";
 
 export default {
   data: () => ({
@@ -137,7 +187,7 @@ export default {
       window.open("http://" + this.currentLocation.site);
     },
     copyToClipboard(el) {
-      this.showT = !this.showT
+      this.showT = !this.showT;
       let txt = this.$refs[el].textContent;
       console.log("copyToClipboard", txt);
       let textarea = document.createElement("textarea");
@@ -149,7 +199,10 @@ export default {
       document.body.removeChild(textarea);
     }
   },
-  computed: mapState(["currentLocation"])
+  computed: {
+    ...mapState(["currentLocation", "socnet"]),
+    ...mapGetters(["getFoundingYearImage"])
+  }
 };
 </script>
 
