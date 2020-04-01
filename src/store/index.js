@@ -1,6 +1,5 @@
 import Vue from "vue"
 import Vuex from "vuex"
-import filials from "./modules/filials"
 import shedule from "../data/shedule.js"
 import places from "../data/places.js"
 
@@ -248,9 +247,6 @@ export default new Vuex.Store({
           )}`
       }
       return result
-    },
-    getCurrentLocation(state) {
-      return state.currentLocation
     },
     getPanaUrl(state) {
       return `http://cbs-uu.ru/tours/f${state.currentLocation.id}/index.html`

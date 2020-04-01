@@ -28,11 +28,9 @@ export default {
   computed: {
     drawer: {
       get() {
-        // console.log('okkkk11:', this.$store.getters.getDrawer)
         return this.$store.getters.getDrawer;
       },
       set(val) {
-        //  console.log('okkkk',val)
         this.$store.commit("toggleDrawer", val);
       }
     }
