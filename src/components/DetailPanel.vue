@@ -21,18 +21,14 @@
         <v-container>
           <v-row>
             <v-col cols="12" md="6">
-              <v-row>
-                <v-col cols="12">
-                  <v-row>
-                    <v-col v-for="(item, index) in getFeaturesImages" :key="index">
-                      <v-tooltip bottom>
-                        <template v-slot:activator="{ on }">
-                          <v-img :src="item.img" width="40" v-on="on"></v-img>
-                        </template>
-                        <span>{{item.title}}</span>
-                      </v-tooltip>
-                    </v-col>
-                  </v-row>
+              <v-row justify="start">
+                <v-col v-for="(item, index) in getFeaturesImages" :key="index">
+                  <v-tooltip bottom>
+                    <template v-slot:activator="{ on }">
+                      <v-img :src="item.img" width="40" v-on="on" class="photoglr"></v-img>
+                    </template>
+                    <span>{{item.title}}</span>
+                  </v-tooltip>
                 </v-col>
               </v-row>
               <div style="text-align: justify; color: #454545;" v-html="currentLocation.text"></div>
@@ -115,6 +111,9 @@ export default {
   position: relative;
   width: 20%;
   opacity: 0.1;
+}
+.photoglr {
+  cursor: pointer;
 }
 </style>
 
