@@ -21,9 +21,9 @@
         <v-container>
           <v-row>
             <v-col cols="12" md="6">
-              <v-row justify="start">
+              <v-row justify="start" align="center">
                 <v-col v-for="(item, index) in getFeaturesImages" :key="index">
-                  <v-tooltip bottom>
+                  <v-tooltip bottom v-if="item.type == 1">
                     <template v-slot:activator="{ on }">
                       <v-img :src="item.img" width="40" v-on="on" class="photoglr"></v-img>
                     </template>

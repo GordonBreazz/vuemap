@@ -114,6 +114,26 @@
       </v-list-item-content>
     </v-list-item>        
 
+    <v-list-item>
+      <v-list-item-icon>
+        <v-icon color="indigo">mdi-web</v-icon>
+      </v-list-item-icon>
+      <v-list-item-content>
+        <v-list-item-subtitle class="mb-2">Библиотека предоставляет</v-list-item-subtitle>
+        
+ <v-row justify="start" align="center" >
+                <v-col v-for="(item, index) in getFeaturesImages" :key="index">
+                  <v-tooltip bottom v-if="item.type == 2">
+                    <template v-slot:activator="{ on }">
+                      <v-img :src="item.img" width="40" v-on="on" class="photoglr"></v-img>
+                    </template>
+                    <span>{{item.title}}</span>
+                  </v-tooltip>
+                </v-col>
+                </v-row>
+      </v-list-item-content>
+    </v-list-item>     
+
   </v-list>
 </template>
 <script>
@@ -155,7 +175,7 @@ export default {
       services: state => state.currentLocation.services,
       ebd: state => state.ebd,
     }),
-    ...mapGetters(["getTimetable", "getFoundingYearImage"]),
+    ...mapGetters(["getTimetable", "getFoundingYearImage", "getFeaturesImages"]),
     timeTable() {
       let arr = this.getTimetable;
       //console.log('AAA', arr)

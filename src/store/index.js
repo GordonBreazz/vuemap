@@ -42,107 +42,133 @@ export default new Vuex.Store({
     featuresImg:[
       { name: 'aboniment',
         title:'Услуги абонемента',
-        img:'http://cbs-uu.ru/data/assets/features_blue/1.jpg'
+        img:'http://cbs-uu.ru/data/assets/features_blue/1.jpg',
+        type: 1
       },
       { name: 'partnership',
         title:'Совместные мероприятия библиотеки и других организаций',
-        img:'http://cbs-uu.ru/data/assets/features_blue/2.jpg'
+        img:'http://cbs-uu.ru/data/assets/features_blue/2.jpg',
+        type: 1
       },
       { name: 'echb',
         title:'Единый читательский билет',
-        img:'http://cbs-uu.ru/data/assets/features_blue/3.jpg'
+        img:'http://cbs-uu.ru/data/assets/features_blue/3.jpg',
+        type: 1
       },
       { name: 'inet',
         title:'Доступ в интернет',
-        img:'http://cbs-uu.ru/data/assets/features_blue/4.jpg'
+        img:'http://cbs-uu.ru/data/assets/features_blue/4.jpg',
+        type: 1
       },
       { name: 'pc',
         title:'Предоставление ПК',
-        img:'http://cbs-uu.ru/data/assets/features_blue/5.jpg'
+        img:'http://cbs-uu.ru/data/assets/features_blue/5.jpg',
+        type: 2
       },
       { name: 'polygraph',
         title:'Полиграфические услуги',
-        img:'http://cbs-uu.ru/data/assets/features_blue/6.jpg'
+        img:'http://cbs-uu.ru/data/assets/features_blue/6.jpg',
+        type: 1
       },
       { name: 'video',
         title:'Видеопросмотры',
-        img:'http://cbs-uu.ru/data/assets/features_blue/7.jpg'
+        img:'http://cbs-uu.ru/data/assets/features_blue/7.jpg',
+        type: 1
       },
       { name: 'outwork',
         title:'Внестационарное обслуживание',
-        img:'http://cbs-uu.ru/data/assets/features_blue/8.jpg'
+        img:'http://cbs-uu.ru/data/assets/features_blue/8.jpg',
+        type: 1
       },
       { name: 'litres',
         title:'Выдача пароля к ЛитРес',
-        img:'http://cbs-uu.ru/data/assets/features_blue/9.jpg'
+        img:'http://cbs-uu.ru/data/assets/features_blue/9.jpg',
+        type: 1
       },
       { name: 'clubs',
         title:'Клубы и образовательные программы',
-        img:'http://cbs-uu.ru/data/assets/features_blue/10.jpg'
+        img:'http://cbs-uu.ru/data/assets/features_blue/10.jpg',
+        type: 1
       },
       { name: 'infosearch',
         title:'Поиск информации, услуги библиографов',
-        img:'http://cbs-uu.ru/data/assets/features_blue/11.jpg'
+        img:'http://cbs-uu.ru/data/assets/features_blue/11.jpg',
+        type: 1
       },
       { name: 'consulting',
         title:'Консультирование',
-        img:'http://cbs-uu.ru/data/assets/features_blue/12.jpg'
+        img:'http://cbs-uu.ru/data/assets/features_blue/12.jpg',
+        type: 1
       },
       { name: 'disabilities',
         title:'Работа с людьми с ОВЗ',
-        img:'http://cbs-uu.ru/data/assets/features_blue/13.jpg'
+        img:'http://cbs-uu.ru/data/assets/features_blue/13.jpg',
+        type: 2
       },
       { name: 'esia',
         title:'Центр обслуживания по подтверждению учетных записей ЕСИА',
-        img:'http://cbs-uu.ru/data/assets/features_blue/14.jpg'
+        img:'http://cbs-uu.ru/data/assets/features_blue/14.jpg',
+        type: 2
       },
       { name: 'coworking',
         title:'Коворкинг',
-        img:'http://cbs-uu.ru/data/assets/features_blue/15.jpg'
+        img:'http://cbs-uu.ru/data/assets/features_blue/15.jpg',
+        type: 2
       },
       { name: 'memories',
         title:'Мемориальный уголок',
-        img:'http://cbs-uu.ru/data/assets/features_blue/16.jpg'
+        img:'http://cbs-uu.ru/data/assets/features_blue/16.jpg',
+        type: 1
       },
       { name: 'neb',
         title:'Национальня электронная библиотека',
-        img:'http://cbs-uu.ru/data/assets/features_blue/17.jpg'
+        img:'http://cbs-uu.ru/data/assets/features_blue/17.jpg',
+        type: 1
       },
       { name: 'wifi',
         title:'Зона Wi-Fi',
-        img:'http://cbs-uu.ru/data/assets/features_blue/18.jpg'
+        img:'http://cbs-uu.ru/data/assets/features_blue/18.jpg',
+        type: 2
       },
       { name: 'excursions',
         title:'Экскурсии',
-        img:'http://cbs-uu.ru/data/assets/features_blue/19.jpg'
+        img:'http://cbs-uu.ru/data/assets/features_blue/19.jpg',
+        type: 1
       },
       { name: 'bibliovek',
         title:'Виртуальный музей книги «Библиовек»',
-        img:'http://cbs-uu.ru/data/assets/features_blue/20.jpg'
+        img:'http://cbs-uu.ru/data/assets/features_blue/20.jpg',
+        type: 1
       },
       { name: 'legalbases',
         title:'Юридические правовые базы',
-        img:'http://cbs-uu.ru/data/assets/features_blue/21.jpg'
+        img:'http://cbs-uu.ru/data/assets/features_blue/21.jpg',
+        type: 1
       },
       { name: 'children',
         title:'Детская зона',
-        img:'http://cbs-uu.ru/data/assets/features_blue/22.jpg'
+        img:'http://cbs-uu.ru/data/assets/features_blue/22.jpg',
+        type: 1
       },
       { name: 'piano',
         title:'Предоставление пианино',
-        img:'http://cbs-uu.ru/data/assets/features_blue/23.jpg'
+        img:'http://cbs-uu.ru/data/assets/features_blue/23.jpg',
+        type: 1
       },
       { name: 'work_with_children',
         title:'Работа с детьми',
-        img:'http://cbs-uu.ru/data/assets/features_blue/24.jpg'
+        img:'http://cbs-uu.ru/data/assets/features_blue/24.jpg',
+        type: 2
       },
       { name: 'gochs',
         title:'Учебно-консультационный пункт ГО и ЧС',
-        img:'http://cbs-uu.ru/data/assets/features_blue/25.jpg'
+        img:'http://cbs-uu.ru/data/assets/features_blue/25.jpg',
+        type: 1
       },
       { name: 'renovation',
         title:'Реновация библиотеки',
-        img:'http://cbs-uu.ru/data/assets/features_blue/26.jpg'
+        img:'http://cbs-uu.ru/data/assets/features_blue/26.jpg',
+        type: 1
       }
     ],
     ebd:[
