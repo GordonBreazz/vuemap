@@ -24,23 +24,19 @@
               <v-row>
                 <v-col cols="12">
                   <v-row>
-                    <v-col
-                      v-for="(item, index) in getFeaturesImages"
-                      :key="index"
-                    >
-                      <v-img :src="item.img" width="40"></v-img>
+                    <v-col v-for="(item, index) in getFeaturesImages" :key="index">
+                      <v-tooltip bottom>
+                        <template v-slot:activator="{ on }">
+                          <v-img :src="item.img" width="40" v-on="on"></v-img>
+                        </template>
+                        <span>{{item.title}}</span>
+                      </v-tooltip>
                     </v-col>
                   </v-row>
                 </v-col>
-
               </v-row>
-              <div
-                style="text-align: justify; color: #454545;"
-                v-html="currentLocation.text"
-              >                                        
-              </div>
-           <Photo-Gallery />
-
+              <div style="text-align: justify; color: #454545;" v-html="currentLocation.text"></div>
+              <Photo-Gallery />
             </v-col>
             <v-col cols="12" md="6">
               <v-container>
@@ -49,7 +45,7 @@
                     <FeaturesList />
                   </v-col>
                   <v-col cols="12" lg="6">
-                    <ContactsList />                    
+                    <ContactsList />
                   </v-col>
                 </v-row>
               </v-container>
@@ -67,8 +63,8 @@
   </div>
 </template>
 <script>
-import { mapState } from 'vuex'
-import { mapGetters } from 'vuex'
+import { mapState } from "vuex";
+import { mapGetters } from "vuex";
 
 import ContactsList from "../components/ContactsList";
 import FeaturesList from "../components/FeaturesList";
@@ -99,8 +95,8 @@ export default {
     }
   },
   computed: {
-    ...mapState(['currentLocation']),
-    ...mapGetters(['getFeaturesImages', 'getCaption', 'getWorkStatus'])
+    ...mapState(["currentLocation"]),
+    ...mapGetters(["getFeaturesImages", "getCaption", "getWorkStatus"])
   }
 };
 </script>
@@ -108,20 +104,18 @@ export default {
 <style>
 #more-photo {
   -ms-flex-align: center;
-      align-items: center;
+  align-items: center;
   background: rgba(51, 51, 51, 0.8);
   color: white;
   cursor: pointer;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
-      justify-content: center;
+  justify-content: center;
   position: relative;
   width: 20%;
-    opacity: 0.1;
+  opacity: 0.1;
 }
-
-
 </style>
 
 
