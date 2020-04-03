@@ -31,21 +31,7 @@
       </v-list-item-content>
     </v-list-item>
 
-    <v-divider inset></v-divider>
 
-    <v-list-item>
-      <v-list-item-icon>
-        <v-icon color="indigo">mdi-desk</v-icon>
-      </v-list-item-icon>
-      <v-list-item-content>
-        <v-list-item-subtitle class="mb-2">Отделы библиотекки</v-list-item-subtitle>
-        <v-list-item-title>
-          <ul v-for="item in structure" v-bind:key="item.id">
-            <li>{{ item }}</li>
-          </ul>
-        </v-list-item-title>
-      </v-list-item-content>
-    </v-list-item>
 
     <v-divider inset></v-divider>
 
@@ -110,7 +96,23 @@
           </ul>
         </v-list-item-title>
       </v-list-item-content>
-    </v-list-item>    
+    </v-list-item>
+            <v-divider inset></v-divider>
+
+    <v-list-item>
+      <v-list-item-icon>
+        <v-icon color="indigo">mdi-web</v-icon>
+      </v-list-item-icon>
+      <v-list-item-content>
+        <v-list-item-subtitle class="mb-2">Электронные базы данных</v-list-item-subtitle>
+        
+        <v-list-item-title>
+          <ul v-for="(item, index ) in ebd" :key="index">
+            <li><a :href="item.url" target="blank">{{ item.title }}</a></li>
+          </ul>
+        </v-list-item-title>
+      </v-list-item-content>
+    </v-list-item>        
 
   </v-list>
 </template>
@@ -151,6 +153,7 @@ export default {
       forChildren: state => state.currentLocation.forChildren,
       copyCentre: state => state.currentLocation.copyCentre,
       services: state => state.currentLocation.services,
+      ebd: state => state.ebd,
     }),
     ...mapGetters(["getTimetable", "getFoundingYearImage"]),
     timeTable() {

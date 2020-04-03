@@ -62,6 +62,27 @@ export default {
         18,
         19
       ],
+      featuresList: [
+        'aboniment',
+        'inet',
+        'pc',        
+        'partnership',
+        'polygraph',        
+        'echb',
+        'litres',
+        'neb',
+        'outwork',
+        'wifi',
+        'esia',        
+        'clubs',
+        'consulting',        
+        'infosearch',
+        'memories',
+        'coworking',
+        'excursions',
+        'bibliovek',
+        'legalbases'
+      ],
       photos: [
         {
           thumb:
@@ -134,6 +155,21 @@ export default {
       site: "cbs-uu.ru/tag/филиал-№2/",
       foundingYear: 1963,
       features: [1, 2, 3, 4, 5, 7, 8, 9, 10, 13, 14, 15, 16, 17, 18, 19, 24],
+      featuresList: [
+        'aboniment',
+        'inet',
+        'pc',        
+        'polygraph',        
+        'partnership',
+        'echb',
+        'litres',
+        'neb',
+        'outwork',
+        'wifi',
+        'consulting',        
+        'infosearch',
+        'work_with_children'
+      ],
       photos: [
         {
           thumb:
@@ -206,6 +242,23 @@ export default {
       site: "cbs-uu.ru/tag/филиал-№3/",
       foundingYear: 1939,
       features: [1, 2, 3, 4, 5, 7, 8, 9, 10, 13, 14, 15, 16, 17, 18, 19, 24],
+      featuresList: [
+        'aboniment',
+        'inet',
+        'pc',        
+        'polygraph',        
+        'partnership',
+        'echb',
+        'litres',
+        'neb',        
+        'outwork',
+        'wifi',        
+        'consulting',        
+        'infosearch', 
+        'work_with_children',
+        'renovation',                   
+        'clubs',
+      ],
       photos: [
         {
           thumb:
@@ -288,6 +341,25 @@ export default {
       site: "cbs-uu.ru/tag/филиал-№4/",
       foundingYear: 1948,
       features: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13, 14, 15, 16, 17, 18, 19, 24],
+      featuresList: [
+        'aboniment',
+        'inet',
+        'pc',        
+        'polygraph',        
+        'partnership',
+        'echb',
+        'litres',
+        'neb',        
+        'outwork',
+        'wifi',
+        'esia',   
+        'clubs',        
+        'consulting',        
+        'infosearch',
+        'memories', 
+        'work_with_children',
+        'gochs'                   
+      ],      
       photos: [
         {
           thumb:
@@ -370,6 +442,24 @@ export default {
       site: "cbs-uu.ru/tag/филиал-№5/",
       foundingYear: 1981,
       features: [1, 2, 3, 4, 5, 7, 8, 9, 10, 13, 14, 15, 16, 17, 18, 19, 24],
+      featuresList: [
+        'aboniment',
+        'inet',
+        'pc',        
+        'polygraph',        
+        'partnership',
+        'echb',
+        'litres',
+        'neb',        
+        'outwork',
+        'wifi',         
+        'clubs',        
+        'consulting',        
+        'infosearch',
+        'work_with_children',
+        'children',
+        'renovation'                   
+      ],            
       photos: [
         {
           thumb:
@@ -442,6 +532,23 @@ export default {
       site: "cbs-uu.ru/tag/филиал-№6/",
       foundingYear: 1963,
       features: [1, 2, 3, 4, 5, 7, 8, 9, 10, 13, 14, 15, 16, 17, 18, 19, 24],
+      featuresList: [
+        'aboniment',
+        'inet',
+        'pc',        
+        'polygraph',        
+        'partnership',
+        'echb',
+        'litres',
+        'neb',        
+        'outwork',
+        'wifi',         
+        'clubs',        
+        'consulting',        
+        'infosearch',
+        'work_with_children',
+        'children'
+      ],        
       photos: [
         {
           thumb:
@@ -521,6 +628,23 @@ export default {
       site: "cbs-uu.ru/tag/филиал-№9/",
       foundingYear: 1971,
       features: [1, 2, 3, 4, 5, 7, 8, 9, 10, 13, 14, 15, 16, 17, 18, 19, 24],
+      featuresList: [
+        'aboniment',
+        'inet',
+        'pc',        
+        'polygraph',        
+        'partnership',
+        'echb',
+        'litres',
+        'neb',        
+        'outwork',
+        'wifi',         
+        'clubs',        
+        'consulting',        
+        'infosearch',
+        'work_with_children',
+        'renovation'
+      ],       
       photos: [
         {
           thumb:
@@ -598,6 +722,24 @@ export default {
       site: "cbs-uu.ru/tag/филиал-№10/",
       foundingYear: 1975,
       features: [1, 2, 3, 4, 5, 7, 8, 9, 10, 13, 14, 15, 16, 17, 18, 19, 24],
+      featuresList: [
+        'aboniment',
+        'inet',
+        'pc',        
+        'polygraph',        
+        'partnership',
+        'echb',
+        'litres',
+        'neb',        
+        'outwork',
+        'wifi',         
+        'clubs',        
+        'consulting',        
+        'infosearch',
+        'memories',
+        'work_with_children',
+        'disabilities'
+      ],         
       photos: [
         {
           thumb:
@@ -678,6 +820,23 @@ export default {
       site: "cbs-uu.ru/tag/филиал-№12/",
       foundingYear: 1994,
       features: [1, 2, 3, 4, 5, 7, 8, 9, 10, 13, 14, 15, 16, 17, 18, 19, 24],
+      featuresList: [
+        'aboniment',
+        'inet',
+        'pc',        
+        'polygraph',        
+        'partnership',
+        'echb',
+        'litres',
+        'neb',        
+        'outwork',
+        'wifi',         
+        'clubs',        
+        'consulting',        
+        'infosearch',
+        'work_with_children',
+        'video'
+      ],          
       photos: [
         {
           thumb:
@@ -761,6 +920,25 @@ export default {
       site: "cbs-uu.ru/tag/филиал-№13/",
       foundingYear: 1947,
       features: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13, 14, 15, 16, 17, 18, 19, 24],
+      featuresList: [
+        'aboniment',
+        'inet',
+        'pc',        
+        'polygraph',        
+        'partnership',
+        'echb',
+        'litres',
+        'neb',        
+        'outwork',
+        'wifi',         
+        'clubs',        
+        'consulting',        
+        'infosearch',
+        'coworking',
+        'work_with_children',
+        'gochs',        
+        'renovation'
+      ],        
       photos: [
         {
           thumb:
@@ -836,6 +1014,22 @@ export default {
       site: "cbs-uu.ru/tag/филиал-№15/",
       foundingYear: 1975,
       features: [1, 2, 3, 4, 5, 7, 8, 9, 10, 13, 14, 15, 16, 17, 18, 19, 24],
+      featuresList: [
+        'aboniment',
+        'inet',
+        'pc',        
+        'polygraph',        
+        'partnership',
+        'echb',
+        'litres',
+        'neb',        
+        'outwork',
+        'wifi',         
+        'clubs',        
+        'consulting',        
+        'infosearch',
+        'work_with_children'
+      ],        
       photos: [
         {
           thumb:
@@ -912,6 +1106,22 @@ export default {
       site: "cbs-uu.ru/tag/филиал-№16/",
       foundingYear: 1975,
       features: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13, 14, 15, 16, 17, 18, 19, 24],
+      featuresList: [
+        'aboniment',
+        'inet',
+        'pc',        
+        'polygraph',        
+        'partnership',
+        'echb',
+        'litres',
+        'neb',        
+        'outwork',
+        'wifi',         
+        'clubs',        
+        'consulting',        
+        'infosearch',
+        'work_with_children'
+      ],       
       photos: [
         {
           thumb:
@@ -993,6 +1203,25 @@ export default {
       site: "cbs-uu.ru/tag/филиал-№17/",
       foundingYear: 1966,
       features: [1, 2, 3, 4, 5, 7, 8, 9, 10, 13, 14, 15, 16, 17, 18, 19, 24],
+      featuresList: [
+        'aboniment',
+        'inet',
+        'pc',        
+        'polygraph',        
+        'partnership',
+        'echb',
+        'litres',
+        'neb',        
+        'outwork',
+        'wifi',         
+        'clubs',        
+        'consulting',        
+        'infosearch',
+        'work_with_children',
+        'disabilities',
+        'piano',
+        'children'
+      ],      
       photos: [
         {
           thumb:
@@ -1065,6 +1294,22 @@ export default {
       site: "cbs-uu.ru/tag/филиал-№18/",
       foundingYear: 1961,
       features: [1, 2, 3, 4, 5, 7, 8, 9, 10, 13, 14, 15, 16, 17, 18, 19, 24],
+      featuresList: [
+        'aboniment',
+        'inet',
+        'pc',        
+        'polygraph',        
+        'partnership',
+        'echb',
+        'litres',
+        'neb',        
+        'outwork',
+        'wifi',         
+        'clubs',        
+        'consulting',        
+        'infosearch',
+        'work_with_children'
+      ],                  
       photos: [
         {
           thumb:
@@ -1147,6 +1392,27 @@ export default {
       site: "cbs-uu.ru/tag/филиал-№19/",
       foundingYear: 1955,
       features: [1, 2, 3, 4, 5, 7, 8, 9, 10, 13, 14, 15, 16, 17, 18, 19, 24],
+      featuresList: [
+        'aboniment',
+        'inet',
+        'pc',        
+        'polygraph',        
+        'partnership',
+        'echb',
+        'litres',
+        'neb',        
+        'outwork',
+        'wifi',         
+        'clubs',        
+        'consulting',        
+        'infosearch',
+        'memories',
+        'gochs',      
+        'work_with_children',
+        'renovation',
+        'piano'
+      ],       
+      
       photos: [
         {
           thumb:
@@ -1219,6 +1485,22 @@ export default {
       site: "cbs-uu.ru/tag/филиал-№20/",
       foundingYear: 1963,
       features: [1, 2, 3, 4, 5, 7, 8, 9, 10, 13, 14, 15, 16, 17, 18, 19, 24],
+      featuresList: [
+        'aboniment',
+        'inet',
+        'pc',        
+        'polygraph',        
+        'partnership',
+        'echb',
+        'litres',
+        'neb',        
+        'outwork',
+        'wifi',         
+        'clubs',        
+        'consulting',        
+        'infosearch',     
+        'work_with_children'
+      ],         
       photos: [
         {
           thumb:
@@ -1294,6 +1576,22 @@ export default {
       site: "cbs-uu.ru/tag/филиал-№21/",
       foundingYear: 1990,
       features: [1, 2, 3, 4, 5, 7, 8, 9, 10, 13, 14, 15, 16, 17, 18, 19, 24],
+      featuresList: [
+        'aboniment',
+        'inet',
+        'pc',        
+        'polygraph',        
+        'partnership',
+        'echb',
+        'litres',
+        'neb',        
+        'outwork',
+        'wifi',         
+        'clubs',        
+        'consulting',        
+        'infosearch',     
+        'work_with_children'
+      ],       
       photos: [
         {
           thumb:
@@ -1375,6 +1673,26 @@ export default {
       site: "cbs-uu.ru/tag/филиал-№24/",
       foundingYear: 1989,
       features: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13, 14, 15, 16, 17, 18, 19, 24],
+      featuresList: [
+        'aboniment',
+        'inet',
+        'pc',        
+        'polygraph',        
+        'partnership',
+        'echb',
+        'litres',
+        'neb',        
+        'outwork',
+        'wifi',   
+        'esia',              
+        'clubs',        
+        'consulting',        
+        'infosearch',
+        'memories',
+        'coworking',                    
+        'work_with_children',
+        'disabilities'  
+      ],       
       photos: [
         {
           thumb:

@@ -93,7 +93,21 @@
           <v-list-item-title class="mt-1">{{currentLocation.chief.name}}</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
+    <v-divider inset></v-divider>
 
+    <v-list-item>
+      <v-list-item-icon>
+        <v-icon color="indigo">mdi-desk</v-icon>
+      </v-list-item-icon>
+      <v-list-item-content>
+        <v-list-item-subtitle class="mb-2">Отделы библиотекки</v-list-item-subtitle>
+        <v-list-item-title>
+          <ul v-for="item in currentLocation.structure" v-bind:key="item.id">
+            <li>{{ item }}</li>
+          </ul>
+        </v-list-item-title>
+      </v-list-item-content>
+    </v-list-item>
       <v-divider inset></v-divider>
       <v-list-item @click>
         <v-list-item-icon>
@@ -138,7 +152,6 @@
         </v-list-item-content>
       </v-list-item>
 
-
       <v-divider inset></v-divider>
 
       <v-list-item>
@@ -165,7 +178,6 @@
           </div>
         </v-list-item-content>
       </v-list-item>
-
     </v-list>
   </div>
 </template>

@@ -22,13 +22,13 @@
           <v-row>
             <v-col cols="12" md="6">
               <v-row>
-                <v-col cols="10">
+                <v-col cols="12">
                   <v-row>
                     <v-col
                       v-for="(item, index) in getFeaturesImages"
                       :key="index"
                     >
-                      <v-img :src="item" width="40"></v-img>
+                      <v-img :src="item.img" width="40"></v-img>
                     </v-col>
                   </v-row>
                 </v-col>

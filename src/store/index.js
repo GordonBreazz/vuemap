@@ -39,6 +39,112 @@ export default new Vuex.Store({
     }
   },
   state: {
+    featuresImg:[
+      { name: 'aboniment',
+        title:'Услуги абонемента',
+        img:'http://cbs-uu.ru/data/assets/features_blue/1.jpg'
+      },
+      { name: 'partnership',
+        title:'Совместные мероприятия библиотеки и других организаций',
+        img:'http://cbs-uu.ru/data/assets/features_blue/2.jpg'
+      },
+      { name: 'echb',
+        title:'Единый читательский билет',
+        img:'http://cbs-uu.ru/data/assets/features_blue/3.jpg'
+      },
+      { name: 'inet',
+        title:'Доступ в интернет',
+        img:'http://cbs-uu.ru/data/assets/features_blue/4.jpg'
+      },
+      { name: 'pc',
+        title:'Предоставление ПК',
+        img:'http://cbs-uu.ru/data/assets/features_blue/5.jpg'
+      },
+      { name: 'polygraph',
+        title:'Полиграфические услуги',
+        img:'http://cbs-uu.ru/data/assets/features_blue/6.jpg'
+      },
+      { name: 'video',
+        title:'Видеопросмотры',
+        img:'http://cbs-uu.ru/data/assets/features_blue/7.jpg'
+      },
+      { name: 'outwork',
+        title:'Внестационарное обслуживание',
+        img:'http://cbs-uu.ru/data/assets/features_blue/8.jpg'
+      },
+      { name: 'litres',
+        title:'Выдача пароля к ЛитРес',
+        img:'http://cbs-uu.ru/data/assets/features_blue/9.jpg'
+      },
+      { name: 'clubs',
+        title:'Клубы и образовательные программы',
+        img:'http://cbs-uu.ru/data/assets/features_blue/10.jpg'
+      },
+      { name: 'infosearch',
+        title:'Поиск информации, услуги библиографов',
+        img:'http://cbs-uu.ru/data/assets/features_blue/11.jpg'
+      },
+      { name: 'consulting',
+        title:'Консультирование',
+        img:'http://cbs-uu.ru/data/assets/features_blue/12.jpg'
+      },
+      { name: 'disabilities',
+        title:'Работа с людьми с ОВЗ',
+        img:'http://cbs-uu.ru/data/assets/features_blue/13.jpg'
+      },
+      { name: 'esia',
+        title:'Центр обслуживания по подтверждению учетных записей ЕСИА',
+        img:'http://cbs-uu.ru/data/assets/features_blue/14.jpg'
+      },
+      { name: 'coworking',
+        title:'Коворкинг',
+        img:'http://cbs-uu.ru/data/assets/features_blue/15.jpg'
+      },
+      { name: 'memories',
+        title:'Мемориальный уголок',
+        img:'http://cbs-uu.ru/data/assets/features_blue/16.jpg'
+      },
+      { name: 'neb',
+        title:'Национальня электронная библиотека',
+        img:'http://cbs-uu.ru/data/assets/features_blue/17.jpg'
+      },
+      { name: 'wifi',
+        title:'Зона Wi-Fi',
+        img:'http://cbs-uu.ru/data/assets/features_blue/18.jpg'
+      },
+      { name: 'excursions',
+        title:'Экскурсии',
+        img:'http://cbs-uu.ru/data/assets/features_blue/19.jpg'
+      },
+      { name: 'bibliovek',
+        title:'Виртуальный музей книги «Библиовек»',
+        img:'http://cbs-uu.ru/data/assets/features_blue/20.jpg'
+      },
+      { name: 'legalbases',
+        title:'Юридические правовые базы',
+        img:'http://cbs-uu.ru/data/assets/features_blue/21.jpg'
+      },
+      { name: 'children',
+        title:'Детская зона',
+        img:'http://cbs-uu.ru/data/assets/features_blue/22.jpg'
+      },
+      { name: 'piano',
+        title:'Предоставление пианино',
+        img:'http://cbs-uu.ru/data/assets/features_blue/23.jpg'
+      },
+      { name: 'work_with_children',
+        title:'Работа с детьми',
+        img:'http://cbs-uu.ru/data/assets/features_blue/24.jpg'
+      },
+      { name: 'gochs',
+        title:'Учебно-консультационный пункт ГО и ЧС',
+        img:'http://cbs-uu.ru/data/assets/features_blue/25.jpg'
+      },
+      { name: 'renovation',
+        title:'Реновация библиотеки',
+        img:'http://cbs-uu.ru/data/assets/features_blue/26.jpg'
+      }
+    ],
     ebd:[
       {
         title: 'ЛитРес: библиотека',
@@ -151,6 +257,27 @@ export default new Vuex.Store({
       18,
       19
     ],
+    featuresList: [
+      'aboniment',
+      'partnership',
+      'echb',
+      'inet',
+      'pc',
+      'polygraph',
+      'outwork',
+      'litres',
+      'clubs',
+      'infosearch',
+      'consulting',
+      'esia',
+      'coworking',
+      'memories',
+      'neb',
+      'wifi',
+      'excursions',
+      'bibliovek',
+      'legalbases'
+    ],
     photos: [],
     forChildren: ['Детская литература', 'Игровая зона'],
     copyCentre: [],
@@ -208,9 +335,8 @@ export default new Vuex.Store({
     },
     getFeaturesImages(state) {
       if (!state.currentLocation.features) return []
-      let arr = Array.from(state.currentLocation.features)
-      return arr.map(
-        item => "http://cbs-uu.ru/data/assets/features_blue/" + item + ".jpg"
+      return state.currentLocation.featuresList.map( 
+        item => state.featuresImg.find( i => i.name == item)
       )
     },
     getFoundingYearImage(state) {
