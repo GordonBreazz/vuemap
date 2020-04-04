@@ -1,7 +1,5 @@
 <template>
   <v-list one-line dense>
-   
-
     <v-list-item>
       <v-list-item-icon>
         <v-icon color="indigo">mdi-clock-outline</v-icon>
@@ -30,8 +28,6 @@
         <v-list-item-title class="mt-1">Последняя пятница месяца</v-list-item-title>
       </v-list-item-content>
     </v-list-item>
-
-
 
     <v-divider inset></v-divider>
 
@@ -64,32 +60,38 @@
         </v-list-item-title>
       </v-list-item-content>
     </v-list-item>
-        <v-divider inset></v-divider>
+    <v-divider inset></v-divider>
 
     <v-list-item>
       <v-list-item-icon>
         <v-icon color="indigo">mdi-printer-check</v-icon>
       </v-list-item-icon>
       <v-list-item-content>
-        <v-list-item-subtitle class="mb-2">Копицентр <b>₽</b></v-list-item-subtitle>
-        
+        <v-list-item-subtitle class="mb-2">
+          Копицентр
+          <b>₽</b>
+        </v-list-item-subtitle>
+
         <v-list-item-title>
           <ul v-for="item in copyCentre" v-bind:key="item">
             <li>{{ item }}</li>
           </ul>
         </v-list-item-title>
       </v-list-item-content>
-    </v-list-item>        
-    
-            <v-divider inset></v-divider>
+    </v-list-item>
+
+    <v-divider inset></v-divider>
 
     <v-list-item>
       <v-list-item-icon>
         <v-icon color="indigo">mdi-account-tie</v-icon>
       </v-list-item-icon>
       <v-list-item-content>
-        <v-list-item-subtitle class="mb-2">Услуги предоставляемые библиотекой <b>₽</b></v-list-item-subtitle>
-        
+        <v-list-item-subtitle class="mb-2">
+          Услуги предоставляемые библиотекой
+          <b>₽</b>
+        </v-list-item-subtitle>
+
         <v-list-item-title>
           <ul v-for="item in services" v-bind:key="item">
             <li>{{ item }}</li>
@@ -97,7 +99,7 @@
         </v-list-item-title>
       </v-list-item-content>
     </v-list-item>
-            <v-divider inset></v-divider>
+    <v-divider inset></v-divider>
 
     <v-list-item>
       <v-list-item-icon>
@@ -105,14 +107,16 @@
       </v-list-item-icon>
       <v-list-item-content>
         <v-list-item-subtitle class="mb-2">Электронные базы данных</v-list-item-subtitle>
-        
+
         <v-list-item-title>
           <ul v-for="(item, index ) in ebd" :key="index">
-            <li><a :href="item.url" target="blank">{{ item.title }}</a></li>
+            <li>
+              <a :href="item.url" target="blank">{{ item.title }}</a>
+            </li>
           </ul>
         </v-list-item-title>
       </v-list-item-content>
-    </v-list-item>        
+    </v-list-item>
 
     <v-list-item>
       <v-list-item-icon>
@@ -120,20 +124,23 @@
       </v-list-item-icon>
       <v-list-item-content>
         <v-list-item-subtitle class="mb-2">Библиотека предоставляет</v-list-item-subtitle>
-        
- <v-row justify="start" align="center" >
-                <v-col v-for="(item, index) in getFeaturesImages" :key="index">
-                  <v-tooltip bottom v-if="item.type == 2">
-                    <template v-slot:activator="{ on }">
-                      <v-img :src="item.img" width="40" v-on="on" class="photoglr"></v-img>
-                    </template>
-                    <span>{{item.title}}</span>
-                  </v-tooltip>
-                </v-col>
-                </v-row>
+        <div class="d-flex align-center mb-3">
+          <div
+            v-for="(item, index) in getFeaturesImages"
+            :key="index"
+            class="mr-2"
+            v-show="item.type == 2"
+          >
+            <v-tooltip bottom>
+              <template v-slot:activator="{ on }">
+                <v-img :src="item.img" width="40" v-on="on" class="photoglr"></v-img>
+              </template>
+              <span>{{item.title}}</span>
+            </v-tooltip>
+          </div>
+        </div>
       </v-list-item-content>
-    </v-list-item>     
-
+    </v-list-item>
   </v-list>
 </template>
 <script>
@@ -173,9 +180,13 @@ export default {
       forChildren: state => state.currentLocation.forChildren,
       copyCentre: state => state.currentLocation.copyCentre,
       services: state => state.currentLocation.services,
-      ebd: state => state.ebd,
+      ebd: state => state.ebd
     }),
-    ...mapGetters(["getTimetable", "getFoundingYearImage", "getFeaturesImages"]),
+    ...mapGetters([
+      "getTimetable",
+      "getFoundingYearImage",
+      "getFeaturesImages"
+    ]),
     timeTable() {
       let arr = this.getTimetable;
       //console.log('AAA', arr)

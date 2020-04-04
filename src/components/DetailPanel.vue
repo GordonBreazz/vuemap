@@ -21,16 +21,21 @@
         <v-container>
           <v-row>
             <v-col cols="12" md="6">
-              <v-row justify="start" align="center">
-                <v-col v-for="(item, index) in getFeaturesImages" :key="index">
-                  <v-tooltip bottom v-if="item.type == 1">
+              <div class="d-flex align-center mb-3">
+                <div
+                  v-for="(item, index) in getFeaturesImages"
+                  :key="index"
+                  class="mr-2"
+                  v-show="item.type == 1"
+                >
+                  <v-tooltip bottom>
                     <template v-slot:activator="{ on }">
                       <v-img :src="item.img" width="40" v-on="on" class="photoglr"></v-img>
                     </template>
                     <span>{{item.title}}</span>
                   </v-tooltip>
-                </v-col>
-              </v-row>
+                </div>
+              </div>
               <div style="text-align: justify; color: #454545;" v-html="currentLocation.text"></div>
               <Photo-Gallery />
             </v-col>
