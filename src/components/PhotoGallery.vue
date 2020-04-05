@@ -4,11 +4,11 @@
       <v-row no-gutters class="photoglr">
 
         <v-col cols="5" v-for="(photo, i) in getTwoPhoto" :key="i">
-          <v-img :src="photo.thumb" @click="openGallery(i)" class="mr-1" height="100%"></v-img>
+          <v-img :src="photo.thumb" @click="openGallery(i)" class="mr-1" height="270px"></v-img>
         </v-col>
 
         <v-col cols="2" v-if="getOtherPhoto">
-          <v-img :src="getOtherPhoto.photo.thumb" @click="openGallery(3)" width="200" height="100%">
+          <v-img :src="getOtherPhoto.photo.thumb" @click="openGallery(2)" width="200" height="100%">
             <div
               style="background-color:rgba(51,51,51,.8); height: 100%; color: white; justify-content: center;   position: relative ;  align-items: center; text-align: center; "
             >

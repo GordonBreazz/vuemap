@@ -58,7 +58,7 @@ export default new Vuex.Store({
       { name: 'inet',
         title:'Доступ в интернет',
         img:'http://cbs-uu.ru/data/assets/features_blue/4.jpg',
-        type: 1
+        type: 2
       },
       { name: 'pc',
         title:'Предоставление ПК',
@@ -68,7 +68,7 @@ export default new Vuex.Store({
       { name: 'polygraph',
         title:'Полиграфические услуги',
         img:'http://cbs-uu.ru/data/assets/features_blue/6.jpg',
-        type: 1
+        type: 2
       },
       { name: 'video',
         title:'Видеопросмотры',
@@ -153,7 +153,7 @@ export default new Vuex.Store({
       { name: 'piano',
         title:'Предоставление пианино',
         img:'http://cbs-uu.ru/data/assets/features_blue/23.jpg',
-        type: 1
+        type: 2
       },
       { name: 'work_with_children',
         title:'Работа с детьми',
@@ -182,22 +182,26 @@ export default new Vuex.Store({
       }
     ],    
     socnet: [
-      {
+      { 
+        name: "facebook",
         icon: "mdi-facebook",
         link: "https://www.facebook.com/CBSUU",
         hint: "Наш Facebook"
       },
       {
+        name: "vk",
         icon: "mdi-vk",
         link: "https://vk.com/ik_kalashnikov",
         hint: "Наша группа ВКонтакте"
       },
       {
+        name: "youtube",
         icon: "mdi-youtube",
         link: "https://www.youtube.com/channel/UC3xc55v1C4hJmRp6UCLWeyQ",
         hint: "Наш канал на YouTube"
       },
       {
+        name: "instagram",
         icon: "mdi-instagram",
         link: "https://www.instagram.com/cbs_kalashnikov/",
         hint: "Наш Instagram"
@@ -256,7 +260,8 @@ export default new Vuex.Store({
         name: ""
       },
       libraryType: "",
-      shedule: 0
+      shedule: 0,
+      socnet: {}
     },
     structure: ["Читальный зал"],
     clubs: [],

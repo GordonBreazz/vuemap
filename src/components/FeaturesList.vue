@@ -30,7 +30,48 @@
     </v-list-item>
 
     <v-divider inset></v-divider>
+    <v-list-item>
+      <v-list-item-icon>
+        <v-icon color="indigo">mdi-page-previous-outline</v-icon>
+      </v-list-item-icon>
+      <v-list-item-content>
+        <v-list-item-subtitle class="mb-2">В библиотеке вы найдёте</v-list-item-subtitle>
+        <div class="d-flex flex-wrap align-center">
+          <div
+            v-for="(item, index) in getFeaturesImages"
+            :key="index"
+            class="mr-2 mb-2"
+            v-show="item.type == 1"
+          >
+            <v-tooltip bottom>
+              <template v-slot:activator="{ on }">
+                <v-img :src="item.img" width="35" v-on="on" class="photoglr"></v-img>
+              </template>
+              <span>{{item.title}}</span>
+            </v-tooltip>
+          </div>
+        </div>
 
+        <v-list-item-subtitle class="mb-2">Библиотека предоставляет</v-list-item-subtitle>
+        <div class="d-flex flex-wrap align-center">
+          <div
+            v-for="(item, index) in getFeaturesImages"
+            :key="index"
+            class="mr-2 mb-2"
+            v-show="item.type == 2"
+          >
+            <v-tooltip bottom>
+              <template v-slot:activator="{ on }">
+                <v-img :src="item.img" width="35" v-on="on" class="photoglr"></v-img>
+              </template>
+              <span>{{item.title}}</span>
+            </v-tooltip>
+          </div>
+        </div>
+      </v-list-item-content>
+    </v-list-item>
+
+    <v-divider inset></v-divider>
     <v-list-item>
       <v-list-item-icon>
         <v-icon color="indigo">mdi-account-supervisor-circle</v-icon>
@@ -80,27 +121,7 @@
       </v-list-item-content>
     </v-list-item>
 
-    <v-divider inset></v-divider>
-
-    <v-list-item>
-      <v-list-item-icon>
-        <v-icon color="indigo">mdi-account-tie</v-icon>
-      </v-list-item-icon>
-      <v-list-item-content>
-        <v-list-item-subtitle class="mb-2">
-          Услуги предоставляемые библиотекой
-          <b>₽</b>
-        </v-list-item-subtitle>
-
-        <v-list-item-title>
-          <ul v-for="item in services" v-bind:key="item">
-            <li>{{ item }}</li>
-          </ul>
-        </v-list-item-title>
-      </v-list-item-content>
-    </v-list-item>
-    <v-divider inset></v-divider>
-
+       <v-divider inset></v-divider>
     <v-list-item>
       <v-list-item-icon>
         <v-icon color="indigo">mdi-web</v-icon>
@@ -115,30 +136,6 @@
             </li>
           </ul>
         </v-list-item-title>
-      </v-list-item-content>
-    </v-list-item>
-
-    <v-list-item>
-      <v-list-item-icon>
-        <v-icon color="indigo">mdi-web</v-icon>
-      </v-list-item-icon>
-      <v-list-item-content>
-        <v-list-item-subtitle class="mb-2">Библиотека предоставляет</v-list-item-subtitle>
-        <div class="d-flex align-center mb-3">
-          <div
-            v-for="(item, index) in getFeaturesImages"
-            :key="index"
-            class="mr-2"
-            v-show="item.type == 2"
-          >
-            <v-tooltip bottom>
-              <template v-slot:activator="{ on }">
-                <v-img :src="item.img" width="40" v-on="on" class="photoglr"></v-img>
-              </template>
-              <span>{{item.title}}</span>
-            </v-tooltip>
-          </div>
-        </div>
       </v-list-item-content>
     </v-list-item>
   </v-list>

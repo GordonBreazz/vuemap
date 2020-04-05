@@ -1,6 +1,8 @@
 <template>
   <div class="wrap-text">
     <v-list one-line dense>
+
+
       <v-list-item>
         <v-list-item-icon>
           <v-icon color="indigo">mdi-bookshelf</v-icon>
@@ -80,8 +82,8 @@
           </div>
         </v-list-item-content>
       </v-list-item>
-            <v-divider inset></v-divider>
-
+           
+      <v-divider inset></v-divider>
       <v-list-item @click>
         <v-list-item-icon>
           <v-icon color="indigo">mdi-account-circle-outline</v-icon>
@@ -93,8 +95,8 @@
           <v-list-item-title class="mt-1">{{currentLocation.chief.name}}</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
-    <v-divider inset></v-divider>
 
+    <v-divider inset></v-divider>
     <v-list-item>
       <v-list-item-icon>
         <v-icon color="indigo">mdi-desk</v-icon>
@@ -108,6 +110,26 @@
         </v-list-item-title>
       </v-list-item-content>
     </v-list-item>
+
+ <v-divider inset></v-divider>
+    <v-list-item>
+      <v-list-item-icon>
+        <v-icon color="indigo">mdi-account-tie</v-icon>
+      </v-list-item-icon>
+      <v-list-item-content>
+        <v-list-item-subtitle class="mb-2">
+          Услуги предоставляемые библиотекой
+          <b>₽</b>
+        </v-list-item-subtitle>
+
+        <v-list-item-title>
+          <ul v-for="item in currentLocation.services" v-bind:key="item">
+            <li>{{ item }}</li>
+          </ul>
+        </v-list-item-title>
+      </v-list-item-content>
+    </v-list-item>
+
       <v-divider inset></v-divider>
       <v-list-item @click>
         <v-list-item-icon>
@@ -170,8 +192,9 @@
             icon
             x-large
             color="blue-grey darken-3"
-            @click="goSoc(item.link)"
-            v-bind:title="item.hint"
+            :href="currentLocation.socnet[item.name] ? currentLocation.socnet[item.name].link : item.link"   
+            :title="currentLocation.socnet[item.name] ? currentLocation.socnet[item.name].hint : item.hint"
+            target="blank"
           >
             <v-icon large>{{ item.icon }}</v-icon>
           </v-btn>
@@ -213,7 +236,7 @@ export default {
   },
   computed: {
     ...mapState(["currentLocation", "socnet"]),
-    ...mapGetters(["getFoundingYearImage"])
+    ...mapGetters(["getFoundingYearImage", "getFeaturesImages"])
   }
 };
 </script>

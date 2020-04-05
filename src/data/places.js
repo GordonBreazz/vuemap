@@ -86,43 +86,33 @@ export default {
       photos: [
         {
           thumb:
-            "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
+            "http://cbs-uu.ru/data/images/photos/1/trumb/1.jpg",
           src:
-            "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
-          caption: "<h4>Elephant</h4>"
+            "http://cbs-uu.ru/data/images/photos/1/1.jpg",
+          caption: "Центральная городская библиотека им. И. Калашникова"
         },
         {
           thumb:
-            "https://i-kinhdoanh.vnecdn.net/2018/06/18/1-1529296929_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/1/trumb/2.jpg",
           src:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/F-15_vertical_deploy.jpg/390px-F-15_vertical_deploy.jpg",
-          caption: "<h4>Messi</h4>"
+            "http://cbs-uu.ru/data/images/photos/1/2.jpg",
+          caption: "Центральная городская библиотека им. И. Калашникова"
         },
         {
           thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/775162441-MR-2031-8E033EFCEBB928DC12A2A0AA3CEC4C33-21885-1527376486_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/1/trumb/3.jpg",
           src:
-            "https://i-thethao.vnecdn.net/2018/05/27/775162441-MR-2031-8E033EFCEBB928DC12A2A0AA3CEC4C33-21885-1527376486_680x0.jpg",
-          caption: "<h4>Bale and Marcelo</h4>"
-        },
-        {
-          thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/Screen-Shot-2018-05-27-at-7-1527379562_680x0.png",
-          src:
-            "https://i-thethao.vnecdn.net/2018/05/27/Screen-Shot-2018-05-27-at-7-1527379562_680x0.png",
-          caption: "<h4>Madrid crowd</h4>"
-        },
-        {
-          thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/000-15E0DG-1527379049_680x0.jpg",
-          src:
-            "https://i-thethao.vnecdn.net/2018/05/27/000-15E0DG-1527379049_680x0.jpg",
-          caption: "<h4>Zidane</h4>"
+            "http://cbs-uu.ru/data/images/photos/1/3.jpg",
+          caption: "Центральная городская библиотека им. И. Калашникова"
         }
       ],
       forChildren: ['Детская литература', 'Игровая зона', 'Настольные игры', 'Комиксы'],
       copyCentre: ['Сканирование', 'Ксерокопирование', 'Печать на принтере', 'Цветная печать', 'Ламинирование', 'Набор текста'],
-      services: ['Услуги интернет-кафе', 'Подтверждение личности на портале "Гос. Услуги"', 'Юридические консультации', 'Можно провести мероприятие', 'Можно провести выставку', 'Принимаем книги в дар']
+      services: ['Услуги интернет-кафе', 'Подтверждение личности на портале "Гос. Услуги"', 'Юридические консультации', 'Можно провести мероприятие', 'Можно провести выставку', 'Принимаем книги в дар'],
+      socnet: {
+        facebook: {},
+        vk: {}
+      }              
     },
     {
       title: "Библиотека-филиал №2",
@@ -173,43 +163,37 @@ export default {
       photos: [
         {
           thumb:
-            "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
+            "http://cbs-uu.ru/data/images/photos/2/trumb/1.jpg",
           src:
-            "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
-          caption: "<h4>Elephant</h4>"
+            "http://cbs-uu.ru/data/images/photos/2/1.jpg",
+          caption: "Библиотека-филиал №2"
         },
         {
           thumb:
-            "https://i-kinhdoanh.vnecdn.net/2018/06/18/1-1529296929_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/2/trumb/2.jpg",
           src:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/F-15_vertical_deploy.jpg/390px-F-15_vertical_deploy.jpg",
-          caption: "<h4>Messi</h4>"
+            "http://cbs-uu.ru/data/images/photos/2/2.jpg",
+          caption: "Библиотека-филиал №2"
         },
         {
           thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/775162441-MR-2031-8E033EFCEBB928DC12A2A0AA3CEC4C33-21885-1527376486_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/2/trumb/3.jpg",
           src:
-            "https://i-thethao.vnecdn.net/2018/05/27/775162441-MR-2031-8E033EFCEBB928DC12A2A0AA3CEC4C33-21885-1527376486_680x0.jpg",
-          caption: "<h4>Bale and Marcelo</h4>"
-        },
-        {
-          thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/Screen-Shot-2018-05-27-at-7-1527379562_680x0.png",
-          src:
-            "https://i-thethao.vnecdn.net/2018/05/27/Screen-Shot-2018-05-27-at-7-1527379562_680x0.png",
-          caption: "<h4>Madrid crowd</h4>"
-        },
-        {
-          thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/000-15E0DG-1527379049_680x0.jpg",
-          src:
-            "https://i-thethao.vnecdn.net/2018/05/27/000-15E0DG-1527379049_680x0.jpg",
-          caption: "<h4>Zidane</h4>"
+            "http://cbs-uu.ru/data/images/photos/2/3.jpg",
+          caption: "Библиотека-филиал №2"
         }
       ],
       forChildren: ['Детская литература', 'Игровая зона'],
       copyCentre: ['Сканирование', 'Ксерокопирование', 'Печать на принтере', 'Набор текста'],
-      services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар']
+      services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар'],
+      socnet: {
+        vk:
+        { 
+          icon: "mdi-vk",
+          link: "https://vk.com/club115675525",
+          hint: "Филиал №2 ВКонтакте"
+        }
+      }        
     },
     {
       title: "Библиотека-филиал №3",
@@ -262,43 +246,30 @@ export default {
       photos: [
         {
           thumb:
-            "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
+            "http://cbs-uu.ru/data/images/photos/3/trumb/1.jpg",
           src:
-            "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
-          caption: "<h4>Elephant</h4>"
+            "http://cbs-uu.ru/data/images/photos/3/1.jpg",
+          caption: "Библиотека-филиал №3"
         },
         {
           thumb:
-            "https://i-kinhdoanh.vnecdn.net/2018/06/18/1-1529296929_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/3/trumb/2.jpg",
           src:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/F-15_vertical_deploy.jpg/390px-F-15_vertical_deploy.jpg",
-          caption: "<h4>Messi</h4>"
+            "http://cbs-uu.ru/data/images/photos/3/2.jpg",
+          caption: "Библиотека-филиал №3"
         },
         {
           thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/775162441-MR-2031-8E033EFCEBB928DC12A2A0AA3CEC4C33-21885-1527376486_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/3/trumb/3.jpg",
           src:
-            "https://i-thethao.vnecdn.net/2018/05/27/775162441-MR-2031-8E033EFCEBB928DC12A2A0AA3CEC4C33-21885-1527376486_680x0.jpg",
-          caption: "<h4>Bale and Marcelo</h4>"
-        },
-        {
-          thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/Screen-Shot-2018-05-27-at-7-1527379562_680x0.png",
-          src:
-            "https://i-thethao.vnecdn.net/2018/05/27/Screen-Shot-2018-05-27-at-7-1527379562_680x0.png",
-          caption: "<h4>Madrid crowd</h4>"
-        },
-        {
-          thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/000-15E0DG-1527379049_680x0.jpg",
-          src:
-            "https://i-thethao.vnecdn.net/2018/05/27/000-15E0DG-1527379049_680x0.jpg",
-          caption: "<h4>Zidane</h4>"
+            "http://cbs-uu.ru/data/images/photos/3/3.jpg",
+          caption: "Библиотека-филиал №3"
         }
       ],
       forChildren: ['Детская литература', 'Игровая зона'],
       copyCentre: ['Сканирование', 'Ксерокопирование', 'Печать на принтере', 'Набор текста'],
-      services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар']
+      services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар'],
+      socnet: {}        
     },
     {
       title: "Библиотека-филиал №4",
@@ -363,43 +334,43 @@ export default {
       photos: [
         {
           thumb:
-            "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
+            "http://cbs-uu.ru/data/images/photos/4/trumb/1.jpg",
           src:
-            "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
-          caption: "<h4>Elephant</h4>"
+            "http://cbs-uu.ru/data/images/photos/4/1.jpg",
+          caption: "Библиотека-филиал №4"
         },
         {
           thumb:
-            "https://i-kinhdoanh.vnecdn.net/2018/06/18/1-1529296929_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/4/trumb/2.jpg",
           src:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/F-15_vertical_deploy.jpg/390px-F-15_vertical_deploy.jpg",
-          caption: "<h4>Messi</h4>"
+            "http://cbs-uu.ru/data/images/photos/4/2.jpg",
+          caption: "Библиотека-филиал №4"
         },
         {
           thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/775162441-MR-2031-8E033EFCEBB928DC12A2A0AA3CEC4C33-21885-1527376486_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/4/trumb/3.jpg",
           src:
-            "https://i-thethao.vnecdn.net/2018/05/27/775162441-MR-2031-8E033EFCEBB928DC12A2A0AA3CEC4C33-21885-1527376486_680x0.jpg",
-          caption: "<h4>Bale and Marcelo</h4>"
-        },
-        {
-          thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/Screen-Shot-2018-05-27-at-7-1527379562_680x0.png",
-          src:
-            "https://i-thethao.vnecdn.net/2018/05/27/Screen-Shot-2018-05-27-at-7-1527379562_680x0.png",
-          caption: "<h4>Madrid crowd</h4>"
-        },
-        {
-          thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/000-15E0DG-1527379049_680x0.jpg",
-          src:
-            "https://i-thethao.vnecdn.net/2018/05/27/000-15E0DG-1527379049_680x0.jpg",
-          caption: "<h4>Zidane</h4>"
+            "http://cbs-uu.ru/data/images/photos/4/3.jpg",
+          caption: "Библиотека-филиал №4"
         }
       ],
       forChildren: ['Детская литература', 'Игровая зона'],
       copyCentre: ['Сканирование', 'Ксерокопирование', 'Печать на принтере', 'Набор текста'],
-      services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар']
+      services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар'],
+      socnet: {
+        facebook:
+        {
+          icon: "mdi-facebook",
+          link: "https://www.facebook.com/filial4.cbs.uu/",
+          hint: "Facebook филиала №4"
+        },
+        vk:
+        { 
+          icon: "mdi-vk",
+          link: "https://vk.com/public46270108",
+          hint: "Филиал №4 ВКонтакте"
+        }
+      }        
     },
     {
       title: "Библиотека-филиал №5",
@@ -463,43 +434,79 @@ export default {
       photos: [
         {
           thumb:
-            "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
+            "http://cbs-uu.ru/data/images/photos/5/trumb/1.jpg",
           src:
-            "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
-          caption: "<h4>Elephant</h4>"
+            "http://cbs-uu.ru/data/images/photos/5/1.jpg",
+          caption: "Библиотека-филиал №5"
         },
         {
           thumb:
-            "https://i-kinhdoanh.vnecdn.net/2018/06/18/1-1529296929_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/5/trumb/2.jpg",
           src:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/F-15_vertical_deploy.jpg/390px-F-15_vertical_deploy.jpg",
-          caption: "<h4>Messi</h4>"
+            "http://cbs-uu.ru/data/images/photos/5/2.jpg",
+          caption: "Библиотека-филиал №5"
         },
         {
           thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/775162441-MR-2031-8E033EFCEBB928DC12A2A0AA3CEC4C33-21885-1527376486_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/5/trumb/3.jpg",
           src:
-            "https://i-thethao.vnecdn.net/2018/05/27/775162441-MR-2031-8E033EFCEBB928DC12A2A0AA3CEC4C33-21885-1527376486_680x0.jpg",
-          caption: "<h4>Bale and Marcelo</h4>"
+            "http://cbs-uu.ru/data/images/photos/5/3.jpg",
+          caption: "Библиотека-филиал №5"
         },
         {
           thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/Screen-Shot-2018-05-27-at-7-1527379562_680x0.png",
+            "http://cbs-uu.ru/data/images/photos/5/trumb/4.jpg",
           src:
-            "https://i-thethao.vnecdn.net/2018/05/27/Screen-Shot-2018-05-27-at-7-1527379562_680x0.png",
-          caption: "<h4>Madrid crowd</h4>"
+            "http://cbs-uu.ru/data/images/photos/5/4.jpg",
+          caption: "Библиотека-филиал №5"
         },
         {
           thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/000-15E0DG-1527379049_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/5/trumb/5.jpg",
           src:
-            "https://i-thethao.vnecdn.net/2018/05/27/000-15E0DG-1527379049_680x0.jpg",
-          caption: "<h4>Zidane</h4>"
-        }
+            "http://cbs-uu.ru/data/images/photos/5/5.jpg",
+          caption: "Библиотека-филиал №5"
+        },
+        {
+          thumb:
+            "http://cbs-uu.ru/data/images/photos/5/trumb/6.jpg",
+          src:
+            "http://cbs-uu.ru/data/images/photos/5/6.jpg",
+          caption: "Библиотека-филиал №5"
+        },
+        {
+          thumb:
+            "http://cbs-uu.ru/data/images/photos/5/trumb/7.jpg",
+          src:
+            "http://cbs-uu.ru/data/images/photos/5/7.jpg",
+          caption: "Библиотека-филиал №5"
+        },
+        {
+          thumb:
+            "http://cbs-uu.ru/data/images/photos/5/trumb/8.jpg",
+          src:
+            "http://cbs-uu.ru/data/images/photos/5/8.jpg",
+          caption: "Библиотека-филиал №5"
+        },
+        {
+          thumb:
+            "http://cbs-uu.ru/data/images/photos/5/trumb/9.jpg",
+          src:
+            "http://cbs-uu.ru/data/images/photos/5/9.jpg",
+          caption: "Библиотека-филиал №5"
+        },
+        {
+          thumb:
+            "http://cbs-uu.ru/data/images/photos/5/trumb/10.jpg",
+          src:
+            "http://cbs-uu.ru/data/images/photos/5/10.jpg",
+          caption: "Библиотека-филиал №5"
+        }               
       ],
       forChildren: ['Детская литература', 'Игровая зона', 'Развлекательный комплекс', 'Интерактивное оборудование'],
       copyCentre: ['Сканирование', 'Ксерокопирование', 'Печать на принтере', 'Набор текста', 'Цветная печать'],
-      services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Можно провести выставку', 'Принимаем книги в дар']
+      services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Можно провести выставку', 'Принимаем книги в дар'],
+      socnet: {}        
     },
     {
       title: "Библиотека-филиал №6",
@@ -552,43 +559,44 @@ export default {
       photos: [
         {
           thumb:
-            "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
+            "http://cbs-uu.ru/data/images/photos/6/trumb/1.jpg",
           src:
-            "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
-          caption: "<h4>Elephant</h4>"
+            "http://cbs-uu.ru/data/images/photos/6/1.jpg",
+          caption: "Библиотека-филиал №6"
         },
         {
           thumb:
-            "https://i-kinhdoanh.vnecdn.net/2018/06/18/1-1529296929_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/6/trumb/2.jpg",
           src:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/F-15_vertical_deploy.jpg/390px-F-15_vertical_deploy.jpg",
-          caption: "<h4>Messi</h4>"
+            "http://cbs-uu.ru/data/images/photos/6/2.jpg",
+          caption: "Библиотека-филиал №6"
         },
         {
           thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/775162441-MR-2031-8E033EFCEBB928DC12A2A0AA3CEC4C33-21885-1527376486_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/6/trumb/3.jpg",
           src:
-            "https://i-thethao.vnecdn.net/2018/05/27/775162441-MR-2031-8E033EFCEBB928DC12A2A0AA3CEC4C33-21885-1527376486_680x0.jpg",
-          caption: "<h4>Bale and Marcelo</h4>"
+            "http://cbs-uu.ru/data/images/photos/6/3.jpg",
+          caption: "Библиотека-филиал №6"
         },
         {
           thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/Screen-Shot-2018-05-27-at-7-1527379562_680x0.png",
+            "http://cbs-uu.ru/data/images/photos/6/trumb/4.jpg",
           src:
-            "https://i-thethao.vnecdn.net/2018/05/27/Screen-Shot-2018-05-27-at-7-1527379562_680x0.png",
-          caption: "<h4>Madrid crowd</h4>"
-        },
-        {
-          thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/000-15E0DG-1527379049_680x0.jpg",
-          src:
-            "https://i-thethao.vnecdn.net/2018/05/27/000-15E0DG-1527379049_680x0.jpg",
-          caption: "<h4>Zidane</h4>"
-        }
+            "http://cbs-uu.ru/data/images/photos/6/4.jpg",
+          caption: "Библиотека-филиал №6"
+        }        
       ],
       forChildren: ['Детская литература', 'Игровая зона'],
       copyCentre: ['Сканирование', 'Ксерокопирование', 'Печать на принтере', 'Набор текста'],
-      services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар']
+      services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар'],
+      socnet: {
+        vk:
+        { 
+          icon: "mdi-vk",
+          link: "https://vk.com/club165017033",
+          hint: "Филиал №6 ВКонтакте"
+        }
+      }        
     },
     {
       title: "Библиотека-филиал №9",
@@ -648,43 +656,51 @@ export default {
       photos: [
         {
           thumb:
-            "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
+            "http://cbs-uu.ru/data/images/photos/9/trumb/1.jpg",
           src:
-            "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
-          caption: "<h4>Elephant</h4>"
+            "http://cbs-uu.ru/data/images/photos/9/1.jpg",
+          caption: "Библиотека-филиал №9"
         },
         {
           thumb:
-            "https://i-kinhdoanh.vnecdn.net/2018/06/18/1-1529296929_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/9/trumb/2.jpg",
           src:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/F-15_vertical_deploy.jpg/390px-F-15_vertical_deploy.jpg",
-          caption: "<h4>Messi</h4>"
+            "http://cbs-uu.ru/data/images/photos/9/2.jpg",
+          caption: "Библиотека-филиал №9"
         },
         {
           thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/775162441-MR-2031-8E033EFCEBB928DC12A2A0AA3CEC4C33-21885-1527376486_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/9/trumb/3.jpg",
           src:
-            "https://i-thethao.vnecdn.net/2018/05/27/775162441-MR-2031-8E033EFCEBB928DC12A2A0AA3CEC4C33-21885-1527376486_680x0.jpg",
-          caption: "<h4>Bale and Marcelo</h4>"
+            "http://cbs-uu.ru/data/images/photos/9/3.jpg",
+          caption: "Библиотека-филиал №9"
         },
         {
           thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/Screen-Shot-2018-05-27-at-7-1527379562_680x0.png",
+            "http://cbs-uu.ru/data/images/photos/9/trumb/4.jpg",
           src:
-            "https://i-thethao.vnecdn.net/2018/05/27/Screen-Shot-2018-05-27-at-7-1527379562_680x0.png",
-          caption: "<h4>Madrid crowd</h4>"
+            "http://cbs-uu.ru/data/images/photos/9/4.jpg",
+          caption: "Библиотека-филиал №9"
         },
         {
           thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/000-15E0DG-1527379049_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/9/trumb/5.jpg",
           src:
-            "https://i-thethao.vnecdn.net/2018/05/27/000-15E0DG-1527379049_680x0.jpg",
-          caption: "<h4>Zidane</h4>"
-        }
+            "http://cbs-uu.ru/data/images/photos/9/5.jpg",
+          caption: "Библиотека-филиал №9"
+        }          
       ],
       forChildren: ['Детская литература', 'Игровая зона'],
       copyCentre: ['Сканирование', 'Ксерокопирование', 'Печать на принтере', 'Набор текста'],
-      services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар']
+      services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар'],
+      socnet: {
+        facebook:
+        {
+          icon: "mdi-facebook",
+          link: "https://www.facebook.com/Bibliotheka9.ru/",
+          hint: "Facebook филиала №9"
+        }
+      }        
     },
     {
       title: "Библиотека-филиал №10",
@@ -743,43 +759,37 @@ export default {
       photos: [
         {
           thumb:
-            "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
+            "http://cbs-uu.ru/data/images/photos/10/trumb/1.jpg",
           src:
-            "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
-          caption: "<h4>Elephant</h4>"
+            "http://cbs-uu.ru/data/images/photos/10/1.jpg",
+          caption: "Библиотека-филиал №10"
         },
         {
           thumb:
-            "https://i-kinhdoanh.vnecdn.net/2018/06/18/1-1529296929_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/10/trumb/2.jpg",
           src:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/F-15_vertical_deploy.jpg/390px-F-15_vertical_deploy.jpg",
-          caption: "<h4>Messi</h4>"
+            "http://cbs-uu.ru/data/images/photos/10/2.jpg",
+          caption: "Библиотека-филиал №10"
         },
         {
           thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/775162441-MR-2031-8E033EFCEBB928DC12A2A0AA3CEC4C33-21885-1527376486_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/10/trumb/3.jpg",
           src:
-            "https://i-thethao.vnecdn.net/2018/05/27/775162441-MR-2031-8E033EFCEBB928DC12A2A0AA3CEC4C33-21885-1527376486_680x0.jpg",
-          caption: "<h4>Bale and Marcelo</h4>"
+            "http://cbs-uu.ru/data/images/photos/10/3.jpg",
+          caption: "Библиотека-филиал №10"
         },
         {
           thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/Screen-Shot-2018-05-27-at-7-1527379562_680x0.png",
+            "http://cbs-uu.ru/data/images/photos/10/trumb/4.jpg",
           src:
-            "https://i-thethao.vnecdn.net/2018/05/27/Screen-Shot-2018-05-27-at-7-1527379562_680x0.png",
-          caption: "<h4>Madrid crowd</h4>"
-        },
-        {
-          thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/000-15E0DG-1527379049_680x0.jpg",
-          src:
-            "https://i-thethao.vnecdn.net/2018/05/27/000-15E0DG-1527379049_680x0.jpg",
-          caption: "<h4>Zidane</h4>"
-        }
+            "http://cbs-uu.ru/data/images/photos/10/4.jpg",
+          caption: "Библиотека-филиал №10"
+        }   
       ],
       forChildren: ['Детская литература', 'Игровая зона'],
       copyCentre: ['Сканирование', 'Ксерокопирование', 'Печать на принтере', 'Набор текста'],
-      services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар']
+      services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар'],
+      socnet: {}        
     },
     {
       title: "Библиотека-филиал №12",
@@ -840,43 +850,107 @@ export default {
       photos: [
         {
           thumb:
-            "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
+            "http://cbs-uu.ru/data/images/photos/12/trumb/1.jpg",
           src:
-            "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
-          caption: "<h4>Elephant</h4>"
+            "http://cbs-uu.ru/data/images/photos/12/1.jpg",
+          caption: "Библиотека-филиал №12"
         },
         {
           thumb:
-            "https://i-kinhdoanh.vnecdn.net/2018/06/18/1-1529296929_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/12/trumb/2.jpg",
           src:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/F-15_vertical_deploy.jpg/390px-F-15_vertical_deploy.jpg",
-          caption: "<h4>Messi</h4>"
+            "http://cbs-uu.ru/data/images/photos/12/2.jpg",
+          caption: "Библиотека-филиал №12"
         },
         {
           thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/775162441-MR-2031-8E033EFCEBB928DC12A2A0AA3CEC4C33-21885-1527376486_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/12/trumb/3.jpg",
           src:
-            "https://i-thethao.vnecdn.net/2018/05/27/775162441-MR-2031-8E033EFCEBB928DC12A2A0AA3CEC4C33-21885-1527376486_680x0.jpg",
-          caption: "<h4>Bale and Marcelo</h4>"
+            "http://cbs-uu.ru/data/images/photos/12/3.jpg",
+          caption: "Библиотека-филиал №12"
         },
         {
           thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/Screen-Shot-2018-05-27-at-7-1527379562_680x0.png",
+            "http://cbs-uu.ru/data/images/photos/12/trumb/4.jpg",
           src:
-            "https://i-thethao.vnecdn.net/2018/05/27/Screen-Shot-2018-05-27-at-7-1527379562_680x0.png",
-          caption: "<h4>Madrid crowd</h4>"
+            "http://cbs-uu.ru/data/images/photos/12/4.jpg",
+          caption: "Библиотека-филиал №12"
         },
         {
           thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/000-15E0DG-1527379049_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/12/trumb/5.jpg",
           src:
-            "https://i-thethao.vnecdn.net/2018/05/27/000-15E0DG-1527379049_680x0.jpg",
-          caption: "<h4>Zidane</h4>"
+            "http://cbs-uu.ru/data/images/photos/12/5.jpg",
+          caption: "Библиотека-филиал №12"
+        },
+        {
+          thumb:
+            "http://cbs-uu.ru/data/images/photos/12/trumb/6.jpg",
+          src:
+            "http://cbs-uu.ru/data/images/photos/12/6.jpg",
+          caption: "Библиотека-филиал №12"
+        },
+        {
+          thumb:
+            "http://cbs-uu.ru/data/images/photos/12/trumb/7.jpg",
+          src:
+            "http://cbs-uu.ru/data/images/photos/12/7.jpg",
+          caption: "Библиотека-филиал №12"
+        },
+        {
+          thumb:
+            "http://cbs-uu.ru/data/images/photos/12/trumb/8.jpg",
+          src:
+            "http://cbs-uu.ru/data/images/photos/12/8.jpg",
+          caption: "Библиотека-филиал №12"
+        },
+        {
+          thumb:
+            "http://cbs-uu.ru/data/images/photos/12/trumb/9.jpg",
+          src:
+            "http://cbs-uu.ru/data/images/photos/12/9.jpg",
+          caption: "Библиотека-филиал №12"
+        },
+        {
+          thumb:
+            "http://cbs-uu.ru/data/images/photos/12/trumb/10.jpg",
+          src:
+            "http://cbs-uu.ru/data/images/photos/12/10.jpg",
+          caption: "Библиотека-филиал №12"
+        },
+        {
+          thumb:
+            "http://cbs-uu.ru/data/images/photos/12/trumb/11.jpg",
+          src:
+            "http://cbs-uu.ru/data/images/photos/12/11.jpg",
+          caption: "Библиотека-филиал №12"
+        },
+        {
+          thumb:
+            "http://cbs-uu.ru/data/images/photos/12/trumb/12.jpg",
+          src:
+            "http://cbs-uu.ru/data/images/photos/12/12.jpg",
+          caption: "Библиотека-филиал №12"
+        },
+        {
+          thumb:
+            "http://cbs-uu.ru/data/images/photos/12/trumb/13.jpg",
+          src:
+            "http://cbs-uu.ru/data/images/photos/12/13.jpg",
+          caption: "Библиотека-филиал №12"
         }
       ],
       forChildren: ['Детская литература', 'Игровая зона'],
       copyCentre: ['Сканирование', 'Ксерокопирование', 'Печать на принтере', 'Набор текста'],
-      services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар']
+      services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар'],
+      socnet: {
+        vk:
+        { 
+          icon: "mdi-vk",
+          link: "https://vk.com/id398193048",
+          hint: "Филиал №12 ВКонтакте"
+        }
+      }        
     },
     {
       title: "Библиотека-филиал №13",
@@ -942,43 +1016,79 @@ export default {
       photos: [
         {
           thumb:
-            "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
+            "http://cbs-uu.ru/data/images/photos/13/trumb/1.jpg",
           src:
-            "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
-          caption: "<h4>Elephant</h4>"
+            "http://cbs-uu.ru/data/images/photos/13/1.jpg",
+          caption: "Библиотека-филиал №13"
         },
         {
           thumb:
-            "https://i-kinhdoanh.vnecdn.net/2018/06/18/1-1529296929_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/13/trumb/2.jpg",
           src:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/F-15_vertical_deploy.jpg/390px-F-15_vertical_deploy.jpg",
-          caption: "<h4>Messi</h4>"
+            "http://cbs-uu.ru/data/images/photos/13/2.jpg",
+          caption: "Библиотека-филиал №13"
         },
         {
           thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/775162441-MR-2031-8E033EFCEBB928DC12A2A0AA3CEC4C33-21885-1527376486_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/13/trumb/3.jpg",
           src:
-            "https://i-thethao.vnecdn.net/2018/05/27/775162441-MR-2031-8E033EFCEBB928DC12A2A0AA3CEC4C33-21885-1527376486_680x0.jpg",
-          caption: "<h4>Bale and Marcelo</h4>"
+            "http://cbs-uu.ru/data/images/photos/13/3.jpg",
+          caption: "Библиотека-филиал №13"
         },
         {
           thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/Screen-Shot-2018-05-27-at-7-1527379562_680x0.png",
+            "http://cbs-uu.ru/data/images/photos/13/trumb/4.jpg",
           src:
-            "https://i-thethao.vnecdn.net/2018/05/27/Screen-Shot-2018-05-27-at-7-1527379562_680x0.png",
-          caption: "<h4>Madrid crowd</h4>"
+            "http://cbs-uu.ru/data/images/photos/13/4.jpg",
+          caption: "Библиотека-филиал №13"
         },
         {
           thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/000-15E0DG-1527379049_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/13/trumb/5.jpg",
           src:
-            "https://i-thethao.vnecdn.net/2018/05/27/000-15E0DG-1527379049_680x0.jpg",
-          caption: "<h4>Zidane</h4>"
+            "http://cbs-uu.ru/data/images/photos/13/5.jpg",
+          caption: "Библиотека-филиал №13"
+        },
+        {
+          thumb:
+            "http://cbs-uu.ru/data/images/photos/13/trumb/6.jpg",
+          src:
+            "http://cbs-uu.ru/data/images/photos/13/6.jpg",
+          caption: "Библиотека-филиал №13"
+        },
+        {
+          thumb:
+            "http://cbs-uu.ru/data/images/photos/13/trumb/7.jpg",
+          src:
+            "http://cbs-uu.ru/data/images/photos/13/7.jpg",
+          caption: "Библиотека-филиал №13"
+        },
+        {
+          thumb:
+            "http://cbs-uu.ru/data/images/photos/13/trumb/8.jpg",
+          src:
+            "http://cbs-uu.ru/data/images/photos/13/8.jpg",
+          caption: "Библиотека-филиал №13"
+        },
+        {
+          thumb:
+            "http://cbs-uu.ru/data/images/photos/13/trumb/9.jpg",
+          src:
+            "http://cbs-uu.ru/data/images/photos/13/9.jpg",
+          caption: "Библиотека-филиал №13"
         }
       ],
       forChildren: ['Детская литература', 'Игровая зона'],
       copyCentre: ['Сканирование', 'Ксерокопирование', 'Печать на принтере', 'Набор текста'],
-      services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар']
+      services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар'],
+      socnet: {
+        vk:
+        { 
+          icon: "mdi-vk",
+          link: "https://vk.com/library_13_uu ",
+          hint: "Филиал №13 ВКонтакте"
+        }
+      }        
     },
     {
       title: "Библиотека-филиал №15",
@@ -1033,43 +1143,44 @@ export default {
       photos: [
         {
           thumb:
-            "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
+            "http://cbs-uu.ru/data/images/photos/15/trumb/1.jpg",
           src:
-            "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
-          caption: "<h4>Elephant</h4>"
+            "http://cbs-uu.ru/data/images/photos/15/1.jpg",
+          caption: "Библиотека-филиал №15"
         },
         {
           thumb:
-            "https://i-kinhdoanh.vnecdn.net/2018/06/18/1-1529296929_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/15/trumb/2.jpg",
           src:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/F-15_vertical_deploy.jpg/390px-F-15_vertical_deploy.jpg",
-          caption: "<h4>Messi</h4>"
+            "http://cbs-uu.ru/data/images/photos/15/2.jpg",
+          caption: "Библиотека-филиал №15"
         },
         {
           thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/775162441-MR-2031-8E033EFCEBB928DC12A2A0AA3CEC4C33-21885-1527376486_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/15/trumb/3.jpg",
           src:
-            "https://i-thethao.vnecdn.net/2018/05/27/775162441-MR-2031-8E033EFCEBB928DC12A2A0AA3CEC4C33-21885-1527376486_680x0.jpg",
-          caption: "<h4>Bale and Marcelo</h4>"
+            "http://cbs-uu.ru/data/images/photos/15/3.jpg",
+          caption: "Библиотека-филиал №15"
         },
         {
           thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/Screen-Shot-2018-05-27-at-7-1527379562_680x0.png",
+            "http://cbs-uu.ru/data/images/photos/15/trumb/4.jpg",
           src:
-            "https://i-thethao.vnecdn.net/2018/05/27/Screen-Shot-2018-05-27-at-7-1527379562_680x0.png",
-          caption: "<h4>Madrid crowd</h4>"
-        },
-        {
-          thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/000-15E0DG-1527379049_680x0.jpg",
-          src:
-            "https://i-thethao.vnecdn.net/2018/05/27/000-15E0DG-1527379049_680x0.jpg",
-          caption: "<h4>Zidane</h4>"
+            "http://cbs-uu.ru/data/images/photos/15/4.jpg",
+          caption: "Библиотека-филиал №15"
         }
       ],
       forChildren: ['Детская литература', 'Игровая зона'],
       copyCentre: ['Сканирование', 'Ксерокопирование', 'Печать на принтере', 'Набор текста'],
-      services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар']
+      services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар'],
+      socnet: {
+        vk:
+        { 
+          icon: "mdi-vk",
+          link: "https://vk.com/filial15",
+          hint: "Филиала №15 ВКонтакте"
+        }
+      }        
     },
     {
       title: "Библиотека-филиал №16",
@@ -1125,43 +1236,44 @@ export default {
       photos: [
         {
           thumb:
-            "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
+            "http://cbs-uu.ru/data/images/photos/16/trumb/1.jpg",
           src:
-            "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
-          caption: "<h4>Elephant</h4>"
+            "http://cbs-uu.ru/data/images/photos/16/1.jpg",
+          caption: "Библиотека-филиал №16"
         },
         {
           thumb:
-            "https://i-kinhdoanh.vnecdn.net/2018/06/18/1-1529296929_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/16/trumb/2.jpg",
           src:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/F-15_vertical_deploy.jpg/390px-F-15_vertical_deploy.jpg",
-          caption: "<h4>Messi</h4>"
+            "http://cbs-uu.ru/data/images/photos/16/2.jpg",
+          caption: "Библиотека-филиал №16"
         },
         {
           thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/775162441-MR-2031-8E033EFCEBB928DC12A2A0AA3CEC4C33-21885-1527376486_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/16/trumb/3.jpg",
           src:
-            "https://i-thethao.vnecdn.net/2018/05/27/775162441-MR-2031-8E033EFCEBB928DC12A2A0AA3CEC4C33-21885-1527376486_680x0.jpg",
-          caption: "<h4>Bale and Marcelo</h4>"
+            "http://cbs-uu.ru/data/images/photos/16/3.jpg",
+          caption: "Библиотека-филиал №16"
         },
         {
           thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/Screen-Shot-2018-05-27-at-7-1527379562_680x0.png",
+            "http://cbs-uu.ru/data/images/photos/16/trumb/4.jpg",
           src:
-            "https://i-thethao.vnecdn.net/2018/05/27/Screen-Shot-2018-05-27-at-7-1527379562_680x0.png",
-          caption: "<h4>Madrid crowd</h4>"
+            "http://cbs-uu.ru/data/images/photos/16/4.jpg",
+          caption: "Библиотека-филиал №16"
         },
         {
           thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/000-15E0DG-1527379049_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/16/trumb/5.jpg",
           src:
-            "https://i-thethao.vnecdn.net/2018/05/27/000-15E0DG-1527379049_680x0.jpg",
-          caption: "<h4>Zidane</h4>"
+            "http://cbs-uu.ru/data/images/photos/16/5.jpg",
+          caption: "Библиотека-филиал №16"
         }
       ],
       forChildren: ['Детская литература', 'Игровая зона'],
       copyCentre: ['Сканирование', 'Ксерокопирование', 'Печать на принтере', 'Набор текста'],
-      services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар']
+      services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар'],
+      socnet: {}        
     },
     {
       title: "Библиотека-филиал №17",
@@ -1225,43 +1337,37 @@ export default {
       photos: [
         {
           thumb:
-            "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
+            "http://cbs-uu.ru/data/images/photos/17/trumb/1.jpg",
           src:
-            "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
-          caption: "<h4>Elephant</h4>"
+            "http://cbs-uu.ru/data/images/photos/17/1.jpg",
+          caption: "Библиотека-филиал №17"
         },
         {
           thumb:
-            "https://i-kinhdoanh.vnecdn.net/2018/06/18/1-1529296929_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/17/trumb/2.jpg",
           src:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/F-15_vertical_deploy.jpg/390px-F-15_vertical_deploy.jpg",
-          caption: "<h4>Messi</h4>"
+            "http://cbs-uu.ru/data/images/photos/17/2.jpg",
+          caption: "Библиотека-филиал №17"
         },
         {
           thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/775162441-MR-2031-8E033EFCEBB928DC12A2A0AA3CEC4C33-21885-1527376486_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/17/trumb/3.jpg",
           src:
-            "https://i-thethao.vnecdn.net/2018/05/27/775162441-MR-2031-8E033EFCEBB928DC12A2A0AA3CEC4C33-21885-1527376486_680x0.jpg",
-          caption: "<h4>Bale and Marcelo</h4>"
-        },
-        {
-          thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/Screen-Shot-2018-05-27-at-7-1527379562_680x0.png",
-          src:
-            "https://i-thethao.vnecdn.net/2018/05/27/Screen-Shot-2018-05-27-at-7-1527379562_680x0.png",
-          caption: "<h4>Madrid crowd</h4>"
-        },
-        {
-          thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/000-15E0DG-1527379049_680x0.jpg",
-          src:
-            "https://i-thethao.vnecdn.net/2018/05/27/000-15E0DG-1527379049_680x0.jpg",
-          caption: "<h4>Zidane</h4>"
+            "http://cbs-uu.ru/data/images/photos/17/3.jpg",
+          caption: "Библиотека-филиал №17"
         }
       ],
       forChildren: ['Детская литература', 'Игровая зона', 'Интерактивное оборудование'],
       copyCentre: ['Сканирование', 'Ксерокопирование', 'Печать на принтере', 'Набор текста'],
-      services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар']
+      services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар'],
+      socnet: {
+        vk:
+        { 
+          icon: "mdi-vk",
+          link: "https://vk.com/id241004119",
+          hint: "Филиал №17 ВКонтакте"
+        }
+      }        
     },
     {
       title: "Библиотека-филиал №18",
@@ -1313,43 +1419,44 @@ export default {
       photos: [
         {
           thumb:
-            "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
+            "http://cbs-uu.ru/data/images/photos/18/trumb/1.jpg",
           src:
-            "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
-          caption: "<h4>Elephant</h4>"
+            "http://cbs-uu.ru/data/images/photos/18/1.jpg",
+          caption: "Библиотека-филиал №18"
         },
         {
           thumb:
-            "https://i-kinhdoanh.vnecdn.net/2018/06/18/1-1529296929_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/18/trumb/2.jpg",
           src:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/F-15_vertical_deploy.jpg/390px-F-15_vertical_deploy.jpg",
-          caption: "<h4>Messi</h4>"
+            "http://cbs-uu.ru/data/images/photos/18/2.jpg",
+          caption: "Библиотека-филиал №18"
         },
         {
           thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/775162441-MR-2031-8E033EFCEBB928DC12A2A0AA3CEC4C33-21885-1527376486_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/18/trumb/3.jpg",
           src:
-            "https://i-thethao.vnecdn.net/2018/05/27/775162441-MR-2031-8E033EFCEBB928DC12A2A0AA3CEC4C33-21885-1527376486_680x0.jpg",
-          caption: "<h4>Bale and Marcelo</h4>"
+            "http://cbs-uu.ru/data/images/photos/18/3.jpg",
+          caption: "Библиотека-филиал №18"
         },
         {
           thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/Screen-Shot-2018-05-27-at-7-1527379562_680x0.png",
+            "http://cbs-uu.ru/data/images/photos/18/trumb/4.jpg",
           src:
-            "https://i-thethao.vnecdn.net/2018/05/27/Screen-Shot-2018-05-27-at-7-1527379562_680x0.png",
-          caption: "<h4>Madrid crowd</h4>"
+            "http://cbs-uu.ru/data/images/photos/18/4.jpg",
+          caption: "Библиотека-филиал №18"
         },
         {
           thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/000-15E0DG-1527379049_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/18/trumb/5.jpg",
           src:
-            "https://i-thethao.vnecdn.net/2018/05/27/000-15E0DG-1527379049_680x0.jpg",
-          caption: "<h4>Zidane</h4>"
+            "http://cbs-uu.ru/data/images/photos/18/5.jpg",
+          caption: "Библиотека-филиал №18"
         }
       ],
       forChildren: ['Детская литература', 'Игровая зона'],
       copyCentre: ['Сканирование', 'Ксерокопирование', 'Печать на принтере', 'Набор текста'],
-      services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар']
+      services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар'],
+      socnet: {}        
     },
     {
       title: "Библиотека-филиал №19",
@@ -1411,48 +1518,48 @@ export default {
         'work_with_children',
         'renovation',
         'piano'
-      ],       
-      
+      ],             
       photos: [
         {
           thumb:
-            "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
+            "http://cbs-uu.ru/data/images/photos/19/trumb/1.jpg",
           src:
-            "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
-          caption: "<h4>Elephant</h4>"
+            "http://cbs-uu.ru/data/images/photos/19/1.jpg",
+          caption: "Библиотека-филиал №19"
         },
         {
           thumb:
-            "https://i-kinhdoanh.vnecdn.net/2018/06/18/1-1529296929_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/19/trumb/2.jpg",
           src:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/F-15_vertical_deploy.jpg/390px-F-15_vertical_deploy.jpg",
-          caption: "<h4>Messi</h4>"
+            "http://cbs-uu.ru/data/images/photos/19/2.jpg",
+          caption: "Библиотека-филиал №19"
         },
         {
           thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/775162441-MR-2031-8E033EFCEBB928DC12A2A0AA3CEC4C33-21885-1527376486_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/19/trumb/3.jpg",
           src:
-            "https://i-thethao.vnecdn.net/2018/05/27/775162441-MR-2031-8E033EFCEBB928DC12A2A0AA3CEC4C33-21885-1527376486_680x0.jpg",
-          caption: "<h4>Bale and Marcelo</h4>"
+            "http://cbs-uu.ru/data/images/photos/19/3.jpg",
+          caption: "Библиотека-филиал №19"
         },
         {
           thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/Screen-Shot-2018-05-27-at-7-1527379562_680x0.png",
+            "http://cbs-uu.ru/data/images/photos/19/trumb/4.jpg",
           src:
-            "https://i-thethao.vnecdn.net/2018/05/27/Screen-Shot-2018-05-27-at-7-1527379562_680x0.png",
-          caption: "<h4>Madrid crowd</h4>"
+            "http://cbs-uu.ru/data/images/photos/19/4.jpg",
+          caption: "Библиотека-филиал №19"
         },
         {
           thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/000-15E0DG-1527379049_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/19/trumb/5.jpg",
           src:
-            "https://i-thethao.vnecdn.net/2018/05/27/000-15E0DG-1527379049_680x0.jpg",
-          caption: "<h4>Zidane</h4>"
+            "http://cbs-uu.ru/data/images/photos/19/5.jpg",
+          caption: "Библиотека-филиал №19"
         }
       ],
       forChildren: ['Детская литература', 'Игровая зона'],
       copyCentre: ['Сканирование', 'Ксерокопирование', 'Печать на принтере', 'Набор текста'],
-      services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар']
+      services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар'],
+      socnet: {}        
     },
     {
       title: "Библиотека-филиал №20",
@@ -1504,43 +1611,58 @@ export default {
       photos: [
         {
           thumb:
-            "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
+            "http://cbs-uu.ru/data/images/photos/20/trumb/1.jpg",
           src:
-            "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
-          caption: "<h4>Elephant</h4>"
+            "http://cbs-uu.ru/data/images/photos/20/1.jpg",
+          caption: "Библиотека-филиал №20"
         },
         {
           thumb:
-            "https://i-kinhdoanh.vnecdn.net/2018/06/18/1-1529296929_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/20/trumb/2.jpg",
           src:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/F-15_vertical_deploy.jpg/390px-F-15_vertical_deploy.jpg",
-          caption: "<h4>Messi</h4>"
+            "http://cbs-uu.ru/data/images/photos/20/2.jpg",
+          caption: "Библиотека-филиал №20"
         },
         {
           thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/775162441-MR-2031-8E033EFCEBB928DC12A2A0AA3CEC4C33-21885-1527376486_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/20/trumb/3.jpg",
           src:
-            "https://i-thethao.vnecdn.net/2018/05/27/775162441-MR-2031-8E033EFCEBB928DC12A2A0AA3CEC4C33-21885-1527376486_680x0.jpg",
-          caption: "<h4>Bale and Marcelo</h4>"
+            "http://cbs-uu.ru/data/images/photos/20/3.jpg",
+          caption: "Библиотека-филиал №20"
         },
         {
           thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/Screen-Shot-2018-05-27-at-7-1527379562_680x0.png",
+            "http://cbs-uu.ru/data/images/photos/20/trumb/4.jpg",
           src:
-            "https://i-thethao.vnecdn.net/2018/05/27/Screen-Shot-2018-05-27-at-7-1527379562_680x0.png",
-          caption: "<h4>Madrid crowd</h4>"
+            "http://cbs-uu.ru/data/images/photos/20/4.jpg",
+          caption: "Библиотека-филиал №20"
         },
         {
           thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/000-15E0DG-1527379049_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/20/trumb/5.jpg",
           src:
-            "https://i-thethao.vnecdn.net/2018/05/27/000-15E0DG-1527379049_680x0.jpg",
-          caption: "<h4>Zidane</h4>"
+            "http://cbs-uu.ru/data/images/photos/20/5.jpg",
+          caption: "Библиотека-филиал №20"
+        },
+        {
+          thumb:
+            "http://cbs-uu.ru/data/images/photos/20/trumb/6.jpg",
+          src:
+            "http://cbs-uu.ru/data/images/photos/20/6.jpg",
+          caption: "Библиотека-филиал №20"
+        },
+        {
+          thumb:
+            "http://cbs-uu.ru/data/images/photos/20/trumb/7.jpg",
+          src:
+            "http://cbs-uu.ru/data/images/photos/20/7.jpg",
+          caption: "Библиотека-филиал №20"
         }
       ],
       forChildren: ['Детская литература', 'Игровая зона'],
       copyCentre: ['Сканирование', 'Ксерокопирование', 'Печать на принтере', 'Набор текста'],
-      services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар']
+      services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар'],
+      socnet: {}        
     },
     {
       title: "Библиотека-филиал №21",
@@ -1595,43 +1717,30 @@ export default {
       photos: [
         {
           thumb:
-            "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
+            "http://cbs-uu.ru/data/images/photos/21/trumb/1.jpg",
           src:
-            "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
-          caption: "<h4>Elephant</h4>"
+            "http://cbs-uu.ru/data/images/photos/21/1.jpg",
+          caption: "Библиотека-филиал №21"
         },
         {
           thumb:
-            "https://i-kinhdoanh.vnecdn.net/2018/06/18/1-1529296929_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/21/trumb/2.jpg",
           src:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/F-15_vertical_deploy.jpg/390px-F-15_vertical_deploy.jpg",
-          caption: "<h4>Messi</h4>"
+            "http://cbs-uu.ru/data/images/photos/21/2.jpg",
+          caption: "Библиотека-филиал №21"
         },
         {
           thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/775162441-MR-2031-8E033EFCEBB928DC12A2A0AA3CEC4C33-21885-1527376486_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/21/trumb/3.jpg",
           src:
-            "https://i-thethao.vnecdn.net/2018/05/27/775162441-MR-2031-8E033EFCEBB928DC12A2A0AA3CEC4C33-21885-1527376486_680x0.jpg",
-          caption: "<h4>Bale and Marcelo</h4>"
-        },
-        {
-          thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/Screen-Shot-2018-05-27-at-7-1527379562_680x0.png",
-          src:
-            "https://i-thethao.vnecdn.net/2018/05/27/Screen-Shot-2018-05-27-at-7-1527379562_680x0.png",
-          caption: "<h4>Madrid crowd</h4>"
-        },
-        {
-          thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/000-15E0DG-1527379049_680x0.jpg",
-          src:
-            "https://i-thethao.vnecdn.net/2018/05/27/000-15E0DG-1527379049_680x0.jpg",
-          caption: "<h4>Zidane</h4>"
+            "http://cbs-uu.ru/data/images/photos/21/3.jpg",
+          caption: "Библиотека-филиал №21"
         }
       ],
       forChildren: ['Детская литература', 'Игровая зона'],
       copyCentre: ['Сканирование', 'Ксерокопирование', 'Печать на принтере', 'Набор текста'],
-      services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар']
+      services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар'],
+      socnet: {}        
     },
     {
       title: "Библиотека-филиал №24",
@@ -1696,43 +1805,51 @@ export default {
       photos: [
         {
           thumb:
-            "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
+            "http://cbs-uu.ru/data/images/photos/24/trumb/1.jpg",
           src:
-            "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
-          caption: "<h4>Elephant</h4>"
+            "http://cbs-uu.ru/data/images/photos/24/1.jpg",
+          caption: "Библиотека-филиал №24"
         },
         {
           thumb:
-            "https://i-kinhdoanh.vnecdn.net/2018/06/18/1-1529296929_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/24/trumb/2.jpg",
           src:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/F-15_vertical_deploy.jpg/390px-F-15_vertical_deploy.jpg",
-          caption: "<h4>Messi</h4>"
+            "http://cbs-uu.ru/data/images/photos/24/2.jpg",
+          caption: "Библиотека-филиал №24"
         },
         {
           thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/775162441-MR-2031-8E033EFCEBB928DC12A2A0AA3CEC4C33-21885-1527376486_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/24/trumb/3.jpg",
           src:
-            "https://i-thethao.vnecdn.net/2018/05/27/775162441-MR-2031-8E033EFCEBB928DC12A2A0AA3CEC4C33-21885-1527376486_680x0.jpg",
-          caption: "<h4>Bale and Marcelo</h4>"
+            "http://cbs-uu.ru/data/images/photos/24/3.jpg",
+          caption: "Библиотека-филиал №24"
         },
         {
           thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/Screen-Shot-2018-05-27-at-7-1527379562_680x0.png",
+            "http://cbs-uu.ru/data/images/photos/24/trumb/4.jpg",
           src:
-            "https://i-thethao.vnecdn.net/2018/05/27/Screen-Shot-2018-05-27-at-7-1527379562_680x0.png",
-          caption: "<h4>Madrid crowd</h4>"
+            "http://cbs-uu.ru/data/images/photos/24/4.jpg",
+          caption: "Библиотека-филиал №24"
         },
         {
           thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/000-15E0DG-1527379049_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/24/trumb/5.jpg",
           src:
-            "https://i-thethao.vnecdn.net/2018/05/27/000-15E0DG-1527379049_680x0.jpg",
-          caption: "<h4>Zidane</h4>"
+            "http://cbs-uu.ru/data/images/photos/24/5.jpg",
+          caption: "Библиотека-филиал №24"
         }
       ],
       forChildren: ['Детская литература', 'Игровая зона'],
       copyCentre: ['Сканирование', 'Ксерокопирование', 'Печать на принтере', 'Набор текста'],
-      services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар']
+      services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар'],
+      socnet: {
+        vk:
+        { 
+          icon: "mdi-vk",
+          link: "https://vk.com/biblio24centr",
+          hint: "Филиал №24 ВКонтакте"
+        }
+      }        
     },
     {
       title: "КНИГА&FORUM",
@@ -1767,43 +1884,30 @@ export default {
       photos: [
         {
           thumb:
-            "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
+            "http://cbs-uu.ru/data/images/photos/25/trumb/1.jpg",
           src:
-            "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
-          caption: "<h4>Elephant</h4>"
+            "http://cbs-uu.ru/data/images/photos/25/1.jpg",
+          caption: "КНИГА&FORUM. Мобильная точка библиотеки в Торговом центре «Форум»"
         },
         {
           thumb:
-            "https://i-kinhdoanh.vnecdn.net/2018/06/18/1-1529296929_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/25/trumb/2.jpg",
           src:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/F-15_vertical_deploy.jpg/390px-F-15_vertical_deploy.jpg",
-          caption: "<h4>Messi</h4>"
+            "http://cbs-uu.ru/data/images/photos/25/2.jpg",
+          caption: "КНИГА&FORUM. Мобильная точка библиотеки в Торговом центре «Форум»"
         },
         {
           thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/775162441-MR-2031-8E033EFCEBB928DC12A2A0AA3CEC4C33-21885-1527376486_680x0.jpg",
+            "http://cbs-uu.ru/data/images/photos/25/trumb/3.jpg",
           src:
-            "https://i-thethao.vnecdn.net/2018/05/27/775162441-MR-2031-8E033EFCEBB928DC12A2A0AA3CEC4C33-21885-1527376486_680x0.jpg",
-          caption: "<h4>Bale and Marcelo</h4>"
-        },
-        {
-          thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/Screen-Shot-2018-05-27-at-7-1527379562_680x0.png",
-          src:
-            "https://i-thethao.vnecdn.net/2018/05/27/Screen-Shot-2018-05-27-at-7-1527379562_680x0.png",
-          caption: "<h4>Madrid crowd</h4>"
-        },
-        {
-          thumb:
-            "https://i-thethao.vnecdn.net/2018/05/27/000-15E0DG-1527379049_680x0.jpg",
-          src:
-            "https://i-thethao.vnecdn.net/2018/05/27/000-15E0DG-1527379049_680x0.jpg",
-          caption: "<h4>Zidane</h4>"
+            "http://cbs-uu.ru/data/images/photos/25/3.jpg",
+          caption: "КНИГА&FORUM. Мобильная точка библиотеки в Торговом центре «Форум»"
         }
       ],
       forChildren: ['Детская литература', 'Игровая зона', 'Настольные игры', 'Комиксы'],
       copyCentre: ['Сканирование', 'Ксерокопирование', 'Печать на принтере', 'Набор текста'],
-      services: ['Принимаем книги в дар']
+      services: ['Принимаем книги в дар'],
+      socnet: {}        
     }
   ]
 }
