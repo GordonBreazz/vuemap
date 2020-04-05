@@ -1881,6 +1881,11 @@ export default {
       site: "cbs-uu.ru",
       foundingYear: 2019,
       features: [1, 2],
+      featuresList: [
+        'wifi',               
+        'clubs',                            
+        'work_with_children'
+      ],        
       photos: [
         {
           thumb:
