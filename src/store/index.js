@@ -267,27 +267,6 @@ export default new Vuex.Store({
     clubs: [],
     site: "cbs-uu.ru",
     foundingYear: 2019,
-    features: [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11,
-      12,
-      13,
-      14,
-      15,
-      16,
-      17,
-      18,
-      19
-    ],
     featuresList: [
       'aboniment',
       'partnership',
@@ -431,13 +410,8 @@ export default new Vuex.Store({
     },
     getCaption(state) {
       if (state.currentLocation.title != state.currentLocation.fullTitle)
-        return (
-          state.currentLocation.fullTitle +
-          "( " +
-          state.currentLocation.title +
-          " )"
-        )
-      return state.currentLocation.fullTitle
+        return state.currentLocation.title
+      return ''
     }
   }
 })

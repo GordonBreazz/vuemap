@@ -1,5 +1,6 @@
 <template>
   <div>
+    <v-list-item-subtitle>Фото библиотеки</v-list-item-subtitle>
     <v-container no-gutters v-if="getTwoPhoto">
       <v-row no-gutters class="photoglr">
 
@@ -8,6 +9,7 @@
         </v-col>
 
         <v-col cols="2" v-if="getOtherPhoto">
+           
           <v-img :src="getOtherPhoto.photo.thumb" @click="openGallery(2)" width="200" height="100%">
             <div
               style="background-color:rgba(51,51,51,.8); height: 100%; color: white; justify-content: center;   position: relative ;  align-items: center; text-align: center; "

@@ -8,18 +8,22 @@
     >
       <v-card-title primary-title>
         <div>
-          <h3 class="headline">{{getCaption}}</h3>
+          <h3 class=" display-1 font-weight-light" >{{currentLocation.fullTitle}}</h3>
+          <h3 class="headline font-weight-light pt-1 pb-1" v-if="getCaption">( {{getCaption}} )</h3>
         </div>
+        <div class="font-weight-REGULAR   display-4 v-btn--absolute v-btn--right d-none d-md-flex d-lg-flex d-xl-flex" style="margin-right: 60px; margin-top: 30px; z-index: 0">
+          <span style="color: #F44336" >#</span>{{currentLocation.id == 25 ? 'KNIGA&FORUM' : currentLocation.id }}
+         </div> 
         <v-btn @click="hidePanel" absolute dark fab top right color="red">
           <v-icon dark>mdi-close</v-icon>
         </v-btn>
       </v-card-title>
       <v-card-subtitle
         style="text-align: left"
-      >{{ currentLocation.district + ' район ' + currentLocation.address }}. Сейчас {{getWorkStatus.status}}. {{getWorkStatus.message}}</v-card-subtitle>
+      >{{ currentLocation.district + ' район ' + currentLocation.address }}. Сейчас {{getWorkStatus.status}}. {{getWorkStatus.message}}</v-card-subtitle>      
       <v-card-text>
         <v-container>
-          <v-row>
+          <v-row no-gutters>
             <v-col cols="12" md="6">
               <div style="text-align: justify; color: #454545;" v-html="currentLocation.text"></div>
               <Photo-Gallery />
