@@ -29,8 +29,8 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
-import { mapGetters } from 'vuex'
+import { mapState } from "vuex";
+import { mapGetters } from "vuex";
 
 export default {
   components: {},
@@ -56,8 +56,10 @@ export default {
   },
   methods: {
     showPanel() {
-      this.$store.commit("showInfoPanel");     
-      this.$vuetify.goTo("#infopanel", { offset: 30 +  Math.floor(Math.random() * 11) })
+      this.$store.commit("showInfoPanel");
+      this.$vuetify.goTo("#infopanel", {
+        offset: 30 + Math.floor(Math.random() * 11)
+      });
     },
 
     goToAll() {
@@ -65,7 +67,6 @@ export default {
       this.$vuetify.goTo("#requestpanel");
       if (this.map.balloon) this.map.balloon.close();
       this.map.setBounds(this.map.geoObjects.getBounds());
-      
     },
     balloonTemplate(location) {
       //Создания балуна метки
@@ -101,14 +102,14 @@ export default {
             </span>
           </button>`;
       } else if (location.photoSmall)
-        frameSt = '<img style="width: 100%" src="' + location.photoSmall + '">'; //'<div role="progressbar" aria-valuemin="0" aria-valuemax="100" class="v-progress-circular v-progress-circular--indeterminate purple--text" style="height: 70px; width: 70px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="22.22222222222222 22.22222222222222 44.44444444444444 44.44444444444444" style="transform: rotate(0deg);"><circle fill="transparent" cx="44.44444444444444" cy="44.44444444444444" r="20" stroke-width="4.444444444444445" stroke-dasharray="125.664" stroke-dashoffset="125.66370614359172px" class="v-progress-circular__overlay"></circle></svg><div class="v-progress-circular__info"></div></div>'//
+        frameSt = '<img style="width: 100%" src="' + location.photoSmall + '">';
 
       return `
         <h2 style="margin-top: 0px;">${location.fullTitle}</h2>
         <p style="margin-top: 8px; margin-bottom: 4px;"><i>Адрес:
         <b>${location.address}</b>
         <br><b>Сейчас ${this.getWorkStatus.status}.</b> ${this.getWorkStatus.message} </i></p>
-        ${frameSt}<div style="height: 10px;"></div>
+        <div class="d-none d-md-flex d-lg-flex d-xl-flex">${frameSt}</div><div style="height: 10px;"></div>
         <button type="button" class="v-btn v-btn--contained  v-size--default  primary mb-1" onclick="javascript: document.querySelector('#button100500').click();">Подробнее</button> 
         <button type="button" class="v-btn v-btn--contained  v-size--default  light-blue white--text mb-1" onclick="javascript: document.querySelector('#button100600').click();">ВСЕ БИБЛИОТЕКИ </button>
         ${buttonSt}
@@ -121,8 +122,7 @@ export default {
       this.map.setCenter(l.coords, 19, { checkZoomRange: false });
       this.$store.commit("changeLocation", { newLocation: l });
     },
-    getDataCluster(obj) {
-    },
+    getDataCluster(obj) {},
     getDataPoint(obj) {
       const coords = obj.get("coords");
     },
@@ -141,7 +141,7 @@ export default {
       });
       btn.options.set("size", "large");
       btn.events.add("press", function() {
-        gt();//goToAll
+        gt(); //goToAll
       });
 
       this.map.controls.add(btn, {
@@ -151,8 +151,8 @@ export default {
     }
   },
   computed: {
-    ...mapState(['placemarks']),
-    ...mapGetters(['getWorkStatus'])
+    ...mapState(["placemarks"]),
+    ...mapGetters(["getWorkStatus"])
   },
   props: ["fId", "frm"],
   watch: {
@@ -161,10 +161,10 @@ export default {
         let result = this.placemarks.find(
           currentValue => currentValue.id == newVal
         );
-        if (result) {     
+        if (result) {
           if (!this.frm) {
             this.map.setCenter(result.coords, 19, { checkZoomRange: false });
-          }    
+          }
           this.$store.commit("changeLocation", { newLocation: result });
           this.showPanel();
         } else console.log("Нет такого филиала");

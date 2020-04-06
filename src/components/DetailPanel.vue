@@ -31,7 +31,7 @@
             <v-col cols="12" md="6">
               <v-container>
                 <v-row no-gutters>
-                  <v-col cols="12" lg="6">
+                  <v-col cols="12" lg="6" >                
                     <FeaturesList />
                   </v-col>
                   <v-col cols="12" lg="6">
@@ -86,7 +86,23 @@ export default {
   },
   computed: {
     ...mapState(["currentLocation"]),
-    ...mapGetters(["getFeaturesImages", "getCaption", "getWorkStatus"])
+    ...mapGetters(["getFeaturesImages", "getCaption", "getWorkStatus"]),
+     
+    orderColumns() {
+      switch (this.$vuetify.breakpoint.name) {
+        case "xs":
+          return "1";
+        case "sm":
+          return "1";
+        case "md":
+          return "1";
+        case "lg":
+          return "2";
+        case "xl":
+          return "2";
+      }
+    }
+  
   }
 };
 </script>
