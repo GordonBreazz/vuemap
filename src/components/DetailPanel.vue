@@ -26,9 +26,9 @@
           <v-row no-gutters>
             <v-col cols="12" md="6">
 
-              <div style="text-align: justify; color: #454545;" v-html="d3 + currentLocation.text"></div>
+              <div style="text-align: justify; color: #454545;" class="mb-3" v-html="d3 + currentLocation.text"></div>
               <Photo-Gallery />
-              <v-list-item-subtitle>Видео</v-list-item-subtitle>
+              <v-list-item-subtitle v-if="currentLocation.video">Видео</v-list-item-subtitle>
               <div style="padding: 10px" v-html="currentLocation.video"></div>
             </v-col>
             <v-col cols="12" md="6">
@@ -72,15 +72,11 @@ export default {
   props: ["filial"],
   data() {
     return {
-      d3: `      <v-img :aspect-ratio="16/9" src="https://cdn.vuetifyjs.com/images/parallax/material.jpg" style="width: 300px; float: right;">
-        <v-row align="end" class="lightbox white--text pa-2 fill-height">
-          <v-col>
-            <div class="subheading">Jonathan Lee</div>
-            <div class="body-1">heyfromjonathan@gmail.com</div>
-          </v-col>
-        </v-row>
-      </v-img>
-`
+      d3: `<div style="text-align: center; float: right;"><img title="3D Тур по библиотеке" 
+            style="cursor: pointer; width: 170px; padding-left: 10px; " alt="" 
+            src="http://cbs-uu.ru/data/assets/360-pana.jpg"
+            onclick="javascript:document.querySelector('#button100700').click()">
+            <p style="font-size: 8pt; color: gray; margin-bottom: 0px;">3D тур по библиотекe</p> </div>`
     };
   },
   methods: {
