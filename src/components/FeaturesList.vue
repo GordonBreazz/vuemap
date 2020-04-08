@@ -110,12 +110,11 @@
       <v-list-item-content>
         <v-list-item-subtitle class="mb-2">
           Копицентр
-          <b>₽</b>
         </v-list-item-subtitle>
 
         <v-list-item-title>
           <ul v-for="item in copyCentre" v-bind:key="item">
-            <li>{{ item }}</li>
+            <li class="badge" title="Платные услуги (₽)">{{ item }}</li>
           </ul>
         </v-list-item-title>
       </v-list-item-content>
@@ -202,6 +201,30 @@ export default {
 </script>
 
 <style scoped>
+
+.badge:after {
+  content: '₽';
+  margin-left: 5px;
+  padding-left: 0.35em;
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  vertical-align: baseline;
+  background-color: #284ac7;
+  border-radius: 50%;
+  color: white;
+  font-size: 0.9em;
+  position: relative;
+  top: 2px;
+  background-size: cover;
+}
+
+.badge {
+  white-space: nowrap;
+}
+
+
+
 .activeDay {
   background-color: rgb(223, 223, 223);
 }

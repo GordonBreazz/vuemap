@@ -176,6 +176,18 @@
 
       <v-divider inset></v-divider>
 
+            <v-list-item @click="openSiteEx(currentLocation.yandexCard)">
+        <v-list-item-icon>
+          <v-icon color="indigo">mdi-message-draw</v-icon>
+        </v-list-item-icon>
+        <v-list-item-content>
+          <v-list-item-subtitle>Библиотека в Яндекс.Справочнике</v-list-item-subtitle>
+          <v-list-item-title class="mt-1">Здесь вы можете посмотреть и оставить отзывы о библиотеке</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+
+      <v-divider inset></v-divider>    
+
       <v-list-item>
         <v-list-item-icon>
           <v-icon color="indigo">mdi-thumb-up-outline</v-icon>
@@ -224,6 +236,9 @@ export default {
     },
     openSite() {
       window.open("http://" + this.currentLocation.site);
+    },
+    openSiteEx(url) {
+      if (url) window.open(url);
     },
     copyToClipboard(el) {
       this.showT = !this.showT;

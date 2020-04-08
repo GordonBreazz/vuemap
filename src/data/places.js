@@ -110,10 +110,8 @@ export default {
       forChildren: ['Детская литература', 'Игровая зона', 'Настольные игры', 'Комиксы'],
       copyCentre: ['Сканирование', 'Ксерокопирование', 'Печать на принтере', 'Цветная печать', 'Ламинирование', 'Набор текста'],
       services: ['Услуги интернет-кафе', 'Подтверждение личности на портале "Гос. Услуги"', 'Юридические консультации', 'Можно провести мероприятие', 'Можно провести выставку', 'Принимаем книги в дар'],
-      socnet: {
-        facebook: {},
-        vk: {}
-      }              
+      socnet: {},
+      yandexCard: "https://yandex.ru/maps/org/67126580751/"
     },
     {
       title: "Библиотека-филиал №2",
@@ -195,7 +193,8 @@ export default {
           link: "https://vk.com/club115675525",
           hint: "Филиал №2 ВКонтакте"
         }
-      }        
+      },
+      yandexCard: "https://yandex.ru/maps/org/1689871759/"        
     },
     {
       title: "Библиотека-филиал №3",
@@ -272,7 +271,8 @@ export default {
       forChildren: ['Детская литература', 'Игровая зона'],
       copyCentre: ['Сканирование', 'Ксерокопирование', 'Печать на принтере', 'Набор текста'],
       services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар'],
-      socnet: {}        
+      socnet: {},
+      yandexCard: "https://yandex.ru/maps/org/217492780063/"        
     },
     {
       title: "Библиотека-филиал №4",
@@ -374,7 +374,8 @@ export default {
           link: "https://vk.com/public46270108",
           hint: "Филиал №4 ВКонтакте"
         }
-      }        
+      },
+      yandexCard: "https://yandex.ru/maps/org/1030202458/"        
     },
     {
       title: "Библиотека-филиал №5",
@@ -507,11 +508,12 @@ export default {
           caption: "Библиотека-филиал №5"
         }               
       ],
-      video: "",
+      video: '<iframe width="100%" height="315" src="https://www.youtube.com/embed/9U9-CasovEE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
       forChildren: ['Детская литература', 'Игровая зона', 'Развлекательный комплекс', 'Интерактивное оборудование'],
       copyCentre: ['Сканирование', 'Ксерокопирование', 'Печать на принтере', 'Набор текста', 'Цветная печать'],
       services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Можно провести выставку', 'Принимаем книги в дар'],
-      socnet: {}        
+      socnet: {},
+      yandexCard: "https://yandex.ru/maps/org/1110255846/"        
     },
     {
       title: "Библиотека-филиал №6",
@@ -602,7 +604,8 @@ export default {
           link: "https://vk.com/club165017033",
           hint: "Филиал №6 ВКонтакте"
         }
-      }        
+      },
+      yandexCard: ""        
     },
     {
       title: "Библиотека-филиал №9",
@@ -708,7 +711,8 @@ export default {
           link: "https://www.facebook.com/Bibliotheka9.ru/",
           hint: "Facebook филиала №9"
         }
-      }        
+      },
+      yandexCard: "https://yandex.ru/maps/org/1076693829/"        
     },
     {
       title: "Библиотека-филиал №10",
@@ -798,7 +802,8 @@ export default {
       forChildren: ['Детская литература', 'Игровая зона'],
       copyCentre: ['Сканирование', 'Ксерокопирование', 'Печать на принтере', 'Набор текста'],
       services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар'],
-      socnet: {}        
+      socnet: {},
+      yandexCard: "https://yandex.ru/maps/org/1030530472/"        
     },
     {
       title: "Библиотека-филиал №12",
@@ -960,7 +965,8 @@ export default {
           link: "https://vk.com/id398193048",
           hint: "Филиал №12 ВКонтакте"
         }
-      }        
+      },
+      yandexCard: "https://yandex.ru/maps/org/1710059565/"        
     },
     {
       title: "Библиотека-филиал №13",
@@ -1099,7 +1105,8 @@ export default {
           link: "https://vk.com/library_13_uu ",
           hint: "Филиал №13 ВКонтакте"
         }
-      }        
+      },
+      yandexCard: "https://yandex.ru/maps/org/tsentralizovannaya_bibliotechnaya_sistema_filial_13/1017873277/"        
     },
     {
       title: "Библиотека-филиал №15",
@@ -1192,7 +1199,8 @@ export default {
           link: "https://vk.com/filial15",
           hint: "Филиала №15 ВКонтакте"
         }
-      }        
+      },
+      yandexCard: "https://yandex.ru/maps/org/1218283471/"        
     },
     {
       title: "Библиотека-филиал №16",
@@ -1286,7 +1294,8 @@ export default {
       forChildren: ['Детская литература', 'Игровая зона'],
       copyCentre: ['Сканирование', 'Ксерокопирование', 'Печать на принтере', 'Набор текста'],
       services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар'],
-      socnet: {}        
+      socnet: {},
+      yandexCard: "https://yandex.ru/maps/org/biblioteka_filial_16/1133950870/"
     },
     {
       title: "Библиотека-филиал №17",
@@ -1370,7 +1379,7 @@ export default {
           caption: "Библиотека-филиал №17"
         }
       ],
-      video: "",
+      video: '<iframe width="100%" height="315" src="https://www.youtube.com/embed/PhsHEWIeY1I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
       forChildren: ['Детская литература', 'Игровая зона', 'Интерактивное оборудование'],
       copyCentre: ['Сканирование', 'Ксерокопирование', 'Печать на принтере', 'Набор текста'],
       services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар'],
@@ -1381,7 +1390,8 @@ export default {
           link: "https://vk.com/id241004119",
           hint: "Филиал №17 ВКонтакте"
         }
-      }        
+      },
+      yandexCard: "https://yandex.ru/maps/org/1753546335/"        
     },
     {
       title: "Библиотека-филиал №18",
@@ -1471,7 +1481,8 @@ export default {
       forChildren: ['Детская литература', 'Игровая зона'],
       copyCentre: ['Сканирование', 'Ксерокопирование', 'Печать на принтере', 'Набор текста'],
       services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар'],
-      socnet: {}        
+      socnet: {},
+      yandexCard: "https://yandex.ru/maps/org/1108695457/"        
     },
     {
       title: "Библиотека-филиал №19",
@@ -1575,7 +1586,8 @@ export default {
       forChildren: ['Детская литература', 'Игровая зона'],
       copyCentre: ['Сканирование', 'Ксерокопирование', 'Печать на принтере', 'Набор текста'],
       services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар'],
-      socnet: {}        
+      socnet: {},
+      yandexCard: "https://yandex.ru/maps/org/82440294389/"        
     },
     {
       title: "Библиотека-филиал №20",
@@ -1679,7 +1691,8 @@ export default {
       forChildren: ['Детская литература', 'Игровая зона'],
       copyCentre: ['Сканирование', 'Ксерокопирование', 'Печать на принтере', 'Набор текста'],
       services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар'],
-      socnet: {}        
+      socnet: {},
+      yandexCard: "https://yandex.ru/maps/org/1680598945/"        
     },
     {
       title: "Библиотека-филиал №21",
@@ -1758,7 +1771,8 @@ export default {
       forChildren: ['Детская литература', 'Игровая зона'],
       copyCentre: ['Сканирование', 'Ксерокопирование', 'Печать на принтере', 'Набор текста'],
       services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар'],
-      socnet: {}        
+      socnet: {},
+      yandexCard: "https://yandex.ru/maps/org/101479237983/"        
     },
     {
       title: "Библиотека-филиал №24",
@@ -1868,7 +1882,8 @@ export default {
           link: "https://vk.com/biblio24centr",
           hint: "Филиал №24 ВКонтакте"
         }
-      }        
+      },
+      yandexCard: "https://yandex.ru/maps/org/1061852592/"        
     },
     {
       title: "КНИГА&FORUM",
@@ -1932,7 +1947,7 @@ export default {
       forChildren: ['Детская литература', 'Игровая зона', 'Настольные игры', 'Комиксы'],
       copyCentre: ['Сканирование', 'Ксерокопирование', 'Печать на принтере', 'Набор текста'],
       services: ['Принимаем книги в дар'],
-      socnet: {}        
+      socnet: {},      
     }
   ]
 }

@@ -48,7 +48,7 @@
       </v-card-text>
       <v-divider></v-divider>
       <v-card-actions>
-        <v-btn @click="showPanViewer" large color="pink" dark outlined>
+        <v-btn @click="showPanViewer" large color="pink" dark>
           <v-icon dark class="mr-2">mdi-arrow-decision-outline</v-icon>3D тур по библиотеке
         </v-btn>
       </v-card-actions>

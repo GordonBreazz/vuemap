@@ -1,0 +1,20 @@
+<svg width="14" height="14" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Group</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-15454 -196)">
+<g id="Group">
+<g id="Ellipse 3">
+<use xlink:href="#path0_fill" transform="translate(15454 196)" fill="#9CC5ED"/>
+</g>
+<g id="iconmonstr-currency-14">
+<g id="Vector">
+<use xlink:href="#path1_fill" transform="translate(15457 199)"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 14 7C 14 10.866 10.866 14 7 14C 3.13401 14 0 10.866 0 7C 0 3.13401 3.13401 0 7 0C 10.866 0 14 3.13401 14 7Z"/>
+<path id="path1_fill" d="M 1.43182 9L 1.43182 7.125L 0 7.125L 0 6L 1.43182 6L 1.43182 5.25L 0 5.25L 0 4.125L 1.43182 4.125L 1.43182 0L 4.46155 0C 5.78526 0 6.66046 0 7.38245 0.983625C 7.70103 1.41787 7.875 1.99238 7.875 2.58C 7.875 3.396 7.54174 4.197 6.88311 4.677C 6.20622 5.1705 5.53756 5.25 4.17339 5.25L 2.86364 5.25L 2.86364 6L 5.36932 6L 5.36932 7.125L 2.86364 7.125L 2.86364 9L 1.43182 9ZM 2.86364 4.125L 5.10049 4.125C 7.12938 4.125 7.36277 1.125 4.98452 1.125L 2.86364 1.125L 2.86364 4.125Z"/>
+</defs>
+</svg>
