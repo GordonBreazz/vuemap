@@ -5,7 +5,7 @@ import places from "../data/places.js"
 
 Vue.use(Vuex)
 
-const FEATURES_IMG_PATH =  'http://cbs-uu.ru/data/assets/features_lightgray/'
+const FEATURES_IMG_PATH =  'http://cbs-uu.ru/data/assets/features_gray/'
 
 function getHoursAndMin(millisec) {
   var seconds = (millisec / 1000).toFixed(0)
