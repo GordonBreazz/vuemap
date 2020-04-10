@@ -1,6 +1,6 @@
 <template>
 <div>
-    <v-menu offset-y v-for="(item, i) in getSubMenu" :key="(i+900)" :close-on-content-click="false" v-model="mshow">
+    <v-menu offset-y v-for="(item, i) in getSubMenu" :key="(i+900)" :close-on-content-click="false" v-model="mshow" transition="scale-transition">
       <template v-slot:activator="{ on }">
         <v-btn text v-on="on" class="hidden-xs-only">
           <v-icon>{{item.icon}}</v-icon>

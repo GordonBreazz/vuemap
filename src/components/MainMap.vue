@@ -167,7 +167,7 @@ export default {
           }
           this.$store.commit("changeLocation", { newLocation: result });
           this.showPanel();
-        } else console.log("Нет такого филиала");
+        } else this.$router.push('/404/')//console.log("Нет такого филиала");
       }
     }
   }
