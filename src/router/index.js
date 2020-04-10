@@ -26,6 +26,13 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: Home,
     props: (route) => ({ fId: Number(route.params.id), frm: route.query.q })
+  },
+  {
+    // сопоставляется со всеми остальными маршрутами
+    path: '*',
+    name: '404',
+    component: 404,
+    component: () => import(/* webpackChunkName: "about" */ '../views/404.vue')    
   }
 
 

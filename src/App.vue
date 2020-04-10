@@ -18,7 +18,6 @@ require("vue-image-lightbox/dist/vue-image-lightbox.min.css");
 export default {
   data() {
     return {
-      tt: true
     };
   },
   components: {
