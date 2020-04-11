@@ -22,7 +22,7 @@ export default {
   components: {
     MenuList
   },
-  computed: mapGetters(["getSubMenu"])
+  computed: mapGetters("Menu",["getSubMenu"])
 }
 </script>
 

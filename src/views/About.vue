@@ -186,31 +186,10 @@
 
 
 <script>
+import { mapState } from "vuex";
 export default {
   data() {
     return {
-      socnet: [
-        {
-          icon: "mdi-facebook",
-          link: "https://www.facebook.com/CBSUU",
-          hint: "Наш Facebook"
-        },
-        {
-          icon: "mdi-vk",
-          link: "https://vk.com/ik_kalashnikov",
-          hint: "Наша группа ВКонтакте"
-        },
-        {
-          icon: "mdi-youtube",
-          link: "https://www.youtube.com/channel/UC3xc55v1C4hJmRp6UCLWeyQ",
-          hint: "Наш канал на YouTube"
-        },
-        {
-          icon: "mdi-instagram",
-          link: "https://www.instagram.com/cbs_kalashnikov/",
-          hint: "Наш Instagram"
-        }
-      ],
       items: [
         {
           src: "http://cbs-uu.ru/data/assets/places/4.jpg"
@@ -227,6 +206,9 @@ export default {
       ]
     };
   },
+  computed: {
+    ...mapState(["socnet"])
+  },  
   methods: {
     goMap() {
       this.$router.push({ path: "/" });

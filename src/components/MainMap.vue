@@ -158,6 +158,7 @@ export default {
   watch: {
     fId: function(newVal, oldVal) {
       if (newVal !== oldVal) {
+        if (!Number(newVal)) this.$router.push('/404/')          
         let result = this.placemarks.find(
           currentValue => currentValue.id == newVal
         );

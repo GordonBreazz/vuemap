@@ -1,11 +1,13 @@
 import Vue from "vue"
 import Vuex from "vuex"
+import {MainMenu} from "../store/modules/MainMenu.js"
+
 import shedule from "../data/shedule.js"
 import places from "../data/places.js"
 
 Vue.use(Vuex)
 
-const FEATURES_IMG_PATH =  'http://cbs-uu.ru/data/assets/features_gray/'
+const FEATURES_IMG_PATH =  'http://cbs-uu.ru/data/assets/features_lightgray/'
 
 function getHoursAndMin(millisec) {
   var seconds = (millisec / 1000).toFixed(0)
@@ -212,27 +214,6 @@ export default new Vuex.Store({
     placemarks: places.placemarks,
     pathMode: false,
     districts: ["Советский", "Октябрьский", "Железнодорожный"],
-    mainMenu: [
-      {
-        title: "Афиша",
-        link:
-          "http://cbs-uu.ru/category/%d1%87%d1%82%d0%be-%d0%bf%d0%be%d1%87%d0%b8%d1%82%d0%b0%d1%82%d1%8c/",
-        icon: "mdi-book-open-page-variant",
-        linkName: "href"
-      },
-      {
-        title: "Карта",
-        link: "/",
-        icon: "mdi-map-marker-multiple-outline",
-        linkName: "to"
-      },
-      {
-        title: "О проекте",
-        link: "/about",
-        icon: "mdi-bookmark-minus-outline",
-        linkName: "to"
-      }
-    ],
     drawer: false,
     timeTables: shedule.scheduleTypes,
     summerTimetable: shedule.summerTimetable,
@@ -313,35 +294,7 @@ export default new Vuex.Store({
     getPath(state) {
       return `/filial/${state.currentLocation.id}/`
     },
-    getSubMenu(state) {
-      let arr = state.placemarks.map(function(item) {
-        return {
-          district: item.district,
-          title: item.title,
-          link: "/filial/" + item.id + "/",
-          id: item.id
-        }
-      })
-      let districts = state.districts.map(function(item, i) {
-        return {
-          name: item + " район",
-          items: arr.filter(i => item == i.district),
-          ids: arr.filter(i => item == i.district).map((i)=> i.id),
-          idx: i
-        }
-      })
-      let sm = [
-        {
-          title: "Библиотеки",
-          icon: "mdi-bookshelf",
-          groups: districts,
-          items: arr
-        }
-      ]
-      console.log(sm)
-
-      return sm
-    },
+    
     getDrawer(state) {
       return state.drawer
     },
@@ -415,5 +368,8 @@ export default new Vuex.Store({
         return state.currentLocation.title
       return ''
     }
+  },
+  modules: {
+    Menu: MainMenu 
   }
 })

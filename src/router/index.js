@@ -19,6 +19,15 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
+    path: '/events',
+    name: 'Events',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/Events.vue')
+  },
+
+  {
     path: '/filial/:id',
     name: 'Filials',
     // route level code-splitting
@@ -27,6 +36,7 @@ const routes = [
     component: Home,
     props: (route) => ({ fId: Number(route.params.id), frm: route.query.q })
   },
+
   {
     // сопоставляется со всеми остальными маршрутами
     path: '*',

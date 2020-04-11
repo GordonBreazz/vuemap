@@ -27,6 +27,6 @@ export default {
   components: {
     NestedMenuList
   },
-  computed:  mapState(["mainMenu"])
+  computed:  mapState("Menu",["mainMenu"])
 };
 </script>
