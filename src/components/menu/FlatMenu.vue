@@ -18,6 +18,6 @@
 import { mapState } from "vuex";
 
 export default {
-  computed: mapState("Menu",["mainMenu"])
+  computed: mapState("MainMenu",["mainMenu"])
 };
 </script>

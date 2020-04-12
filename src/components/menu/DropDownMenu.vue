@@ -31,6 +31,6 @@ export default {
       this.mshow=false; 
     }
   },
-  computed: mapGetters("Menu",["getSubMenu"])    
+  computed: mapGetters("MainMenu",["getSubMenu"])    
 }
 </script>>

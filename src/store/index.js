@@ -370,6 +370,6 @@ export default new Vuex.Store({
     }
   },
   modules: {
-    Menu: MainMenu 
+    MainMenu 
   }
 })
