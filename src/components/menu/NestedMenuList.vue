@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-list-group value="true" v-for="(item, i) in getSubMenu" :key="i + 900" :value="false">
+    <v-list-group value="true" v-for="(item, i) in getSubMenu" :key="i + 900">
       <template v-slot:activator>
         <v-list-item-icon>
           <v-icon>{{ item.icon }}</v-icon>
@@ -26,4 +26,5 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+</style>

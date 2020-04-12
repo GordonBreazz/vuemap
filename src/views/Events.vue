@@ -9,7 +9,7 @@
         class="title-with-shadow"
       >Культурные cобытия в библиотеках. Лекции, выставки, кинопоказы, экскурсии</h2>
     </v-parallax>
-    <v-container style="margin-top:0px; ">
+    <v-container class="mt-0">
       <v-row justify="center">
         <v-col cols="12" lg="10">
           <h3 class="display-1 font-weight-light">МЫ В СОЦИАЛЬНЫХ СЕТЯХ, ПРИСОЕДИНЯЙСЯ!</h3>
@@ -33,7 +33,7 @@
       </v-row>
     </v-container>
 
-    <v-container style="margin-top:0px; ">
+    <v-container class="mt-0">
       <v-row justify="center">
         <v-col cols="12" lg="9">
           <v-img

@@ -180,8 +180,7 @@ export default {
 };
 </script>
 <style>
-.container {
-}
+
 .v-parallax__image-container {
   opacity: 1;
 }

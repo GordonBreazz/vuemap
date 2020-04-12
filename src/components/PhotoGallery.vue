@@ -11,10 +11,8 @@
         <v-col cols="2" v-if="getOtherPhoto">
            
           <v-img :src="getOtherPhoto.photo.thumb" @click="openGallery(2)" width="200" height="100%">
-            <div
-              style="background-color:rgba(51,51,51,.8); height: 100%; color: white; justify-content: center;   position: relative ;  align-items: center; text-align: center; "
-            >
-              <p style="position: absolute; top: 45%; width: 100%">ещё {{getOtherPhoto.cnt}} фото</p>
+            <div class="gallery-conteneir-element">
+              <p>ещё {{getOtherPhoto.cnt}} фото</p>
             </div>
           </v-img>
         </v-col>
@@ -48,4 +46,19 @@ export default {
 .photoglr {
   cursor: pointer;
 }
+
+.gallery-conteneir-element {
+  background-color:rgba(51,51,51,.8); 
+  height: 100%; 
+  color: white; 
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  text-align: center;
+}
+
+.gallery-conteneir-element p{
+  position: absolute; top: 45%; width: 100%
+}  
+
 </style>

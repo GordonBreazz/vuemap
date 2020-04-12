@@ -18,9 +18,9 @@
     <main-map ref="foo" id="mainmap" v-bind="$props" />
     <detail-panel id="infopanel" :filial="toFilial" v-on:showPanViewer="panaView" />
 
-    <button @click="showPanel" id="button100500" style="display: none">Подробнее</button>
-    <button @click="goToAll" id="button100600" style="display: none">Все библиотеки на карте</button>
-    <button @click="panaView" id="button100700" style="display: none">Панорама на весь экран</button>
+    <button @click="showPanel" id="button100500" class="hidden-button">Подробнее</button>
+    <button @click="goToAll" id="button100600" class="hidden-button">Все библиотеки на карте</button>
+    <button @click="panaView" id="button100700" class="hidden-button">Панорама на весь экран</button>
     <pana-viewer :toUrl="getPanaUrl" ref="bar" />
   </div>
 </template>
@@ -81,6 +81,10 @@ export default {
 };
 </script>
 <style>
+.hidden-button {
+  display: none;
+}
+
 .map-page {
   padding-top: 20px;
 }

@@ -11,7 +11,7 @@
           <h3 class=" display-1 font-weight-light" >{{currentLocation.fullTitle}}</h3>
           <h3 class="headline font-weight-light pt-1 pb-1" v-if="getCaption">( {{getCaption}} )</h3>
         </div>
-        <div class="font-weight-REGULAR   display-4 v-btn--absolute v-btn--right d-none d-md-flex d-lg-flex d-xl-flex" style="margin-right: 60px; margin-top: 30px; z-index: 0">
+        <div class="font-weight-REGULAR   display-4 v-btn--absolute v-btn--right d-none d-md-flex d-lg-flex d-xl-flex sing-number" >
           <span style="color: #F44336" >#</span>{{currentLocation.id == 25 ? 'KNIGA&FORUM' : currentLocation.id }}
          </div> 
         <v-btn @click="hidePanel" absolute dark fab top right color="red">
@@ -19,14 +19,14 @@
         </v-btn>
       </v-card-title>
       <v-card-subtitle
-        style="text-align: left"
+        class="text-left"
       >{{ currentLocation.district + ' район ' + currentLocation.address }}. Сейчас {{getWorkStatus.status}}. {{getWorkStatus.message}}</v-card-subtitle>      
       <v-card-text>
         <v-container>
           <v-row no-gutters>
             <v-col cols="12" md="6">
 
-              <div style="text-align: justify; color: #454545;" class="mb-3" v-html="d3 + currentLocation.text"></div>
+              <div class="mb-3 current-text" v-html="d3 + currentLocation.text"></div>
               <Photo-Gallery />
               <v-list-item-subtitle v-if="currentLocation.video">Видео</v-list-item-subtitle>
               <div style="padding: 10px" v-html="currentLocation.video"></div>
@@ -131,6 +131,18 @@ export default {
   width: 20%;
   opacity: 0.1;
 }
+
+.sing-number {
+  margin-right: 60px; 
+  margin-top: 30px; 
+  z-index: 0
+}
+
+.current-text {
+  text-align: justify; 
+  color: #454545
+}
+
 .photoglr {
   cursor: pointer;
 }

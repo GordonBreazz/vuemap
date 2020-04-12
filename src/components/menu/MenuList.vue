@@ -13,9 +13,6 @@
         <v-list-item-content>
           <v-list-item-title class="font-weight-medium">{{gp.name.toUpperCase()}}</v-list-item-title>
         </v-list-item-content>
-        <!--       <v-list-item-icon>
-          <v-icon>mdi-numeric-{{gp.items.length}}-box-multiple-outline</v-icon>
-        </v-list-item-icon>-->
       </template>
 
       <v-list-item
@@ -45,7 +42,6 @@ export default {
   },
   methods: {
     menuClick: function() {
-      //console.log("close menu")
       this.$emit("closemenuev");
     },
     close() {

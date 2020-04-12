@@ -39,12 +39,16 @@ const routes = [
 
   {
     // сопоставляется со всеми остальными маршрутами
-    path: '*',
+    path: '/404',
     name: '404',
     component: 404,
     component: () => import(/* webpackChunkName: "about" */ '../views/404.vue')    
+  },
+  
+  { 
+    path: '*', 
+    redirect: '/404' 
   }
-
 
 ]
 const router = new VueRouter({
@@ -54,5 +58,10 @@ const router = new VueRouter({
   }
 
 })
+
+router.beforeEach((to, from, next) => {
+  //console.log(from, to)
+  next()
+});
 
 export default router

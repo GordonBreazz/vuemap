@@ -1,7 +1,7 @@
 <template>
   <v-app-bar app color="primary" dark id="top-page" :clipped-right="$vuetify.breakpoint.lgAndUp">
     <div class="d-flex align-center">
-      <router-link to="/">
+      <a href="/" >
         <v-img
           alt="Logo"
           class="shrink mr-2"
@@ -11,7 +11,7 @@
           width="70"
         />
 
-      </router-link>
+      </a>
 
       <v-img
         alt="Vuetify Name"
