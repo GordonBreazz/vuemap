@@ -17,7 +17,9 @@
         color="white"
         @click="$router.push('/')"
       >Вернутся на главную страницу</v-btn>
+
     </div>
+    
   </v-card>
 </template>
 

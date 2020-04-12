@@ -1,14 +1,15 @@
 <template>
   <div>
-    <v-parallax src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg" height="350">
-      <h2 class="display-2 font-weight-light mb-5"> Афиша МАУ ЦБС г. Улан-Удэ</h2>
+    <v-parallax src="http://cbs-uu.ru/data/images/3.jpg" height="350">
+      <h2 class="display-2 font-weight-light mb-5" style="text-shadow: black 1px 1px 20px, red 0px 0px 1em "> Афиша МАУ ЦБС г. Улан-Удэ</h2>
 
       <!--<h2 class="display-1 font-weight-light mb-5">-->
       <h2
         v-bind:class="{'subtitle-1 font-weight-light': $vuetify.breakpoint.xsOnly, 'display-1 font-weight-light': $vuetify.breakpoint.mdAndUp}"
+        style="text-shadow: black 1px 1px 20px, red 0px 0px 1em "
       >
       
-       Культурные cобытия в библиотеках. Лекции, выставки, кинопоказы, экскурсии.
+       Культурные cобытия в библиотеках. Лекции, выставки, кинопоказы, экскурсии
       </h2>
     </v-parallax>
     <v-container style="margin-top:0px; ">
@@ -40,7 +41,7 @@
         <v-col cols="12" lg="9">
           <v-img
             src="http://cbs-uu.ru/data/assets/places/1.jpg"
-            title="На рисунке изображена Площадь советов г. Улан-Удэ"
+            title="На рисунке изображен театр Оперы и балета г. Улан-Удэ"
           ></v-img>
           <!--
           <v-carousel hide-delimiters cycle>
