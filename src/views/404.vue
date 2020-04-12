@@ -7,9 +7,11 @@
     height="80vh"
   >
     <div>
-      <p class="title font-weight-light">Информация не найдена или запрощеная вами страница не существует!</p>
+      <p
+        class="title font-weight-light"
+      >Информация не найдена или запрощеная вами страница не существует!</p>
 
-      <div class="font-weight-black" style="font-size:150pt">404</div>
+      <div class="font-weight-black title-404">404</div>
 
       <v-btn
         class="ma-2"
@@ -17,9 +19,7 @@
         color="white"
         @click="$router.push('/')"
       >Вернутся на главную страницу</v-btn>
-
     </div>
-    
   </v-card>
 </template>
 
@@ -28,4 +28,7 @@ export default {};
 </script>
 
 <style scoped>
+.title-404 {
+  font-size: 150pt;
+}
 </style>

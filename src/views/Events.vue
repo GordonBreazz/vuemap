@@ -1,16 +1,13 @@
 <template>
   <div>
     <v-parallax src="http://cbs-uu.ru/data/images/3.jpg" height="350">
-      <h2 class="display-2 font-weight-light mb-5" style="text-shadow: black 1px 1px 20px, red 0px 0px 1em "> Афиша МАУ ЦБС г. Улан-Удэ</h2>
+      <h2 class="display-2 font-weight-light mb-5 title-with-shadow">Афиша МАУ ЦБС г. Улан-Удэ</h2>
 
       <!--<h2 class="display-1 font-weight-light mb-5">-->
       <h2
         v-bind:class="{'subtitle-1 font-weight-light': $vuetify.breakpoint.xsOnly, 'display-1 font-weight-light': $vuetify.breakpoint.mdAndUp}"
-        style="text-shadow: black 1px 1px 20px, red 0px 0px 1em "
-      >
-      
-       Культурные cобытия в библиотеках. Лекции, выставки, кинопоказы, экскурсии
-      </h2>
+        class="title-with-shadow"
+      >Культурные cобытия в библиотеках. Лекции, выставки, кинопоказы, экскурсии</h2>
     </v-parallax>
     <v-container style="margin-top:0px; ">
       <v-row justify="center">
@@ -76,4 +73,10 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.title-with-shadow {
+  text-shadow: black 1px 1px 20px;
+}
+</style>
 
