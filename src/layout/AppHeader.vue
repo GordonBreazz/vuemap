@@ -4,11 +4,13 @@
       <a href="/" >
         <v-img
           alt="Logo"
-          class="shrink mr-2"
+          class="shrink  mt-2 mr-2"
           contain
-          src="http://cbs-uu.ru/data/assets/logo/bibliocity7.png"
-          transition="scale-transition"
-          width="70"
+          :src="hover ? 'http://cbs-uu.ru/data/assets/logo/bibliocity6.png' : 'http://cbs-uu.ru/data/assets/logo/bibliocity7.png'"
+          transition="slide-y-transition"
+          width="73"        
+          @mouseover="hover = true"
+          @mouseleave="hover = false"
         />
 
       </a>
@@ -42,7 +44,9 @@ export default {
     DropDownMenu
   },
   data() {
-    return {};
+    return {
+      hover: false
+    };
   },
   methods: {
     drawer() {
