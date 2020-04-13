@@ -13,7 +13,7 @@
         </div>
         <v-select
           prepend-icon="mdi-map"
-          v-model="e7"
+          v-model="selectedPlaces"
           :items="getPlacesList"
           label="Выбор библиотеки"
           multiple
@@ -41,21 +41,7 @@ import { mapGetters } from "vuex";
 export default {
   data() {
     return {
-      e7: [],
-      states: [
-        "Во всех",  
-        "Alabama",
-        "Alaska",
-        "American Samoa",
-        "Arizona",
-        "Arkansas",
-        "California",
-        "Colorado",
-        "Connecticut",
-        "Delaware",
-        "District of Columbia",
-        "Federated States of Micronesia"
-      ]
+      selectedPlaces: []
     };
   },
   methods: {
