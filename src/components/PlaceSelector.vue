@@ -14,7 +14,7 @@
         <v-select
           prepend-icon="mdi-map"
           v-model="e7"
-          :items="states"
+          :items="getPlacesList"
           label="Выбор библиотеки"
           multiple
           chips
@@ -36,6 +36,8 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
+
 export default {
   data() {
     return {
@@ -57,12 +59,14 @@ export default {
     };
   },
   methods: {
-    close(t) {
-        
-      this.e7 = this.e7.filter((item) => item != t)
-      
+    close(t) {        
+      this.e7 = this.e7.filter((item) => item != t)      
     }
   }
+,
+  computed: {
+    ...mapGetters(["getPlacesList"])
+  }  
 };
 </script>
 

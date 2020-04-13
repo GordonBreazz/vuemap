@@ -367,6 +367,9 @@ export default new Vuex.Store({
       if (state.currentLocation.title != state.currentLocation.fullTitle)
         return state.currentLocation.title
       return ''
+    },
+    getPlacesList(state) {
+      return state.placemarks.map( (item) => item.title)
     }
   },
   modules: {
