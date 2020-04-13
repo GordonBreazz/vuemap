@@ -9,6 +9,9 @@
         class="title-with-shadow"
       >Культурные cобытия в библиотеках. Лекции, выставки, кинопоказы, экскурсии</h2>
     </v-parallax>
+    <v-container class="mt-9">
+    <place-selector/>
+    </v-container>
     <v-container class="mt-0">
       <v-row justify="center">
         <v-col cols="12" lg="10">
@@ -55,8 +58,15 @@
 //API
 //https://all.culture.ru/api/2.3/events?status=accepted&start=1588291200&organizations=10872&sort=-start
 
+
+import PlaceSelector from "../components/PlaceSelector";
+
+
 import { mapState } from "vuex";
 export default {
+    components: {
+      PlaceSelector
+  },
   data() {
     return {};
   },
