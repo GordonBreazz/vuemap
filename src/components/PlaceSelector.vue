@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div >
     <v-form>
       <v-subheader class="display-1 font-weight-light">Ближайщие события в библиотеках</v-subheader>
       <v-container class="mb-3">
@@ -19,10 +19,10 @@
           multiple
           chips
           hint="События какой библиотеки вас интересуют?"
-          persistent-hint
+          persistent-hint          
         > 
         <template v-slot:label v-if="selectedPlaces.length==0">
-         <div style="color: black">События во всех библиотеках МАУ ЦБС г. Улан-Удэ</div>
+         <div style="color: black; ">События во всех библиотеках МАУ ЦБС г. Улан-Удэ</div>
         </template>  
 
           <template v-slot:selection="{item, index}">
@@ -62,5 +62,9 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.v-select__selection {
+    width: 100%;
+    justify-content: left;
+}
 </style>
