@@ -15,19 +15,25 @@
           prepend-icon="mdi-map"
           v-model="selectedPlaces"
           :items="getPlacesList"
-          label="Выбор библиотеки"
+          label="События в отдельных библиотеках"
           multiple
           chips
           hint="События какой библиотеки вас интересуют?"
           persistent-hint
-        >
-          <template v-slot:selection="{ item}">
-            <v-chip class="ma-2" close color="teal" text-color="white" @click:close="close(item)">
+        > 
+        <template v-slot:label v-if="selectedPlaces.length==0">
+         <div style="color: black">События во всех библиотеках МАУ ЦБС г. Улан-Удэ</div>
+        </template>  
+
+          <template v-slot:selection="{item, index}">
+
+            <v-chip class="ma-2" close color="teal" text-color="white" @click:close="close(item)" >
               <v-avatar left>
                 <v-icon>mdi-checkbox-marked-circle</v-icon>
               </v-avatar>
               {{item}}
             </v-chip>
+            
           </template>
         </v-select>
       </v-container>
@@ -46,7 +52,7 @@ export default {
   },
   methods: {
     close(t) {        
-      this.e7 = this.e7.filter((item) => item != t)      
+      this.selectedPlaces = this.selectedPlaces.filter((item) => item != t)      
     }
   }
 ,
