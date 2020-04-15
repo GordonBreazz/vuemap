@@ -10,7 +10,7 @@
       >Культурные cобытия в библиотеках. Лекции, выставки, кинопоказы, экскурсии</h2>
     </v-parallax>
     <v-container class="mt-9">
-    <place-selector/>
+      <event-request-panel />
     </v-container>
     <v-container class="mt-0">
       <v-row justify="center">
@@ -58,14 +58,12 @@
 //API
 //https://all.culture.ru/api/2.3/events?status=accepted&start=1588291200&organizations=10872&sort=-start
 
-
-import PlaceSelector from "../components/PlaceSelector";
-
+import EventRequestPanel from "../components/EventRequestPanel";
 
 import { mapState } from "vuex";
 export default {
-    components: {
-      PlaceSelector
+  components: {
+    EventRequestPanel
   },
   data() {
     return {};
