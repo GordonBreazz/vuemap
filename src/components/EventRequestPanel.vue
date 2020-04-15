@@ -7,9 +7,9 @@
           <v-text-field label="Библиотека, название мероприятия" outlined class="mr-2"></v-text-field>
           <v-btn x-large dark color="primary">Найти</v-btn>
         </div>
-        <div class="d-flex">
-          <tags-selector :captions="captionPlaces" :dataArr="getPlacesList" tagsColor="#111c3b" iconTag = "mdi-checkbox-marked-circle" titleIcon="mdi-map" />
-          <tags-selector :captions="captionEvensType" :dataArr="getPlacesList" tagsColor="#cf84b7" iconTag = "mdi-tag-text-outline" titleIcon="mdi-tag-multiple-outline"/>
+        <div  class="d-flex d-flex justify-space-around flex-wrap">
+          <tags-selector style="min-width: 500px"  :captions="captionPlaces" :dataArr="getPlacesList" tagsColor="#111c3b" iconTag = "mdi-checkbox-marked-circle" titleIcon="mdi-map" />
+          <tags-selector style="min-width: 500px" :captions="captionEvensType" :dataArr="getPlacesList" tagsColor="#cf84b7" iconTag = "mdi-tag-text-outline" titleIcon="mdi-tag-multiple-outline"/>
         </div>
       </v-container>
     </v-form>
