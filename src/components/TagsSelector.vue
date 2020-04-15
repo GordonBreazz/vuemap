@@ -2,7 +2,7 @@
   <div>
     
         <v-select
-          prepend-icon="mdi-map"
+          :prepend-icon="titleIcon"
           v-model="selectedArr"
           :items="dataArr"
           :label="captions.tagsCategoryText"
@@ -18,7 +18,7 @@
           <template v-slot:selection="{item, index}">
             <v-chip class="ma-2" close :color="tagsColor" text-color="white" @click:close="close(item)">
               <v-avatar left>
-                <v-icon>mdi-checkbox-marked-circle</v-icon>
+                <v-icon>{{iconTag}}</v-icon>
               </v-avatar>
               {{item}}
             </v-chip>
@@ -32,7 +32,7 @@
 
 export default {
   name: "TagsSelector",
-  props: ["captions", "dataArr","tagsColor"],  
+  props: ["captions", "dataArr","tagsColor","iconTag", "titleIcon"],  
   data() {
     return {
       selectedArr: []

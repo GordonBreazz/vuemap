@@ -8,8 +8,8 @@
           <v-btn x-large dark color="primary">Найти</v-btn>
         </div>
         <div class="d-flex">
-          <tags-selector :captions="captionPlaces" :dataArr="getPlacesList" tagsColor="#111c3b" />
-          <tags-selector :captions="captionEvensType" :dataArr="getPlacesList" tagsColor="#cf84b7" />
+          <tags-selector :captions="captionPlaces" :dataArr="getPlacesList" tagsColor="#111c3b" iconTag = "mdi-checkbox-marked-circle" titleIcon="mdi-map" />
+          <tags-selector :captions="captionEvensType" :dataArr="getPlacesList" tagsColor="#cf84b7" iconTag = "mdi-tag-text-outline" titleIcon="mdi-tag-multiple-outline"/>
         </div>
       </v-container>
     </v-form>
