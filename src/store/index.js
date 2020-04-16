@@ -1,6 +1,7 @@
 import Vue from "vue"
 import Vuex from "vuex"
 import {MainMenu} from "../store/modules/MainMenu.js"
+import {CultureEvents} from "../store/modules/CultureEvents.js"
 
 import shedule from "../data/shedule.js"
 import places from "../data/places.js"
@@ -373,6 +374,7 @@ export default new Vuex.Store({
     }
   },
   modules: {
-    MainMenu 
+    MainMenu,
+    CultureEvents 
   }
 })

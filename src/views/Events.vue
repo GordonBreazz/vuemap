@@ -12,6 +12,10 @@
     <v-container class="mt-9">
       <event-request-panel />
     </v-container>
+    <v-container class="mt-9">
+      <posts-grid />
+    </v-container>
+
     <v-container class="mt-0">
       <v-row justify="center">
         <v-col cols="12" lg="10">
@@ -59,11 +63,13 @@
 //https://all.culture.ru/api/2.3/events?status=accepted&start=1588291200&organizations=10872&sort=-start
 
 import EventRequestPanel from "../components/EventRequestPanel";
+import PostsGrid from "../components/PostsGrid";
 
 import { mapState } from "vuex";
 export default {
   components: {
-    EventRequestPanel
+    EventRequestPanel,
+    PostsGrid
   },
   data() {
     return {};
