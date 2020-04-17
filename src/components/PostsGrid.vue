@@ -5,8 +5,7 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
-import { mapActions } from "vuex";
+import { mapState, mapActions } from "vuex";
 
 export default {
   components: {},
@@ -14,15 +13,18 @@ export default {
     return {}
   },
   methods: {    
-      ...mapActions(["CultureEvents/fetchPosts"]),
+      ...mapActions("CultureEvents",["fetchPosts"])
   },
-  async mounted() {
-      this.fetchPosts
-      console.log(this.posts)
-
+  async mounted() {      
+      this.fetchPosts()
   },
   computed: {
-    ...mapState(['CultureEvents/posts'])    
+    ...mapState("CultureEvents",["posts"]), 
+  },
+  watch: {
+    posts(a) {
+      console.log('      watch',a)}
+
   }
 };
 </script>
