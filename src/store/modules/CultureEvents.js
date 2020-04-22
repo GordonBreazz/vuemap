@@ -1,4 +1,4 @@
-const URLAPI = 'https://all.culture.ru/api/2.3/events?status=accepted&start=1588291200&organizations=10872&sort=-start'
+const URLAPI = 'http://cbs-uu.ru/data/json_proxy.php?status=accepted&start=1588291200&organizations=10872&sort=-start'
 export const CultureEvents = {
   namespaced: true,
   actions: {
@@ -11,6 +11,7 @@ export const CultureEvents = {
         console.log('status',res.ok)
         console.log('ответ',posts)
         context.commit('updatePosts', posts)
+        console.log('ok ppp')
     }
   },
   mutations: {
