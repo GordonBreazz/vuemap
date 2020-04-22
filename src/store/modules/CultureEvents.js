@@ -11,12 +11,11 @@ export const CultureEvents = {
         console.log('status',res.ok)
         console.log('ответ',posts)
         context.commit('updatePosts', posts)
-        console.log('ok ppp')
     }
   },
   mutations: {
       updatePosts(state, posts){
-          state.posts = posts
+          state.posts = posts.events
       }
   },
   state: {

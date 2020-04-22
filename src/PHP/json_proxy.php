@@ -22,15 +22,24 @@ try {
         throw new Exception('Bad error code (' . $info['http_code'] . ')');
     }
 
+    if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+        header('Access-Control-Allow-Origin: *');
+        header('Access-Control-Allow-Methods: POST, GET, DELETE, PUT, PATCH, OPTIONS');
+        header('Access-Control-Allow-Headers: token, Content-Type');
+        header('Access-Control-Max-Age: 1728000');
+        header('Content-Length: 0');
+        header('Content-Type: text/plain');
+        die();
+    }    
     // header shit.
     header('Cache-Control: no-cache, must-revalidate');
     header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
+    header('Access-Control-Allow-Origin: *');
     header('Content-type: application/json');
 
-    // base64 encode the data
-    //$data = base64_encode($contents);
 
-    $json_data = $contents;//'{ "data" : "' . $data . '" }';
+
+    $json_data = $contents;
     echo $json_data;
 } catch (Exception $e) {
     echo "ERROR: " . $e->getMessage();
