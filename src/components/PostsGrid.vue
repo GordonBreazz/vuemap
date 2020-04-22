@@ -1,14 +1,26 @@
 <template>
-  <div>
-      Здесь будут посты
-  </div>
+  
+ <v-container>
+    <v-row >
+    <v-col
+        v-for="(item, i) in posts"
+        :key="i"
+      >
+      <post-cart :eventdata="item"/>
+    </v-col>  
+    </v-row>
+</v-container>    
+  
 </template>
 
 <script>
 import { mapState, mapActions } from "vuex";
+import PostCart from "../components/PostCart.vue";
 
 export default {
-  components: {},
+  components: {
+    PostCart
+  },
   data() {
     return {}
   },

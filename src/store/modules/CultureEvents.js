@@ -19,7 +19,8 @@ export const CultureEvents = {
       }
   },
   state: {
-    posts: [],
+    imagesPath: 'https://all.culture.ru/uploads/',
+    posts: [],    
   },
   getters: {},
 }
