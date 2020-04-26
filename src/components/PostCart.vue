@@ -1,8 +1,11 @@
 <template>
-  <v-card :loading="loading" class="mx-auto my-12" max-width="374">
+  <v-card :loading="loading" class="mx-auto my-12" :max-width="cartHeight">
     <v-img height="250" :src="getImagePath"></v-img>
-
-    <v-card-title>{{eventdata.name}}</v-card-title>
+    <v-card-text>
+      <h3 class="headline font-weight-light pt-3">{{eventdata.name | titlePart1}}<br>
+      {{eventdata.name | titlePart2 }}
+      </h3>
+    </v-card-text>
 
     <v-card-text>
       <v-row align="center" class="mx-0">
@@ -13,7 +16,7 @@
 
       <div class="my-4 subtitle-1">{{eventdata.shortDescription}}</div>
 
-      <div v-html="eventdata.description"></div>
+     <p class="text-left" >{{eventdata.description | planText | short}}</p>
     </v-card-text>
 
     <v-divider class="mx-4"></v-divider>
@@ -56,11 +59,52 @@ export default {
     ...mapState("CultureEvents", ["imagesPath"]),
     getImagePath: function() {
       return this.imagesPath + this.eventdata.image.name;
+    },
+      cartHeight() {
+      switch (this.$vuetify.breakpoint.name) {
+        case "xs":
+          return "100%";
+        case "sm":
+          return "100%";
+        case "md":
+          return "400";
+        case "lg":
+          return "400";
+        case "xl":
+          return "410";
+      }
     }
   },
+  filters: {
+    titlePart1: function(value) {
+      let a = value.indexOf('«') 
+      if (~a) return  value.slice(0, a)
+      return value
+    },
+    titlePart2: function(value) {
+      let a = value.indexOf('«')        
+      if (~a) return  value.slice(a)
+      return ''
+    },
+   short: function(value){
+     const len = 250     
+     if (value.length > len) {
+       let st = value.slice(0, len)       
+       return st.slice(0, st.lastIndexOf(' ')) + '...'
+     }  
+     return value  
+   },
+   planText: value => value.replace(/<\/?[^>]+>/g,'')        
+  },  
   props: ["eventdata"]
 };
 </script>
 
-<style>
+<style scoped>
+.frow1 {
+  border-color: red;
+  border-width: 3px;
+  height: 50px;
+}
+
 </style>
