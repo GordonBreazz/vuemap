@@ -1,22 +1,29 @@
 <template>
   <v-card :loading="loading" class="mx-auto my-12" :max-width="cartHeight">
+       <v-list-item>
+          <v-avatar color="orange" size="50">
+      <span class="white--text headline">13</span>
+    </v-avatar>
+      <v-list-item-content>
+        <v-list-item-title class="headline">Our Changing Planet</v-list-item-title>
+        <v-list-item-subtitle>by Kurt Wagner</v-list-item-subtitle>
+      </v-list-item-content>
+    </v-list-item>
     <v-img height="250" :src="getImagePath"></v-img>
     <v-card-text>
-      <h3 class="headline font-weight-light pt-3">{{eventdata.name | titlePart1}}<br>
+      <h3 class="headline font-weight-light pt-3  cart-title">{{eventdata.name | titlePart1}}<br>
       {{eventdata.name | titlePart2 }}
       </h3>
     </v-card-text>
 
     <v-card-text>
       <v-row align="center" class="mx-0">
-        <v-rating :value="4.5" color="amber" dense half-increments readonly size="14"></v-rating>
 
-        <div class="grey--text ml-4">4.5 (413)</div>
       </v-row>
 
       <div class="my-4 subtitle-1">{{eventdata.shortDescription}}</div>
 
-     <p class="text-left" >{{eventdata.description | planText | short}}</p>
+     <p class="text-justify">{{eventdata.description | planText | short}}</p>
     </v-card-text>
 
     <v-divider class="mx-4"></v-divider>
@@ -87,7 +94,7 @@ export default {
       return ''
     },
    short: function(value){
-     const len = 250     
+     const len = 200     
      if (value.length > len) {
        let st = value.slice(0, len)       
        return st.slice(0, st.lastIndexOf(' ')) + '...'
@@ -101,6 +108,11 @@ export default {
 </script>
 
 <style scoped>
+
+.cart-title {
+  color: black;
+}
+
 .frow1 {
   border-color: red;
   border-width: 3px;
