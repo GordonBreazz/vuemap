@@ -15,7 +15,7 @@
 
 <script>
 import { mapState, mapActions } from "vuex";
-import PostCart from "../components/PostCart.vue";
+import PostCart from "./PostCart.vue";
 
 export default {
   components: {

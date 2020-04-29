@@ -62,8 +62,8 @@
 //API
 //https://all.culture.ru/api/2.3/events?status=accepted&start=1588291200&organizations=10872&sort=-start
 
-import EventRequestPanel from "../components/EventRequestPanel";
-import PostsGrid from "../components/PostsGrid";
+import EventRequestPanel from "@/components/AfficheEvents/EventRequestPanel";
+import PostsGrid from "@/components/AfficheEvents/PostsGrid";
 
 import { mapState } from "vuex";
 export default {

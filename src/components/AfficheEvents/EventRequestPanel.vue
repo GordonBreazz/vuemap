@@ -18,7 +18,7 @@
 
 <script>
 import { mapGetters } from "vuex";
-import TagsSelector from "../components/TagsSelector";
+import TagsSelector from "./TagsSelector";
 
 export default {
   components: {
