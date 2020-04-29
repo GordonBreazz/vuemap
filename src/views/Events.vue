@@ -12,7 +12,7 @@
     <v-container class="mt-9">
       <event-request-panel />
     </v-container>
-    <v-container class="mt-9">
+    <v-container class="mt-0">
       <posts-grid />
     </v-container>
 

@@ -1,6 +1,6 @@
 <template>
   
- <v-container>
+ <v-container class="mt-0">
     <v-row >
     <v-col
         v-for="(item, i) in posts"
@@ -15,7 +15,7 @@
 
 <script>
 import { mapState, mapActions } from "vuex";
-import PostCart from "./PostCart.vue";
+import PostCart from "./PostCard.vue";
 
 export default {
   components: {
