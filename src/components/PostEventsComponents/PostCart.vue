@@ -1,14 +1,6 @@
 <template>
   <v-card :loading="loading" class="mx-auto my-12" :max-width="cartHeight">
-       <v-list-item>
-          <v-avatar color="orange" size="50">
-      <span class="white--text headline">13</span>
-    </v-avatar>
-      <v-list-item-content>
-        <v-list-item-title class="headline">Our Changing Planet</v-list-item-title>
-        <v-list-item-subtitle>by Kurt Wagner</v-list-item-subtitle>
-      </v-list-item-content>
-    </v-list-item>
+
     <v-img height="250" :src="getImagePath"></v-img>
     <v-card-text>
       <h3 class="headline font-weight-light pt-3  cart-title">{{eventdata.name | titlePart1}}<br>
@@ -29,7 +21,15 @@
     <v-divider class="mx-4"></v-divider>
 
     <v-card-title>Tonight's availability</v-card-title>
-
+       <v-list-item>
+          <v-avatar color="orange" size="50">
+      <span class="white--text headline">13</span>
+    </v-avatar>
+      <v-list-item-content>
+        <v-list-item-title class="headline">Our Changing Planet</v-list-item-title>
+        <v-list-item-subtitle>by Kurt Wagner</v-list-item-subtitle>
+      </v-list-item-content>
+    </v-list-item>
     <v-card-text>
       <v-chip-group v-model="selection" active-class="deep-purple accent-4 white--text" column>
         <v-chip>5:30PM</v-chip>
