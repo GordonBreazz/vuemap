@@ -5,7 +5,7 @@
         <div v-if="!panarama">
           <v-card-text class="headline font-weight-bold">
             <v-icon large left>mdi-arrow-decision-outline</v-icon>
-            <span class=" font-weight-light">3D тур по библиотеке</span>
+            <span class=" font-weight-light">События</span>
           </v-card-text>
 
           <div width="100%" style="position: relative; height:100vh">
@@ -20,7 +20,7 @@
             ></v-progress-circular>
           </div>
         </div>
-
+13132
       </v-card>
     </v-sheet>
   </v-bottom-sheet>
@@ -28,8 +28,8 @@
 <script>
 export default {
   data: () => ({
-    sheet: true,
-    panarama: true
+    sheet: false,
+    panarama: false
   }),
 }
 </script>

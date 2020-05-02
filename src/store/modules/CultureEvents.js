@@ -20,7 +20,7 @@ export const CultureEvents = {
   },
   state: {
     imagesPath: 'https://all.culture.ru/uploads/',
-    posts: [],    
+    posts: [],        
   },
   getters: {},
 }

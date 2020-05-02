@@ -38,8 +38,7 @@
           </v-btn>
         </v-col>
       </v-row>
-    </v-container>
-     <event-detail/>
+    </v-container>    
     <v-container class="mt-0">
       <v-row justify="center">
         <v-col cols="12" lg="9">
@@ -64,14 +63,12 @@
 
 import EventRequestPanel from "@/components/AfficheEvents/EventRequestPanel";
 import PostsGrid from "@/components/AfficheEvents/PostsGrid";
-import EventDetail from "@/components/AfficheEvents/EventDetail";
 
 import { mapState } from "vuex";
 export default {
   components: {
     EventRequestPanel,
-    PostsGrid,
-    EventDetail
+    PostsGrid
   },
   data() {
     return {};

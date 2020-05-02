@@ -2,8 +2,9 @@
   <v-card :loading="loading" class="mx-auto my-12 mt-0" :max-width="cartHeight">
 
     <v-img height="250" :src="getImagePath"></v-img>
+     <v-card-title class="text--deep-purple">{{eventdata.name | titlePart1}}</v-card-title>
     <v-card-text>
-      <h3 class="headline font-weight-light pt-3  cart-title">{{eventdata.name | titlePart1}}<br>
+      <h3 class="headline font-weight-light pt-3  cart-title">
       {{eventdata.name | titlePart2 }}
       </h3>
     </v-card-text>
@@ -43,7 +44,7 @@
     </v-card-text>
 
     <v-card-actions>
-      <v-btn color="deep-purple lighten-2" text @click="reserve">Reserve</v-btn>
+      <v-btn color="deep-purple lighten-2" text @click="showDetail">Reserve</v-btn>
     </v-card-actions>
   </v-card>
 </template>
@@ -57,9 +58,8 @@ export default {
     selection: 1
   }),
   methods: {
-    reserve() {
-      this.loading = true;
-      setTimeout(() => (this.loading = false), 2000);
+    showDetail() {      
+      this.$emit("showDetailView");
     }
   },
   computed: {
