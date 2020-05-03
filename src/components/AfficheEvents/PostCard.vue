@@ -2,7 +2,12 @@
   <v-card :loading="loading" class="mx-auto my-12 mt-0" :max-width="cartHeight">
 
     <v-img height="250" :src="getImagePath"></v-img>
-     <v-card-title class="text--deep-purple">{{eventdata.name | titlePart1}}</v-card-title>
+        <v-card-title>
+          <div class="title font-weight-regular grey--text">{{eventdata.name | titlePart1}}</div>
+      <div class="display-1 mb-2">{{eventdata.name | titlePart2}}</div>
+      
+    </v-card-title>
+    <v-card-title class="red--text"><v-icon>mdi-domain</v-icon>{{eventdata.name | titlePart1}}</v-card-title>
     <v-card-text>
       <h3 class="headline font-weight-light pt-3  cart-title">
       {{eventdata.name | titlePart2 }}
