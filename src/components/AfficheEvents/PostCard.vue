@@ -1,36 +1,31 @@
 <template>
   <v-card :loading="loading" class="mx-auto my-12 mt-0" :max-width="cartHeight">
-
     <v-img height="250" :src="getImagePath"></v-img>
-        <v-card-title>
-          <div class="title font-weight-regular grey--text">{{eventdata.name | titlePart1}}</div>
-      <div class="display-1 mb-2">{{eventdata.name | titlePart2}}</div>
-      
+
+    <v-card-title class="red--text mb-0">
+      <v-icon class="pr-1" color="red">mdi-bookmark-multiple-outline</v-icon>
+      {{eventdata.name | titlePart1}}
     </v-card-title>
-    <v-card-title class="red--text"><v-icon>mdi-domain</v-icon>{{eventdata.name | titlePart1}}</v-card-title>
     <v-card-text>
-      <h3 class="headline font-weight-light pt-3  cart-title">
-      {{eventdata.name | titlePart2 }}
-      </h3>
+      <h3 class="headline font-weight-light  cart-title ">{{eventdata.name | titlePart2 }}</h3>
+       <div class="subtitle-1 mt-5 mb-0 pb-0 orange--text font-weight-regular">{{eventdata.shortDescription | withoutPoint }}</div>
+
     </v-card-text>
 
     <v-card-text>
-      <v-row align="center" class="mx-0">
+      <v-row align="center" class="mx-0"></v-row>
 
-      </v-row>
-
-      <div class="my-4 subtitle-1">{{eventdata.shortDescription}}</div>
-
-     <p class="text-justify">{{eventdata.description | planText | short}}</p>
+     
+      <p class="text-justify">{{eventdata.description | planText | short}}</p>
     </v-card-text>
 
     <v-divider class="mx-4"></v-divider>
 
     <v-card-title>Tonight's availability</v-card-title>
-       <v-list-item>
-          <v-avatar color="orange" size="50">
-      <span class="white--text headline">13</span>
-    </v-avatar>
+    <v-list-item>
+      <v-avatar color="orange" size="50">
+        <span class="white--text headline">13</span>
+      </v-avatar>
       <v-list-item-content>
         <v-list-item-title class="headline">Our Changing Planet</v-list-item-title>
         <v-list-item-subtitle>by Kurt Wagner</v-list-item-subtitle>
@@ -63,7 +58,7 @@ export default {
     selection: 1
   }),
   methods: {
-    showDetail() {      
+    showDetail() {
       this.$emit("showDetailView");
     }
   },
@@ -72,7 +67,7 @@ export default {
     getImagePath: function() {
       return this.imagesPath + this.eventdata.image.name;
     },
-      cartHeight() {
+    cartHeight() {
       switch (this.$vuetify.breakpoint.name) {
         case "xs":
           return "100%";
@@ -89,31 +84,31 @@ export default {
   },
   filters: {
     titlePart1: function(value) {
-      let a = value.indexOf('«') 
-      if (~a) return  value.slice(0, a)
-      return value
+      let a = value.indexOf("«");
+      if (~a) return value.slice(0, a);
+      return value;
     },
     titlePart2: function(value) {
-      let a = value.indexOf('«')        
-      if (~a) return  value.slice(a)
-      return ''
+      let a = value.indexOf("«");
+      if (~a) return value.slice(a+1, -1)
+      return "";
     },
-   short: function(value){
-     const len = 200     
-     if (value.length > len) {
-       let st = value.slice(0, len)       
-       return st.slice(0, st.lastIndexOf(' ')) + '...'
-     }  
-     return value  
-   },
-   planText: value => value.replace(/<\/?[^>]+>/g,'')        
-  },  
+    short: function(value) {
+      const len = 200;
+      if (value.length > len) {
+        let st = value.slice(0, len);
+        return st.slice(0, st.lastIndexOf(" ")) + "...";
+      }
+      return value;
+    },
+    planText: value => value.replace(/<\/?[^>]+>/g, ""),
+    withoutPoint: value => value.slice(0, -1)
+  },
   props: ["eventdata"]
 };
 </script>
 
 <style scoped>
-
 .cart-title {
   color: black;
 }
@@ -123,5 +118,4 @@ export default {
   border-width: 3px;
   height: 50px;
 }
-
 </style>
