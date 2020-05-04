@@ -7,8 +7,8 @@
       {{eventdata.name | titlePart1}}
     </v-card-title>
     <v-card-text>
-      <h3 class="headline font-weight-light  cart-title ">{{eventdata.name | titlePart2 }}</h3>
-       <div class="subtitle-1 mt-5 mb-0 pb-0 orange--text font-weight-regular">{{eventdata.shortDescription | withoutPoint }}</div>
+      <h3 class="headline   cart-title ">{{eventdata.name | titlePart2 }}</h3>
+       <div class="subtitle-1 mt-5 mb-0 pb-0  font-weight-regular">{{eventdata.shortDescription | withoutPoint }}</div>
 
     </v-card-text>
 
