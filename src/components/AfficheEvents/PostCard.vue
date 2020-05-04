@@ -6,6 +6,11 @@
       <v-icon class="pr-1" color="red">mdi-bookmark-multiple-outline</v-icon>
       {{eventdata.name | titlePart1}}
     </v-card-title>
+    
+    <v-card-title class="red--text mb-0">
+      <v-icon class="pr-1" color="red">mdi-clock-outline</v-icon>
+      15 марта 2020 г. в 12:30
+    </v-card-title>
     <v-card-text>
       <h3 class="headline   cart-title ">{{eventdata.name | titlePart2 }}</h3>
        <div class="subtitle-1 mt-5 mb-0 pb-0  font-weight-regular">{{eventdata.shortDescription | withoutPoint }}</div>
