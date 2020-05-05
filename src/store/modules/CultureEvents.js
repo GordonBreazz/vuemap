@@ -22,5 +22,7 @@ export const CultureEvents = {
     imagesPath: 'https://all.culture.ru/uploads/',
     posts: [],        
   },
-  getters: {},
+  getters: {
+    
+  },
 }

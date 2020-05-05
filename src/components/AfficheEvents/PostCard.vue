@@ -6,21 +6,29 @@
       <v-icon class="pr-1" color="red">mdi-bookmark-multiple-outline</v-icon>
       {{eventdata.name | titlePart1}}
     </v-card-title>
-    
+
     <v-card-title class="red--text mb-0">
       <v-icon class="pr-1" color="red">mdi-clock-outline</v-icon>
-      15 марта 2020 г. в 12:30
+      {{eventTime(eventdata.start, eventdata.end)}}
+    </v-card-title>
+    <v-card-title class="red--text mb-0">
+      <v-icon class="pr-1" color="red">mdi-calendar-month</v-icon>
+      <router-link :to="eventDate(eventdata.start, eventdata.end)">{{eventdata.start, eventdata.end}}</router-link>
+    </v-card-title>
+    <v-card-title class="red--text mb-0">
+      <v-icon class="pr-1" color="red">mdi-map-marker-radius-outline</v-icon>
+      {{placeIndex(eventdata.places[0].name)}}
     </v-card-title>
     <v-card-text>
-      <h3 class="headline   cart-title ">{{eventdata.name | titlePart2 }}</h3>
-       <div class="subtitle-1 mt-5 mb-0 pb-0  font-weight-regular">{{eventdata.shortDescription | withoutPoint }}</div>
-
+      <h3 class="headline cart-title">{{eventdata.name | titlePart2 }}</h3>
+      <div
+        class="subtitle-1 mt-5 mb-0 pb-0 font-weight-regular"
+      >{{eventdata.shortDescription | withoutPoint }}</div>
     </v-card-text>
 
     <v-card-text>
       <v-row align="center" class="mx-0"></v-row>
 
-     
       <p class="text-justify">{{eventdata.description | planText | short}}</p>
     </v-card-text>
 
@@ -65,7 +73,46 @@ export default {
   methods: {
     showDetail() {
       this.$emit("showDetailView");
+    },
+    eventDate(start, end) {
+      let ds = new Date(start).toLocaleString("ru", {
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+      });
+
+      let de = new Date(end).toLocaleString("ru", {
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+      });
+
+      return ds.toString() == de.toString()
+        ? ds.toString()
+        : ds.toString() + " - " + de.toString();
+    },
+    eventTime(start, end) {
+      let ds = new Date(start).toLocaleString("ru", {
+        hour: "numeric",
+        minute: "numeric"
+      });
+
+      let de = new Date(end).toLocaleString("ru", {
+        hour: "numeric",
+        minute: "numeric"
+      });
+
+      return ds.toString() + " - " + de.toString();
+    },
+    placeIndex(st){
+      const result = st.match(/\d+/)
+      let url = '/filial/'
+      if (result) url += result[0] + '/'
+        else url += '1/'
+
+      return url
     }
+
   },
   computed: {
     ...mapState("CultureEvents", ["imagesPath"]),
@@ -95,7 +142,7 @@ export default {
     },
     titlePart2: function(value) {
       let a = value.indexOf("«");
-      if (~a) return value.slice(a+1, -1)
+      if (~a) return value.slice(a + 1, -1);
       return "";
     },
     short: function(value) {
