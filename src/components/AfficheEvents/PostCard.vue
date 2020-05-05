@@ -13,11 +13,11 @@
     </v-card-title>
     <v-card-title class="red--text mb-0">
       <v-icon class="pr-1" color="red">mdi-calendar-month</v-icon>
-      <router-link :to="eventDate(eventdata.start, eventdata.end)">{{eventdata.start, eventdata.end}}</router-link>
+       {{eventDate(eventdata.start, eventdata.end)}}
     </v-card-title>
     <v-card-title class="red--text mb-0">
       <v-icon class="pr-1" color="red">mdi-map-marker-radius-outline</v-icon>
-      {{placeIndex(eventdata.places[0].name)}}
+      <router-link :to="placeIndex(eventdata.places[0].name).url">{{placeIndex(eventdata.places[0].name).name}}</router-link>
     </v-card-title>
     <v-card-text>
       <h3 class="headline cart-title">{{eventdata.name | titlePart2 }}</h3>
@@ -63,7 +63,7 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapState, mapGetters } from "vuex";
 
 export default {
   data: () => ({
@@ -107,15 +107,17 @@ export default {
     placeIndex(st){
       const result = st.match(/\d+/)
       let url = '/filial/'
-      if (result) url += result[0] + '/'
-        else url += '1/'
-
-      return url
+      let index = 1
+      if (result) index = result[0]
+      url += index + '/'              
+      console.log('qq', Number(index), this.placesArr[Number(index)]) 
+      return { url, name: this.placesArr[Number(index)]}
     }
 
   },
   computed: {
     ...mapState("CultureEvents", ["imagesPath"]),
+    ...mapState(["placesArr"]),
     getImagePath: function() {
       return this.imagesPath + this.eventdata.image.name;
     },

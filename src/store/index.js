@@ -213,6 +213,7 @@ export default new Vuex.Store({
       }
     ],
     placemarks: places.placemarks,
+    placesArr:  places.getPlacesList(),
     pathMode: false,
     districts: ["Советский", "Октябрьский", "Железнодорожный"],
     drawer: false,

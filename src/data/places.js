@@ -1949,5 +1949,10 @@ export default {
       services: ['Принимаем книги в дар'],
       socnet: {},      
     }
-  ]
+  ],
+  getPlacesList(){
+    let arr = []
+    this.placemarks.forEach( (item) => arr[item.id] = item.title )
+    return arr
+  }
 }
