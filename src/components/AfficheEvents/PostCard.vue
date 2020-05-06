@@ -110,7 +110,7 @@ export default {
       let index = 1
       if (result) index = result[0]
       url += index + '/'              
-      console.log('qq', Number(index), this.placesArr[Number(index)]) 
+     // console.log('qq', Number(index), this.placesArr[Number(index)]) 
       return { url, name: this.placesArr[Number(index)]}
     }
 
