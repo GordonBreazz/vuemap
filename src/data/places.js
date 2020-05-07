@@ -1952,7 +1952,7 @@ export default {
   ],
   getPlacesList(){
     let arr = []
-    this.placemarks.forEach( (item) => arr[item.id] = item.title )
+    this.placemarks.forEach( (item) => arr[item.id] = {name: item.title, address: item.address}  )
     return arr
   }
 }

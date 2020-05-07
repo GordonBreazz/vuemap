@@ -2,27 +2,24 @@
   <v-card :loading="loading" class="mx-auto my-12 mt-0" :max-width="cartHeight">
     <v-img height="250" :src="getImagePath"></v-img>
 
-    <v-card-title class="red--text mb-0">
-      <v-icon class="pr-1" color="red">mdi-bookmark-multiple-outline</v-icon>
+    <v-card-title class="mb-0" style="color: #fe5d23">
+          <v-chip
+      class="ma-2 text-left"
+      color="pink"
+      label
+      text-color="white"
+      
+    >
+      <v-icon left>mdi-bookmark-multiple-outline</v-icon>
       {{eventdata.name | titlePart1}}
+    </v-chip>
+ 
     </v-card-title>
 
-    <v-card-title class="red--text mb-0">
-      <v-icon class="pr-1" color="red">mdi-clock-outline</v-icon>
-      {{eventTime(eventdata.start, eventdata.end)}}
-    </v-card-title>
-    <v-card-title class="red--text mb-0">
-      <v-icon class="pr-1" color="red">mdi-calendar-month</v-icon>
-       {{eventDate(eventdata.start, eventdata.end)}}
-    </v-card-title>
-    <v-card-title class="red--text mb-0">
-      <v-icon class="pr-1" color="red">mdi-map-marker-radius-outline</v-icon>
-      <router-link :to="placeIndex(eventdata.places[0].name).url">{{placeIndex(eventdata.places[0].name).name}}</router-link>
-    </v-card-title>
-    <v-card-text>
-      <h3 class="headline cart-title">{{eventdata.name | titlePart2 }}</h3>
+    <v-card-text class="mt-5">
+      <h3 class="headline cart-title" style="color: #3f51b1">{{eventdata.name | titlePart2 }}</h3>
       <div
-        class="subtitle-1 mt-5 mb-0 pb-0 font-weight-regular"
+        class="subtitle-1 mt-5 mb-0 pb-0 font-weight-regular" style="color: #454F85"
       >{{eventdata.shortDescription | withoutPoint }}</div>
     </v-card-text>
 
@@ -33,26 +30,40 @@
     </v-card-text>
 
     <v-divider class="mx-4"></v-divider>
+    <div class="d-flex justify-space-between">
+      <v-card-title class="mb-0 subtitle-1">
+        <v-icon class="pr-1">mdi-clock-outline</v-icon>
+        {{eventTime(eventdata.start, eventdata.end)}}
+      </v-card-title>
 
-    <v-card-title>Tonight's availability</v-card-title>
-    <v-list-item>
-      <v-avatar color="orange" size="50">
-        <span class="white--text headline">13</span>
+      <v-card-title class="subtitle-1">
+        <v-icon class="pr-1">mdi-calendar-month</v-icon>
+        {{eventDate(eventdata.start, eventdata.end)}}
+      </v-card-title>
+    </div>
+    <v-list-item @click>
+      <v-avatar color="orange" size="50" class="mr-3">
+        <span class="white--text headline">{{placeIndex(eventdata.places[0].name).ind}}</span>
       </v-avatar>
       <v-list-item-content>
-        <v-list-item-title class="headline">Our Changing Planet</v-list-item-title>
-        <v-list-item-subtitle>by Kurt Wagner</v-list-item-subtitle>
+        <v-list-item-title class="subtitle-1">{{placeIndex(eventdata.places[0].name).name}}</v-list-item-title>
+        <v-list-item-subtitle>{{placeIndex(eventdata.places[0].name).address}}</v-list-item-subtitle>
       </v-list-item-content>
     </v-list-item>
     <v-card-text>
-      <v-chip-group v-model="selection" active-class="deep-purple accent-4 white--text" column>
-        <v-chip>5:30PM</v-chip>
-
-        <v-chip>7:30PM</v-chip>
-
-        <v-chip>8:00PM</v-chip>
-
-        <v-chip>9:00PM</v-chip>
+      <v-chip-group
+        column
+    
+        active-class="deep-purple accent-4 white--text"
+      
+        
+      >
+        <v-chip color="#cf84b7" text-color="white" v-for="tag in eventdata.tags" :key="tag._id">
+          <v-avatar left>
+            <v-icon>mdi-tag-text-outline</v-icon>
+          </v-avatar>
+          {{tag.name}}
+        </v-chip>
       </v-chip-group>
     </v-card-text>
 
@@ -104,16 +115,20 @@ export default {
 
       return ds.toString() + " - " + de.toString();
     },
-    placeIndex(st){
-      const result = st.match(/\d+/)
-      let url = '/filial/'
-      let index = 1
-      if (result) index = result[0]
-      url += index + '/'              
-     // console.log('qq', Number(index), this.placesArr[Number(index)]) 
-      return { url, name: this.placesArr[Number(index)]}
+    placeIndex(st) {
+      const result = st.match(/\d+/);
+      let url = "/filial/";
+      let index = 1;
+      if (result) index = result[0];
+      url += index + "/";
+      // console.log('qq', Number(index), this.placesArr[Number(index)])
+      return {
+        url,
+        name: this.placesArr[Number(index)].name,
+        ind: Number(index),
+        address: this.placesArr[Number(index)].address
+      };
     }
-
   },
   computed: {
     ...mapState("CultureEvents", ["imagesPath"]),
