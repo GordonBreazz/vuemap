@@ -2,24 +2,18 @@
   <v-card :loading="loading" class="mx-auto my-12 mt-0" :max-width="cartHeight">
     <v-img height="250" :src="getImagePath"></v-img>
 
-    <v-card-title class="mb-0" style="color: #fe5d23">
-          <v-chip
-      class="ma-2 text-left"
-      color="pink"
-      label
-      text-color="white"
-      
-    >
-      <v-icon left>mdi-bookmark-multiple-outline</v-icon>
-      {{eventdata.name | titlePart1}}
-    </v-chip>
- 
-    </v-card-title>
+    <div class="mb-0 text-left" style="width: 100%; margin-left: 0px">
+      <v-chip class=" ma-2 text-left mt-3" color="deep-orange " label text-color="white" >
+        <v-icon  left>mdi-bookmark-multiple-outline</v-icon>
+        {{eventdata.name | titlePart1}}
+      </v-chip>
+    </div>
 
-    <v-card-text class="mt-5">
-      <h3 class="headline cart-title" style="color: #3f51b1">{{eventdata.name | titlePart2 }}</h3>
+    <v-card-text class="mt-2">
+      <h3 class="headline cart-title " style="color: #4556b1">{{eventdata.name | titlePart2 }}</h3>
       <div
-        class="subtitle-1 mt-5 mb-0 pb-0 font-weight-regular" style="color: #454F85"
+        class="subtitle-1 mt-5 mb-0 pb-0 font-weight-regular"
+        style="color: #454F85"
       >{{eventdata.shortDescription | withoutPoint }}</div>
     </v-card-text>
 
@@ -51,14 +45,8 @@
       </v-list-item-content>
     </v-list-item>
     <v-card-text>
-      <v-chip-group
-        column
-    
-        active-class="deep-purple accent-4 white--text"
-      
-        
-      >
-        <v-chip color="#cf84b7" text-color="white" v-for="tag in eventdata.tags" :key="tag._id">
+      <v-chip-group column active-class="deep-purple accent-4 white--text">
+        <v-chip color="indigo lighten-3" text-color="white" v-for="tag in eventdata.tags" :key="tag._id">
           <v-avatar left>
             <v-icon>mdi-tag-text-outline</v-icon>
           </v-avatar>
@@ -178,6 +166,20 @@ export default {
 </script>
 
 <style scoped>
+
+.band:before {
+
+       content: '';
+       position: absolute;
+       border-style: solid;
+       border-color: transparent;
+       bottom: -10px;
+}
+
+.band {
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
 .cart-title {
   color: black;
 }
