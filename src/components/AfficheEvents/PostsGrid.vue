@@ -3,7 +3,7 @@
     <v-container class="mt-0">
       <v-row>
         <v-col v-for="(item, i) in posts" :key="i">
-          <post-cart :eventdata="item" @showDetailView="detailView" />
+          <post-cart :eventdata="item" @showDetailView="detailView" :fullinfo="true" />
         </v-col>
       </v-row>
     </v-container>
