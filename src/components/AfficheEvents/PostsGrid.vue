@@ -3,10 +3,15 @@
     <v-container class="mt-0">
       <v-row>
         <v-col v-for="(item, i) in posts" :key="i">
-          <post-cart :eventdata="item" @showDetailView="detailView" :fullinfo="true" />
+          <post-cart :eventdata="item" @showDetailView="detailView" />
         </v-col>
       </v-row>
     </v-container>
+
+    <div class="text-center">
+      <v-pagination  :length="4" prev-icon="mdi-menu-left" next-icon="mdi-menu-right"></v-pagination>
+    </div>
+
     <event-detail ref="eventbar" />
   </div>
 </template>
@@ -28,7 +33,7 @@ export default {
   },
   methods: {
     ...mapActions("CultureEvents", ["fetchPosts"]),
-    detailView() {
+    detailView(itm) {
       this.$refs.eventbar.sheet = true;
     },
     getEventsDate(d) {
@@ -42,24 +47,22 @@ export default {
         year: "numeric",
         month: "long",
         day: "numeric"
-      })
+      });
 
-      return ds.toString()
-
+      return ds.toString();
     },
     eventTime(start, end) {
       let ds = new Date(start).toLocaleString("ru", {
         hour: "numeric",
         minute: "numeric"
-      })
+      });
 
-       let de = new Date(end).toLocaleString("ru", {
+      let de = new Date(end).toLocaleString("ru", {
         hour: "numeric",
         minute: "numeric"
-      })
+      });
 
-      return ds.toString() + ' - ' + de.toString()
-
+      return ds.toString() + " - " + de.toString();
     }
   },
   async mounted() {
@@ -75,7 +78,11 @@ export default {
       // var date1 = new Date(a[1].end);
       // console.log(date.getDay, date1);
 
-      console.log("      watch1", this.eventDate(a[0].start), this.eventTime(a[0].start, a[0].end) )
+      console.log(
+        "      watch1",
+        this.eventDate(a[0].start),
+        this.eventTime(a[0].start, a[0].end)
+      );
       console.log("      watch", a[0].createDate);
     }
   }

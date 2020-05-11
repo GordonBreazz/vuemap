@@ -7,7 +7,6 @@
             <v-icon large left>mdi-arrow-decision-outline</v-icon>
             <span class=" font-weight-light">События</span>
           </v-card-text>
-
           <div width="100%" style="position: relative; height:100vh">
             <v-progress-circular
               mt-5
@@ -28,9 +27,8 @@
 <script>
 export default {
   data: () => ({
-    sheet: false,
-    panarama: false
-  }),
+    sheet: false,  
+  })
 }
 </script>
 

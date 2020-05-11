@@ -5,7 +5,7 @@
     <div class="mb-0 text-left" style="width: 100%; margin-left: 0px">
       <v-chip class=" ma-2 text-left mt-3" color="deep-purple" label text-color="white" ><!--color="deep-purple" color="#0b4065" #044d7f-->
         <v-icon  left>mdi-bookmark-multiple-outline</v-icon>
-        {{eventdata.name | titlePart1}}{{fullinfo}}
+        {{eventdata.name | titlePart1}}
       </v-chip>
     </div>
 <div style="min-height: cartInfoMinHeight">
@@ -20,7 +20,7 @@
     <v-card-text>
       <v-row align="center" class="mx-0"></v-row>
 
-      <p class="text-justify" v-if="fullinfo">{{eventdata.description | planText | short}}</p>
+      <p class="text-justify" v-if="fullinfo">{{eventdata.description | planText }}</p>
       <p class="text-justify" v-else>{{eventdata.description | planText | short}}</p>
 
     </v-card-text>
@@ -46,8 +46,8 @@
         <v-list-item-subtitle>{{placeIndex(eventdata.places[0].name).address}}</v-list-item-subtitle>
       </v-list-item-content>
     </v-list-item>
-    <v-card-text>
-      <v-chip-group column active-class="deep-purple accent-4 white--text" v-if="fullinfo">
+    <v-card-text  v-if="fullinfo">
+      <v-chip-group column active-class="deep-purple accent-4 white--text">
         <v-chip color="deep-purple lighten-3" text-color="white"  v-for="tag in eventdata.tags" :key="tag._id">
           <v-avatar left >
             <v-icon>mdi-tag-text-outline</v-icon>
@@ -58,7 +58,8 @@
     </v-card-text>
 
     <v-card-actions class="text-right">
-      <v-btn color="deep-purple lighten-2" text @click="showDetail">Подробнее</v-btn>
+      <v-btn color="deep-purple" text  @click="showDetail">Подробнее</v-btn>
+      <v-btn color="deep-purple" text  @click="showDetail">Записатся на мероприятие</v-btn>
     </v-card-actions>
   </v-card>
 </template>
@@ -70,6 +71,7 @@ export default {
   data: () => ({
     loading: false,
     selection: 1
+
   }),
   methods: {
     showDetail() {
@@ -145,13 +147,27 @@ export default {
         case "xs":
           return "0px";
         case "sm":
-          return "250px%";
+          return "250px";
         case "md":
           return "250px";
         case "lg":
           return "240px";
         case "xl":
           return "240px";
+      }
+    },
+      fullinfo() {
+      switch (this.$vuetify.breakpoint.name) {
+        case "xs":
+          return true
+        case "sm":
+          return false
+        case "md":
+          return false
+        case "lg":
+          return false
+        case "xl":
+          return false
       }
     }
   },
@@ -177,7 +193,7 @@ export default {
     planText: value => value.replace(/<\/?[^>]+>/g, ""),
     withoutPoint: value => value.slice(0, -1)
   },
-  props: ["eventdata", "fullinfo"]
+  props: ["eventdata"]
 };
 </script>
 
