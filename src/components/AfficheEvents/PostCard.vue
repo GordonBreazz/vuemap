@@ -1,5 +1,5 @@
 <template>
-  <v-card :loading="loading" class="mx-auto my-12 mt-0" :max-width="cartHeight">
+  <v-card :loading="loading" class="mx-auto my-12 mt-0" :max-width="cartWidth">
     <v-img height="250" :src="getImagePath" @click="showDetail" class="photoglr"></v-img>
 
     <div class="mb-0 text-left" style="width: 100%; margin-left: 0px">
@@ -8,8 +8,8 @@
         {{eventdata.name | titlePart1}}
       </v-chip>
     </div>
-<div style="min-height: cartInfoMinHeight">
-    <v-card-text class="mt-2">
+<div style="min-height: 235px">
+    <v-card-text class="mt-2 mb-0 pb-0">
       <h3 class="headline cart-title " style="color: #354288">{{eventdata.name | titlePart2 }}</h3>
       <div
         class="subtitle-1 mt-5 mb-0 pb-0 font-weight-regular"
@@ -56,10 +56,11 @@
         </v-chip>
       </v-chip-group>
     </v-card-text>
-
-    <v-card-actions class="text-right">
-      <v-btn color="deep-purple" text  @click="showDetail">Подробнее</v-btn>
-      <v-btn color="deep-purple" text  @click="showDetail">Записатся на мероприятие</v-btn>
+    
+    <v-card-actions class="text-right pb-2 pr-3">
+      <v-btn class="font-weight-medium" color="#354288" text  @click="showDetail">Подробнее</v-btn>
+      <v-spacer></v-spacer>
+      <v-btn class="font-weight-medium" color="deep-orange" text  @click="showDetail">Записатся на мероприятие</v-btn>
     </v-card-actions>
   </v-card>
 </template>
@@ -128,7 +129,7 @@ export default {
     getImagePath: function() {
       return this.imagesPath + this.eventdata.image.name;
     },
-    cartHeight() {
+    cartWidth() {
       switch (this.$vuetify.breakpoint.name) {
         case "xs":
           return "100%";
