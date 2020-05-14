@@ -35,34 +35,6 @@ export default {
     ...mapActions("CultureEvents", ["fetchPosts"]),
     detailView(itm) {
       this.$refs.eventbar.sheet = true;
-    },
-    getEventsDate(d) {
-      const day = d.getDay();
-      const mnt = d.getMonth();
-      const yr = d.getYear();
-      return day + "." + d.mnt + d.yr;
-    },
-    eventDate(date) {
-      let ds = new Date(date).toLocaleString("ru", {
-        year: "numeric",
-        month: "long",
-        day: "numeric"
-      });
-
-      return ds.toString();
-    },
-    eventTime(start, end) {
-      let ds = new Date(start).toLocaleString("ru", {
-        hour: "numeric",
-        minute: "numeric"
-      });
-
-      let de = new Date(end).toLocaleString("ru", {
-        hour: "numeric",
-        minute: "numeric"
-      });
-
-      return ds.toString() + " - " + de.toString();
     }
   },
   async mounted() {
@@ -78,12 +50,12 @@ export default {
       // var date1 = new Date(a[1].end);
       // console.log(date.getDay, date1);
 
-      console.log(
-        "      watch1",
-        this.eventDate(a[0].start),
-        this.eventTime(a[0].start, a[0].end)
-      );
-      console.log("      watch", a[0].createDate);
+      // console.log(
+      //   "      watch1",
+      //   this.eventDate(a[0].start),
+      //   this.eventTime(a[0].start, a[0].end)
+      // );
+      //console.log("      watch", a[0].createDate);
     }
   }
 };

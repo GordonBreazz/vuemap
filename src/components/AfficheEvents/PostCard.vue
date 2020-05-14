@@ -126,6 +126,7 @@ export default {
   computed: {
     ...mapState("CultureEvents", ["imagesPath"]),
     ...mapState(["placesArr"]),
+    ...mapGetters(["getNormPost"]),
     getImagePath: function() {
       return this.imagesPath + this.eventdata.image.name;
     },
