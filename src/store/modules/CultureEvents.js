@@ -101,6 +101,7 @@ export const CultureEvents = {
   state: {
     imagesPath: "https://all.culture.ru/uploads/",
     posts: [],
+    postsFilter: []
   },
   getters: {
     getNormPosts(state, getters, rootState) {
@@ -124,5 +125,8 @@ export const CultureEvents = {
         return record
       })
     },
+    getPostCategory(state, getters){
+      return getters.getNormPosts.map( (i) => i.titlePart1)
+    }
   },
 }

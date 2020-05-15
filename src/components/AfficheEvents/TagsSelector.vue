@@ -29,7 +29,7 @@
 </template>
 
 <script>
-
+import { mapState } from "vuex";
 export default {
   name: "TagsSelector",
   props: ["captions", "dataArr","tagsColor","iconTag", "titleIcon"],  
@@ -44,6 +44,25 @@ export default {
     }
   },
   computed: {
+        ...mapState("CultureEvents", ["postsFilter"])
+  },
+  watch: {
+    selectedArr(a) {
+     // this.postsFilter = [...a]
+      console.log(a)
+     // console.log('ok',this.pageCount, this.getNormPosts.length)
+      // var date = new Date(a[1].start);
+      // console.log(a[1].altName);
+      // var date1 = new Date(a[1].end);
+      // console.log(date.getDay, date1);
+
+      // console.log(
+      //   "      watch1",
+      //   this.eventDate(a[0].start),
+      //   this.eventTime(a[0].start, a[0].end)
+      // );
+      //console.log("      watch", a[0].createDate);
+    }
   }
 };
 </script>

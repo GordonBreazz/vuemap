@@ -9,7 +9,7 @@
         </div>
         <div  class="d-flex d-flex justify-space-around flex-wrap mt-0">
           <tags-selector class="tags-selector mt-2" :captions="captionPlaces" :dataArr="getPlacesList" tagsColor="#111c3b" iconTag = "mdi-checkbox-marked-circle" titleIcon="mdi-map" />
-          <tags-selector class="tags-selector mt-2" :captions="captionEvensType" :dataArr="getPlacesList" tagsColor="#cf84b7" iconTag = "mdi-tag-text-outline" titleIcon="mdi-tag-multiple-outline"/>
+          <tags-selector class="tags-selector mt-2" :captions="captionEvensType" :dataArr="getPostCategory" tagsColor="#cf84b7" iconTag = "mdi-tag-text-outline" titleIcon="mdi-tag-multiple-outline"/>
         </div>
       </v-container>
     </v-form>
@@ -40,7 +40,8 @@ export default {
   },
   methods: {},
   computed: {
-    ...mapGetters(["getPlacesList"])
+    ...mapGetters(["getPlacesList"]),
+    ...mapGetters("CultureEvents", ["getPostCategory"])   
   }
 };
 </script>

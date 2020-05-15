@@ -3,7 +3,7 @@
     <v-container class="mt-0" id="card-table">
       <v-row>
         <v-col v-for="(item, i) in paginator" :key="i">
-          <post-cart :eventdata="item" @showDetailView="detailView" />
+          <post-cart :eventdata="item" :colCard="getNormPosts.length" @showDetailView="detailView" />
         </v-col>
       </v-row>
     </v-container>
@@ -50,7 +50,6 @@ export default {
     this.fetchPosts();
   },
   computed: {
-    ...mapState("CultureEvents", ["posts"]),
     ...mapGetters("CultureEvents", ["getNormPosts"]),
     paginator(){
       let position = (this.currentPage-1) * (this.postPerPage)
@@ -77,22 +76,6 @@ export default {
       }
     }
         
-  },
-  watch: {
-    posts(a) {
-     // console.log('ok',this.pageCount, this.getNormPosts.length)
-      // var date = new Date(a[1].start);
-      // console.log(a[1].altName);
-      // var date1 = new Date(a[1].end);
-      // console.log(date.getDay, date1);
-
-      // console.log(
-      //   "      watch1",
-      //   this.eventDate(a[0].start),
-      //   this.eventTime(a[0].start, a[0].end)
-      // );
-      //console.log("      watch", a[0].createDate);
-    }
   }
 };
 </script>

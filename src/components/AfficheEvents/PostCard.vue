@@ -9,8 +9,8 @@
         {{eventdata.titlePart1}}
       </v-chip>
       <v-spacer></v-spacer>
-      <v-chip class="ma-2" color="deep-purple" text-color="white">
-        <v-avatar left class="purple ">{{eventdata.key + 1}}</v-avatar>Карточка
+      <v-chip class="ma-2" color="gray" text-color="white">
+        <v-avatar left class="grey  lighten-1 ">{{eventdata.key + 1}}</v-avatar>/{{colCard}}
       </v-chip>
     </v-card-actions>
     <div style="min-height: 235px">
@@ -139,7 +139,7 @@ export default {
   filters: {
     withoutPoint: value => value.slice(0, -1)
   },
-  props: ["eventdata"]
+  props: ["eventdata", "colCard"]
 };
 </script>
 
