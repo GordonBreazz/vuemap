@@ -64,7 +64,7 @@ function eventTime(start, end) {
   return ds.toString() + " - " + de.toString()
 }
 
-function placeIndex(st) {
+function placeIndex(st, placesArr) {
   const result = st.match(/\d+/)
   let url = "/filial/"
   let index = 1
@@ -73,9 +73,9 @@ function placeIndex(st) {
   // console.log('qq', Number(index), this.placesArr[Number(index)])
   return {
     url,
-    name: this.placesArr[Number(index)].name,
+    name: placesArr[Number(index)].name,
     ind: Number(index),
-    address: this.placesArr[Number(index)].address,
+    address: placesArr[Number(index)].address,
   }
 }
 
@@ -103,22 +103,24 @@ export const CultureEvents = {
     posts: [],
   },
   getters: {
-    getNormPost(state) {
-      return state.posts.map(function(item) {
+    getNormPosts(state, getters, rootState) {
+      return state.posts.map(function(item, i) {
         let record = {}
+        record.key = i
         record.titlePart1 = titlePart1(item.name)
         record.titlePart2 = titlePart2(item.name)
+        record.shortDescription = item.shortDescription
         record.description = item.description
         record.descriptionText = planText(item.description)
-        record.descriptionShort = short(item.description)
+        record.descriptionShort = short( planText(item.description) )
         record.eventTime = eventTime(item.start, item.end)
         record.eventDate = eventDate(item.start, item.end)
         record.tags = item.tags.map((i) => i.name)
-        record.url = item.places[0].name
         record.imagePath = IMAGESPATH + item.image.name
-        record.index = placeIndex(item.places[0].name).ind
-        record.name = placeIndex(item.places[0].name).name
-        record.address = placeIndex(item.places[0].name).address
+        record.index = placeIndex(item.places[0].name, rootState.placesArr).ind
+        record.name = placeIndex(item.places[0].name, rootState.placesArr).name
+        record.address = placeIndex(item.places[0].name, rootState.placesArr).address
+        record.url = placeIndex(item.places[0].name, rootState.placesArr).url        
         return record
       })
     },
