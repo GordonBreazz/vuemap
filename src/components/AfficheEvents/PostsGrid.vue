@@ -10,7 +10,7 @@
       label
       text-color="white"
     >
-      <v-icon left>mdi-card-search-outline</v-icon>
+      <v-icon left>mdi-magnify</v-icon>
       {{searchMessage()}}
     </v-chip>
     <v-container class="mt-0" id="card-table">
@@ -69,7 +69,7 @@ export default {
     }, 
     searchMessage(){
       if (this.filteredPosts.length > 0)
-        return `Найдено ${this.filteredPosts.length} соб. для запроса "${this.postSearchRequest}`
+        return `Найдено ${this.filteredPosts.length} соб. для запроса "${this.postSearchRequest}"`
       return 'Ничего не найдено'  
     }
   },
@@ -77,29 +77,33 @@ export default {
     this.fetchPosts();
   },
   computed: {
-    ...mapState("CultureEvents", ["postSearchRequest"]),
+    ...mapState("CultureEvents", ["postSearchRequest", "postsFilter"]),
     ...mapGetters("CultureEvents", ["getNormPosts"]),
     filteredPosts() {
       if (this.getNormPosts.length == 0) return this.getNormPosts;
+      let result = this.getNormPosts
+      
+      //console.log(this.postsFilter['name'])
+      if (!!this.postsFilter['name'])
+      if (this.postsFilter['name'].length > 0){        
+         result = result.filter(post => {
+           console.log('okkkkkkkkkkkkkkkkkkkk', post.name.trim())
+           return post.name.trim() == this.postsFilter['name'][0].trim()
+         });
+      }
+      //console.log(this.postsFilter['tags'])
 
-      // if (this.getNormPosts.length > 0)
-      //   console.log(this.getNormPosts[0].allText);
+      //if (!this.postSearchRequest) return this.getNormPosts;
+      if (String(this.postSearchRequest).trim() == "") return result
+        else
+          result = result.filter(post => {
+            return post.allText
+              .toLowerCase()
+              .includes(this.postSearchRequest.toLowerCase());
+          });
 
-      //console.log(this.postSearchRequest);
-
-      if (!this.postSearchRequest) return this.getNormPosts;
-
-      if (this.postSearchRequest.trim() == "") return this.getNormPosts;
-
-      let result = this.getNormPosts.filter(post => {
-        return post.allText
-          .toLowerCase()
-          .includes(this.postSearchRequest.toLowerCase());
-      });
-
-      // if (result.length == 0) {
-      //   return this.getNormPosts;
-      // }
+      if (result.length != 0) 
+        this.currentPage = 1
 
       return result;
     },

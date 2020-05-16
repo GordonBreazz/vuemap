@@ -27,39 +27,29 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapMutations } from "vuex";
 export default {
   name: "TagsSelector",
-  props: ["captions", "dataArr", "tagsColor", "iconTag", "titleIcon"],
+  props: ["captions", "dataArr", "tagsColor", "iconTag", "titleIcon", "dataCont"],
   data() {
     return {
       selectedArr: []
     };
   },
   methods: {
+    ...mapMutations("CultureEvents", ["updateFilter"]),    
     close(t) {
       this.selectedArr = this.selectedArr.filter(item => item != t);
     }
   },
   computed: {
-    ...mapState("CultureEvents", ["postsFilter"])
   },
   watch: {
-    selectedArr(a) {
-      // this.postsFilter = [...a]
-      console.log(a);
-      // console.log('ok',this.pageCount, this.getNormPosts.length)
-      // var date = new Date(a[1].start);
-      // console.log(a[1].altName);
-      // var date1 = new Date(a[1].end);
-      // console.log(date.getDay, date1);
-
-      // console.log(
-      //   "      watch1",
-      //   this.eventDate(a[0].start),
-      //   this.eventTime(a[0].start, a[0].end)
-      // );
-      //console.log("      watch", a[0].createDate);
+    selectedArr(a) {          
+      if (a.length > 0) {
+        //console.log(this.dataCont, a);
+        this.updateFilter({k: this.dataCont, v: a})
+      }  
     }
   }
 };
