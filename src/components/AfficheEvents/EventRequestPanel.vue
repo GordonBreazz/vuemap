@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import { mapGetters, mapMutations } from "vuex";
+import { mapGetters, mapMutations, mapState } from "vuex";
 import TagsSelector from "./TagsSelector";
 
 export default {
@@ -49,7 +49,7 @@ export default {
   },
   computed: {
     ...mapGetters(["getPlacesList"]),
-    ...mapGetters("CultureEvents", ["getPostCategory"])   
+    ...mapGetters("CultureEvents", ["getPostCategory"])    
   }
 };
 </script>

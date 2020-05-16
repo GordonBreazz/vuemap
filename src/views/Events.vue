@@ -13,7 +13,7 @@
       <event-request-panel />
     </v-container>
     <v-container class="mt-0">
-      <posts-grid />
+      <posts-grid :key="filterString" />
     </v-container>
 
     <v-container class="mt-0">
@@ -63,8 +63,8 @@
 
 import EventRequestPanel from "@/components/AfficheEvents/EventRequestPanel";
 import PostsGrid from "@/components/AfficheEvents/PostsGrid";
+import { mapState, mapActions } from "vuex";
 
-import { mapState } from "vuex";
 export default {
   components: {
     EventRequestPanel,
@@ -73,10 +73,15 @@ export default {
   data() {
     return {};
   },
+  async mounted() {
+    this.fetchPosts();
+  },  
   computed: {
-    ...mapState(["socnet"])
+    ...mapState(["socnet"]),
+    ...mapState("CultureEvents", ["filterString"])    
   },
   methods: {
+    ...mapActions("CultureEvents", ["fetchPosts"]),    
     goMap() {
       this.$router.push({ path: "/" });
     },

@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import { mapState, mapGetters, mapActions, mapMutations } from "vuex";
+import { mapState, mapGetters, mapMutations } from "vuex";
 import PostCart from "./PostCard.vue";
 import EventDetail from "./EventDetail";
 
@@ -48,12 +48,11 @@ export default {
   data() {
     return {
       detail: false,
-      currentPage: 1,
+      currentPage: 1
       //postPerPage: 6
     };
   },
   methods: {
-    ...mapActions("CultureEvents", ["fetchPosts"]),
     ...mapMutations("CultureEvents", ["updateSearchRequest"]),
     detailView(itm) {
       this.$refs.eventbar.sheet = true;
@@ -66,50 +65,64 @@ export default {
     },
     clearSearchRequest() {
       this.updateSearchRequest({ value: "" });
-    }, 
-    searchMessage(){
+    },
+    searchMessage() {
       if (this.filteredPosts.length > 0)
-        return `Найдено ${this.filteredPosts.length} соб. для запроса "${this.postSearchRequest}"`
-      return 'Ничего не найдено'  
+        return `Найдено ${this.filteredPosts.length} соб. для запроса "${this.postSearchRequest}"`;
+      return "Ничего не найдено";
     }
-  },
-  async mounted() {
-    this.fetchPosts();
   },
   computed: {
     ...mapState("CultureEvents", ["postSearchRequest", "postsFilter"]),
     ...mapGetters("CultureEvents", ["getNormPosts"]),
     filteredPosts() {
       if (this.getNormPosts.length == 0) return this.getNormPosts;
-      let result = this.getNormPosts
-      
-      //console.log(this.postsFilter['name'])
-      if (!!this.postsFilter['name'])
-      if (this.postsFilter['name'].length > 0){        
-         result = result.filter(post => {
-           console.log('okkkkkkkkkkkkkkkkkkkk', post.name.trim())
-           return post.name.trim() == this.postsFilter['name'][0].trim()
-         });
-      }
+      let result = this.getNormPosts;
+
+      if (!!this.postsFilter["name"])
+        if (this.postsFilter["name"].length > 0) {
+          result = result.filter(post => {                      
+            return this.postsFilter['name'].some( i => i.trim() ==  post.name.trim()) 
+          });
+        }
+
+      if (!!this.postsFilter["tags"])
+        if (this.postsFilter["tags"].length > 0) {
+          result = result.filter(post => {                      
+            return this.postsFilter['tags'].some( i => i.trim() ==  post.titlePart1.trim()) 
+          });
+        }
+
+      // if (!!this.postsFilter["tags"])
+      //   if (this.postsFilter["tags"].length > 0) {
+      //     result = result.filter(post => {                      
+      //       return this.postsFilter['tags'].some( i => {
+      //         console.log('i:::::::::::::::::::::',i)
+      //         return post.tags.some( j => {
+      //           console.log('j:',j, j.trim() == i.trim()) 
+      //           return j.trim() == i.trim()
+      //           })
+      //         }) 
+      //     });
+      //   }
       //console.log(this.postsFilter['tags'])
 
       //if (!this.postSearchRequest) return this.getNormPosts;
-      if (String(this.postSearchRequest).trim() == "") return result
-        else
-          result = result.filter(post => {
-            return post.allText
-              .toLowerCase()
-              .includes(this.postSearchRequest.toLowerCase());
-          });
+      if (String(this.postSearchRequest).trim() == "") return result;
+      else
+        result = result.filter(post => {
+          return post.allText
+            .toLowerCase()
+            .includes(this.postSearchRequest.toLowerCase());
+        });
 
-      if (result.length != 0) 
-        this.currentPage = 1
+      if (result.length != 0) this.currentPage = 1;
 
       return result;
     },
     paginator() {
       let position = (this.currentPage - 1) * this.postPerPage;
-      console.log("QQQ", this.currentPage, position);
+      //console.log("QQQ", this.currentPage, position);
       if (this.currentPage > 1)
         return this.filteredPosts.slice(position, position + this.postPerPage);
       return this.filteredPosts.slice(0, this.postPerPage);

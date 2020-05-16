@@ -96,6 +96,8 @@ export const CultureEvents = {
   mutations: {
     updateFilter(state, value){
       state.postsFilter[value.k] = value.v
+      //Vue.set(state.postsFilter,value.k, value.v)
+      state.filterString = Math.random().toString(36).substring(7)
     },
     updatePosts(state, posts){
       state.posts = posts.events
@@ -109,7 +111,8 @@ export const CultureEvents = {
     imagesPath: "https://all.culture.ru/uploads/",
     posts: [],
     postSearchRequest: '',
-    postsFilter: {}
+    postsFilter: {},
+    filterString: ''
   },
   getters: {
     getNormPosts(state, getters, rootState) {

@@ -46,10 +46,9 @@ export default {
   },
   watch: {
     selectedArr(a) {          
-      if (a.length > 0) {
-        //console.log(this.dataCont, a);
-        this.updateFilter({k: this.dataCont, v: a})
-      }  
+      //console.log(this.dataCont, a);
+      this.updateFilter({k: this.dataCont, v: a})
+
     }
   }
 };
