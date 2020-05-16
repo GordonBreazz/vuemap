@@ -4,8 +4,8 @@
       <v-subheader class="display-1 font-weight-light">Ближайщие события в библиотеках</v-subheader>
       <v-container class="mb-3">
         <div class="d-flex">
-          <v-text-field label="Библиотека, название мероприятия" outlined class="mr-2"></v-text-field>
-          <v-btn x-large dark color="primary">Найти</v-btn>
+          <v-text-field v-model="searchRequest" label="Библиотека, название мероприятия, адрес" @keyup.enter="sendRequest" outlined clearable class="mr-2"></v-text-field>
+          <v-btn x-large dark color="primary" @click="sendRequest">Найти</v-btn>
         </div>
         <div  class="d-flex d-flex justify-space-around flex-wrap mt-0">
           <tags-selector class="tags-selector mt-2" :captions="captionPlaces" :dataArr="getPlacesList" tagsColor="#111c3b" iconTag = "mdi-checkbox-marked-circle" titleIcon="mdi-map" />
@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters, mapMutations } from "vuex";
 import TagsSelector from "./TagsSelector";
 
 export default {
@@ -26,6 +26,7 @@ export default {
   },
   data() {
     return {
+      searchRequest: '',
       captionPlaces: {
         allCategoryText: "События во всех библиотеках МАУ ЦБС г. Улан-Удэ",
         tagsCategoryText: "События в отдельных библиотеках",
@@ -38,7 +39,14 @@ export default {
       }
     }
   },
-  methods: {},
+  methods: {
+    ...mapMutations("CultureEvents", ["updateSearchRequest"]),
+    sendRequest(){            
+      this.updateSearchRequest({value: this.searchRequest})      
+      console.log(this.searchRequest)
+      this.searchRequest = ''
+    }
+  },
   computed: {
     ...mapGetters(["getPlacesList"]),
     ...mapGetters("CultureEvents", ["getPostCategory"])   

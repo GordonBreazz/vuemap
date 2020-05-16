@@ -94,13 +94,18 @@ export const CultureEvents = {
     },
   },
   mutations: {
-    updatePosts(state, posts) {
+    updatePosts(state, posts){
       state.posts = posts.events
     },
+    updateSearchRequest(state, d){
+      if (!d.value) state.postSearchRequest = ''
+       else state.postSearchRequest = String(d.value)
+    } 
   },
   state: {
     imagesPath: "https://all.culture.ru/uploads/",
     posts: [],
+    postSearchRequest: '',
     postsFilter: []
   },
   getters: {
@@ -121,7 +126,9 @@ export const CultureEvents = {
         record.index = placeIndex(item.places[0].name, rootState.placesArr).ind
         record.name = placeIndex(item.places[0].name, rootState.placesArr).name
         record.address = placeIndex(item.places[0].name, rootState.placesArr).address
-        record.url = placeIndex(item.places[0].name, rootState.placesArr).url        
+        record.url = placeIndex(item.places[0].name, rootState.placesArr).url     
+        record.allText = record.titlePart1 + '\n' + record.titlePart2+ '\n' + record.tags.join('\n') + '\n' + record.shortDescription
+                         + '\n' + record.descriptionText+ '\n' + record.name + '\n' + record.address
         return record
       })
     },
