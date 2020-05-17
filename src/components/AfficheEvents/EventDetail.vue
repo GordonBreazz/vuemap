@@ -14,17 +14,7 @@
           class="subtitle-1 mt-1 mb-0 pb-0 font-weight-regular"
           style="color: #5f6c7a"
         >{{eventdata.shortDescription | withoutPoint}}</div>
-        <div class="d-flex justify-space-between" style="color: #5f6c7a">
-          <v-card-title class="mb-0 subtitle-1">
-            <v-icon class="pr-1">mdi-clock-outline</v-icon>
-            {{eventdata.eventTime}}
-          </v-card-title>
 
-          <v-card-title class="subtitle-1">
-            <v-icon class="pr-1">mdi-calendar-month</v-icon>
-            {{eventdata.eventDate}}
-          </v-card-title>
-        </div>
  
 
         <v-container v-if="true">
@@ -37,31 +27,11 @@
                   </v-card>
                 </v-col>
 
-                <v-col cols="6" md="6" lg="6" xl="6" max-height="500" height="500">
+                <v-col cols="6" md="6" lg="6" xl="6" max-height="500" height="500">                  
                   <v-card :loading="loading" class="mx-auto my-12 mt-0" v-if="true" >
-                    <v-card-actions class="mb-0 text-left" style="width: 100%; margin-left: 0px">
-                      <v-chip
-                        class="ma-2 text-left mt-3"
-                        color="deep-purple"
-                        label
-                        text-color="white"
-                      >
-                        <!--color="deep-purple" color="#0b4065" #044d7f-->
-                        <v-icon left>mdi-bookmark-multiple-outline</v-icon>
-                        {{eventdata.titlePart1}}
-                      </v-chip>
-                    </v-card-actions>
-                    <div style="min-height: 235px">
-                      <v-card-text class="mt-2 mb-0 pb-0">
-                        <h3
-                          class="headline cart-title"
-                          style="color: #354288"
-                        >{{eventdata.titlePart2 }}</h3>
-                        <div
-                          class="subtitle-1 mt-5 mb-0 pb-0 font-weight-regular"
-                          style="color: #5f6c7a"
-                        >{{eventdata.shortDescription | withoutPoint}}</div>
-                      </v-card-text>
+
+                    <div style="min-height: 100px">
+
 
                       <v-card-text>
                         <v-row align="center" class="mx-0"></v-row>
