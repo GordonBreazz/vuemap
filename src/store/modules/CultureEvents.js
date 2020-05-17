@@ -87,13 +87,17 @@ export const CultureEvents = {
       const res = await fetch(URLAPI)
 
       const posts = await res.json()
-      //const posts = await res.text()
+      //const posts = await res.text()    
       console.log("status", res.ok)
       console.log("ответ", posts)
       context.commit("updatePosts", posts)
+      context.commit("stopLoader")      
     },
   },
   mutations: {
+    stopLoader(state){
+      state.loadingPost = false
+    },
     updateFilter(state, value){
       state.postsFilter[value.k] = value.v
       //Vue.set(state.postsFilter,value.k, value.v)
@@ -112,7 +116,8 @@ export const CultureEvents = {
     posts: [],
     postSearchRequest: '',
     postsFilter: {},
-    filterString: ''
+    filterString: '',
+    loadingPost: true
   },
   getters: {
     getNormPosts(state, getters, rootState) {

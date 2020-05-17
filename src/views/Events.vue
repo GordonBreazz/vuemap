@@ -12,6 +12,13 @@
     <v-container class="mt-9">
       <event-request-panel />
     </v-container>
+    <v-progress-circular
+      v-if="loadingPost"    
+      :size="100"
+      :width="7"
+      color="primary"
+      indeterminate
+    ></v-progress-circular>
     <v-container class="mt-0">
       <posts-grid :key="filterString" />
     </v-container>
@@ -78,7 +85,7 @@ export default {
   },  
   computed: {
     ...mapState(["socnet"]),
-    ...mapState("CultureEvents", ["filterString"])    
+    ...mapState("CultureEvents", ["filterString", "loadingPost"])    
   },
   methods: {
     ...mapActions("CultureEvents", ["fetchPosts"]),    

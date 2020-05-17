@@ -73,7 +73,7 @@
         class="font-weight-medium"
         color="deep-orange"
         text
-        @click="showDetail"
+        @click="showEventInvite"
       >Записатся на мероприятие</v-btn>
     </v-card-actions>
   </v-card>
@@ -82,7 +82,7 @@
 <script>
 import { mapState, mapGetters } from "vuex";
 
-export default {
+export default { 
   data: () => ({
     loading: false,
     selection: 1
@@ -90,6 +90,9 @@ export default {
   methods: {
     showDetail() {
       if (!this.fullinfo) this.$emit("showDetailView", this.eventdata);
+    },
+    showEventInvite() {
+      this.$emit("showEventInvite", this.eventdata);
     }
   },
   computed: {

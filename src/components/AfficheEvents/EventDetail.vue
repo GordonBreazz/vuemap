@@ -1,7 +1,7 @@
 <template>
   <v-bottom-sheet v-model="sheet" inset>
     <v-sheet>
-      <v-card :loading="loading" class="mx-auto " v-if="true">
+      <v-card :loading="loading" class="mx-auto" v-if="true">
         <v-card-actions class="mb-0 text-left" style="width: 100%; margin-left: 0px">
           <v-chip class="ma-2 text-left mt-3" color="deep-purple" label text-color="white">
             <!--color="deep-purple" color="#0b4065" #044d7f-->
@@ -10,22 +10,35 @@
           </v-chip>
         </v-card-actions>
         <h3 class="headline cart-title" style="color: #354288">{{eventdata.titlePart2 }}</h3>
-                        <div
-                          class="subtitle-1 mt-1 mb-0 pb-0 font-weight-regular"
-                          style="color: #5f6c7a"
-                        >{{eventdata.shortDescription | withoutPoint}}</div>
-        <v-container>
+        <div
+          class="subtitle-1 mt-1 mb-0 pb-0 font-weight-regular"
+          style="color: #5f6c7a"
+        >{{eventdata.shortDescription | withoutPoint}}</div>
+        <div class="d-flex justify-space-between" style="color: #5f6c7a">
+          <v-card-title class="mb-0 subtitle-1">
+            <v-icon class="pr-1">mdi-clock-outline</v-icon>
+            {{eventdata.eventTime}}
+          </v-card-title>
+
+          <v-card-title class="subtitle-1">
+            <v-icon class="pr-1">mdi-calendar-month</v-icon>
+            {{eventdata.eventDate}}
+          </v-card-title>
+        </div>
+ 
+
+        <v-container v-if="true">
           <v-row no-gutters>
             <v-col cols="12" class="pl-3 pr-3">
               <v-row>
-                <v-col cols="6"  md="6" lg="6" xl="6">
-                  <v-card :loading="loading" class="mx-auto my-12 mt-0" v-if="true">
-                    <v-img :src="eventdata.imagePath" class="photoglr"></v-img>
+                <v-col cols="6" md="6" lg="6" xl="6" max-height="490" height="490">
+                  <v-card :loading="loading" class="mx-auto my-12 mt-0 "  v-if="true">
+                    <v-img :src="eventdata.imagePath" class="photoglr" height="490" ></v-img>
                   </v-card>
                 </v-col>
 
-                <v-col cols="6"  md="6" lg="6" xl="6">
-                  <v-card :loading="loading" class="mx-auto my-12 mt-0" v-if="true">
+                <v-col cols="6" md="6" lg="6" xl="6" max-height="500" height="500">
+                  <v-card :loading="loading" class="mx-auto my-12 mt-0" v-if="true" >
                     <v-card-actions class="mb-0 text-left" style="width: 100%; margin-left: 0px">
                       <v-chip
                         class="ma-2 text-left mt-3"

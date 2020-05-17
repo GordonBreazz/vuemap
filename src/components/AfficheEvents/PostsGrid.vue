@@ -16,7 +16,7 @@
     <v-container class="mt-0" id="card-table">
       <v-row>
         <v-col v-for="(item, i) in paginator" :key="i">
-          <post-cart :eventdata="item" :colCard="getNormPosts.length" @showDetailView="detailView" />
+          <post-cart :eventdata="item" :colCard="getNormPosts.length" @showDetailView="detailView" @showEventInvite="eventInviteView" />
         </v-col>
       </v-row>
     </v-container>
@@ -31,6 +31,7 @@
       ></v-pagination>
     </div>
 
+    <event-invite ref="eventinvite" />
     <event-detail ref="eventbar" />
   </div>
 </template>
@@ -39,11 +40,13 @@
 import { mapState, mapGetters, mapMutations } from "vuex";
 import PostCart from "./PostCard.vue";
 import EventDetail from "./EventDetail";
+import EventInvite from "./EventInvite.vue";
 
 export default {
   components: {
     PostCart,
-    EventDetail
+    EventDetail,
+    EventInvite
   },
   data() {
     return {
@@ -57,6 +60,10 @@ export default {
     detailView(itm) {
       this.$refs.eventbar.sheet = true;
       this.$refs.eventbar.eventdata = itm;
+    },
+    eventInviteView(itm) {
+      this.$refs.eventinvite.dialog = true;
+      this.$refs.eventinvite.eventdata = itm;
     },
     next() {
       setTimeout(() => {
@@ -107,7 +114,6 @@ export default {
       //   }
       //console.log(this.postsFilter['tags'])
 
-      //if (!this.postSearchRequest) return this.getNormPosts;
       if (String(this.postSearchRequest).trim() == "") return result;
       else
         result = result.filter(post => {
@@ -122,7 +128,6 @@ export default {
     },
     paginator() {
       let position = (this.currentPage - 1) * this.postPerPage;
-      //console.log("QQQ", this.currentPage, position);
       if (this.currentPage > 1)
         return this.filteredPosts.slice(position, position + this.postPerPage);
       return this.filteredPosts.slice(0, this.postPerPage);
