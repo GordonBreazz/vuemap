@@ -22,13 +22,13 @@
             <v-col cols="12" class="pl-3 pr-3">
               <v-row>
                 <v-col cols="6" md="6" lg="6" xl="6" max-height="490" height="490">
-                  <v-card :loading="loading" class="mx-auto my-12 mt-0 "  v-if="true">
+                 
                     <v-img :src="eventdata.imagePath" class="photoglr" height="490" ></v-img>
-                  </v-card>
+                 
                 </v-col>
 
                 <v-col cols="6" md="6" lg="6" xl="6" max-height="500" height="500">                  
-                  <v-card :loading="loading" class="mx-auto my-12 mt-0" v-if="true" >
+                 
 
                     <div style="min-height: 100px">
 
@@ -76,7 +76,8 @@
                         </v-chip>
                       </v-chip-group>
                     </v-card-text>
-                  </v-card>
+
+
                 </v-col>
               </v-row>
             </v-col>
