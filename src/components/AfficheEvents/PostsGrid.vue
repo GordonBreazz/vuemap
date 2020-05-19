@@ -33,6 +33,7 @@
 
     <event-invite ref="eventinvite" />
     <event-detail ref="eventbar" />
+    <fullscreen-view />
   </div>
 </template>
 
@@ -41,12 +42,14 @@ import { mapState, mapGetters, mapMutations } from "vuex";
 import PostCart from "./PostCard.vue";
 import EventDetail from "./EventDetail";
 import EventInvite from "./EventInvite.vue";
+import FullscreenView from "./FullscreenView.vue";
 
 export default {
   components: {
     PostCart,
     EventDetail,
-    EventInvite
+    EventInvite,
+    FullscreenView
   },
   data() {
     return {
