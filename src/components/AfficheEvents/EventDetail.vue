@@ -153,7 +153,7 @@
               </v-chip-group>
             </v-card-text>
           </v-card>
-        </div>13132
+        </div>
       </v-card>
     </v-sheet>
   </v-bottom-sheet>
