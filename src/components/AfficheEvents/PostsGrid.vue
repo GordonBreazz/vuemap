@@ -16,7 +16,7 @@
     <v-container class="mt-0" id="card-table">
       <v-row>
         <v-col v-for="(item, i) in paginator" :key="i">
-          <post-cart :eventdata="item" :colCard="getNormPosts.length" @showDetailView="detailView" @showEventInvite="eventInviteView" />
+          <post-cart :eventdata="item" :colCard="getNormPosts.length" @showDetailView="detailView" @showDetailViewFullscreen="detailViewFullScreen" @showEventInvite="eventInviteView" />
         </v-col>
       </v-row>
     </v-container>
@@ -33,7 +33,7 @@
 
     <event-invite ref="eventinvite" />
     <event-detail ref="eventbar" />
-    <fullscreen-view />
+    <fullscreen-view ref="fullscreenview" />
   </div>
 </template>
 
@@ -63,6 +63,10 @@ export default {
     detailView(itm) {
       this.$refs.eventbar.sheet = true;
       this.$refs.eventbar.eventdata = itm;
+    },
+    detailViewFullScreen(itm) {
+      this.$refs.fullscreenview.dialog = true;
+      this.$refs.fullscreenview.eventdata = itm;
     },
     eventInviteView(itm) {
       this.$refs.eventinvite.dialog = true;

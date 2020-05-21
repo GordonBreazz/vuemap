@@ -67,7 +67,9 @@
     </v-card-text>
 
     <v-card-actions class="text-right pb-2 pr-3">
-      <v-btn v-show="!fullinfo" class="font-weight-medium" color="#354288" text @click="showDetail">Подробнее</v-btn>
+      <v-btn v-show="!fullinfo" class="font-weight-medium" color="#354288" text @click="showDetailFullscreen">
+        Подробнее
+      </v-btn>
       <v-spacer></v-spacer>
       <v-btn
         class="font-weight-medium"
@@ -90,6 +92,9 @@ export default {
   methods: {
     showDetail() {
       if (!this.fullinfo) this.$emit("showDetailView", this.eventdata);
+    },
+    showDetailFullscreen() {
+      if (!this.fullinfo) this.$emit("showDetailViewFullscreen", this.eventdata);
     },
     showEventInvite() {
       this.$emit("showEventInvite", this.eventdata);
