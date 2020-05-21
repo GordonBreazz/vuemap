@@ -6,7 +6,6 @@ e to limited space, full-screen dialogs may be more appropriate for mobile devic
       <v-btn color="primary" dark v-on="on">Open Dialog</v-btn>
     </template>
     <div class="bg-image"></div>
-
     <div class="bg-text">
       <v-fab-transition>
         <v-btn
@@ -22,10 +21,7 @@ e to limited space, full-screen dialogs may be more appropriate for mobile devic
         >
           <v-icon>mdi-chevron-left</v-icon>
         </v-btn>
-      </v-fab-transition>
-
-     
-     
+      </v-fab-transition>         
     </div>
   </v-dialog>
 </template>
