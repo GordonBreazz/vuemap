@@ -5,7 +5,7 @@ e to limited space, full-screen dialogs may be more appropriate for mobile devic
     <template v-slot:activator="{ on }">
       <v-btn color="primary" dark v-on="on">Open Dialog</v-btn>
     </template>
-    <div class="bg-image"></div>
+    <div :style="styleObject"></div>
     <div class="bg-text">
       <v-fab-transition>
         <v-btn
@@ -21,7 +21,9 @@ e to limited space, full-screen dialogs may be more appropriate for mobile devic
         >
           <v-icon>mdi-chevron-left</v-icon>
         </v-btn>
-      </v-fab-transition>         
+      </v-fab-transition>
+      <h1>1211212</h1>
+      {{eventdata.imagePath}}
     </div>
   </v-dialog>
 </template>
@@ -32,16 +34,14 @@ export default {
   data() {
     return {
       dialog: false,
-      eventdata: {}
+      eventdata: {},
+      styleObject: {
+        color: "red",
+        fontSize: "13px"
+      }
     };
   },
-  computed: {
-    userStyle () {
-      return {
-        '--user-font-fam': 'Roboto'
-      }
-    }
-  }
+  computed: {}
 };
 </script>
 
@@ -61,10 +61,7 @@ export default {
 }
 
 .bg-image {
-  font-family: var(--user-font-fam);
-
   /* The image used */
-  background-image: url("https://all.culture.ru/uploads/55a6614d89d6748d2b1c3640bc6eba28.jpeg");
 
   /* Add the blur effect */
   filter: blur(8px);
