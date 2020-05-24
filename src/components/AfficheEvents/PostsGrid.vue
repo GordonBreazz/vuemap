@@ -65,8 +65,9 @@ export default {
       this.$refs.eventbar.eventdata = itm;
     },
     detailViewFullScreen(itm) {
-      this.$refs.fullscreenview.dialog = true;
-      this.$refs.fullscreenview.eventdata = itm;
+      this.$refs.fullscreenview.showDialog(itm)
+      //this.$refs.fullscreenview.dialog = true;
+      //this.$refs.fullscreenview.eventdata = itm;
     },
     eventInviteView(itm) {
       this.$refs.eventinvite.dialog = true;

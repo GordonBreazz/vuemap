@@ -5,7 +5,7 @@ e to limited space, full-screen dialogs may be more appropriate for mobile devic
     <template v-slot:activator="{ on }">
       <v-btn color="primary" dark v-on="on">Open Dialog</v-btn>
     </template>
-    <div :style="styleObject"></div>
+    <div :style="styleObject" :key="uniqKey">></div>
     <div class="bg-text">
       <v-fab-transition>
         <v-btn
@@ -23,78 +23,14 @@ e to limited space, full-screen dialogs may be more appropriate for mobile devic
         </v-btn>
       </v-fab-transition>
       <h1>1211212</h1>
+      {{uniqKey}}
       {{eventdata.imagePath}}
-      <div>
-    <p class="text-left">Left aligned text on all viewport sizes.</p>
-    <p class="text-center">Center aligned text on all viewport sizes.</p>
-    <p class="text-right">Right aligned text on all viewport sizes.</p>
-
-    <p class="text-sm-left">Left aligned text on viewports sized SM (small) or wider.</p>
-    <p class="text-md-left">Left aligned text on viewports sized MD (medium) or wider.</p>
-    <p class="text-lg-left">Left aligned text on viewports sized LG (large) or wider.</p>
-    <p class="text-xl-left">Left aligned text on viewports sized XL (extra-large) or wider.</p>
-  </div>
-
- <v-row>
-    <v-col cols="12" sm="6" offset-sm="3">
-      <v-card>
-        <v-toolbar color="white" flat>
-          <v-btn icon light>
-            <v-icon color="grey darken-2">mdi-arrow-left</v-icon>
-          </v-btn>
-
-          <v-toolbar-title class="grey--text text--darken-4">Albums</v-toolbar-title>
-
-          <v-spacer></v-spacer>
-
-          <v-btn icon light>
-            <v-icon color="grey darken-2">mdi-magnify</v-icon>
-          </v-btn>
-        </v-toolbar>
-
-        <v-subheader>May</v-subheader>
-        <v-container fluid>
-          <v-row>
-            <v-col
-              v-for="i in 6"
-              :key="i"
-              cols="4"
-            >
-              <img
-                :src="`https://randomuser.me/api/portraits/men/${i + 20}.jpg`"
-                alt="lorem"
-                class="image"
-                height="100%"
-                width="100%"
-              >
-            </v-col>
-          </v-row>
-        </v-container>
-
-        <v-subheader>June</v-subheader>
-        <v-container fluid>
-          <v-row>
-            <v-col
-              v-for="i in 6"
-              :key="i"
-              cols="4"
-            >
-              <img
-                :src="`https://randomuser.me/api/portraits/women/${i + 5}.jpg`"
-                alt="lorem"
-                class="image"
-                height="100%"
-                width="100%"
-              >
-            </v-col>
-          </v-row>
-        </v-container>
-
-        <v-footer class="mt-12"></v-footer>
-      </v-card>
-    </v-col>
-  </v-row>
-
+      <v-btn
+        class="font-weight-medium"
+        color="deep-orange"
+        text
+        @click="forceRerender"
+      >Записатся на мероприятие</v-btn>
     </div>
   </v-dialog>
 </template>
@@ -108,9 +44,33 @@ export default {
       eventdata: {},
       styleObject: {
         color: "red",
-        fontSize: "13px"
-      }
+        fontSize: "13px",
+        backgroundImage: `url(${this.getImgPath})`,
+        filter: "blur(8px)",
+        "-webkit-filter": "blur(8px)",
+        height: "100%",
+        "background-position": "center",
+        "background-repeat": "no-repeat",
+        "background-size": "cover"
+      },
+      uniqKey: 0
     };
+  },
+  methods: {
+    forceRerender() {
+      this.styleObject.backgroundImage = `url(${this.getImgPath()})`; //new image
+      this.uniqKey += 1;
+    },
+    getImgPath() {
+      console.log( this.eventdata.imagePath)
+      if (this.eventdata.imagePath) return this.eventdata.imagePath;
+      return require("@/assets/libfr.png");
+    },
+    showDialog(viewData){
+      this.eventdata = viewData
+      this.forceRerender()
+      this.dialog = true
+    }
   },
   computed: {}
 };
