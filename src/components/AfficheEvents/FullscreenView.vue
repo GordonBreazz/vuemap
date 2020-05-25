@@ -22,7 +22,8 @@ e to limited space, full-screen dialogs may be more appropriate for mobile devic
           <v-icon>mdi-chevron-left</v-icon>
         </v-btn>
       </v-fab-transition>
-      <h1>1211212</h1>
+      <h1 style="margin-top: 200px" class="display-3"> {{eventdata.titlePart2}}</h1>
+      <h3 class="headline mt-5"> {{eventdata.shortDescription}}</h3>
       {{uniqKey}}
       {{eventdata.imagePath}}
       <v-btn
