@@ -3,7 +3,7 @@ e to limited space, full-screen dialogs may be more appropriate for mobile devic
 <template>
   <v-dialog v-model="dialog" fullscreen transition="dialog-bottom-transition">
     <template v-slot:activator="{ on }">
-      <v-btn color="primary" dark v-on="on">Open Dialog</v-btn>
+      
     </template>
     <div :style="styleObject" :key="uniqKey">></div>
     <div class="bg-text">
@@ -22,16 +22,10 @@ e to limited space, full-screen dialogs may be more appropriate for mobile devic
           <v-icon>mdi-chevron-left</v-icon>
         </v-btn>
       </v-fab-transition>
-      <h1 style="margin-top: 200px" class="display-3"> {{eventdata.titlePart2}}</h1>
-      <h3 class="headline mt-5"> {{eventdata.shortDescription}}</h3>
-      {{uniqKey}}
-      {{eventdata.imagePath}}
-      <v-btn
-        class="font-weight-medium"
-        color="deep-orange"
-        text
-        @click="forceRerender"
-      >Записатся на мероприятие</v-btn>
+      <h1 style="margin-top: 200px" class="display-2 font-weight-light "> {{eventdata.titlePart2}}</h1>
+      <h3 class="subtitle-1	 mt-5"> {{eventdata.shortDescription}}</h3>
+    
+
     </div>
   </v-dialog>
 </template>
