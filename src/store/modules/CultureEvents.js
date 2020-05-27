@@ -19,8 +19,9 @@ function planText(value) {
   return value.replace(/<\/?[^>]+>/g, "")
 }
 
-function withoutPoint(value) {
-  value.slice(0, -1)
+function withoutPoint(value) {  
+  if (!!value) return value.slice(0, -1)
+  return value
 }
 
 function short(value) {
@@ -126,7 +127,7 @@ export const CultureEvents = {
         record.key = i
         record.titlePart1 = titlePart1(item.name)
         record.titlePart2 = titlePart2(item.name)
-        record.shortDescription = item.shortDescription
+        record.shortDescription = withoutPoint(item.shortDescription)
         record.description = item.description
         record.descriptionText = planText(item.description)
         record.descriptionShort = short( planText(item.description) )

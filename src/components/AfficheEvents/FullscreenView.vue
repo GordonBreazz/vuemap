@@ -2,9 +2,7 @@ e to limited space, full-screen dialogs may be more appropriate for mobile devic
 
 <template>
   <v-dialog v-model="dialog" fullscreen transition="dialog-bottom-transition">
-    <template v-slot:activator="{ on }">
-      
-    </template>
+    <template v-slot:activator="{ on }"></template>
     <div :style="styleObject" :key="uniqKey">></div>
     <div class="bg-text">
       <v-fab-transition>
@@ -22,10 +20,10 @@ e to limited space, full-screen dialogs may be more appropriate for mobile devic
           <v-icon>mdi-chevron-left</v-icon>
         </v-btn>
       </v-fab-transition>
-      <h1 style="margin-top: 200px" class="display-2 font-weight-light "> {{eventdata.titlePart2}}</h1>
-      <h3 class="subtitle-1	 mt-5"> {{eventdata.shortDescription}}</h3>
-    
-
+      <div style="margin-top: 150px; ">        
+        <h1 class="display-3 font-weight-bold">{{eventdata.titlePart2}}</h1>
+        <h3 class="subtitle-1 mt-8">{{eventdata.shortDescription}}</h3>
+      </div>
     </div>
   </v-dialog>
 </template>
@@ -57,14 +55,14 @@ export default {
       this.uniqKey += 1;
     },
     getImgPath() {
-      console.log( this.eventdata.imagePath)
+      console.log(this.eventdata.imagePath);
       if (this.eventdata.imagePath) return this.eventdata.imagePath;
       return require("@/assets/libfr.png");
     },
-    showDialog(viewData){
-      this.eventdata = viewData
-      this.forceRerender()
-      this.dialog = true
+    showDialog(viewData) {
+      this.eventdata = viewData;
+      this.forceRerender();
+      this.dialog = true;
     }
   },
   computed: {}
