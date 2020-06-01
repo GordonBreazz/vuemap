@@ -23,6 +23,7 @@ e to limited space, full-screen dialogs may be more appropriate for mobile devic
       <div style="margin-top: 150px; ">        
         <h1 class="display-3 font-weight-bold">{{eventdata.titlePart2}}</h1>
         <h3 class="subtitle-1 mt-8">{{eventdata.shortDescription}}</h3>
+        <h3 class="subtitle-1 mt-8">{{eventdata.eventTime}} {{eventdata.eventDate}} </h3>
       </div>
     </div>
   </v-dialog>
