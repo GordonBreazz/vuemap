@@ -82,7 +82,7 @@ function view_data($folder) {
   $ppath = '/userscripts/conference/stud_science_55'; 	
   $inif = parse_ini_file("$ppath/$fo/config.ini");
   $count_folders = count($inif)-1;
-  echo '<h2>'.$inif["1"].'</h2>';
+  echo '<h2>'.$inif["1"].'</h2> ';
   $full_path = "$apath/$folder/";
   foreach(glob("$full_path*", GLOB_ONLYDIR) as $dir) {
     $title = str_replace($full_path, '', $dir);
