@@ -20,10 +20,19 @@ e to limited space, full-screen dialogs may be more appropriate for mobile devic
           <v-icon>mdi-chevron-left</v-icon>
         </v-btn>
       </v-fab-transition>
-      <div style="margin-top: 150px; ">        
+      <div style="margin-top: 150px; ">
         <h1 class="display-3 font-weight-bold">{{eventdata.titlePart2}}</h1>
+
         <h3 class="subtitle-1 mt-8">{{eventdata.shortDescription}}</h3>
-        <h3 class="subtitle-1 mt-8">{{eventdata.eventTime}} {{eventdata.eventDate}} </h3>
+        <v-chip class="ma-2 text-left mt-3" color="deep-purple" label text-color="white">
+          <!--color="deep-purple" color="#0b4065" #044d7f-->
+          <v-icon left>mdi-bookmark-multiple-outline</v-icon>
+          {{eventdata.titlePart1}}
+        </v-chip>
+        <h3 class="subtitle-1 mt-8">{{eventdata.eventTime}} {{eventdata.eventDate}}</h3>
+        <div style="width: 50%"> 
+          <p class="text-justify" >{{eventdata.descriptionText}}</p>
+        </div>  
       </div>
     </div>
   </v-dialog>
