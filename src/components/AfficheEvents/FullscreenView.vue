@@ -30,8 +30,8 @@ e to limited space, full-screen dialogs may be more appropriate for mobile devic
           {{eventdata.titlePart1}}
         </v-chip>
         <h3 class="subtitle-1 mt-8">{{eventdata.eventTime}} {{eventdata.eventDate}}</h3>
-        <div style="width: 50%"> 
-          <p class="text-justify" >{{eventdata.descriptionText}}</p>
+        <div style="width: 70%;" class="d-inline-flex justify-center"> 
+          <div ><p class="text-left body-1 font-weight-light">{{eventdata.descriptionText}}</p></div>
         </div>  
       </div>
     </div>
