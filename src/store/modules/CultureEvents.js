@@ -33,9 +33,14 @@ function short(value) {
   return value
 }
 
-function eventDate(start, end) {
+function eventDate(start, end) {    
   let ds = new Date(start).toLocaleString("ru", {
     year: "numeric",
+    month: "long",
+    day: "numeric",
+  })
+
+  let shortDs = new Date(start).toLocaleString("ru", {
     month: "long",
     day: "numeric",
   })
@@ -48,7 +53,7 @@ function eventDate(start, end) {
 
   return ds.toString() == de.toString()
     ? ds.toString()
-    : ds.toString() + " - " + de.toString()
+    : shortDs.toString() + " - " + de.toString()
 }
 
 function eventTime(start, end) {
@@ -61,8 +66,9 @@ function eventTime(start, end) {
     hour: "numeric",
     minute: "numeric",
   })
-
-  return ds.toString() + " - " + de.toString()
+  let result = ds.toString() + " - " + de.toString()
+  if (result == '00:00 - 23:59') result = ''
+  return result
 }
 
 function placeIndex(st, placesArr) {

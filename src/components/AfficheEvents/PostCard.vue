@@ -31,7 +31,7 @@
     </div>
     <v-divider class="mx-4"></v-divider>
     <div class="d-flex justify-space-between" style="color: #5f6c7a">
-      <v-card-title class="mb-0 subtitle-1">
+      <v-card-title class="mb-0 subtitle-1"  v-if="eventdata.eventTime">
         <v-icon class="pr-1">mdi-clock-outline</v-icon>
         {{eventdata.eventTime}}
       </v-card-title>

@@ -23,16 +23,32 @@ e to limited space, full-screen dialogs may be more appropriate for mobile devic
       <div style="margin-top: 150px; ">
         <h1 class="display-3 font-weight-bold">{{eventdata.titlePart2}}</h1>
 
-        <h3 class="subtitle-1 mt-8">{{eventdata.shortDescription}}</h3>
-        <v-chip class="ma-2 text-left mt-3" color="deep-purple" label text-color="white">
-          <!--color="deep-purple" color="#0b4065" #044d7f-->
-          <v-icon left>mdi-bookmark-multiple-outline</v-icon>
-          {{eventdata.titlePart1}}
-        </v-chip>
-        <h3 class="subtitle-1 mt-8">{{eventdata.eventTime}} {{eventdata.eventDate}}</h3>
-        <div style="width: 70%;" class="d-inline-flex justify-center"> 
-          <div ><p class="text-left body-1 font-weight-light">{{eventdata.descriptionText}}</p></div>
-        </div>  
+        <h1 class="title mt-8 mb-8">{{eventdata.shortDescription}}</h1>
+
+        <div style="width: 70%; max-width: 1200px;" class="mt-7 d-inline-flex justify-center">
+          <div >
+            <div class="d-flex justify-space-between mb-8" >
+                    <v-chip class="text-left" color="deep-purple" label text-color="white">
+        <!--color="deep-purple" color="#0b4065" #044d7f-->
+        <v-icon left>mdi-bookmark-multiple-outline</v-icon>
+        {{eventdata.titlePart1}}
+      </v-chip>
+              <h3 class="text-left" style="font-size: 18px;">
+                <v-icon class="pr-1" color="white">mdi-calendar-month</v-icon>
+                {{eventdata.eventTime}} {{eventdata.eventDate}}
+              </h3>
+
+
+            </div>
+
+            <p
+              class="text-justify body-1"
+              style="line-height: 1.8; letter-spacing: 20px; "
+            >{{eventdata.descriptionText}}</p>
+          </div>
+          
+        </div>
+        
       </div>
     </div>
   </v-dialog>
