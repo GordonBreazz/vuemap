@@ -20,23 +20,24 @@ e to limited space, full-screen dialogs may be more appropriate for mobile devic
           <v-icon>mdi-chevron-left</v-icon>
         </v-btn>
       </v-fab-transition>
-      <div style="margin-top: 150px; ">
+      <div style="margin-top: 120px; ">
         <h1 class="display-3 font-weight-bold">{{eventdata.titlePart2}}</h1>
 
         <h1 class="title mt-8 mb-8">{{eventdata.shortDescription}}</h1>
 
         <div style="width: 70%; max-width: 1200px;" class="mt-7 d-inline-flex justify-center">
-          <div >
-            <div class="d-flex justify-space-between mb-8" >
-                    <v-chip class="text-left" color="deep-purple" label text-color="white">
-        <!--color="deep-purple" color="#0b4065" #044d7f-->
-        <v-icon left>mdi-bookmark-multiple-outline</v-icon>
-        {{eventdata.titlePart1}}
-      </v-chip>
+          <div>
+            <div class="d-flex justify-space-between mb-8">
+              <v-chip class="text-left" color="deep-purple" label text-color="white">
+                <!--color="deep-purple" color="#0b4065" #044d7f-->
+                <v-icon left>mdi-bookmark-multiple-outline</v-icon>
+                {{eventdata.titlePart1}}
+              </v-chip>
               <h3 class="text-left" style="font-size: 18px;">
-                <v-icon class="pr-1" color="white">mdi-calendar-month</v-icon>
-                {{eventdata.eventTime}} {{eventdata.eventDate}}
-              </h3>
+               <v-icon class="pr-1" color="white" v-if="eventdata.eventTime">mdi-clock-outline</v-icon>  {{eventdata.eventTime}}
+                <v-icon class="pr-1 ml-5" color="white">mdi-calendar-month</v-icon>
+                {{eventdata.eventDate}} 
+              </h3>              
 
 
             </div>
@@ -46,9 +47,7 @@ e to limited space, full-screen dialogs may be more appropriate for mobile devic
               style="line-height: 1.8; letter-spacing: 20px; "
             >{{eventdata.descriptionText}}</p>
           </div>
-          
         </div>
-        
       </div>
     </div>
   </v-dialog>
