@@ -25,7 +25,7 @@ e to limited space, full-screen dialogs may be more appropriate for mobile devic
 
         <h1 class="title mt-8 mb-8">{{eventdata.shortDescription}}</h1>
 
-        <div style="width: 70%; max-width: 1200px;" class="mt-7 d-inline-flex justify-center">
+        <div style="width: 70%; max-width: 1200px; " class="mt-7 d-inline-flex justify-center">
           <div>
             <div class="d-flex justify-space-between mb-8">
               <v-chip class="text-left" color="deep-purple" label text-color="white">
@@ -34,18 +34,58 @@ e to limited space, full-screen dialogs may be more appropriate for mobile devic
                 {{eventdata.titlePart1}}
               </v-chip>
               <h3 class="text-left" style="font-size: 18px;">
-               <v-icon class="pr-1" color="white" v-if="eventdata.eventTime">mdi-clock-outline</v-icon>  {{eventdata.eventTime}}
+                <v-icon class="pr-1" color="white" v-if="eventdata.eventTime">mdi-clock-outline</v-icon>
+                {{eventdata.eventTime}}
                 <v-icon class="pr-1 ml-5" color="white">mdi-calendar-month</v-icon>
-                {{eventdata.eventDate}} 
-              </h3>              
-
-
+                {{eventdata.eventDate}}
+              </h3>
+            </div>
+            <div
+              class="mb-7"
+              style="line-height: 1.8; background-color: rgba(0,0,0, 0.2); border-radius: 10px; padding: 15px 25px 10px 25px; "
+            >
+              <p class="text-justify body-1">{{eventdata.descriptionText}}</p>
+              <v-chip-group column active-class="deep-purple accent-4 white--text ">
+                <v-chip color="light-gray" v-for="(tag, i) in eventdata.tags" :key="i">
+                  <v-avatar left>
+                    <v-icon>mdi-tag-text-outline</v-icon>
+                  </v-avatar>
+                  {{tag}}
+                </v-chip>
+              </v-chip-group>
             </div>
 
-            <p
-              class="text-justify body-1"
-              style="line-height: 1.8; letter-spacing: 20px; "
-            >{{eventdata.descriptionText}}</p>
+            <div class="d-flex justify-space-between mb-8">
+              <v-list-item @click>
+                <v-avatar color="orange lighten-1" size="50" class="mr-3">
+                  <span class="white--text headline">{{eventdata.index}}</span>
+                </v-avatar>
+                <v-list-item-content class="white--text">
+                  <v-list-item-title class="subtitle-1">{{eventdata.name}}</v-list-item-title>
+                  <v-list-item-subtitle class="white--text">{{eventdata.address}}</v-list-item-subtitle>
+                </v-list-item-content>
+              </v-list-item>
+              <div style="width: 350px">
+                <v-btn
+                  v-for="(item, index) in socnet"
+                  :key="index"
+                  class="mx-1"
+                  dark
+                  icon
+                  x-large
+                  color="white "
+                  @click="goSoc(item.link)"
+                  v-bind:title="item.hint"
+                >
+                  <v-icon x-large>{{ item.icon }}</v-icon>
+                </v-btn>
+                <v-list-item-subtitle class="white--text font-weight-light">поделиться в соц. сетях</v-list-item-subtitle>
+              </div>
+            </div>
+
+            <div class="mt-10">
+              <v-btn x-large color="red" class="font-weight-bold" dark>Записатся на мероприятие</v-btn>
+            </div>
           </div>
         </div>
       </div>
@@ -55,6 +95,8 @@ e to limited space, full-screen dialogs may be more appropriate for mobile devic
 
 
 <script>
+import { mapState } from "vuex";
+
 export default {
   data() {
     return {
@@ -88,9 +130,14 @@ export default {
       this.eventdata = viewData;
       this.forceRerender();
       this.dialog = true;
+    },
+    goSoc(link) {
+      window.open(link);
     }
   },
-  computed: {}
+  computed: {
+    ...mapState(["socnet"])
+  }
 };
 </script>
 
