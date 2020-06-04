@@ -21,9 +21,15 @@ e to limited space, full-screen dialogs may be more appropriate for mobile devic
         </v-btn>
       </v-fab-transition>
       <div :style="{marginTop: cartMargin}" id="content">
-        <h1 class="display-3 font-weight-bold">{{eventdata.titlePart2}}</h1>
+        <div v-if="$vuetify.breakpoint.mdAndUp">
+          <h1 class="display-3 font-weight-bold">{{eventdata.titlePart2}}</h1>
+          <h1 class="title mt-8 mb-8">{{eventdata.shortDescription}}</h1>
+        </div>
 
-        <h1 class="title mt-8 mb-8">{{eventdata.shortDescription}}</h1>
+        <div v-if="$vuetify.breakpoint.smAndDown">
+          <h1 class="display-2 font-weight-bold">{{eventdata.titlePart2}}</h1>
+          <h1 class="subtitle-1 mt-4 mb-4">{{eventdata.shortDescription}}</h1>
+        </div>
 
         <div
           :style="{width: cartWidth, maxWidth: '1200px'}"
