@@ -53,7 +53,7 @@ e to limited space, full-screen dialogs may be more appropriate for mobile devic
               class="mb-7"
               style="line-height: 1.8; background-color: rgba(0,0,0, 0.2); border-radius: 10px; padding: 15px 25px 10px 25px; "
             >
-              <p class="text-justify body-1">{{eventdata.descriptionText}}</p>
+              <p class="text-justify body-1" v-for="(item, i) in splitPrg(eventdata.descriptionText)">{{item}}</p>
               <v-chip-group column active-class="deep-purple accent-4 white--text ">
                 <v-chip color="light-gray" v-for="(tag, i) in eventdata.tags" :key="i">
                   <v-avatar left>
@@ -142,7 +142,15 @@ export default {
     },
     goSoc(link) {
       window.open(link);
-    }
+    },
+    splitPrg(st) {      
+      let arr = String(st).split(/[.|!|?]\s/)    
+      let cnt = Math.floor(arr.length / 2);
+      if (arr.length == 3) cnt = 2
+      let f = arr.slice(0, cnt).reduce( (sum, item) => sum + item.length, 0)
+//      console.log(f + cnt)
+      return [st.slice(0, f + cnt +1), st.slice(f + cnt + 1)]
+    },    
   },
   computed: {
     ...mapState(["socnet"]),
