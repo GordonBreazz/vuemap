@@ -20,12 +20,15 @@ e to limited space, full-screen dialogs may be more appropriate for mobile devic
           <v-icon>mdi-chevron-left</v-icon>
         </v-btn>
       </v-fab-transition>
-      <div style="margin-top: 120px; ">
+      <div :style="{marginTop: cartMargin}" id="content">
         <h1 class="display-3 font-weight-bold">{{eventdata.titlePart2}}</h1>
 
         <h1 class="title mt-8 mb-8">{{eventdata.shortDescription}}</h1>
 
-        <div style="width: 70%; max-width: 1200px; " class="mt-7 d-inline-flex justify-center">
+        <div
+          :style="{width: cartWidth, maxWidth: '1200px'}"
+          class="mt-7 d-inline-flex justify-center"
+        >
           <div>
             <div class="d-flex justify-space-between mb-8">
               <v-chip class="text-left" color="deep-purple" label text-color="white">
@@ -65,7 +68,7 @@ e to limited space, full-screen dialogs may be more appropriate for mobile devic
                   <v-list-item-subtitle class="white--text">{{eventdata.address}}</v-list-item-subtitle>
                 </v-list-item-content>
               </v-list-item>
-              <div style="width: 350px">
+              <div style="min-width: 240px">
                 <v-btn
                   v-for="(item, index) in socnet"
                   :key="index"
@@ -136,7 +139,35 @@ export default {
     }
   },
   computed: {
-    ...mapState(["socnet"])
+    ...mapState(["socnet"]),
+    cartWidth() {
+      switch (this.$vuetify.breakpoint.name) {
+        case "xs":
+          return "100%";
+        case "sm":
+          return "100%";
+        case "md":
+          return "90%";
+        case "lg":
+          return "70%";
+        case "xl":
+          return "70%";
+      }
+    },
+    cartMargin() {
+      switch (this.$vuetify.breakpoint.name) {
+        case "xs":
+          return "40px";
+        case "sm":
+          return "50px;";
+        case "md":
+          return "100px;";
+        case "lg":
+          return "120px";
+        case "xl":
+          return "120px";
+      }
+    }
   }
 };
 </script>

@@ -1,6 +1,6 @@
 <template>
   <v-card :loading="loading" class="mx-auto my-12 mt-0" :max-width="cartWidth">
-    <v-img height="250" :src="eventdata.imagePath" @click="showDetail" class="photoglr"></v-img>
+    <v-img height="250" :src="eventdata.imagePath" @click="showDetailFullscreen" class="photoglr"></v-img>
 
     <v-card-actions class="mb-0 text-left" style="width: 100%; margin-left: 0px">
       <v-chip class="ma-2 text-left mt-3" color="deep-purple" label text-color="white">
