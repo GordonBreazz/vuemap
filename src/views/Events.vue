@@ -7,7 +7,7 @@
       <h2
         v-bind:class="{'subtitle-1 font-weight-light': $vuetify.breakpoint.xsOnly, 'display-1 font-weight-light': $vuetify.breakpoint.mdAndUp}"
         class="title-with-shadow"
-      >Культурные cобытия в библиотеках. Лекции, выставки, кинопоказы, экскурсии</h2>
+      >Культурные cобытия в библиотеках. Лекции, выставки, кинопоказы, мастер-классы</h2>
     </v-parallax>
     <v-container class="mt-9">
       <event-request-panel />

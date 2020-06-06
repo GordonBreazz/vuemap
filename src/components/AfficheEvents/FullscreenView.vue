@@ -5,6 +5,7 @@
     <div class="bg-text">
       <v-fab-transition>
         <v-btn
+          :key="animate"
           absolute
           dark
           fab
@@ -13,9 +14,9 @@
           style="margin-top: 45px; margin-left: 5px;"
           color="grey lighten-5"
           class="black--text"
-          @click="dialog = false"
+          @click="hideDialog"
         >
-          <v-icon>mdi-chevron-left</v-icon>
+          <v-icon large>mdi-chevron-left</v-icon>
         </v-btn>
       </v-fab-transition>
       <div :style="{marginTop: cartMargin}" id="content">
@@ -66,7 +67,7 @@
             </div>
 
             <div class="d-flex justify-space-between mb-8">
-              <v-list-item @click>
+              <v-list-item @click="animate++">
                 <v-avatar color="orange lighten-1" size="50" class="mr-3">
                   <span class="white--text headline">{{eventdata.index}}</span>
                 </v-avatar>
@@ -109,6 +110,8 @@ export default {
   data() {
     return {
       dialog: false,
+      buttonShow: false,
+      animate: 0,
       eventdata: {},
       styleObject: {
         color: "red",
@@ -138,6 +141,12 @@ export default {
       this.eventdata = viewData;
       this.forceRerender();
       this.dialog = true;
+      setTimeout(() => {
+        this.animate++;
+      }, 10);
+    },
+    hideDialog() {
+      this.dialog = false;      
     },
     splitPrg(st) {
       if (!st) return st;
@@ -181,6 +190,10 @@ export default {
           return "120px";
       }
     }
+  },
+  mounted() {
+    this.animate = this.animate + 1;
+    console.log("this.animate ", this.animate);
   }
 };
 </script>
