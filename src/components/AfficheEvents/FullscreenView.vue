@@ -20,12 +20,12 @@
       </v-fab-transition>
       <div :style="{marginTop: cartMargin}" id="content">
         <div v-if="$vuetify.breakpoint.mdAndUp">
-          <h1 class="display-3 font-weight-bold">{{eventdata.titlePart2}}</h1>
+          <h1 class="display-2 font-weight-bold">{{eventdata.titlePart2}}</h1>
           <h1 class="title mt-8 mb-8">{{eventdata.shortDescription}}</h1>
         </div>
 
         <div v-if="$vuetify.breakpoint.smAndDown">
-          <h1 class="display-2 font-weight-bold">{{eventdata.titlePart2}}</h1>
+          <h1 class="display-1 font-weight-bold">{{eventdata.titlePart2}}</h1>
           <h1 class="subtitle-1 mt-4 mb-4">{{eventdata.shortDescription}}</h1>
         </div>
 
@@ -51,7 +51,10 @@
               class="mb-7"
               style="line-height: 1.8; background-color: rgba(0,0,0, 0.2); border-radius: 10px; padding: 15px 25px 10px 25px; "
             >
-              <p class="text-justify body-1" v-for="(item, i) in splitPrg(eventdata.descriptionText)">{{item}}</p>
+              <p
+                class="text-justify body-1"
+                v-for="(item, i) in splitPrg(eventdata.descriptionText)"
+              >{{item}}</p>
               <v-chip-group column active-class="deep-purple accent-4 white--text ">
                 <v-chip color="light-gray" v-for="(tag, i) in eventdata.tags" :key="i">
                   <v-avatar left>
@@ -72,26 +75,21 @@
                   <v-list-item-subtitle class="white--text">{{eventdata.address}}</v-list-item-subtitle>
                 </v-list-item-content>
               </v-list-item>
+
               <div style="min-width: 240px">
-                <v-btn
-                  v-for="(item, index) in socnet"
-                  :key="index"
-                  class="mx-1"
-                  dark
-                  icon
-                  x-large
-                  color="white "
-                  @click="goSoc(item.link)"
-                  v-bind:title="item.hint"
-                >
-                  <v-icon x-large>{{ item.icon }}</v-icon>
-                </v-btn>
+                <share-event />
                 <v-list-item-subtitle class="white--text font-weight-light">поделиться в соц. сетях</v-list-item-subtitle>
               </div>
             </div>
 
             <div class="mt-5" v-if="eventdata.eventTime">
-              <v-btn x-large color="red" class="font-weight-bold" dark @click="showEventInviteTimer">Записатся на мероприятие</v-btn>
+              <v-btn
+                x-large
+                color="red"
+                class="font-weight-bold"
+                dark
+                @click="showEventInviteTimer"
+              >Записатся на мероприятие</v-btn>
             </div>
           </div>
         </div>
@@ -102,9 +100,12 @@
 
 
 <script>
-import { mapState } from "vuex";
+import ShareEvent from "./ShareEvent";
 
 export default {
+  components: {
+    ShareEvent
+  },
   data() {
     return {
       dialog: false,
@@ -138,24 +139,20 @@ export default {
       this.forceRerender();
       this.dialog = true;
     },
-    goSoc(link) {
-      window.open(link);
-    },
-    splitPrg(st) {   
-      if (!st) return st
-      let arr = String(st).split(/[.|!|?]\s/)    
+    splitPrg(st) {
+      if (!st) return st;
+      let arr = String(st).split(/[.|!|?]\s/);
       let cnt = Math.floor(arr.length / 2);
-      if (arr.length == 3) cnt = 2
-      let f = arr.slice(0, cnt).reduce( (sum, item) => sum + item.length, 0)
-//      console.log(f + cnt)
-      return [st.slice(0, f + cnt +1), st.slice(f + cnt + 1)]
+      if (arr.length == 3) cnt = 2;
+      let f = arr.slice(0, cnt).reduce((sum, item) => sum + item.length, 0);
+      //      console.log(f + cnt)
+      return [st.slice(0, f + cnt + 1), st.slice(f + cnt + 1)];
     },
-    showEventInviteTimer() {   
-      this.$emit("showEventInvite", this.eventdata);          
-    }     
+    showEventInviteTimer() {
+      this.$emit("showEventInvite", this.eventdata);
+    }
   },
   computed: {
-    ...mapState(["socnet"]),
     cartWidth() {
       switch (this.$vuetify.breakpoint.name) {
         case "xs":
