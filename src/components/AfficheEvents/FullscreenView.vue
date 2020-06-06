@@ -1,5 +1,3 @@
-e to limited space, full-screen dialogs may be more appropriate for mobile devices than dialogs used on devices with larger screens.
-
 <template>
   <v-dialog v-model="dialog" fullscreen transition="dialog-bottom-transition">
     <template v-slot:activator="{ on }"></template>
@@ -92,8 +90,8 @@ e to limited space, full-screen dialogs may be more appropriate for mobile devic
               </div>
             </div>
 
-            <div class="mt-10">
-              <v-btn x-large color="red" class="font-weight-bold" dark>Записатся на мероприятие</v-btn>
+            <div class="mt-5" v-if="eventdata.eventTime">
+              <v-btn x-large color="red" class="font-weight-bold" dark @click="showEventInviteTimer">Записатся на мероприятие</v-btn>
             </div>
           </div>
         </div>
@@ -131,7 +129,7 @@ export default {
       this.uniqKey += 1;
     },
     getImgPath() {
-      console.log(this.eventdata.imagePath);
+      //console.log(this.eventdata.imagePath);
       if (this.eventdata.imagePath) return this.eventdata.imagePath;
       return require("@/assets/libfr.png");
     },
@@ -143,14 +141,18 @@ export default {
     goSoc(link) {
       window.open(link);
     },
-    splitPrg(st) {      
+    splitPrg(st) {   
+      if (!st) return st
       let arr = String(st).split(/[.|!|?]\s/)    
       let cnt = Math.floor(arr.length / 2);
       if (arr.length == 3) cnt = 2
       let f = arr.slice(0, cnt).reduce( (sum, item) => sum + item.length, 0)
 //      console.log(f + cnt)
       return [st.slice(0, f + cnt +1), st.slice(f + cnt + 1)]
-    },    
+    },
+    showEventInviteTimer() {   
+      this.$emit("showEventInvite", this.eventdata);          
+    }     
   },
   computed: {
     ...mapState(["socnet"]),
@@ -175,9 +177,9 @@ export default {
         case "sm":
           return "50px;";
         case "md":
-          return "100px;";
+          return "70px;";
         case "lg":
-          return "120px";
+          return "90px";
         case "xl":
           return "120px";
       }

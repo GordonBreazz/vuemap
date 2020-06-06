@@ -33,7 +33,7 @@
 
     <event-invite ref="eventinvite" />
     <event-detail ref="eventbar" />
-    <fullscreen-view ref="fullscreenview" />
+    <fullscreen-view ref="fullscreenview" @showEventInvite="eventInviteView"/>
   </div>
 </template>
 

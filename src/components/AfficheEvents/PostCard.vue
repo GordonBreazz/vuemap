@@ -76,6 +76,7 @@
         color="deep-orange"
         text
         @click="showEventInvite"
+        v-if="eventdata.eventTime"
       >Записатся на мероприятие</v-btn>
     </v-card-actions>
   </v-card>
