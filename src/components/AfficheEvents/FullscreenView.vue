@@ -52,7 +52,7 @@
               class="mb-7"
               style="line-height: 1.8; background-color: rgba(0,0,0, 0.2); border-radius: 10px; padding: 15px 25px 10px 25px; "
             >
-              <p
+              <p :key="i"
                 class="text-justify body-1"
                 v-for="(item, i) in splitPrg(eventdata.descriptionText)"
               >{{item}}</p>
@@ -67,7 +67,7 @@
             </div>
 
             <div class="d-flex justify-space-between mb-8">
-              <v-list-item @click="animate++">
+              <v-list-item @click="animate++" >
                 <v-avatar color="orange lighten-1" size="50" class="mr-3">
                   <span class="white--text headline">{{eventdata.index}}</span>
                 </v-avatar>
@@ -127,7 +127,7 @@ export default {
       uniqKey: 0
     };
   },
-  methods: {
+  methods: {    
     forceRerender() {
       this.styleObject.backgroundImage = `url(${this.getImgPath()})`; //new image
       this.uniqKey += 1;
