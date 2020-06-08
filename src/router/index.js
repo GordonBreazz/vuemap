@@ -8,7 +8,7 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
   },
   {
     path: '/about',
@@ -60,8 +60,9 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  //console.log(from, to)
-  next()
+  console.log(from, to)
+  if (from.name == 'Filials' && to.name == "Home") next(false)
+    else next()
 });
 
 export default router
