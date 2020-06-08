@@ -41,7 +41,7 @@
         {{eventdata.eventDate}}
       </v-card-title>
     </div>
-    <v-list-item @click to="/filial/10/">
+    <v-list-item @click="clck(eventdata.index)">
       <v-avatar color="orange lighten-1" size="50" class="mr-3">
         <span class="white--text headline">{{eventdata.index}}</span>
       </v-avatar>
@@ -99,6 +99,9 @@ export default {
     },
     showEventInvite() {
       this.$emit("showEventInvite", this.eventdata);
+    },
+    clck(index){
+      this.$router.push('/filial/' + index + '/')
     }
   },
   computed: {

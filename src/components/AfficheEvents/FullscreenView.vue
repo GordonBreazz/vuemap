@@ -67,7 +67,7 @@
             </div>
 
             <div class="d-flex justify-space-between mb-8">
-              <v-list-item @click="animate++" >
+              <v-list-item @click="clck(eventdata.index)" >
                 <v-avatar color="orange lighten-1" size="50" class="mr-3">
                   <span class="white--text headline">{{eventdata.index}}</span>
                 </v-avatar>
@@ -159,6 +159,9 @@ export default {
     },
     showEventInviteTimer() {
       this.$emit("showEventInvite", this.eventdata);
+    },
+    clck(index){
+      this.$router.push('/filial/' + index + '/')
     }
   },
   computed: {
