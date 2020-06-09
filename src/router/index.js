@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Filials from '../views/Filials.vue'
 
 Vue.use(VueRouter)
 
@@ -33,7 +34,7 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: Home,
+    component: Filials,
     props: (route) => ({ fId: Number(route.params.id), frm: route.query.q })
   },
 
@@ -61,8 +62,9 @@ const router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
   console.log(from, to)
-  if (from.name == 'Filials' && to.name == "Home") next(false)
-    else next()
+  //if (from.name == 'Filials' && to.name == "Home") next(false)
+   // else 
+   next()
 });
 
 export default router
