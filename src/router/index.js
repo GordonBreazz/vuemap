@@ -61,7 +61,7 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  console.log(from, to)
+  //console.log(from, to)
   //if (from.name == 'Filials' && to.name == "Home") next(false)
    // else 
    next()
