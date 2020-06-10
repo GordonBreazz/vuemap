@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-parallax src="http://cbs-uu.ru/data/images/3.jpg" height="350">
-      <h2 class="display-2 font-weight-light mb-5 title-with-shadow">Афиша МАУ ЦБС г. Улан-Удэ</h2>
+      <h2 :class="{'display-1 font-weight-light mb-5 title-with-shadow': $vuetify.breakpoint.xsOnly, 'display-2 font-weight-light mb-5 title-with-shadow': $vuetify.breakpoint.mdAndUp}">Афиша МАУ ЦБС г. Улан-Удэ</h2>
 
       <!--<h2 class="display-1 font-weight-light mb-5">-->
       <h2

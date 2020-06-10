@@ -9,9 +9,10 @@
       chips
       :hint="captions.hintText"
       persistent-hint
+      
     >
       <template v-slot:label v-if="selectedArr.length==0">
-        <div style="color: black; ">{{captions.allCategoryText}}</div>
+        <div style="color: black;">{{captions.allCategoryText}}</div>
       </template>
 
       <template v-slot:selection="{item, index}">

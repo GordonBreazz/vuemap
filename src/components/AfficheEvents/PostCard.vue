@@ -2,7 +2,7 @@
   <v-card :loading="loading" class="mx-auto my-12 mt-0" :max-width="cartWidth">
     <v-img height="250" :src="eventdata.imagePath" @click="showDetailFullscreen" class="photoglr"></v-img>
 
-    <v-card-actions class="mb-0 text-left" style="width: 100%; margin-left: 0px">
+    <v-card-actions class="mb-0 text-left" style="width: 100%; margin-left: 0px" v-if="$vuetify.breakpoint.mdAndUp">
       <v-chip class="ma-2 text-left mt-3" color="deep-purple" label text-color="white">
         <!--color="deep-purple" color="#0b4065" #044d7f-->
         <v-icon left>mdi-bookmark-multiple-outline</v-icon>
@@ -13,6 +13,19 @@
         <v-avatar left class="grey  lighten-1 ">{{eventdata.key + 1}}</v-avatar>/{{colCard}}
       </v-chip>
     </v-card-actions>
+    <div class="mb-0 text-left" style="width: 100%; margin-left: 0px" v-else>
+      <v-chip class=" text-left mt-3" color="deep-purple" label text-color="white"  >
+        <!--color="deep-purple" color="#0b4065" #044d7f-->
+        <v-icon left>mdi-bookmark-multiple-outline</v-icon>
+        {{eventdata.titlePart1}}
+      </v-chip>
+      <v-card-actions> 
+      <v-spacer></v-spacer>
+      <v-chip class="ma-2" color="gray" text-color="white">
+        <v-avatar left class="grey  lighten-1 ">{{eventdata.key + 1}}</v-avatar>/{{colCard}}
+      </v-chip>
+      </v-card-actions> 
+    </div>    
     <div style="min-height: 235px">
       <v-card-text class="mt-2 mb-0 pb-0">
         <h3 class="headline cart-title" style="color: #354288">{{eventdata.titlePart2 }}</h3>
