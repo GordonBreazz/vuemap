@@ -35,7 +35,12 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: Filials,
-    props: (route) => ({ fId: Number(route.params.id), frm: route.query.q })
+    props: (route) => (
+      { 
+        fId: Number(route.params.id), 
+        frm: route.query.q 
+      }
+    )
   },
 
   {
