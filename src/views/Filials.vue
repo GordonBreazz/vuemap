@@ -35,6 +35,8 @@ import RequastPanel from "../components/RequastPanel";
 import DetailPanel from "../components/DetailPanel";
 // @ is an alias to /src
 
+// параметры роута передаются в компонент карты
+
 export default {
   name: "Home",
   components: {
