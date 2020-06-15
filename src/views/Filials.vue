@@ -26,6 +26,8 @@
 </template>
 
 <script>
+// изменить логику рендера карты и детально описания
+
 import { mapState } from "vuex";
 import { mapGetters } from "vuex";
 
