@@ -3,8 +3,9 @@
     <v-card class="flex" flat tile color="blue darken-4 mt-3">
 
       <v-card-text class="py-2 white--text">
-        {{ new Date().getFullYear() }}
-        <strong >© МАУ «Централизованная библиотечная система г. Улан-Удэ»</strong>
+        Егор Коннов      
+        <strong>© МАУ «Централизованная библиотечная система г. Улан-Удэ»</strong>
+          {{ new Date().getFullYear() }} г.
         <!--<strong> Разработка Коннов Е. С.</strong>-->
       </v-card-text>
      

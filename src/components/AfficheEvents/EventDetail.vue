@@ -15,8 +15,6 @@
           style="color: #5f6c7a"
         >{{eventdata.shortDescription | withoutPoint}}</div>
 
- 
-
         <v-container v-if="true">
           <v-row no-gutters>
             <v-col cols="12" class="pl-3 pr-3">
