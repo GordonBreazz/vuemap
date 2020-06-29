@@ -21,6 +21,12 @@ export const MainMenu = {
         link: "/about",
         icon: "mdi-bookmark-minus-outline",
         linkName: "to"
+      },
+      {
+        title: "Вход",
+        link: "/singin",
+        icon: "mdi-badge-account-outline",
+        linkName: "to"
       }
     ]
   },
