@@ -1,6 +1,6 @@
 <template>
   <div class="about-page">
-    <v-parallax src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg" height="350">
+    <v-parallax src="../assets/material2.jpg" height="350">
       <h2 class="display-2 font-weight-light mb-5">Добро пожаловать!</h2>
 
       <!--<h2 class="display-1 font-weight-light mb-5">-->
