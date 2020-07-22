@@ -106,7 +106,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(["getPlacesList"]),
+    ...mapGetters("CultureEvents", ["getPlacesList"]),
     ...mapGetters("CultureEvents", ["getPostCategory"])
   }
 };

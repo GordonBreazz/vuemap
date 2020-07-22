@@ -1,4 +1,5 @@
-//import { apikey } from "../store/modules/APIKEY.js";
+
+import sample from "../../data/sample_data.js"
 
 const URLAPI =
   "http://cbs-uu.ru/data/json_proxy.php?status=accepted&start=1588291200&organizations=10872&sort=-start&apiKey=" + process.env.VUE_APP_ALLCULTURE_APIKEY
@@ -93,14 +94,22 @@ export const CultureEvents = {
   actions: {
     async fetchPosts(context) {
       console.log("fetch post сработал")
+      try {
       const res = await fetch(URLAPI)
 
       const posts = await res.json()
       //const posts = await res.text()    
-      console.log("status", res.ok)
-      console.log("ответ", posts)
+      //console.log("status", res.ok)
+      //console.log("ответ", posts)
       context.commit("updatePosts", posts)
       context.commit("stopLoader")      
+      } catch (error) {
+        console.log('Ошибка c загрузкой данных. Загружены тестовые данные')
+        const posts = sample.fakeResponse
+        context.commit("updatePosts", posts)
+        context.commit("stopLoader")   
+        //throw error;
+      }
     },
   },
   mutations: {
@@ -154,6 +163,10 @@ export const CultureEvents = {
     },
     getPostCategory(state, getters){
       return getters.getNormPosts.map( (i) => i.titlePart1)
-    }
+    },
+    getPlacesList(state, getters, rootState, rootGetters){
+      let arr = rootGetters.getPlacesList
+      return getters.getNormPosts.map( (i) => arr[i.index-1])
+    }  
   },
 }
