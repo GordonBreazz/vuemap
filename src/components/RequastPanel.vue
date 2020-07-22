@@ -9,7 +9,7 @@
               outlined
               class="mr-2"
             ></v-text-field>
-            <v-btn x-large dark color="primary">Найти</v-btn>
+            <v-btn x-large dark color="primary" @click="btnClick">Найти</v-btn>
           </div>
           <filter-panel/>
  
@@ -26,6 +26,12 @@ export default {
   components: {
       FilterPanel
   },
+  methods: {
+    btnClick(){
+      console.log(process.env)
+      alert('ok')
+    }
+  }
 }
 </script>
 
