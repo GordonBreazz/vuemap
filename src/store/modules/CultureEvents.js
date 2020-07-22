@@ -165,8 +165,7 @@ export const CultureEvents = {
       return getters.getNormPosts.map( (i) => i.titlePart1)
     },
     getPlacesList(state, getters, rootState, rootGetters){
-      let arr = rootGetters.getPlacesList
-      return getters.getNormPosts.map( (i) => arr[i.index-1])
+      return getters.getNormPosts.map( (i) => i.name)
     }  
   },
 }
