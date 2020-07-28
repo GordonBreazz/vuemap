@@ -1,5 +1,6 @@
 <template>
   <div class="map-page">
+    <h1>Филиалы</h1>      
     <v-btn
       v-scroll="onScroll"
       v-show="fab"
@@ -69,9 +70,10 @@ export default {
       this.$refs.foo.goToAll();
     },
     showPanel() {
-      if (this.pathMode && this.$router.currentRoute.path !== this.getPath)
-        this.$router.push(this.getPath + "?q=baloon");
-      else this.$refs.foo.showPanel();
+      // if (this.pathMode && this.$router.currentRoute.path !== this.getPath)
+      //   this.$router.push(this.getPath + "?q=baloon");
+      // else this.$refs.foo.showPanel();
+      alert('показать панель')
     },
     panaView() {
       this.$refs.bar.panarama = false;

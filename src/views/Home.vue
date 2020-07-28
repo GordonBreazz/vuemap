@@ -68,6 +68,7 @@ export default {
       if (this.pathMode && this.$router.currentRoute.path !== this.getPath)
         this.$router.push(this.getPath + "?q=baloon");
       else this.$refs.foo.showPanel();
+
     },
     panaView() {
       this.$refs.bar.panarama = false;
