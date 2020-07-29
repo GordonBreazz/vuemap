@@ -70,10 +70,10 @@ export default {
       this.$refs.foo.goToAll();
     },
     showPanel() {
-      // if (this.pathMode && this.$router.currentRoute.path !== this.getPath)
-      //   this.$router.push(this.getPath + "?q=baloon");
-      // else this.$refs.foo.showPanel();
-      alert('показать панель')
+      if (this.pathMode && this.$router.currentRoute.path !== this.getPath)
+         this.$router.push(this.getPath + "?q=baloon");
+      else this.$refs.foo.showPanel();
+      //alert('показать панель')
     },
     panaView() {
       this.$refs.bar.panarama = false;
