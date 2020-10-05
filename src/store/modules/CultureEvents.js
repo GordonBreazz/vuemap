@@ -93,17 +93,18 @@ export const CultureEvents = {
   namespaced: true,
   actions: {
     async fetchPosts(context) {
-      console.log("fetch post сработал")
+      console.log("fetch post сработал@@@", URLAPI)
       try {
       const res = await fetch(URLAPI)
 
       const posts = await res.json()
       //const posts = await res.text()    
       //console.log("status", res.ok)
-      //console.log("ответ", posts)
+     
       context.commit("updatePosts", posts)
       context.commit("stopLoader")      
       } catch (error) {
+        console.log("ответ", posts)
         console.log('Ошибка c загрузкой данных. Загружены тестовые данные')
         const posts = sample.fakeResponse
         context.commit("updatePosts", posts)
