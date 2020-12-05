@@ -1,5 +1,6 @@
 <?php
 //Use this to tunnel a file through json for crossdomain access.
+
 $server_url = "https://all.culture.ru/api/2.3/events";
 try {
     
