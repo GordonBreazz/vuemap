@@ -1,6 +1,5 @@
 <template>
   <div class="map-page">
-    <h1>Филиалы</h1>      
     <v-btn
       v-scroll="onScroll"
       v-show="fab"
