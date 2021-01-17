@@ -54,6 +54,7 @@ export default {
   },
   watch: {
     $route(to, from) {
+      console.log('')
       // обрабатываем изменение параметров маршрута...
       if (to.name == "Filials") {
         //console.log(this.menuItems);

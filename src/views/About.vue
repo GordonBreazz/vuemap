@@ -16,7 +16,7 @@
     <h4
       class="display-1 font-weight-light"
       style="margin-top:80px"
-    >В Улан-Удэ 18 городских библиотек, в которых рады каждому</h4>
+    >В Улан-Удэ 18 мунициапальных библиотек, в которых рады каждому</h4>
 
     <blockquote class="blockquote">
       <p>
