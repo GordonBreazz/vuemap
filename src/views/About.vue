@@ -69,7 +69,7 @@
           <v-row class="text-left pl-3">
             <v-col
               cols="1"
-              style=" background:no-repeat url(http://cbs-uu.ru/data/images/1.svg) 50% 30%; "
+              style=" background:no-repeat url(https://cbs-uu.ru/data/images/1.svg) 50% 30%; "
             ></v-col>
             <v-col cols="11" class="mb-10">
               <p>Большое разнообразие литературы, которую можно читать в зале или взять домой совершенно бесплатно. Библиотекари и библиографы помогут подобрать нужные издания. А через стационарный компьютер можно получить доступ к электронным базам данных (Электронная библиотека диссертаций, КонсультантПлюс, Гарант, Национальная электронная библиотека и многие другие).</p>
@@ -77,7 +77,7 @@
 
             <v-col
               cols="1"
-              style=" background:no-repeat url(http://cbs-uu.ru/data/images/2.svg) 50% 30%;"
+              style=" background:no-repeat url(https://cbs-uu.ru/data/images/2.svg) 50% 30%;"
             ></v-col>
             <v-col cols="11" class="mb-10">
               <p>Комфортное пространство с книгами, периодикой, компьютерами. Здесь можно работать, читать, отдыхать, слушать музыку, а также по предварительной договоренности провести мероприятие.</p>
@@ -85,7 +85,7 @@
 
             <v-col
               cols="1"
-              style=" background:no-repeat url(http://cbs-uu.ru/data/images/3.svg) 50% 30%;"
+              style=" background:no-repeat url(https://cbs-uu.ru/data/images/3.svg) 50% 30%;"
             ></v-col>
             <v-col cols="11" class="mb-10">
               <p>Множество самых разных культурных, просветительских и образовательных событий.</p>
@@ -93,7 +93,7 @@
 
             <v-col
               cols="1"
-              style=" background:no-repeat url(http://cbs-uu.ru/data/images/4.svg) 50% 30%;"
+              style=" background:no-repeat url(https://cbs-uu.ru/data/images/4.svg) 50% 30%;"
             ></v-col>
             <v-col cols="11">
               <p>Удобный график работы: взрослые библиотеки открыты со вторника по субботу 10:00 до 19:00, а в воскресенье — до 18:00. Время работы может меняться в зависимости от профиля библиотеки и территориального расположения. Смотрите подробное расписание библиотек на карте.</p>
@@ -130,7 +130,7 @@
       <v-row justify="center">
         <v-col cols="12" lg="9">
           <v-img
-            src="http://cbs-uu.ru/data/assets/places/6.jpg"
+            src="https://cbs-uu.ru/data/assets/places/6.jpg"
             title="На рисунке изображена Площадь советов г. Улан-Удэ"
           ></v-img>
           <!--
@@ -152,16 +152,16 @@ export default {
     return {
       items: [
         {
-          src: "http://cbs-uu.ru/data/assets/places/4.jpg"
+          src: "https://cbs-uu.ru/data/assets/places/4.jpg"
         },
         {
-          src: "http://cbs-uu.ru/data/assets/places/1.jpg"
+          src: "https://cbs-uu.ru/data/assets/places/1.jpg"
         },
         {
-          src: "http://cbs-uu.ru/data/assets/places/2.jpg"
+          src: "https://cbs-uu.ru/data/assets/places/2.jpg"
         },
         {
-          src: "http://cbs-uu.ru/data/assets/places/5.jpg"
+          src: "https://cbs-uu.ru/data/assets/places/5.jpg"
         }
       ]
     };

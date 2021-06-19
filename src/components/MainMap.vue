@@ -43,7 +43,7 @@ export default {
       controls: ["zoomControl", "typeSelector"],
       markerIcon: (title, photoSmall) => ({
         layout: "default#imageWithContent",
-        imageHref: "http://cbs-uu.ru//images/assets/pins-maps-library.png",
+        imageHref: "https://cbs-uu.ru/data/assets/pins-maps-library.png",
         imageSize: [50, 50],
         imageOffset: [0, 0],
         content: title,
@@ -92,7 +92,7 @@ export default {
         location.id == 24
       ) {
         frameSt =
-          '<div style="margin-bottom:0px;"><div style="width: 400px; height: 250px;"><iframe src="http://cbs-uu.ru/tours/f' +
+          '<div style="margin-bottom:0px;"><div style="width: 400px; height: 250px;"><iframe src="https://cbs-uu.ru/tours/f' +
           location.id +
           '/index.html" width="100%" height="100%" align="left" loading="lazy">Ваш браузер не поддерживает плавающие фреймы!</iframe></div></div>';
         buttonSt = `

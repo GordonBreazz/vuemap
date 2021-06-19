@@ -8,7 +8,7 @@ import places from "../data/places.js"
 
 Vue.use(Vuex)
 
-const FEATURES_IMG_PATH =  'http://cbs-uu.ru/data/assets/features_lightgray/'
+const FEATURES_IMG_PATH =  'https://cbs-uu.ru/data/assets/features_lightgray/'
 
 function getHoursAndMin(millisec) {
   var seconds = (millisec / 1000).toFixed(0)
@@ -308,7 +308,7 @@ export default new Vuex.Store({
     },
     getFoundingYearImage(state) {
       return (
-        "http://cbs-uu.ru/data/assets/years/" +
+        "https://cbs-uu.ru/data/assets/years/" +
         state.currentLocation.foundingYear +
         ".jpg"
       )
@@ -363,7 +363,7 @@ export default new Vuex.Store({
       return result
     },
     getPanaUrl(state) {
-      return `http://cbs-uu.ru/tours/f${state.currentLocation.id}/index.html`
+      return `https://cbs-uu.ru/tours/f${state.currentLocation.id}/index.html`
     },
     getCaption(state) {
       if (state.currentLocation.title != state.currentLocation.fullTitle)

@@ -234,7 +234,7 @@ export default {
       );
     },
     openSite() {
-      window.open("http://" + this.currentLocation.site);
+      window.open("https://" + this.currentLocation.site);
     },
     openSiteEx(url) {
       if (url) window.open(url);
