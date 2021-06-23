@@ -1884,71 +1884,71 @@ export default {
         }
       },
       yandexCard: "https://yandex.ru/maps/org/1061852592/"        
-    },
-    {
-      title: "КНИГА&FORUM",
-      fullTitle: "Мобильная точка библиотеки в Торговом центре «Форум» ",
-      coords: [51.830601, 107.583757],
-      address: "г.  Улан-Удэ, пр. Строителей, 34а",
-      phone: " +7 (3012) 8 (3012) 219947",
-      forChildren: false,
-      district: "Советский",
-      photoSmall: "https://cbs-uu.ru/data/images/small/25.jpg",
-      id: 25,
-      text: "",
-      microdistrict: "",
-      email: "cbskalashnikov@yandex.ru",
-      itinerary: {
-        point: "1",
-        bus: "",
-        tram: "",
-        taxiBus: ""
-      },
-      chief: {
-        title: "",
-        name: ""
-      },
-      libraryType: "Мобильная",
-      shedule: 8,
-      structure: ["Читальный зал"],
-      clubs: [],
-      site: "cbs-uu.ru",
-      foundingYear: 2019,
-      features: [1, 2],
-      featuresList: [
-        'wifi',               
-        'clubs',                            
-        'work_with_children'
-      ],        
-      photos: [
-        {
-          thumb:
-            "https://cbs-uu.ru/data/images/photos/25/trumb/1.jpg",
-          src:
-            "https://cbs-uu.ru/data/images/photos/25/1.jpg",
-          caption: "КНИГА&FORUM. Мобильная точка библиотеки в Торговом центре «Форум»"
-        },
-        {
-          thumb:
-            "https://cbs-uu.ru/data/images/photos/25/trumb/2.jpg",
-          src:
-            "https://cbs-uu.ru/data/images/photos/25/2.jpg",
-          caption: "КНИГА&FORUM. Мобильная точка библиотеки в Торговом центре «Форум»"
-        },
-        {
-          thumb:
-            "https://cbs-uu.ru/data/images/photos/25/trumb/3.jpg",
-          src:
-            "https://cbs-uu.ru/data/images/photos/25/3.jpg",
-          caption: "КНИГА&FORUM. Мобильная точка библиотеки в Торговом центре «Форум»"
-        }
-      ],
-      video: "",
-      forChildren: ['Детская литература', 'Игровая зона', 'Настольные игры', 'Комиксы'],
-      copyCentre: ['Сканирование', 'Ксерокопирование', 'Печать на принтере', 'Набор текста'],
-      services: ['Принимаем книги в дар'],
-      socnet: {},      
-    }
+     }//,
+    // {
+    //   title: "КНИГА&FORUM",
+    //   fullTitle: "Мобильная точка библиотеки в Торговом центре «Форум» ",
+    //   coords: [51.830601, 107.583757],
+    //   address: "г.  Улан-Удэ, пр. Строителей, 34а",
+    //   phone: " +7 (3012) 8 (3012) 219947",
+    //   forChildren: false,
+    //   district: "Советский",
+    //   photoSmall: "https://cbs-uu.ru/data/images/small/25.jpg",
+    //   id: 25,
+    //   text: "",
+    //   microdistrict: "",
+    //   email: "cbskalashnikov@yandex.ru",
+    //   itinerary: {
+    //     point: "1",
+    //     bus: "",
+    //     tram: "",
+    //     taxiBus: ""
+    //   },
+    //   chief: {
+    //     title: "",
+    //     name: ""
+    //   },
+    //   libraryType: "Мобильная",
+    //   shedule: 8,
+    //   structure: ["Читальный зал"],
+    //   clubs: [],
+    //   site: "cbs-uu.ru",
+    //   foundingYear: 2019,
+    //   features: [1, 2],
+    //   featuresList: [
+    //     'wifi',               
+    //     'clubs',                            
+    //     'work_with_children'
+    //   ],        
+    //   photos: [
+    //     {
+    //       thumb:
+    //         "https://cbs-uu.ru/data/images/photos/25/trumb/1.jpg",
+    //       src:
+    //         "https://cbs-uu.ru/data/images/photos/25/1.jpg",
+    //       caption: "КНИГА&FORUM. Мобильная точка библиотеки в Торговом центре «Форум»"
+    //     },
+    //     {
+    //       thumb:
+    //         "https://cbs-uu.ru/data/images/photos/25/trumb/2.jpg",
+    //       src:
+    //         "https://cbs-uu.ru/data/images/photos/25/2.jpg",
+    //       caption: "КНИГА&FORUM. Мобильная точка библиотеки в Торговом центре «Форум»"
+    //     },
+    //     {
+    //       thumb:
+    //         "https://cbs-uu.ru/data/images/photos/25/trumb/3.jpg",
+    //       src:
+    //         "https://cbs-uu.ru/data/images/photos/25/3.jpg",
+    //       caption: "КНИГА&FORUM. Мобильная точка библиотеки в Торговом центре «Форум»"
+    //     }
+    //   ],
+    //   video: "",
+    //   forChildren: ['Детская литература', 'Игровая зона', 'Настольные игры', 'Комиксы'],
+    //   copyCentre: ['Сканирование', 'Ксерокопирование', 'Печать на принтере', 'Набор текста'],
+    //   services: ['Принимаем книги в дар'],
+    //   socnet: {},      
+    // }
   ],
   getPlacesList(){
     let arr = []

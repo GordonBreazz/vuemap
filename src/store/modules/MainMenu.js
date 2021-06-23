@@ -10,12 +10,12 @@ export const MainMenu = {
         icon: "mdi-map-marker-multiple-outline",
         linkName: "to"
       },      
-      {
-        title: "Афиша",
-        link: "/events",
-        icon: "mdi-book-open-page-variant",
-        linkName: "to"
-      },
+      // {
+      //   title: "Афиша",
+      //   link: "/events",
+      //   icon: "mdi-book-open-page-variant",
+      //   linkName: "to"
+      // },
       {
         title: "О проекте",
         link: "/about",

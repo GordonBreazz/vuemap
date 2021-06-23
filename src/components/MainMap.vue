@@ -72,25 +72,7 @@ export default {
       //Создания балуна метки
       let frameSt = "";
       let buttonSt = "";
-      if (
-        location.id == 1 ||
-        location.id == 2 ||
-        location.id == 3 ||
-        location.id == 4 ||
-        location.id == 5 ||
-        location.id == 6 ||
-        location.id == 9 ||
-        location.id == 10 ||
-        location.id == 12 ||
-        location.id == 13 ||
-        location.id == 15 ||
-        location.id == 16 ||
-        location.id == 17 ||
-        location.id == 19 ||
-        location.id == 20 ||
-        location.id == 21 ||
-        location.id == 24
-      ) {
+      if ( location.id != 25 ) {
         frameSt =
           '<div style="margin-bottom:0px;"><div style="width: 400px; height: 250px;"><iframe src="https://cbs-uu.ru/tours/f' +
           location.id +
