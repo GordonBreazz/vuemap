@@ -13,7 +13,7 @@ function titlePart2(value) {
   if (~a) return value.slice(a + 1, -1)
   return ""
 }
-
+//dghd
 function planText(value) {
   return value.replace(/<\/?[^>]+>/g, "")
 }
