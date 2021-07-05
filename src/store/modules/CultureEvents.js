@@ -1,5 +1,5 @@
 //const URLAPI = "http://cbs-uu.ru/data/json_proxy.php?status=accepted&start=1588291200&organizations=10872&sort=-start&apiKey=" + process.env.VUE_APP_ALLCULTURE_APIKEY
-//const URLAPI = "https://all.culture.ru/api/2.5/events?status=accepted&start=1588291200&organizations=10872&sort=-start&apiKey=" + process.env.VUE_APP_ALLCULTURE_APIKEY
+const URLAPI = "https://all.culture.ru/api/2.5/events?status=accepted&start=1588291200&organizations=10872&sort=-start&apiKey=" + process.env.VUE_APP_ALLCULTURE_APIKEY
 const IMAGESPATH = "https://all.culture.ru/uploads/"
 
 function titlePart1(value) {
