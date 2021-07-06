@@ -39,7 +39,7 @@ export default {
     },
     getters: {
         getFilialState(state, payload) {
-            //alert('ok')
+)
             return state.filials
         },
 
