@@ -8,7 +8,7 @@ export default {
         }
     },
     state: {
-        filials: [
+        filials: [//
             false,
             false,
             false,
@@ -40,7 +40,7 @@ export default {
     getters: {
         getFilialState(state, payload) {
 )
-            return state.filials
+            return false //state.filials
         },
 
     }
