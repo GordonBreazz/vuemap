@@ -45,6 +45,4 @@ try {
     echo "ERROR: " . $e->getMessage();
     exit(1);
 }
-//echo $request_url;
 
-//echo $response[1]; 
