@@ -214,7 +214,7 @@ export default {
     }
   },
   filters: {
-    withoutPoint: value => value //.slice(0, -1)
+    withoutPoint: value //=> value //.slice(0, -1)
   }
 };
 </script>
