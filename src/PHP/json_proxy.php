@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 
 $server_url = "https://all.culture.ru/api/2.3/events";
 $request_url = $server_url . '?' . $_SERVER['QUERY_STRING'];
@@ -45,4 +45,4 @@ try {
     echo "ERROR: " . $e->getMessage();
     exit(1);
 }
-
+ -->
