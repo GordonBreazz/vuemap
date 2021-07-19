@@ -5,7 +5,7 @@
 </template>
 
 <script>
-
+// админ часть
 export default {
   components: {
 
