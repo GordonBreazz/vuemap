@@ -6,7 +6,7 @@
           alt="Logo"
           class="shrink  mt-2 mr-2"
           contain
-          :src="hover ? 'https://cbs-uu.ru/data/assets/logo/bibliocity6.png' : 'https://cbs-uu.ru/data/assets/logo/bibliocity7.png'"
+          :src="hover ? 'https://cbs-uu.ru/bibliocity/assets/logo/bibliocity6.png' : 'https://cbs-uu.ru/bibliocity/assets/logo/bibliocity7.png'"
           transition="slide-y-transition"
           width="73"        
           @mouseover="hover = true"
@@ -20,7 +20,7 @@
         class="shrink mt-1"
         contain
         min-width="100"
-        src="https://cbs-uu.ru/data/assets/logo/img_fonts (3).png"
+        src="https://cbs-uu.ru/bibliocity/assets/logo/img_fonts (3).png"
         transition="scale-transition"
         :width="imageHeight"
       />

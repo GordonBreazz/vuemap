@@ -43,7 +43,7 @@ export default {
       controls: ["zoomControl", "typeSelector"],
       markerIcon: (title, photoSmall) => ({
         layout: "default#imageWithContent",
-        imageHref: "https://cbs-uu.ru/data/assets/pins-maps-library.png",
+        imageHref: "https://cbs-uu.ru/bibliocity/assets/pins-maps-library.png",
         imageSize: [50, 50],
         imageOffset: [0, 0],
         content: title,

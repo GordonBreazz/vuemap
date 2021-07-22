@@ -3,12 +3,12 @@ import Vuex from "vuex"
 import {MainMenu} from "../store/modules/MainMenu.js"
 import {CultureEvents} from "../store/modules/CultureEvents.js"
 
-import shedule from "../data/shedule.js"
-import places from "../data/places.js"
+import shedule from "../bibliocity/shedule.js"
+import places from "../bibliocity/places.js"
 
 Vue.use(Vuex)
 
-const FEATURES_IMG_PATH =  'https://cbs-uu.ru/data/assets/features_lightgray/'
+const FEATURES_IMG_PATH =  'https://cbs-uu.ru/bibliocity/assets/features_lightgray/'
 
 function getHoursAndMin(millisec) {
   var seconds = (millisec / 1000).toFixed(0)
@@ -308,7 +308,7 @@ export default new Vuex.Store({
     },
     getFoundingYearImage(state) {
       return (
-        "https://cbs-uu.ru/data/assets/years/" +
+        "https://cbs-uu.ru/bibliocity/assets/years/" +
         state.currentLocation.foundingYear +
         ".jpg"
       )
