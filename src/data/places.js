@@ -1,4 +1,4 @@
-export default {
+export default { //logomakr.com/7HcZed
   placemarks: [
     {
       title: "ЦГБ им. И. Калашникова",
