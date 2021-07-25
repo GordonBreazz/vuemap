@@ -1,4 +1,3 @@
-//logomakr.com/7HcZed logo creater
 export default {
   placemarks: [
     {
