@@ -1,3 +1,4 @@
+// Загнать в firebase
 export default { //logomakr.com/7HcZed
   placemarks: [
     {
