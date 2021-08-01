@@ -14,7 +14,7 @@ import AppContent from "./layout/AppContent";
 import AppFooter from "./layout/AppFooter";
 require("vue-image-lightbox/dist/vue-image-lightbox.min.css");
 
-// https://codesandbox.io/s/codesandbox-nuxt-1ht4k
+///// https://codesandbox.io/s/codesandbox-nuxt-1ht4k
 export default {
   data() {
     return {
