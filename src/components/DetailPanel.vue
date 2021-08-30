@@ -71,10 +71,10 @@ export default {
   },
   props: ["filial"],
   data() {
-    return {
+    return {    
       d3: `<div style="text-align: center; float: right;"><img title="3D Тур по библиотеке" 
             style="cursor: pointer; width: 170px; padding-left: 10px; " alt="" 
-            src="https://cbs-uu.ru/bibliocity/assets/360-pana.jpg"
+            src="${require('../assets/images/360-pana.jpg')}"
             onclick="javascript:document.querySelector('#button100700').click()">
             <p style="font-size: 8pt; color: gray; margin-bottom: 0px;">3D тур по библиотекe</p> </div>`
     };

@@ -9,7 +9,7 @@ export default { //logomakr.com/7HcZed
       phone: "+7 (3012) 21-54-12",
       forChildren: false,
       district: "Советский",
-      photoSmall: "https://cbs-uu.ru/bibliocity/images/small/1.jpg",
+      photoSmall: require("../assets/images/photos/small/1.jpg"),
       id: 1,
       text:
         "<p>Центральная городская библиотека является координирующим иметодическим центром для библиотек Муниципального автономногоучреждения &laquo;Централизованная библиотечная система г.Улан-Удэ&raquo;.</p><p>Библиотека открыла свои двери в 1968 году. Располагается висторическом здании &laquo;Торговые лавки усадьбы Мостовского&raquo;, построенном в конце 19 века. В 1996 годуЦентральной городской библиотеке присвоено имя народного писателя Исая Калистратовича Калашникова.</p><p>Сегодня библиотека является информационным икультурно-досуговым центром. Использование современных технологийпозволяет библиотеке работать в новом формате и более эффективнозаниматься популяризацией книги и чтения в нашем городе.</p><p>Сегодня библиотека площадка не только для получения информациина материальных и нематериальных носителях, но и место для организациикультурно-просветительских и социально-значимых проектов. С цельюсовершенствования деятельности по продвижению книги и чтения библиотекав последние годы широко использует уличные площадки, где проводятся городские мероприятия. Формы мероприятий - интересные, необычные,привлекающие внимание и призывающие к участию в них горожан.</p><p>В библиотеке действуют большие проекты: &laquo;Улыбка Белой Тары&raquo;, &laquo;Культурный код библиотеки&raquo;,&laquo;Герой наших дней &ndash; Алдар Цыденжапов&raquo;,&laquo;Библиотека &ndash; территория толерантности&raquo;,На базе библиотеки работает &laquo;Виртуальный музей книги городаУлан-Удэ &laquo;Библиовек&raquo; и объединение&laquo;ЛИК&raquo; для организации встреч с писателями,краеведами, творческой интеллигенцией города.</p>",
@@ -86,23 +86,23 @@ export default { //logomakr.com/7HcZed
       photos: [
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/1/trumb/1.jpg",
+            require("../assets/images/photos/1/trumb/1.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/1/1.jpg",
+            require("../assets/images/photos/1/1.jpg"),
           caption: "Центральная городская библиотека им. И. Калашникова"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/1/trumb/2.jpg",
+            require("../assets/images/photos/1/trumb/2.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/1/2.jpg",
+            require("../assets/images/photos/1/2.jpg"),
           caption: "Центральная городская библиотека им. И. Калашникова"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/1/trumb/3.jpg",
+            require("../assets/images/photos/1/trumb/3.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/1/3.jpg",
+            require("../assets/images/photos/1/3.jpg"),
           caption: "Центральная городская библиотека им. И. Калашникова"
         }
       ],      
@@ -121,7 +121,7 @@ export default { //logomakr.com/7HcZed
       phone: " +7 (3012)  29-01-91",
       forChildren: false,
       district: "Октябрьский",
-      photoSmall: "https://cbs-uu.ru/bibliocity/images/small/2.jpg",
+      photoSmall: require("../assets/images/photos/small/2.jpg"),
       id: 2,
       text:
         "<p>Библиотека была открыта в 1963 году и находится в Домекультуры &laquo;Забайкальский&raquo; на 2-ом этаже. В 1998 г.профсоюзная библиотека стала филиалом Централизованной библиотечной системы г. Улан-Удэ.</p><p>Библиотека-филиал №2 является информационным икультурно-досуговым центром микрорайона Забайкальский. Использование современных технологий позволяет библиотеке работать в новом формате иболее эффективно заниматься популяризацией книги и чтения в нашем городе.</p><p>Сегодня библиотека площадка не только для получения информациина материальных и нематериальных носителях, но и место для организации культурно-просветительских и социально-значимых проектов. С целью совершенствования деятельности по продвижению книги и чтения библиотекав последние годы широко использует уличные площадки, где проводятся городские мероприятия. Формы мероприятий - интересные, необычные,привлекающие внимание и призывающие к участию в них горожан.</p><p>Библиотека-филиал №2 сотрудничает с ДК&laquo;Забайкальский&raquo;, СОШ № 55, ДДУ №47&laquo;Елочка&raquo;, ТОС п. Забайкальский и с Республиканским реабилитационным центром для детей с ограниченными возможностями&laquo;Светлый&raquo;.</p>",
@@ -162,23 +162,23 @@ export default { //logomakr.com/7HcZed
       photos: [
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/2/trumb/1.jpg",
+            require("../assets/images/photos/2/trumb/1.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/2/1.jpg",
+            require("../assets/images/photos/2/1.jpg"),
           caption: "Библиотека-филиал №2"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/2/trumb/2.jpg",
+            require("../assets/images/photos/2/trumb/2.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/2/2.jpg",
+            require("../assets/images/photos/2/2.jpg"),
           caption: "Библиотека-филиал №2"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/2/trumb/3.jpg",
+            require("../assets/images/photos/2/trumb/3.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/2/3.jpg",
+            require("../assets/images/photos/2/3.jpg"),
           caption: "Библиотека-филиал №2"
         }
       ],
@@ -204,7 +204,7 @@ export default { //logomakr.com/7HcZed
       phone: " +7 (3012) 25-20-75",
       forChildren: false,
       district: "Железнодорожный",
-      photoSmall: "https://cbs-uu.ru/bibliocity/images/small/3.jpg",
+      photoSmall: require("../assets/images/photos/small/3.jpg"),
       id: 3,
       text:
         "<p>Библиотека была открыта в 1939 году и располагалась в пос.Площадка. В 1958 г. библиотека переехала в новое здание, на ул.Столичную, 1, где находится и по сегодняшний день. В январе 2005 г.Центральная библиотека микрорайона Загорск вошла в состав Централизованной библиотечной системы г. Улан-Удэ.</p><p>Библиотека-филиал №3 является информационным икультурно-досуговым центром микрорайона Загорск. Использование современных технологий позволяет библиотеке работать в новом формате иболее эффективно заниматься популяризацией книги и чтения в нашемгороде.</p><p>Сегодня библиотека площадка не только для получения информациина материальных и нематериальных носителях, но и место для организации культурно-просветительских и социально-значимых проектов. С целью совершенствования деятельности по продвижению книги и чтения библиотека в последние годы широко использует уличные площадки, где проводятся городские мероприятия. Формы мероприятий - интересные, необычные,привлекающие внимание и призывающие к участию в них горожан.</p><p>Библиотека сотрудничает с Советом ветеранов, Ассоциацией жертв политических репрессий и Союзом пенсионеров поселка, ведет летопись микрорайона Загорск. На базе библиотеки действует клуб общения&laquo;Гармония&raquo;.</p>",
@@ -247,23 +247,23 @@ export default { //logomakr.com/7HcZed
       photos: [
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/3/trumb/1.jpg",
+            require("../assets/images/photos/3/trumb/1.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/3/1.jpg",
+            require("../assets/images/photos/3/1.jpg"),
           caption: "Библиотека-филиал №3"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/3/trumb/2.jpg",
+            require("../assets/images/photos/3/trumb/2.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/3/2.jpg",
+            require("../assets/images/photos/3/2.jpg"),
           caption: "Библиотека-филиал №3"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/3/trumb/3.jpg",
+            require("../assets/images/photos/3/trumb/3.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/3/3.jpg",
+            require("../assets/images/photos/3/3.jpg"),
           caption: "Библиотека-филиал №3"
         }
       ],
@@ -282,7 +282,7 @@ export default { //logomakr.com/7HcZed
       phone: " +7 (3012) 27-11-32",
       forChildren: false,
       district: "Советский",
-      photoSmall: "https://cbs-uu.ru/bibliocity/images/small/4.jpg",
+      photoSmall: require("../assets/images/photos/small/4.jpg"),
       id: 4,
       text:
         "<p>Библиотека была открыта в 1948 году. С 1997 года находится навтором этаже социально-культурного центра&laquo;Кристалл&raquo;.</p><p>Библиотека-филиал №4 является информационным икультурно-досуговым центром микрорайона Стеклозавод. Использование современных технологий позволяет библиотеке работать в новом формате иболее эффективно заниматься популяризацией книги и чтения в нашемгороде.</p><p>Сегодня библиотека площадка не только для получения информациина материальных и нематериальных носителях, но и место для организациикультурно-просветительских и социально-значимых проектов. С цельюсовершенствования деятельности по продвижению книги и чтения библиотекав последние годы широко использует уличные площадки, где проводятся городские мероприятия. Формы мероприятий - интересные, необычные, привлекающие внимание и призывающие к участию в них горожан.</p><p>На базе библиотеки действует шахматный кружок&laquo;Умка&raquo; и кружок развития творческих способностей для детей &laquo;Лучики: творческая мастерская&raquo;, работаетмини-музей &laquo;Моя малая Родина&raquo;, где собраны материалы по истории поселка и стекольного завода, ведется&laquo;Летопись поселка&raquo;. Открыт учебно-консультационный пункт ГО и ЧС для неработающих групп населения.</p>",
@@ -337,23 +337,23 @@ export default { //logomakr.com/7HcZed
       photos: [
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/4/trumb/1.jpg",
+            require("../assets/images/photos/4/trumb/1.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/4/1.jpg",
+            require("../assets/images/photos/4/1.jpg"),
           caption: "Библиотека-филиал №4"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/4/trumb/2.jpg",
+            require("../assets/images/photos/4/trumb/2.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/4/2.jpg",
+            require("../assets/images/photos/4/2.jpg"),
           caption: "Библиотека-филиал №4"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/4/trumb/3.jpg",
+            require("../assets/images/photos/4/trumb/3.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/4/3.jpg",
+            require("../assets/images/photos/4/3.jpg"),
           caption: "Библиотека-филиал №4"
         }
       ],
@@ -385,7 +385,7 @@ export default { //logomakr.com/7HcZed
       phone: " +7 (3012) 25-20-80",
       forChildren: false,
       district: "Железнодорожный",
-      photoSmall: "https://cbs-uu.ru/bibliocity/images/small/5.jpg",
+      photoSmall: require("../assets/images/photos/small/5.jpg"),
       id: 5,
       text:
         "<p>Библиотека образована в 1981 году. В состав Централизованной библиотечной системы города Улан-Удэ вошла в 2005 году.</p><p>Библиотека-филиал №5 является информационным икультурно-досуговым центром микрорайона Восточный. Использование современных технологий позволяет библиотеке работать в новом формате иболее эффективно заниматься популяризацией книги и чтения в нашем городе.</p><p>Сегодня библиотека площадка не только для получения информациина материальных и нематериальных носителях, но и место для организации культурно-просветительских и социально-значимых проектов. С целью совершенствования деятельности по продвижению книги и чтения библиотекав последние годы широко использует уличные площадки, где проводятсягородские мероприятия. Формы мероприятий - интересные, необычные,привлекающие внимание и призывающие к участию в них горожан.</p><p>Одним из главных направлений деятельности библиотеки являетсяработа с людьми ограниченных физических возможностей &ndash;взрослыми и детьми. В фонде имеются книги на шрифте Брайля. На базебиблиотеки действует клуб для подростков с ограниченными возможностями здоровья &laquo;Меридиан&raquo;, клуб выходного дня&laquo;Петрушка приглашает друзей&raquo;, кукольный театр&laquo;Петрушка&raquo; и клуб для взрослых с ограниченными возможностями здоровья &laquo;Феникс&raquo;.</p>",
@@ -439,72 +439,72 @@ export default { //logomakr.com/7HcZed
       photos: [
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/5/trumb/1.jpg",
+            require("../assets/images/photos/5/trumb/1.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/5/1.jpg",
+            require("../assets/images/photos/5/1.jpg"),
           caption: "Библиотека-филиал №5"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/5/trumb/2.jpg",
+            require("../assets/images/photos/5/trumb/2.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/5/2.jpg",
+            require("../assets/images/photos/5/2.jpg"),
           caption: "Библиотека-филиал №5"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/5/trumb/3.jpg",
+            require("../assets/images/photos/5/trumb/3.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/5/3.jpg",
+            require("../assets/images/photos/5/3.jpg"),
           caption: "Библиотека-филиал №5"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/5/trumb/4.jpg",
+            require("../assets/images/photos/5/trumb/4.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/5/4.jpg",
+            require("../assets/images/photos/5/4.jpg"),
           caption: "Библиотека-филиал №5"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/5/trumb/5.jpg",
+            require("../assets/images/photos/5/trumb/5.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/5/5.jpg",
+            require("../assets/images/photos/5/5.jpg"),
           caption: "Библиотека-филиал №5"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/5/trumb/6.jpg",
+            require("../assets/images/photos/5/trumb/6.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/5/6.jpg",
+            require("../assets/images/photos/5/6.jpg"),
           caption: "Библиотека-филиал №5"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/5/trumb/7.jpg",
+            require("../assets/images/photos/5/trumb/7.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/5/7.jpg",
+            require("../assets/images/photos/5/7.jpg"),
           caption: "Библиотека-филиал №5"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/5/trumb/8.jpg",
+            require("../assets/images/photos/5/trumb/8.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/5/8.jpg",
+            require("../assets/images/photos/5/8.jpg"),
           caption: "Библиотека-филиал №5"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/5/trumb/9.jpg",
+            require("../assets/images/photos/5/trumb/9.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/5/9.jpg",
+            require("../assets/images/photos/5/9.jpg"),
           caption: "Библиотека-филиал №5"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/5/trumb/10.jpg",
+            require("../assets/images/photos/5/trumb/10.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/5/10.jpg",
+            require("../assets/images/photos/5/10.jpg"),
           caption: "Библиотека-филиал №5"
         }               
       ],
@@ -523,7 +523,7 @@ export default { //logomakr.com/7HcZed
       phone: " +7 (3012) 25-20-74",
       forChildren: true,
       district: "Железнодорожный",
-      photoSmall: "https://cbs-uu.ru/bibliocity/images/small/6.jpg",
+      photoSmall: require("../assets/images/photos/small/6.jpg"),
       id: 6,
       text:
         "<p>Детская библиотека была образована в 1963 году.</p><p>Библиотека-филиал №6 является информационным икультурно-досуговым центром микрорайона Загорск. Использование современных технологий позволяет библиотеке работать в новом формате иболее эффективно заниматься популяризацией книги и чтения в нашем городе.</p><p>Сегодня библиотека площадка не только для получения информациина материальных и нематериальных носителях, но и место для организации культурно-просветительских и социально-значимых проектов. С целью совершенствования деятельности по продвижению книги и чтения библиотекав последние годы широко использует уличные площадки, где проводятся городские мероприятия. Формы мероприятий - интересные, необычные,привлекающие внимание и призывающие к участию в них горожан.</p><p>В библиотеке созданы все условия для качественного информационного обслуживания юных читателей, развития творческих способностей и организации досуга. На базе библиотеки действует клубчтения для детей &laquo;Школа радостного чтения&raquo;.</p>",
@@ -566,30 +566,30 @@ export default { //logomakr.com/7HcZed
       photos: [
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/6/trumb/1.jpg",
+            require("../assets/images/photos/6/trumb/1.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/6/1.jpg",
+            require("../assets/images/photos/6/1.jpg"),
           caption: "Библиотека-филиал №6"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/6/trumb/2.jpg",
+            require("../assets/images/photos/6/trumb/2.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/6/2.jpg",
+            require("../assets/images/photos/6/2.jpg"),
           caption: "Библиотека-филиал №6"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/6/trumb/3.jpg",
+            require("../assets/images/photos/6/trumb/3.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/6/3.jpg",
+            require("../assets/images/photos/6/3.jpg"),
           caption: "Библиотека-филиал №6"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/6/trumb/4.jpg",
+            require("../assets/images/photos/6/trumb/4.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/6/4.jpg",
+            require("../assets/images/photos/6/4.jpg"),
           caption: "Библиотека-филиал №6"
         }        
       ],
@@ -615,7 +615,7 @@ export default { //logomakr.com/7HcZed
       phone: " +7 (3012) 44-13-25",
       forChildren: false,
       district: "Железнодорожный",
-      photoSmall: "https://cbs-uu.ru/bibliocity/images/small/9.jpg",
+      photoSmall: require("../assets/images/photos/small/9.jpg"),
       id: 9,
       text:
         '<p>Библиотека впервые открыла двери для своих первых читателей в мае 1971 года.</p><p>Библиотека-филиал №9 является информационным икультурно-досуговым центром микрорайона Элеватор. Использование современных технологий позволяет библиотеке работать в новом формате и более эффективно заниматься популяризацией книги и чтения в нашем городе.</p><p>Сегодня библиотека площадка не только для получения информации на материальных и нематериальных носителях, но и место для организации культурно-просветительских и социально-значимых проектов. С целью совершенствования деятельности по продвижению книги и чтения библиотекав последние годы широко использует уличные площадки, где проводятся городские мероприятия. Формы мероприятий - интересные, необычные,привлекающие внимание и призывающие к участию в них горожан.</p><p>Библиотека проводит большую культурно-просветительскую работусреди жителей микрорайона. В рамках программы <span style="font-weight: bold;">&laquo;Реновация библиотек&raquo;</span> развивается как &laquo;Мастерскаятворчества&raquo;. С этой целью преобразовано библиотечное пространство. Активная работа проводится по грантовому проекту 201 8года: "Громкие чтения + рукоделие: приобщение к чтению через книгу итворчество".</p>',
@@ -666,37 +666,37 @@ export default { //logomakr.com/7HcZed
       photos: [
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/9/trumb/1.jpg",
+            require("../assets/images/photos/9/trumb/1.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/9/1.jpg",
+            require("../assets/images/photos/9/1.jpg"),
           caption: "Библиотека-филиал №9"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/9/trumb/2.jpg",
+            require("../assets/images/photos/9/trumb/2.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/9/2.jpg",
+            require("../assets/images/photos/9/2.jpg"),
           caption: "Библиотека-филиал №9"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/9/trumb/3.jpg",
+            require("../assets/images/photos/9/trumb/3.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/9/3.jpg",
+            require("../assets/images/photos/9/3.jpg"),
           caption: "Библиотека-филиал №9"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/9/trumb/4.jpg",
+            require("../assets/images/photos/9/trumb/4.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/9/4.jpg",
+            require("../assets/images/photos/9/4.jpg"),
           caption: "Библиотека-филиал №9"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/9/trumb/5.jpg",
+            require("../assets/images/photos/9/trumb/5.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/9/5.jpg",
+            require("../assets/images/photos/9/5.jpg"),
           caption: "Библиотека-филиал №9"
         }          
       ],
@@ -722,7 +722,7 @@ export default { //logomakr.com/7HcZed
       phone: " +7 (3012) 42-59-93",
       forChildren: false,
       district: "Октябрьский",
-      photoSmall: "https://cbs-uu.ru/bibliocity/images/small/10.jpg",
+      photoSmall: require("../assets/images/photos/small/10.jpg"),
       id: 10,
       text:
         "<p>Библиотека была открыта в 1975 году. Постановлением Правительства Республики Бурятия от 20.10.2008 г. библиотеке былоприсвоено имя детского писателя Цырен-Базар Бадмаевича Бадмаева, автора более 30 книгна бурятском и русском языках.</p><p>Библиотека-филиал №10 является информационным и культурно-досуговым центром микрорайона. Использование современныхтехнологий позволяет библиотеке работать в новом формате и более эффективно заниматься популяризацией книги и чтения в нашем городе.</p><p>Сегодня библиотека площадка не только для получения информациина материальных и нематериальных носителях, но и место для организации культурно-просветительских и социально-значимых проектов. С целью совершенствования деятельности по продвижению книги и чтения библиотекав последние годы широко использует уличные площадки, где проводятся городские мероприятия. Формы мероприятий - интересные, необычные,привлекающие внимание и призывающие к участию в них горожан.</p><p>При библиотеке действуют 2 клуба: &laquo;Золотойвозраст&raquo; и &laquo;Алтаргана&raquo;.В библиотекесоздан мини-музей Цырен-Базар Бадмаевича Бадмаева, в котором собраны книги, рукописипоэта, фотографии из семейного архива, личные вещи, предметы, письма.</p>",
@@ -771,30 +771,30 @@ export default { //logomakr.com/7HcZed
       photos: [
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/10/trumb/1.jpg",
+            require("../assets/images/photos/10/trumb/1.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/10/1.jpg",
+            require("../assets/images/photos/10/1.jpg"),
           caption: "Библиотека-филиал №10"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/10/trumb/2.jpg",
+            require("../assets/images/photos/10/trumb/2.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/10/2.jpg",
+            require("../assets/images/photos/10/2.jpg"),
           caption: "Библиотека-филиал №10"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/10/trumb/3.jpg",
+            require("../assets/images/photos/10/trumb/3.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/10/3.jpg",
+            require("../assets/images/photos/10/3.jpg"),
           caption: "Библиотека-филиал №10"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/10/trumb/4.jpg",
+            require("../assets/images/photos/10/trumb/4.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/10/4.jpg",
+            require("../assets/images/photos/10/4.jpg"),
           caption: "Библиотека-филиал №10"
         }   
       ],
@@ -864,93 +864,93 @@ export default { //logomakr.com/7HcZed
       photos: [
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/12/trumb/1.jpg",
+            require("../assets/images/photos/12/trumb/1.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/12/1.jpg",
+            require("../assets/images/photos/12/1.jpg"),
           caption: "Библиотека-филиал №12"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/12/trumb/2.jpg",
+            require("../assets/images/photos/12/trumb/2.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/12/2.jpg",
+            require("../assets/images/photos/12/2.jpg"),
           caption: "Библиотека-филиал №12"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/12/trumb/3.jpg",
+            require("../assets/images/photos/12/trumb/3.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/12/3.jpg",
+            require("../assets/images/photos/12/3.jpg"),
           caption: "Библиотека-филиал №12"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/12/trumb/4.jpg",
+            require("../assets/images/photos/12/trumb/4.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/12/4.jpg",
+            require("../assets/images/photos/12/4.jpg"),
           caption: "Библиотека-филиал №12"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/12/trumb/5.jpg",
+            require("../assets/images/photos/12/trumb/5.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/12/5.jpg",
+            require("../assets/images/photos/12/5.jpg"),
           caption: "Библиотека-филиал №12"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/12/trumb/6.jpg",
+            require("../assets/images/photos/12/trumb/6.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/12/6.jpg",
+            require("../assets/images/photos/12/6.jpg"),
           caption: "Библиотека-филиал №12"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/12/trumb/7.jpg",
+            require("../assets/images/photos/12/trumb/7.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/12/7.jpg",
+            require("../assets/images/photos/12/7.jpg"),
           caption: "Библиотека-филиал №12"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/12/trumb/8.jpg",
+            require("../assets/images/photos/12/trumb/8.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/12/8.jpg",
+            require("../assets/images/photos/12/8.jpg"),
           caption: "Библиотека-филиал №12"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/12/trumb/9.jpg",
+            require("../assets/images/photos/12/trumb/9.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/12/9.jpg",
+            require("../assets/images/photos/12/9.jpg"),
           caption: "Библиотека-филиал №12"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/12/trumb/10.jpg",
+            require("../assets/images/photos/12/trumb/10.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/12/10.jpg",
+            require("../assets/images/photos/12/10.jpg"),
           caption: "Библиотека-филиал №12"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/12/trumb/11.jpg",
+            require("../assets/images/photos/12/trumb/11.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/12/11.jpg",
+            require("../assets/images/photos/12/11.jpg"),
           caption: "Библиотека-филиал №12"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/12/trumb/12.jpg",
+            require("../assets/images/photos/12/trumb/12.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/12/12.jpg",
+            require("../assets/images/photos/12/12.jpg"),
           caption: "Библиотека-филиал №12"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/12/trumb/13.jpg",
+            require("../assets/images/photos/12/trumb/13.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/12/13.jpg",
+            require("../assets/images/photos/12/13.jpg"),
           caption: "Библиотека-филиал №12"
         }
       ],
@@ -976,7 +976,7 @@ export default { //logomakr.com/7HcZed
       phone: " +7 (3012) 23-11-41",
       forChildren: false,
       district: "Октябрьский",
-      photoSmall: "https://cbs-uu.ru/bibliocity/images/small/13.jpg",
+      photoSmall: require("../assets/images/photos/small/13.jpg"),
       id: 13,
       text:
         "<p>Библиотека была открыта в 1947 году. Библиотека-филиал №13 является информационным и культурно-досуговым центром микрорайона.Использование современных технологий позволяет библиотеке работать вновом формате и более эффективно заниматься популяризацией книги и чтения в нашем городе.</p><p>Сегодня библиотека площадка не только для получения информациина материальных и нематериальных носителях, но и место для организации культурно-просветительских и социально-значимых проектов. С целью совершенствования деятельности по продвижению книги и чтения библиотекав последние годы широко использует уличные площадки, где проводятся городские мероприятия. Формы мероприятий - интересные, необычные,привлекающие внимание и призывающие к участию в них горожан.</p><p>В рамках программы &laquo;Реновация библиотек&raquo;развивается как информационный и молодежный культурно - досуговыйцентр. В библиотеке для молодежи работают клубы по интересам:&laquo;Firefox&raquo; - клуб любителей культуры Востока;&laquo;Liotenira&raquo; - клуб любителей аниме;&laquo;Dice&raquo; - клуб любителей настольных игр;&laquo;English-speakingclub&raquo; - клуб для развития базовыхзнаний английского языка.</p>",
@@ -1032,65 +1032,65 @@ export default { //logomakr.com/7HcZed
       photos: [
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/13/trumb/1.jpg",
+            require("../assets/images/photos/13/trumb/1.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/13/1.jpg",
+            require("../assets/images/photos/13/1.jpg"),
           caption: "Библиотека-филиал №13"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/13/trumb/2.jpg",
+            require("../assets/images/photos/13/trumb/2.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/13/2.jpg",
+            require("../assets/images/photos/13/2.jpg"),
           caption: "Библиотека-филиал №13"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/13/trumb/3.jpg",
+            require("../assets/images/photos/13/trumb/3.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/13/3.jpg",
+            require("../assets/images/photos/13/3.jpg"),
           caption: "Библиотека-филиал №13"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/13/trumb/4.jpg",
+            require("../assets/images/photos/13/trumb/4.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/13/4.jpg",
+            require("../assets/images/photos/13/4.jpg"),
           caption: "Библиотека-филиал №13"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/13/trumb/5.jpg",
+            require("../assets/images/photos/13/trumb/5.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/13/5.jpg",
+            require("../assets/images/photos/13/5.jpg"),
           caption: "Библиотека-филиал №13"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/13/trumb/6.jpg",
+            require("../assets/images/photos/13/trumb/6.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/13/6.jpg",
+            require("../assets/images/photos/13/6.jpg"),
           caption: "Библиотека-филиал №13"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/13/trumb/7.jpg",
+            require("../assets/images/photos/13/trumb/7.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/13/7.jpg",
+            require("../assets/images/photos/13/7.jpg"),
           caption: "Библиотека-филиал №13"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/13/trumb/8.jpg",
+            require("../assets/images/photos/13/trumb/8.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/13/8.jpg",
+            require("../assets/images/photos/13/8.jpg"),
           caption: "Библиотека-филиал №13"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/13/trumb/9.jpg",
+            require("../assets/images/photos/13/trumb/9.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/13/9.jpg",
+            require("../assets/images/photos/13/9.jpg"),
           caption: "Библиотека-филиал №13"
         }
       ],
@@ -1116,7 +1116,7 @@ export default { //logomakr.com/7HcZed
       phone: " +7 (3012) 22-47-09",
       forChildren: false,
       district: "Советский",
-      photoSmall: "https://cbs-uu.ru/bibliocity/images/small/15.jpg",
+      photoSmall: require("../assets/images/photos/small/15.jpg"),
       id: 15,
       text:
         "<p>Библиотека была открыта в 1975 году по ул. Строителей, 11. В 2014 году библиотека переехала в новое, более просторное помещение, и сейчас она располагается по адресу: ул. Кабанская, 16.</p><p>Библиотека-филиал №15 является информационным и культурно-досуговым центром микрорайона. Использование современных технологий позволяет библиотеке работать в новом формате и более эффективно заниматься популяризацией книги и чтения в нашем городе.</p><p>Сегодня библиотека площадка не только для получения информациина материальных и нематериальных носителях, но и место для организации культурно-просветительских и социально-значимых проектов. С целью совершенствования деятельности по продвижению книги и чтения библиотекав последние годы широко использует уличные площадки, где проводятся городские мероприятия. Формы мероприятий - интересные, необычные,привлекающие внимание и призывающие к участию в них горожан.</p><p>В библиотеке создана электронная база данных:&laquo;Летопись микрорайона Заречный&raquo;,&laquo;Ветераны Великой Отечественной войны поселка Заречный&raquo;. Приоритетным направлением работы библиотеки является патриотическое воспитание молодежи. На базе библиотеки действует патриотический клуб для подростков&laquo;Факел&raquo; и клуб досуга для пенсионеров&laquo;Ветеран&raquo;.</p>",
@@ -1161,30 +1161,30 @@ export default { //logomakr.com/7HcZed
       photos: [
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/15/trumb/1.jpg",
+            require("../assets/images/photos/15/trumb/1.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/15/1.jpg",
+            require("../assets/images/photos/15/1.jpg"),
           caption: "Библиотека-филиал №15"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/15/trumb/2.jpg",
+            require("../assets/images/photos/15/trumb/2.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/15/2.jpg",
+            require("../assets/images/photos/15/2.jpg"),
           caption: "Библиотека-филиал №15"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/15/trumb/3.jpg",
+            require("../assets/images/photos/15/trumb/3.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/15/3.jpg",
+            require("../assets/images/photos/15/3.jpg"),
           caption: "Библиотека-филиал №15"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/15/trumb/4.jpg",
+            require("../assets/images/photos/15/trumb/4.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/15/4.jpg",
+            require("../assets/images/photos/15/4.jpg"),
           caption: "Библиотека-филиал №15"
         }
       ],
@@ -1211,7 +1211,7 @@ export default { //logomakr.com/7HcZed
       phone: " +7 (3012) 41-01-05",
       forChildren: false,
       district: "Октябрьский",
-      photoSmall: "https://cbs-uu.ru/bibliocity/images/small/16.jpg",
+      photoSmall: require("../assets/images/photos/small/16.jpg"),
       id: 16,
       text:
         "<p>Библиотека была открыта в 1975 году. Библиотека-филиал №16 является информационным и культурно-досуговым центром микрорайона. Использование современных технологий позволяет библиотеке работать вновом формате и более эффективно заниматься популяризацией книги ичтения в нашем городе.</p><p>Сегодня библиотека площадка не только для получения информациина материальных и нематериальных носителях, но и место для организации культурно-просветительских и социально-значимых проектов. С целью совершенствования деятельности по продвижению книги и чтения библиотекав последние годы широко использует уличные площадки, где проводятся городские мероприятия. Формы мероприятий - интересные, необычные,привлекающие внимание и призывающие к участию в них горожан.</p><p>Приоритетным направлением деятельности является семейноечтение. В библиотеке для младших школьников реализуется проект Канис-библиотека &laquo;Читай-ка, лай-ка&raquo;: увлекательное чтение книг вслух в присутствии собаки. На базе библиотеки действует клуб досуга для пенсионеров &laquo;Родник&raquo;.</p>",
@@ -1256,37 +1256,37 @@ export default { //logomakr.com/7HcZed
       photos: [
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/16/trumb/1.jpg",
+            require("../assets/images/photos/16/trumb/1.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/16/1.jpg",
+            require("../assets/images/photos/16/1.jpg"),
           caption: "Библиотека-филиал №16"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/16/trumb/2.jpg",
+            require("../assets/images/photos/16/trumb/2.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/16/2.jpg",
+            require("../assets/images/photos/16/2.jpg"),
           caption: "Библиотека-филиал №16"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/16/trumb/3.jpg",
+            require("../assets/images/photos/16/trumb/3.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/16/3.jpg",
+            require("../assets/images/photos/16/3.jpg"),
           caption: "Библиотека-филиал №16"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/16/trumb/4.jpg",
+            require("../assets/images/photos/16/trumb/4.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/16/4.jpg",
+            require("../assets/images/photos/16/4.jpg"),
           caption: "Библиотека-филиал №16"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/16/trumb/5.jpg",
+            require("../assets/images/photos/16/trumb/5.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/16/5.jpg",
+            require("../assets/images/photos/16/5.jpg"),
           caption: "Библиотека-филиал №16"
         }
       ],
@@ -1305,7 +1305,7 @@ export default { //logomakr.com/7HcZed
       phone: " +7 (3012) 23-19-21",
       forChildren: true,
       district: "Октябрьский",
-      photoSmall: "https://cbs-uu.ru/bibliocity/images/small/17.jpg",
+      photoSmall: require("../assets/images/photos/small/17.jpg"),
       id: 17,
       text:
         "<p>Детская библиотека была основана в 1966 году, в 1968 году ей было присвоено имя детского писателя Аркадия Петровича Гайдара. Библиотека-филиал №17 является информационным и культурно-досуговым центром микрорайона. Использование современных технологий позволяет библиотеке работать в новом формате и более эффективно заниматься популяризацией книги и чтения в нашем городе.</p><p>Сегодня библиотека площадка не только для получения информациина материальных и нематериальных носителях, но и место для организациикультурно-просветительских и социально-значимых проектов. С целью совершенствования деятельности по продвижению книги и чтения библиотекав последние годы широко использует уличные площадки, где проводятся городские мероприятия. Формы мероприятий - интересные, необычные,привлекающие внимание и призывающие к участию в них горожан.</p><p>В библиотеке созданы все условия для качественного информационного обслуживания юных читателей, развития творческих способностей и организации досуга. Приоритетным направлением работы детской библиотеки является правовое просвещение. С этой целью в 2004 году был создан &laquo;Центр правовой информации детей иподростков&raquo;. На базе библиотеки действуют вокальный кружок для детей и подросток &laquo;Хрусталики&raquo;,литературно-театральный кружок &laquo;Радуга&raquo; и кукольный театр на бурятском языке &laquo;Алтан Гэрхэн&raquo;.</p>",
@@ -1359,23 +1359,23 @@ export default { //logomakr.com/7HcZed
       photos: [
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/17/trumb/1.jpg",
+            require("../assets/images/photos/17/trumb/1.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/17/1.jpg",
+            require("../assets/images/photos/17/1.jpg"),
           caption: "Библиотека-филиал №17"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/17/trumb/2.jpg",
+            require("../assets/images/photos/17/trumb/2.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/17/2.jpg",
+            require("../assets/images/photos/17/2.jpg"),
           caption: "Библиотека-филиал №17"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/17/trumb/3.jpg",
+            require("../assets/images/photos/17/trumb/3.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/17/3.jpg",
+            require("../assets/images/photos/17/3.jpg"),
           caption: "Библиотека-филиал №17"
         }
       ],
@@ -1443,37 +1443,37 @@ export default { //logomakr.com/7HcZed
       photos: [
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/18/trumb/1.jpg",
+            require("../assets/images/photos/18/trumb/1.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/18/1.jpg",
+            require("../assets/images/photos/18/1.jpg"),
           caption: "Библиотека-филиал №18"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/18/trumb/2.jpg",
+            require("../assets/images/photos/18/trumb/2.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/18/2.jpg",
+            require("../assets/images/photos/18/2.jpg"),
           caption: "Библиотека-филиал №18"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/18/trumb/3.jpg",
+            require("../assets/images/photos/18/trumb/3.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/18/3.jpg",
+            require("../assets/images/photos/18/3.jpg"),
           caption: "Библиотека-филиал №18"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/18/trumb/4.jpg",
+            require("../assets/images/photos/18/trumb/4.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/18/4.jpg",
+            require("../assets/images/photos/18/4.jpg"),
           caption: "Библиотека-филиал №18"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/18/trumb/5.jpg",
+            require("../assets/images/photos/18/trumb/5.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/18/5.jpg",
+            require("../assets/images/photos/18/5.jpg"),
           caption: "Библиотека-филиал №18"
         }
       ],
@@ -1492,7 +1492,7 @@ export default { //logomakr.com/7HcZed
       phone: " +7 (3012) 27-07-29",
       forChildren: false,
       district: "Железнодорожный",
-      photoSmall: "https://cbs-uu.ru/bibliocity/images/small/19.jpg",
+      photoSmall: require("../assets/images/photos/small/19.jpg"),
       id: 19,
       text:
         "<p>Библиотека образована в 1936 году. Находится на территории рабочего поселка ЛВРЗ &ndash; крупного предприятия тяжелой промышленности республики и обслуживает население микрорайона, оказывая весь комплекс библиотечных услуг. Использование современных технологий позволяет библиотеке работать в новом формате и более эффективно заниматься популяризацией книги и чтения в нашем городе.</p> <p>Сегодня библиотека площадка не только для получения информации на материальных и нематериальных носителях, но и место для организации культурно-просветительских и социально-значимых проектов. С целью совершенствования деятельности по продвижению книги и чтения библиотека в последние годы широко использует уличные площадки, где проводятся городские мероприятия. Формы мероприятий - интересные, необычные, привлекающие внимание и призывающие к участию в них горожан.</p> <p>В библиотеке оформлен мемориальный уголок, посвященный жизненному и творческому пути народного писателя Бурятии К. Г. Карнышеву. Сотрудники библиотеки занимаются популяризацией творчества знаменитого земляка. На базе библиотеки действуют 3 клуба по интересам для разных возрастов: детский клуб &laquo;Почемучка&raquo;, клуб &laquo;Юность 21 века&raquo; для студентов, литературно-музыкальное объединение &laquo;ОЛИМП&raquo;.</p>",
@@ -1548,37 +1548,37 @@ export default { //logomakr.com/7HcZed
       photos: [
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/19/trumb/1.jpg",
+            require("../assets/images/photos/19/trumb/1.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/19/1.jpg",
+            require("../assets/images/photos/19/1.jpg"),
           caption: "Библиотека-филиал №19"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/19/trumb/2.jpg",
+            require("../assets/images/photos/19/trumb/2.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/19/2.jpg",
+            require("../assets/images/photos/19/2.jpg"),
           caption: "Библиотека-филиал №19"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/19/trumb/3.jpg",
+            require("../assets/images/photos/19/trumb/3.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/19/3.jpg",
+            require("../assets/images/photos/19/3.jpg"),
           caption: "Библиотека-филиал №19"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/19/trumb/4.jpg",
+            require("../assets/images/photos/19/trumb/4.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/19/4.jpg",
+            require("../assets/images/photos/19/4.jpg"),
           caption: "Библиотека-филиал №19"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/19/trumb/5.jpg",
+            require("../assets/images/photos/19/trumb/5.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/19/5.jpg",
+            require("../assets/images/photos/19/5.jpg"),
           caption: "Библиотека-филиал №19"
         }
       ],
@@ -1597,7 +1597,7 @@ export default { //logomakr.com/7HcZed
       phone: " +7 (3012) 27-07-29",
       forChildren: false,
       district: "Советский",
-      photoSmall: "https://cbs-uu.ru/bibliocity/images/small/20.jpg",
+      photoSmall: require("../assets/images/photos/small/20.jpg"),
       id: 20,
       text:
         "<p>Библиотека была открыта в 1963 году. Библиотека-филиал №20 является информационным и культурно-досуговым центром микрорайона Аэропорт. Использование современных технологий позволяет библиотеке работать в новом формате и более эффективно заниматься популяризацией книги и чтения в нашем городе.</p> <p>Сегодня библиотека площадка не только для получения информации на материальных и нематериальных носителях, но и место для организации культурно-просветительских и социально-значимых проектов. С целью совершенствования деятельности по продвижению книги и чтения библиотека в последние годы широко использует уличные площадки, где проводятся городские мероприятия. Формы мероприятий - интересные, необычные, привлекающие внимание и призывающие к участию в них горожан.</p> <p>Библиотека работает по программам: &laquo;Библиотеки и ТОС: новые грани взаимодействия&raquo;, &laquo;БиблиоРадуга&raquo; .Осуществляет активную работу по патриотическому направлению, пишет &laquo;Летопись микрорайона&raquo;.</p> ",
@@ -1639,51 +1639,51 @@ export default { //logomakr.com/7HcZed
       photos: [
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/20/trumb/1.jpg",
+            require("../assets/images/photos/20/trumb/1.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/20/1.jpg",
+            require("../assets/images/photos/20/1.jpg"),
           caption: "Библиотека-филиал №20"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/20/trumb/2.jpg",
+            require("../assets/images/photos/20/trumb/2.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/20/2.jpg",
+            require("../assets/images/photos/20/2.jpg"),
           caption: "Библиотека-филиал №20"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/20/trumb/3.jpg",
+            require("../assets/images/photos/20/trumb/3.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/20/3.jpg",
+            require("../assets/images/photos/20/3.jpg"),
           caption: "Библиотека-филиал №20"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/20/trumb/4.jpg",
+            require("../assets/images/photos/20/trumb/4.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/20/4.jpg",
+            require("../assets/images/photos/20/4.jpg"),
           caption: "Библиотека-филиал №20"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/20/trumb/5.jpg",
+            require("../assets/images/photos/20/trumb/5.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/20/5.jpg",
+            require("../assets/images/photos/20/5.jpg"),
           caption: "Библиотека-филиал №20"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/20/trumb/6.jpg",
+            require("../assets/images/photos/20/trumb/6.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/20/6.jpg",
+            require("../assets/images/photos/20/6.jpg"),
           caption: "Библиотека-филиал №20"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/20/trumb/7.jpg",
+            require("../assets/images/photos/20/trumb/7.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/20/7.jpg",
+            require("../assets/images/photos/20/7.jpg"),
           caption: "Библиотека-филиал №20"
         }
       ],
@@ -1702,7 +1702,7 @@ export default { //logomakr.com/7HcZed
       phone: " +7 (3012) 22-66-92",
       forChildren: false,
       district: "Советский",
-      photoSmall: "https://cbs-uu.ru/bibliocity/images/small/21.jpg",
+      photoSmall: require("../assets/images/photos/small/21.jpg"),
       id: 21,
       text:
         "Библиотека была открыта в 1990 году. Библиотека-филиал №21 является информационным и культурно-досуговым центром микрорайонов Сокол, Аэропорт, СНТ &laquo;Авиатор&raquo;. Использование современных технологий позволяет библиотеке работать в новом формате и более эффективно заниматься популяризацией книги и чтения в нашем городе. <p>Сегодня библиотека площадка не только для получения информации на материальных и нематериальных носителях, но и место для организации культурно-просветительских и социально-значимых проектов. С целью совершенствования деятельности по продвижению книги и чтения библиотека в последние годы широко использует уличные площадки, где проводятся городские мероприятия. Формы мероприятий - интересные, необычные, привлекающие внимание и призывающие к участию в них горожан.</p> <p>На базе библиотеки действуют клуб семейного чтения &laquo;Мама и малыш&raquo; и клуб для пенсионеров &laquo;ЗОЖ&raquo;.</p> ",
@@ -1747,23 +1747,23 @@ export default { //logomakr.com/7HcZed
       photos: [
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/21/trumb/1.jpg",
+            require("../assets/images/photos/21/trumb/1.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/21/1.jpg",
+            require("../assets/images/photos/21/1.jpg"),
           caption: "Библиотека-филиал №21"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/21/trumb/2.jpg",
+            require("../assets/images/photos/21/trumb/2.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/21/2.jpg",
+            require("../assets/images/photos/21/2.jpg"),
           caption: "Библиотека-филиал №21"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/21/trumb/3.jpg",
+            require("../assets/images/photos/21/trumb/3.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/21/3.jpg",
+            require("../assets/images/photos/21/3.jpg"),
           caption: "Библиотека-филиал №21"
         }
       ],
@@ -1782,7 +1782,7 @@ export default { //logomakr.com/7HcZed
       phone: " +7 (3012) 33-67-11",
       forChildren: false,
       district: "Октябрьский",
-      photoSmall: "https://cbs-uu.ru/bibliocity/images/small/24.jpg",
+      photoSmall: require("../assets/images/photos/small/24.jpg"),
       id: 24,
       text:
         "<p>Библиотека-филиал № 24 открыла двери для своих первых читателей в мае 1989 года. В 2009 году библиотека переехала в новое просторное, современное здание. В 2018 году библиотеке присвоено имя народного писателя Республики Бурятия Н.Г. Дамдинова.</p> <p>Библиотека-филиал №24 является информационным и культурно-досуговым центром микрорайона. Использование современных технологий позволяет библиотеке работать в новом формате и более эффективно заниматься популяризацией книги и чтения в нашем городе.</p> <p>Сегодня библиотека площадка не только для получения информации на материальных и нематериальных носителях, но и место для организации культурно-просветительских и социально-значимых проектов. С целью совершенствования деятельности по продвижению книги и чтения библиотека в последние годы широко использует уличные площадки, где проводятся городские мероприятия. Формы мероприятий - интересные, необычные, привлекающие внимание и призывающие к участию в них горожан.</p> <p>На базе библиотеки действуют клуб досуга для пенсионеров &laquo;Общение&raquo; и кружок по развитию творческих способностей детей &laquo;Оригами&raquo;.</p> ",
@@ -1837,37 +1837,37 @@ export default { //logomakr.com/7HcZed
       photos: [
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/24/trumb/1.jpg",
+            require("../assets/images/photos/24/trumb/1.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/24/1.jpg",
+            require("../assets/images/photos/24/1.jpg"),
           caption: "Библиотека-филиал №24"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/24/trumb/2.jpg",
+            require("../assets/images/photos/24/trumb/2.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/24/2.jpg",
+            require("../assets/images/photos/24/2.jpg"),
           caption: "Библиотека-филиал №24"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/24/trumb/3.jpg",
+            require("../assets/images/photos/24/trumb/3.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/24/3.jpg",
+            require("../assets/images/photos/24/3.jpg"),
           caption: "Библиотека-филиал №24"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/24/trumb/4.jpg",
+            require("../assets/images/photos/24/trumb/4.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/24/4.jpg",
+            require("../assets/images/photos/24/4.jpg"),
           caption: "Библиотека-филиал №24"
         },
         {
           thumb:
-            "https://cbs-uu.ru/bibliocity/images/photos/24/trumb/5.jpg",
+            require("../assets/images/photos/24/trumb/5.jpg"),
           src:
-            "https://cbs-uu.ru/bibliocity/images/photos/24/5.jpg",
+            require("../assets/images/photos/24/5.jpg"),
           caption: "Библиотека-филиал №24"
         }
       ],
@@ -1893,7 +1893,7 @@ export default { //logomakr.com/7HcZed
     //   phone: " +7 (3012) 8 (3012) 219947",
     //   forChildren: false,
     //   district: "Советский",
-    //   photoSmall: "https://cbs-uu.ru/bibliocity/images/small/25.jpg",
+    //   photoSmall: require("../assets/images/photos/small/25.jpg"),
     //   id: 25,
     //   text: "",
     //   microdistrict: "",
@@ -1923,23 +1923,23 @@ export default { //logomakr.com/7HcZed
     //   photos: [
     //     {
     //       thumb:
-    //         "https://cbs-uu.ru/bibliocity/images/photos/25/trumb/1.jpg",
+    //         require("../assets/images/photos/25/trumb/1.jpg"),
     //       src:
-    //         "https://cbs-uu.ru/bibliocity/images/photos/25/1.jpg",
+    //         require("../assets/images/photos/25/1.jpg"),
     //       caption: "КНИГА&FORUM. Мобильная точка библиотеки в Торговом центре «Форум»"
     //     },
     //     {
     //       thumb:
-    //         "https://cbs-uu.ru/bibliocity/images/photos/25/trumb/2.jpg",
+    //         require("../assets/images/photos/25/trumb/2.jpg"),
     //       src:
-    //         "https://cbs-uu.ru/bibliocity/images/photos/25/2.jpg",
+    //         require("../assets/images/photos/25/2.jpg"),
     //       caption: "КНИГА&FORUM. Мобильная точка библиотеки в Торговом центре «Форум»"
     //     },
     //     {
     //       thumb:
-    //         "https://cbs-uu.ru/bibliocity/images/photos/25/trumb/3.jpg",
+    //         require("../assets/images/photos/25/trumb/3.jpg"),
     //       src:
-    //         "https://cbs-uu.ru/bibliocity/images/photos/25/3.jpg",
+    //         require("../assets/images/photos/25/3.jpg"),
     //       caption: "КНИГА&FORUM. Мобильная точка библиотеки в Торговом центре «Форум»"
     //     }
     //   ],

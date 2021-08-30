@@ -135,7 +135,7 @@ export default {
     getImgPath() {
       //console.log(this.eventdata.imagePath);
       if (this.eventdata.imagePath) return this.eventdata.imagePath;
-      return require("@/assets/libfr.png");
+      return require("@/assets/images/libfr.jpg");
     },
     showDialog(viewData) {
       this.eventdata = viewData;
@@ -206,7 +206,7 @@ export default {
   width: 100%;
   height: 100%;
 
-  background-image: url("https://www.whats-on-netflix.com/wp-content/uploads/2020/04/new-netflix-original-movies-march-2020.png");
+  background-image: "";
   filter: blur(8px);
   -webkit-filter: blur(8px);
   height: 100%;

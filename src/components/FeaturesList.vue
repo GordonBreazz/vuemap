@@ -45,7 +45,7 @@
           >
             <v-tooltip bottom>
               <template v-slot:activator="{ on }">
-                <v-img :src="item.img" width="35" v-on="on" class="photoglr"></v-img>
+                <v-img :src="getFeaturesImgPath(item.img)" width="35" v-on="on" class="photoglr"></v-img>
               </template>
               <span>{{item.title}}</span>
             </v-tooltip>
@@ -62,7 +62,7 @@
           >
             <v-tooltip bottom>
               <template v-slot:activator="{ on }">
-                <v-img :src="item.img" width="35" v-on="on" class="photoglr"></v-img>
+                <v-img :src="getFeaturesImgPath(item.img)" width="35" v-on="on" class="photoglr"></v-img>
               </template>
               <span>{{item.title}}</span>
             </v-tooltip>
@@ -161,6 +161,9 @@ export default {
     isActive(day) {
       if (this.todayWork) if (day == this.todayWork.getDay()) return true;
       return false;
+    },
+    getFeaturesImgPath(item) {
+      return require(`../assets/features_lightgray/${item}`)
     }
   },
   mounted() {

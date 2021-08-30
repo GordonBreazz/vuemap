@@ -1,6 +1,6 @@
 <template>
   <div class="about-page">
-    <v-parallax src="../assets/material2.jpg" height="350">
+    <v-parallax src="../assets/images/material2.jpg" height="350">
       <h2 class="display-2 font-weight-light mb-5">Добро пожаловать!</h2>
 
       <!--<h2 class="display-1 font-weight-light mb-5">-->
@@ -31,7 +31,7 @@
       <v-row justify="center">
         <v-col cols="12" md="11">
           <v-parallax
-            src="../assets/mapimage.jpg"
+            src="../assets/images/mapimage.jpg"
             style="background-color: #17334e;"
             height="350"
             id="litmap"
@@ -59,7 +59,7 @@
             </v-col>
             <v-col cols="12">
               <v-img
-                src="../assets/libfr.jpg"
+                src="../assets/images/libfr.jpg"
                 title="На рисунке изображена Центральная городская библиотека им. Исая К. Калашникова"
               ></v-img>
             </v-col>
@@ -69,7 +69,7 @@
           <v-row class="text-left pl-3">
             <v-col
               cols="1"
-              style=" background:no-repeat url(https://cbs-uu.ru/bibliocity/images/1.svg) 50% 30%; "
+              :style="iconUrl1"
             ></v-col>
             <v-col cols="11" class="mb-10">
               <p>Большое разнообразие литературы, которую можно читать в зале или взять домой совершенно бесплатно. Библиотекари и библиографы помогут подобрать нужные издания. А через стационарный компьютер можно получить доступ к электронным базам данных (Электронная библиотека диссертаций, КонсультантПлюс, Гарант, Национальная электронная библиотека и многие другие).</p>
@@ -77,7 +77,7 @@
 
             <v-col
               cols="1"
-              style=" background:no-repeat url(https://cbs-uu.ru/bibliocity/images/2.svg) 50% 30%;"
+              :style="iconUrl2"
             ></v-col>
             <v-col cols="11" class="mb-10">
               <p>Комфортное пространство с книгами, периодикой, компьютерами. Здесь можно работать, читать, отдыхать, слушать музыку, а также по предварительной договоренности провести мероприятие.</p>
@@ -85,7 +85,7 @@
 
             <v-col
               cols="1"
-              style=" background:no-repeat url(https://cbs-uu.ru/bibliocity/images/3.svg) 50% 30%;"
+              :style="iconUrl3"
             ></v-col>
             <v-col cols="11" class="mb-10">
               <p>Множество самых разных культурных, просветительских и образовательных событий.</p>
@@ -93,7 +93,7 @@
 
             <v-col
               cols="1"
-              style=" background:no-repeat url(https://cbs-uu.ru/bibliocity/images/4.svg) 50% 30%;"
+              :style="iconUrl4"
             ></v-col>
             <v-col cols="11">
               <p>Удобный график работы: взрослые библиотеки открыты со вторника по субботу 10:00 до 19:00, а в воскресенье — до 18:00. Время работы может меняться в зависимости от профиля библиотеки и территориального расположения. Смотрите подробное расписание библиотек на карте.</p>
@@ -130,7 +130,7 @@
       <v-row justify="center">
         <v-col cols="12" lg="9">
           <v-img
-            src="https://cbs-uu.ru/bibliocity/assets/places/6.jpg"
+            src="../assets/places/6.jpg"
             title="На рисунке изображена Площадь советов г. Улан-Удэ"
           ></v-img>
           <!--
@@ -152,22 +152,38 @@ export default {
     return {
       items: [
         {
-          src: "https://cbs-uu.ru/bibliocity/assets/places/4.jpg"
+          src: "../assets/places/4.jpg"
         },
         {
-          src: "https://cbs-uu.ru/bibliocity/assets/places/1.jpg"
+          src: "../assets/places/1.jpg"
         },
         {
-          src: "https://cbs-uu.ru/bibliocity/assets/places/2.jpg"
+          src: "../assets/places/2.jpg"
         },
         {
-          src: "https://cbs-uu.ru/bibliocity/assets/places/5.jpg"
+          src: "../assets/places/5.jpg"
         }
       ]
     };
   },
   computed: {
-    ...mapState(["socnet"])
+    ...mapState(["socnet"]),
+    iconUrl1() {
+        return 'background: no-repeat url(' + require('../assets/svg/1.svg') + ') 50% 30%'
+        // The path could be '../assets/img.png', etc., which depends on where your vue file is      
+    },
+    iconUrl2() {
+        return 'background: no-repeat url(' + require('../assets/svg/2.svg') + ') 50% 30%'
+        // The path could be '../assets/img.png', etc., which depends on where your vue file is      
+    },
+    iconUrl3() {
+        return 'background: no-repeat url(' + require('../assets/svg/3.svg') + ') 50% 30%'
+        // The path could be '../assets/img.png', etc., which depends on where your vue file is      
+    },
+    iconUrl4() {
+        return 'background: no-repeat url(' + require('../assets/svg/4.svg') + ') 50% 30%'
+        // The path could be '../assets/img.png', etc., which depends on where your vue file is      
+    }      
   },
   methods: {
     goMap() {

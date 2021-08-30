@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-parallax src="https://cbs-uu.ru/bibliocity/images/3.jpg" height="350">
+    <v-parallax src="../assets/images/3.jpg" height="350">
       <h2 :class="{'display-1 font-weight-light mb-5 title-with-shadow': $vuetify.breakpoint.xsOnly, 'display-2 font-weight-light mb-5 title-with-shadow': $vuetify.breakpoint.mdAndUp}">Афиша МАУ ЦБС г. Улан-Удэ</h2>
 
       <!--<h2 class="display-1 font-weight-light mb-5">-->
@@ -50,7 +50,7 @@
       <v-row justify="center">
         <v-col cols="12" lg="9">
           <v-img
-            src="https://cbs-uu.ru/bibliocity/assets/places/1.jpg"
+            src="../assets/places/1.jpg"
             title="На рисунке изображен театр Оперы и балета г. Улан-Удэ"
           ></v-img>
           <!--
