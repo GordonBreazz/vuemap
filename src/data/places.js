@@ -6,7 +6,7 @@ export default { //logomakr.com/7HcZed
       fullTitle: "Центральная городская библиотека им. И. Калашникова",
       coords: [51.825683, 107.58439],
       address: "г. Улан-Удэ, ул. Ленина 17",
-      phone: "+7 (3012) 21-54-12",
+      phone: "+7 (3012) 21-11-89",
       forChildren: false,
       district: "Советский",
       photoSmall: require("../assets/images/photos/small/1.jpg"),
@@ -379,7 +379,7 @@ export default { //logomakr.com/7HcZed
     },
     {
       title: "Библиотека-филиал №5",
-      fullTitle: "Библиотека-филиал №5",
+      fullTitle: "Модельная библиотека, Центр чтения «Семейный меридиан»",
       coords: [51.8664255625606, 107.7454773644181],
       address: "г. Улан-Удэ, мкр. Восточный, ул. Туполева, 4",
       phone: " +7 (3012) 25-20-80",
@@ -399,7 +399,7 @@ export default { //logomakr.com/7HcZed
       },
       chief: {
         title: "",
-        name: "Потанина Надежда Васильевна"
+        name: "Калашникова Анна Николаевна"
       },
       libraryType: "Модельная",
       shedule: 0,
@@ -827,7 +827,7 @@ export default { //logomakr.com/7HcZed
       },
       chief: {
         title: "",
-        name: "Имидеева Антонина Сергеевна"
+        name: "Кузнецова Елена Анатольевна"
       },
       libraryType: "Универсальная",
       shedule: 0,
@@ -945,16 +945,9 @@ export default { //logomakr.com/7HcZed
           src:
             require("../assets/images/photos/12/12.jpg"),
           caption: "Библиотека-филиал №12"
-        },
-        {
-          thumb:
-            require("../assets/images/photos/12/trumb/13.jpg"),
-          src:
-            require("../assets/images/photos/12/13.jpg"),
-          caption: "Библиотека-филиал №12"
         }
       ],
-      video: '<iframe width="100%" height="315" src="https://www.youtube.com/embed/VlX8FtS5Ugg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+      video: '',
       forChildren: ['Детская литература', 'Игровая зона'],
       copyCentre: ['Сканирование', 'Ксерокопирование', 'Печать на принтере', 'Набор текста'],
       services: ['Услуги интернет-кафе', 'Можно провести мероприятие', 'Принимаем книги в дар'],
@@ -991,7 +984,7 @@ export default { //logomakr.com/7HcZed
       },
       chief: {
         title: "",
-        name: "Архипова Ольга Анатольевна"
+        name: "Мункуева Должит Батомункуевна"
       },
       libraryType: "Универсальная, Молодёжная",
       shedule: 5,
@@ -1161,6 +1154,13 @@ export default { //logomakr.com/7HcZed
       photos: [
         {
           thumb:
+            require("../assets/images/photos/15/trumb/3.jpg"),
+          src:
+            require("../assets/images/photos/15/3.jpg"),
+          caption: "Библиотека-филиал №15"
+        },        
+        {
+          thumb:
             require("../assets/images/photos/15/trumb/1.jpg"),
           src:
             require("../assets/images/photos/15/1.jpg"),
@@ -1171,13 +1171,6 @@ export default { //logomakr.com/7HcZed
             require("../assets/images/photos/15/trumb/2.jpg"),
           src:
             require("../assets/images/photos/15/2.jpg"),
-          caption: "Библиотека-филиал №15"
-        },
-        {
-          thumb:
-            require("../assets/images/photos/15/trumb/3.jpg"),
-          src:
-            require("../assets/images/photos/15/3.jpg"),
           caption: "Библиотека-филиал №15"
         },
         {
@@ -1594,7 +1587,7 @@ export default { //logomakr.com/7HcZed
       fullTitle: "Библиотека-филиал №20",
       coords: [51.800943, 107.45369],
       address: "г. Улан-Удэ, мкр. Аэропорт, д.7",
-      phone: " +7 (3012) 27-07-29",
+      phone: " +7 (3012) 22-66-85",
       forChildren: false,
       district: "Советский",
       photoSmall: require("../assets/images/photos/small/20.jpg"),
