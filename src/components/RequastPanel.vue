@@ -5,7 +5,7 @@
         <v-container class="mb-3">
           <div class="d-flex">
             <v-text-field
-              label="Библиотека, остановка общественного транспорта, район"
+              label="Библиотека, остановка общественного транспорта, район" 
               outlined
               class="mr-2"
             ></v-text-field>
