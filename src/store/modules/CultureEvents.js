@@ -1,5 +1,5 @@
 //const URLAPI = "http://cbs-uu.ru/bibliocity/json_proxy.php?status=accepted&start=1588291200&organizations=10872&sort=-start&apiKey=" + process.env.VUE_APP_ALLCULTURE_APIKEY
-const URLAPI = "https://all.culture.ru/api/2.5/events?status=accepted&start=1588291200&organizations=10872&sort=-start&apiKey=" + process.env.VUE_APP_ALLCULTURE_APIKEY
+const URLAPI = "https://thingproxy.freeboard.io/fetch/https://all.culture.ru/api/2.5/events?status=accepted&start=1588291200&organizations=10872&sort=-start&apiKey=" + process.env.VUE_APP_ALLCULTURE_APIKEY
 const IMAGESPATH = "https://all.culture.ru/uploads/"
 
 function titlePart1(value) {
@@ -72,9 +72,12 @@ function eventTime(start, end) {
 
 function placeIndex(st, placesArr) {
   const result = st.match(/\d+/)
+  //console.log('@result@', placesArr)
   let url = "/filial/"
   let index = 1
   if (result) index = result[0]
+  console.log('sadasdsad',index)  
+  if (index == 100) index = 12
   url += index + "/"
   // console.log('qq', Number(index), this.placesArr[Number(index)])
   return {
@@ -91,7 +94,11 @@ export const CultureEvents = {
     async fetchPosts(context) {
       console.log("fetch post сработал")
       const res = await fetch(URLAPI)
-
+      // .then(function(response) {
+      //   console.log(response); 
+      // }).catch(function(error) {  
+      //   console.log('Request failed', error)  
+      // });
       const posts = await res.json()
       //const posts = await res.text()    
       console.log("status", res.ok)
@@ -132,7 +139,7 @@ export const CultureEvents = {
         record.key = i
         record.titlePart1 = titlePart1(item.name)
         record.titlePart2 = titlePart2(item.name)
-        record.shortDescription = withoutPoint(item.shortDescription)
+        record.shortDescription = ""//withoutPoint(item.shortDescription || "okokok")
         record.description = item.description
         record.descriptionText = planText(item.description)
         record.descriptionShort = short( planText(item.description) )
@@ -140,6 +147,7 @@ export const CultureEvents = {
         record.eventDate = eventDate(item.start, item.end)
         record.tags = item.tags.map((i) => i.name)
         record.imagePath = IMAGESPATH + item.image.name
+        console.log('kbhkhkhk,j',item.places[0].name,  rootState.placesArr)        
         record.index = placeIndex(item.places[0].name, rootState.placesArr).ind
         record.name = placeIndex(item.places[0].name, rootState.placesArr).name
         record.address = placeIndex(item.places[0].name, rootState.placesArr).address

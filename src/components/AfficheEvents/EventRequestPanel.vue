@@ -101,7 +101,7 @@ export default {
     ...mapMutations("CultureEvents", ["updateSearchRequest"]),
     sendRequest() {
       this.updateSearchRequest({ value: this.searchRequest });
-      //console.log(this.searchRequest)
+      console.log('@@@',this.searchRequest)
       this.searchRequest = "";
     }
   },
